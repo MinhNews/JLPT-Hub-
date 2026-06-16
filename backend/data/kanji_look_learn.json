@@ -1,0 +1,4802 @@
+[
+  {
+    "lessonId": 1,
+    "title": "Bài 1",
+    "kanjis": [
+      {
+        "kanji": "一",
+        "hanViet": "NHẤT",
+        "meaning": "một, đồng nhất, nhất định",
+        "mnemonicText": "Một ngón tay trỏ biểu thị cho số 1. (Nhất)",
+        "readings": "いち, いつ / ひと-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/one.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "二",
+        "hanViet": "NHỊ",
+        "meaning": "2",
+        "mnemonicText": "Hai ngón tay biểu thị cho số 2. (Nhị)",
+        "readings": "に / ふた-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/two.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "三",
+        "hanViet": "TAM",
+        "meaning": "3",
+        "mnemonicText": "Ba ngón tay biểu thị cho số 3. (Tam)",
+        "readings": "さん / み、みっ-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/three.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "四",
+        "hanViet": "TỨ",
+        "meaning": "4",
+        "mnemonicText": "Hình tứ giác có 4 góc biểu thị cho số 4.",
+        "readings": "し / よん、よ-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/four.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "五",
+        "hanViet": "NGŨ",
+        "meaning": "5",
+        "mnemonicText": "Bạn có thể tạo thành hình chữ 「五」với 5 que diêm không?",
+        "readings": "ご / いつ-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/five.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "六",
+        "hanViet": "LỤC",
+        "meaning": "6",
+        "mnemonicText": "Người Trung Quốc biểu thị số 6 bằng cách như vầy.",
+        "readings": "ろく / む-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/six.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "七",
+        "hanViet": "THẤT",
+        "meaning": "7",
+        "mnemonicText": "2 cộng 5 bằng 7.",
+        "readings": "しち / し,なな, なな-つ, なの, しっ, な, ひち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/seven.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "八",
+        "hanViet": "BÁT",
+        "meaning": "8",
+        "mnemonicText": "Nó là chữ「ハ」 trong từ katakana「ハチ」(số 8).",
+        "readings": "はち / や、や-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/eight.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "九",
+        "hanViet": "CỬU",
+        "meaning": "9",
+        "mnemonicText": "”Bạn có thể hít đất 10 lần không?”\n”7, 8, 9...Không được.”",
+        "readings": "きゅう, く / ここの-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/nine.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "十",
+        "hanViet": "THẬP",
+        "meaning": "mười",
+        "mnemonicText": "Chúng ta hãy bó 10 que lại.",
+        "readings": "じゅう, じ / とお",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/ten.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "百",
+        "hanViet": "BÁCH",
+        "meaning": "trăm, bách niên",
+        "mnemonicText": "Xoay số ”100 ” 90 độ về bên phải thì nó sẽ trở thành chữ 「百」",
+        "readings": "ひゃく / もも",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/hundred.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "千",
+        "hanViet": "THIÊN",
+        "meaning": "nghìn, nhiều, thiên lí",
+        "mnemonicText": "Cộng nét 「ノ」vào số 10「十」 ta sẽ có một số lớn hơn rất nhiều, số 1000",
+        "readings": "せん / ち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/thousand.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "万",
+        "hanViet": "VẠN",
+        "meaning": "vạn, nhiều, vạn vật",
+        "mnemonicText": "Số 10.000 là số có 5 chữ số.",
+        "readings": "まん, ばん / →萬［萬",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/ten_thousand.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "円",
+        "hanViet": "VIÊN",
+        "meaning": "viên mãn, tiền Yên",
+        "mnemonicText": "Hình dạng của hình tròn",
+        "readings": "えん / つぶら,まる-い, まる, まど, まど-か, まろ-やか, のぶ, まどか, みつ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/yen_circle.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU",
+        "meaning": "miệng, nhân khẩu, khẩu ngữ",
+        "mnemonicText": "Hình dạng của cái miệng",
+        "readings": "こう, く / くち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/mouth.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "目",
+        "hanViet": "MỤC",
+        "meaning": "mắt, hạng mục, mục lục",
+        "mnemonicText": "Hình dạng của con mắt",
+        "readings": "もく, ぼく / め",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai1/eye.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 2,
+    "title": "Bài 2",
+    "kanjis": [
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT",
+        "meaning": "mặt trời, ngày, nhật thực, nhật báo",
+        "mnemonicText": "Hình dạng của mặt trời",
+        "readings": "にち, じつ / ひ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/day_sun.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "月",
+        "hanViet": "NGUYỆT",
+        "meaning": "mặt trăng, tháng, nguyệt san, nguyệt thực",
+        "mnemonicText": "Hình dạng của mặt trăng lưỡi liềm",
+        "readings": "げつ, がつ / つき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/month_moon.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "火",
+        "hanViet": "HỎA",
+        "meaning": "lửa",
+        "mnemonicText": "Hình dạng của ngọn lữa",
+        "readings": "か / ひ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/fire.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "水",
+        "hanViet": "THỦY",
+        "meaning": "thủy điện",
+        "mnemonicText": "Thác nước phun nước",
+        "readings": "すい / みず、みな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/water.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "木",
+        "hanViet": "MỘC",
+        "meaning": "cây, gỗ",
+        "mnemonicText": "Hình dạng cái cây",
+        "readings": "ぼく, もく / き",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/tree.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "金",
+        "hanViet": "KIM",
+        "meaning": "hoàng kim, kim ngân",
+        "mnemonicText": "Nghe nói dưới núi có vàng（金）",
+        "readings": "きん, こん / かね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/gold.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "土",
+        "hanViet": "THỔ",
+        "meaning": "thổ địa, thổ công",
+        "mnemonicText": "Hạt mầm đâm chồi từ mặt đất（土）",
+        "readings": "ど, と / つち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/soil.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "曜",
+        "hanViet": "DIỆU",
+        "meaning": "ngày trong tuần",
+        "mnemonicText": "Đầu tuần chim sẽ hót: ”Piyo piyo”",
+        "readings": "よう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/weekday.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "本",
+        "hanViet": "BẢN",
+        "meaning": "sách, cơ bản, nguyên bản, bản chất",
+        "mnemonicText": "Đây là gốc của cái cây. Hãy đánh dấu 「一」",
+        "readings": "ほん / もと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/book_base.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN",
+        "meaning": "nhân vật",
+        "mnemonicText": "Con người đứng bằng 2 chân",
+        "readings": "じん, にん / ひと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/person.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "今",
+        "hanViet": "KIM",
+        "meaning": "đương kim, kim nhật",
+        "mnemonicText": "Bây giờ bạn đang làm gì? Tôi đang ở nhà hát la la la",
+        "readings": "こん, きん / いま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/now.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "寺",
+        "hanViet": "TỰ",
+        "meaning": "chùa",
+        "mnemonicText": "Nhìn này, có ngôi chùa trên mặt đất kìa!",
+        "readings": "じ / てら",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/temple.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "時",
+        "hanViet": "THỜI",
+        "meaning": "thời gian",
+        "mnemonicText": "Ngày xưa, người ta rung chuông chùa để báo giờ.",
+        "readings": "じ / とき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/time.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "半",
+        "hanViet": "BÁN",
+        "meaning": "bán cầu, bán nguyệt",
+        "mnemonicText": "Hãy cắt 3 đường ra làm đôi.\nỦa, chỉ cắt đường đầu tiên thôi.",
+        "readings": "はん / なか-ば",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/half.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "刀",
+        "hanViet": "ĐAO",
+        "meaning": "cái đao",
+        "mnemonicText": "Hình dạng của con dao",
+        "readings": "とう / かたな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/sword.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "分",
+        "hanViet": "PHÂN",
+        "meaning": "phân số, phân chia",
+        "mnemonicText": "Hãy chia nó ra phân nửa bằng con dao!",
+        "readings": "ぶん, ふん, ぶ / わ-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai2/minute_to_divide.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 3,
+    "title": "Bài 3",
+    "kanjis": [
+      {
+        "kanji": "上",
+        "hanViet": "THƯỢNG",
+        "meaning": "thượng tầng, thượng đẳng",
+        "mnemonicText": "chổ này là phía trên đường thẳng",
+        "readings": "じょう, しょう / あおい,うえ, -うえ, うわ-, かみ, あ-げる, -あ-げる, あ-がる, -あ-がる, あ-がり, -あ-がり, のぼ-る, のぼ-り, のぼ-せる, のぼ-す, よ-す, あげ, い, か,",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/up.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "下",
+        "hanViet": "HẠ",
+        "meaning": "dưới, hạ đẳng",
+        "mnemonicText": "chổ này là phía dưới đường thẳng",
+        "readings": "か, げ / した、さ-げる、くだ-る、もと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/down.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "中",
+        "hanViet": "TRUNG",
+        "meaning": "trung tâm, trung gian, trung ương",
+        "mnemonicText": "chổ này ở chính giữa vòng tròn",
+        "readings": "ちゅう / なか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/middle_center.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "外",
+        "hanViet": "NGOẠI",
+        "meaning": "ngoài, ngoại thành, ngoại đạo",
+        "mnemonicText": "Chúng ta hãy hút thuốc lá ở bên ngoài.",
+        "readings": "がい, げ / そと、はず-す、ほか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/outside.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "右",
+        "hanViet": "HỮU",
+        "meaning": "bên phải, hữu ngạn, cánh hữu",
+        "mnemonicText": "Ăn bằng tay phải.",
+        "readings": "う, ゆう / みぎ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/right.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "工",
+        "hanViet": "CÔNG",
+        "meaning": "công tác, công nhân",
+        "mnemonicText": "Hình dạng một cây thước của nghệ nhân",
+        "readings": "こう, く / たくみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/craft.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "左",
+        "hanViet": "TẢ",
+        "meaning": "bên trái, tả hữu, cánh tả",
+        "mnemonicText": "Giữ cây thước bằng tay trái.",
+        "readings": "さ / ひだり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/left.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "前",
+        "hanViet": "TIỀN",
+        "meaning": "trước, tiền sử, tiền chiến, mặt tiền",
+        "mnemonicText": "Chuẩn bị bữa tối trước khi trăng lên.",
+        "readings": "ぜん / まえ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/before_front.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "後",
+        "hanViet": "HẬU",
+        "meaning": "sau, hậu quả, hậu sự",
+        "mnemonicText": "Đi bộ trên đường hướng lừng về phía sau",
+        "readings": "ご, こう / こし,のち, うし-ろ, うしろ, あと, おく-れる, し, しい, しり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/back_after.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "午",
+        "hanViet": "NGỌ",
+        "meaning": "chính ngọ",
+        "mnemonicText": "Chữ hán này gồm có số 10「十」 và số 2「二」. 12 giờ là buổi trưa.",
+        "readings": "ご / うま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/noon.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "門",
+        "hanViet": "MÔN",
+        "meaning": "cửa, nhập môn, môn đồ, bộ môn",
+        "mnemonicText": "Hình dạng cánh cổng",
+        "readings": "もん / かど",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/gate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "間",
+        "hanViet": "GIAN",
+        "meaning": "trung gian, không gian",
+        "mnemonicText": "Ta có thể thấy mặt trời giữa hai cánh cổng.",
+        "readings": "かん, けん / あいだ、ま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/between.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "東",
+        "hanViet": "ĐÔNG",
+        "meaning": "phía đông",
+        "mnemonicText": "Mặt trời mọc ở hướng đông. Ta có thể nhìn thấy mặt trời phía sau ngọn cây.",
+        "readings": "とう / ひがし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/east.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "西",
+        "hanViet": "TÂY",
+        "meaning": "phương tây",
+        "mnemonicText": "Một （一）trong 4 （四）hướng là hướng Tây.",
+        "readings": "せい, さい / にし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/west.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "南",
+        "hanViet": "NAM",
+        "meaning": "phương nam",
+        "mnemonicText": "2 cây mọc trong vườn quay về hướng nam.",
+        "readings": "なん, な / みなみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/south.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "北",
+        "hanViet": "BẮC",
+        "meaning": "phương bắc",
+        "mnemonicText": "Vì phía bắc trời lạnh nên 2 người ngồi đâu lưng lại với nhau.",
+        "readings": "ほく / きた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai3/north.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 4,
+    "title": "Bài 4",
+    "kanjis": [
+      {
+        "kanji": "田",
+        "hanViet": "ĐIỀN",
+        "meaning": "điền viên, tá điền",
+        "mnemonicText": "Hình dáng cánh đồng",
+        "readings": "でん / た",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/rice_field.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "力",
+        "hanViet": "LỰC",
+        "meaning": "sức lực",
+        "mnemonicText": "Người đàng ông cơ bắp có sức mạnh",
+        "readings": "りょく, りき / ちから",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/power.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "男",
+        "hanViet": "NAM",
+        "meaning": "đàn ông, nam giới",
+        "mnemonicText": "Người đàn ông đang ra sức làm việc trên ruộng lúa.",
+        "readings": "だん, なん / おとこ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/man.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "女",
+        "hanViet": "NỮ",
+        "meaning": "phụ nữ",
+        "mnemonicText": "Hình dáng của người nữ",
+        "readings": "じょ, にょ, にょう / おんな、め",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/woman.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "子",
+        "hanViet": "TỬ",
+        "meaning": "tử tôn, phần tử, phân tử, nguyên tử",
+        "mnemonicText": "Hình dáng của một đứa bé",
+        "readings": "し, す / こ、ね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/child.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "学",
+        "hanViet": "HỌC",
+        "meaning": "học sinh, học thuyết",
+        "mnemonicText": "Đứa trẻ học ở trường.",
+        "readings": "がく / まな-ぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/learning.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "生",
+        "hanViet": "SINH",
+        "meaning": "sinh sống, sinh sản",
+        "mnemonicText": "Cây cối được sinh ra từ mặt đất.",
+        "readings": "せい, しょう / い-きる、なま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/birth.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "先",
+        "hanViet": "TIÊN",
+        "meaning": "tiên sinh, tiên tiến",
+        "mnemonicText": "Người ấy đang chạy trước mọi người.",
+        "readings": "せん / さき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/ahead.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "何",
+        "hanViet": "HÀ",
+        "meaning": "cái gì, hà cớ",
+        "mnemonicText": "Một người đang khiêng cái gì đó.\n”Đó là cái gì vậy?”",
+        "readings": "か / なに、なん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/what.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "父",
+        "hanViet": "PHỤ",
+        "meaning": "phụ tử, phụ thân, phụ huynh",
+        "mnemonicText": "Cha tôi có râu.",
+        "readings": "ふ / ちち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/father.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "母",
+        "hanViet": "MẪU",
+        "meaning": "mẹ, phụ mẫu, mẫu thân",
+        "mnemonicText": "Hình dáng của người mẹ.",
+        "readings": "ぼ / はは",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/mother.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "年",
+        "hanViet": "NIÊN",
+        "meaning": "năm, niên đại",
+        "mnemonicText": "Mất một năm để thu hoạch lúa.",
+        "readings": "ねん / ね,とし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/year.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "去",
+        "hanViet": "KHỨ",
+        "meaning": "quá khứ, trừ khử",
+        "mnemonicText": "Tôi là người đã sống trong quá khứ, bây giờ tôi ở trong lòng đất.",
+        "readings": "きょ, こ / さ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/past_toleave.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "毎",
+        "hanViet": "MỖI",
+        "meaning": "mỗi",
+        "mnemonicText": "Ai cũng đều có mẹ.",
+        "readings": "まい / ごと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/every.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "王",
+        "hanViet": "VƯƠNG",
+        "meaning": "vương giả",
+        "mnemonicText": "Đức Vua đang đứng.",
+        "readings": "うう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/king.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "国",
+        "hanViet": "QUỐC",
+        "meaning": "nước, quốc gia, quốc ca",
+        "mnemonicText": "Nhà vua nắm giữ ngọc bảo trị vì đất nước.",
+        "readings": "こく / くに",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai4/country.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 5,
+    "title": "Bài 5",
+    "kanjis": [
+      {
+        "kanji": "見",
+        "hanViet": "KIẾN",
+        "meaning": "ý kiến",
+        "mnemonicText": "Để nhìn thấy được nhiều sự vật thì cần có con mắt và đôi chân.",
+        "readings": "けん / み-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/see.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "行",
+        "hanViet": "HÀNH, HÀNG",
+        "meaning": "thực hành, lữ hành; ngân hàng",
+        "mnemonicText": "Tại góc đường này bạn hãy quyết định là sẽ đi đâu.",
+        "readings": "こう, ぎょう, あん / い-く、ゆ-く、おこな-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/to_go.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "米",
+        "hanViet": "MỄ",
+        "meaning": "gạo",
+        "mnemonicText": "Hình dạng của cây lúa.",
+        "readings": "べい, まい / こめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/rice.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "来",
+        "hanViet": "LAI",
+        "meaning": "đến, tương lai, vị lai",
+        "mnemonicText": "Đến tháng 10 thì có thể thu hoạch lúa.",
+        "readings": "らい / く-る、きた-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/come.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "良",
+        "hanViet": "LƯƠNG",
+        "meaning": "tốt, lương tâm, lương tri",
+        "mnemonicText": "Bất kỳ ai cũng có tinh thần tốt khi no bụng.",
+        "readings": "りょう / よ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/good_well.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "食",
+        "hanViet": "THỰC",
+        "meaning": "ẩm thực, thực đường",
+        "mnemonicText": "Điều làm tôi cảm thấy thoải mái là việc ăn ở nhà.",
+        "readings": "しょく, じき / た-べる、く-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/eat.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "飲",
+        "hanViet": "ẨM",
+        "meaning": "ẩm thực",
+        "mnemonicText": "Mở to miệng để ăn và uống.",
+        "readings": "いん / の-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/drink.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "会",
+        "hanViet": "HỘI",
+        "meaning": "hội họp, đại hội",
+        "mnemonicText": "2（二） chúng ta sẽ gặp trong một ngôi nhà.",
+        "readings": "かい, え / あ-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/to_meet.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "耳",
+        "hanViet": "NHĨ",
+        "meaning": "tai",
+        "mnemonicText": "Hình dạng của cái tai.",
+        "readings": "じ / みみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/ear.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "聞",
+        "hanViet": "VĂN",
+        "meaning": "nghe, tân văn (báo)",
+        "mnemonicText": "Ai đó đang ghé tai vào cổng để nghe ngóng.",
+        "readings": "ぶん, もん / き-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/listen.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "言",
+        "hanViet": "NGÔN",
+        "meaning": "ngôn ngữ, ngôn luận, phát ngôn",
+        "mnemonicText": "Nói điều gì đó bằng miệng.",
+        "readings": "げん, ごん / い-う、こと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/say.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "話",
+        "hanViet": "THOẠI",
+        "meaning": "nói chuyện, đối thoại, giai thoại",
+        "mnemonicText": "Mọi người sử dụng hàng ngàn từ vựng để nói chuyện.",
+        "readings": "わ / はなし、はな-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/speak.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "立",
+        "hanViet": "LẬP",
+        "meaning": "thiết lập, tự lập",
+        "mnemonicText": "Hình dáng của một người đang đứng.",
+        "readings": "りつ, りゅう / た-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/stand.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "待",
+        "hanViet": "ĐÃI",
+        "meaning": "đợi, đối đãi",
+        "mnemonicText": "Tôi đợi bạn trên con đường ở trước chùa.",
+        "readings": "たい / ま-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/wait.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "周",
+        "hanViet": "CHU",
+        "meaning": "chu vi, chu biên",
+        "mnemonicText": "Những thứ mình đã ăn sẽ trở về với đất. Mọi vật đều tuần hoàn.",
+        "readings": "しゅう / まわ-り",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/go_around.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "週",
+        "hanViet": "CHU",
+        "meaning": "tuần",
+        "mnemonicText": "Mất 1 tuần để đi vòng quanh con đường này.",
+        "readings": "しゅう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai5/week.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 6,
+    "title": "Bài 6",
+    "kanjis": [
+      {
+        "kanji": "大",
+        "hanViet": "ĐẠI",
+        "meaning": "to lớn, đại dương, đại lục",
+        "mnemonicText": "Khi bạn dang rộng chân tay trông bạn rất lớn.",
+        "readings": "だい, たい / おお-きい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/big.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "小",
+        "hanViet": "TIỂU",
+        "meaning": "nhỏ, ít",
+        "mnemonicText": "Khi bạn co chân tay lại trông bạn nhỏ hơn.",
+        "readings": "しょう / ちい-さい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/small.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "高",
+        "hanViet": "CAO",
+        "meaning": "cao đẳng, cao thượng",
+        "mnemonicText": "Có một cái tháp cao ở trên toà nhà.",
+        "readings": "こう / たか、たか-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/high.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "安",
+        "hanViet": "AN",
+        "meaning": "an bình, an ổn",
+        "mnemonicText": "Phụ nữ cảm thấy an tâm hơn khi ở trong nhà.",
+        "readings": "あん / やす-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/cheap_ease.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "新",
+        "hanViet": "TÂN",
+        "meaning": "mới, cách tân, tân thời",
+        "mnemonicText": "Để bắt đầu điều mới, ta đứng lên, đốn cây mở đường bằng rìu.",
+        "readings": "しん / あたら-しい、あら-た、にい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/new.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "古",
+        "hanViet": "CỔ",
+        "meaning": "cũ, cổ điển, đồ cổ",
+        "mnemonicText": "Khi ta nghe cùng một câu chuyện 10 （十）lần thì câu chuyện đó sẽ trở nên cũ đi.",
+        "readings": "こ / ふる-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/old.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "元",
+        "hanViet": "NGUYÊN",
+        "meaning": "gốc",
+        "mnemonicText": "Nếu 2 người chạy cùng nhau thì họ sẽ trở nên khoẻ mạnh hơn.",
+        "readings": "げん, がん / もと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/origin.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "気",
+        "hanViet": "KHÍ",
+        "meaning": "không khí, khí chất, khí khái, khí phách",
+        "mnemonicText": "Nếu bạn thở ra quá mạnh thì không chừng tinh thần bạn sẽ xuất hiện.",
+        "readings": "き, け",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/spirit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "多",
+        "hanViet": "ĐA",
+        "meaning": "đa số",
+        "mnemonicText": "Có nhiều chữ「タ」",
+        "readings": "た / おお-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/many_much.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "少",
+        "hanViet": "THIẾU, THIỂU",
+        "meaning": "thiếu niên; thiểu số",
+        "mnemonicText": "Khi bạn phân chia một vật nhỏ, bạn chỉ có thể nhận được một ít.",
+        "readings": "しょう / すく-ない、すこ-し",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/little.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "広",
+        "hanViet": "QUẢNG",
+        "meaning": "quảng trường, quảng đại",
+        "mnemonicText": "”Đây là nhà của tôi. Nó rộng phải không?”",
+        "readings": "こう / ひろ-い］ →廣［廣",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/spacious.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "早",
+        "hanViet": "TẢO",
+        "meaning": "sớm, tảo hôn",
+        "mnemonicText": "Việc dậy lúc 10 giờ vào ngày chủ nhật là quá sớm.",
+        "readings": "そう, さ / はや-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/early.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "長",
+        "hanViet": "TRƯỜNG, TRƯỞNG",
+        "meaning": "trường giang, sở trường; hiệu trưởng",
+        "mnemonicText": "Hình dáng của một người có mái tóc dài.",
+        "readings": "ちょう / なが-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/long.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "明",
+        "hanViet": "MINH",
+        "meaning": "quang minh, minh tinh",
+        "mnemonicText": "Nếu kết hợp mặt trời 「日」và mặt trăng 「月」lại với nhau trời sẽ trở nên sáng hơn.",
+        "readings": "めい, みょう / あか-るい、あき-らか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/bright.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "好",
+        "hanViet": "HẢO, HIẾU",
+        "meaning": "hữu hảo; hiếu sắc",
+        "mnemonicText": "Người nữ ấy thích trẻ con.",
+        "readings": "こう / この-む、す-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/like.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "友",
+        "hanViet": "HỮU",
+        "meaning": "bạn hữu, hữu hảo",
+        "mnemonicText": "Bạn bè đưa tay giúp đỡ lẫn nhau.",
+        "readings": "ゆう / とも",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai6/friend.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 7,
+    "title": "Bài 7",
+    "kanjis": [
+      {
+        "kanji": "入",
+        "hanViet": "NHẬP",
+        "meaning": "nhập cảnh, nhập môn, nhập viện",
+        "mnemonicText": "Một người đang chui vào lều.",
+        "readings": "にゅう / い-れる、はい-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/enter.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "出",
+        "hanViet": "XUẤT",
+        "meaning": "xuất hiện, xuất phát",
+        "mnemonicText": "Lối ra ở hướng này.",
+        "readings": "しゅつ, すい / で-る、いずる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/exit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "市",
+        "hanViet": "THỊ",
+        "meaning": "thành thị, thị trường",
+        "mnemonicText": "Mọi người đi đến chợ để mua sắm.",
+        "readings": "し / いち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/city_market.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "町",
+        "hanViet": "ĐINH",
+        "meaning": "khu phố",
+        "mnemonicText": "Đã từng có những ruộng lúa và những con đường trong thị trấn.",
+        "readings": "ちょう / まち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/town.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "村",
+        "hanViet": "THÔN",
+        "meaning": "thôn xã, thôn làng",
+        "mnemonicText": "Có một ngôi làng ở phía bên kia của cái cây.",
+        "readings": "そん / むら",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/village.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "雨",
+        "hanViet": "VŨ",
+        "meaning": "mưa",
+        "mnemonicText": "Chữ Hán này được ghép thành từ đám mây và những giọt mưa.",
+        "readings": "う / あめ, あま-, -さめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/rain.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "電",
+        "hanViet": "ĐIỆN",
+        "meaning": "phát điện, điện lực",
+        "mnemonicText": "Trong cơn mưa những tia chớp loé sáng trên đồng ruộng.",
+        "readings": "でん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/electricity_lightning.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "車",
+        "hanViet": "XA",
+        "meaning": "xe cộ, xa lộ",
+        "mnemonicText": "Hình dạng của một chiếc xe.",
+        "readings": "しゃ / くるま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/car.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "馬",
+        "hanViet": "MÃ",
+        "meaning": "ngựa",
+        "mnemonicText": "Hình dáng của một con ngựa.",
+        "readings": "ば / うま、ま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/horse.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "駅",
+        "hanViet": "DỊCH",
+        "meaning": "ga",
+        "mnemonicText": "Ở nhà ga có nào là ngựa, nào là người đang mang hành lý.",
+        "readings": "えき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/station.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "社",
+        "hanViet": "XÃ",
+        "meaning": "xã hội, công xã, hợp tác xã",
+        "mnemonicText": "Tại đền thờ thần xã mọi người cúng bái và cầu nguyện cho mùa màng bội thu.",
+        "readings": "しゃ / やしろ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/company_shrine.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "校",
+        "hanViet": "HIỆU",
+        "meaning": "trường học",
+        "mnemonicText": "Ba tôi đến trường để đón tôi.",
+        "readings": "こう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/school.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "店",
+        "hanViet": "ĐIẾM",
+        "meaning": "cửa hàng, tửu điếm",
+        "mnemonicText": "Cà chua được chất trên gian hàng trước cửa tiệm.",
+        "readings": "てん / みせ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/shop.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "銀",
+        "hanViet": "NGÂN",
+        "meaning": "ngân hàng, ngân lượng, kim ngân",
+        "mnemonicText": "Bạc thì không tốt bằng vàng.",
+        "readings": "ぎん / しろがね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/silver.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "病",
+        "hanViet": "BỆNH",
+        "meaning": "bệnh nhân, bệnh viện, bệnh tật",
+        "mnemonicText": "Người bệnh đang ngủ ở bệnh viện.",
+        "readings": "びょう, へい / やまい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/sick.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "院",
+        "hanViet": "VIỆN",
+        "meaning": "học viện, y viện",
+        "mnemonicText": "Đã khoẻ （元気）lại và ra viện về nhà.",
+        "readings": "いん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai7/institution.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 8,
+    "title": "Bài 8",
+    "kanjis": [
+      {
+        "kanji": "休",
+        "hanViet": "HƯU",
+        "meaning": "hưu trí, hưu nhàn",
+        "mnemonicText": "Một người đang nghỉ ngơi bên cái cây.",
+        "readings": "きゅう / やす-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/rest.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "走",
+        "hanViet": "TẨU",
+        "meaning": "chạy",
+        "mnemonicText": "Tôi vẫn chạy dù đất phủ trên người.",
+        "readings": "そう / はし-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/run.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "起",
+        "hanViet": "KHỞI",
+        "meaning": "khởi động, khởi sự, khởi nghĩa",
+        "mnemonicText": "Tôi sẽ chạy bởi vì tôi thức dậy muộn.",
+        "readings": "き / お-きる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/get_up.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "貝",
+        "hanViet": "BỐI",
+        "meaning": "vỏ sò",
+        "mnemonicText": "Hình dạng của của con sò.",
+        "readings": "- / かい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/shellfish.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "買",
+        "hanViet": "MÃI",
+        "meaning": "mua, khuyến mãi",
+        "mnemonicText": "Ngày xưa người ta sử dụng vỏ sò để mua hàng hoá còn bây giờ ta đang sử dụng tiền giấy.",
+        "readings": "ばい / か-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/buy.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "売",
+        "hanViet": "MẠI",
+        "meaning": "thương mại",
+        "mnemonicText": "Một người đang bán cái gì đó.",
+        "readings": "ばい / う-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/sell.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "読",
+        "hanViet": "ĐỘC",
+        "meaning": "độc giả, độc thư",
+        "mnemonicText": "Anh ấy đã nói rằng ”Hãy đọc quyển sách bán chạy nhất này.”",
+        "readings": "どく, とく, とう / よ-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/read.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "書",
+        "hanViet": "THƯ",
+        "meaning": "thư đạo, thư tịch, thư kí",
+        "mnemonicText": "Cầm bút lông viết chữ Nhật 「日」.",
+        "readings": "しょ / かき,か-く, -が-き, -がき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/write.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "帰",
+        "hanViet": "QUY",
+        "meaning": "hồi quy",
+        "mnemonicText": "Chim én quay về tổ.",
+        "readings": "き / かえ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/return.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "勉",
+        "hanViet": "MIỄN",
+        "meaning": "miễn cưỡng, chăm chỉ",
+        "mnemonicText": "Người đàn ông đang hết sức cố gắng.",
+        "readings": "べん / つと-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/make_effort.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "弓",
+        "hanViet": "CUNG",
+        "meaning": "cái cung",
+        "mnemonicText": "Hình dạng của một cây cung.",
+        "readings": "きゅう / ゆみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/bow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "虫",
+        "hanViet": "TRÙNG",
+        "meaning": "côn trùng",
+        "mnemonicText": "Hình dạng của côn trùng.",
+        "readings": "ちゅう / むし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/insect.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "強",
+        "hanViet": "CƯỜNG, CƯỠNG",
+        "meaning": "cường quốc; miễn cưỡng",
+        "mnemonicText": "Cả bọ cánh cứng lẫn cây cung đều mạnh.",
+        "readings": "きょう, ごう / つよ-い、こわ-い、し-いて",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/strong.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "持",
+        "hanViet": "TRÌ",
+        "meaning": "cầm, duy trì",
+        "mnemonicText": "Cầm tràng hạt đi đến chùa.",
+        "readings": "じ / も-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/hold.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "名",
+        "hanViet": "DANH",
+        "meaning": "danh tính, địa danh",
+        "mnemonicText": "Tên của nó là Taro 「タロ」.",
+        "readings": "めい, みょう / な",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/name.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "語",
+        "hanViet": "NGỮ",
+        "meaning": "ngôn ngữ, từ ngữ",
+        "mnemonicText": "Họ nói （言）bằng năm （五）ngôn ngữ.",
+        "readings": "ご / かた-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai8/word_language.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 9,
+    "title": "Bài 9",
+    "kanjis": [
+      {
+        "kanji": "春",
+        "hanViet": "XUÂN",
+        "meaning": "mùa xuân, thanh xuân",
+        "mnemonicText": "Mùa xuân đến rồi. Ba người đang người ngắm mặt trời.",
+        "readings": "しゅん / はる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/spring.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "夏",
+        "hanViet": "HẠ",
+        "meaning": "mùa hè",
+        "mnemonicText": "Vì mùa hè quá nóng, nên con người mệt lử dưới bóng râm.",
+        "readings": "か, げ / なつ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/summer.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "秋",
+        "hanViet": "THU",
+        "meaning": "mùa thu",
+        "mnemonicText": "Thu đến, lúa đơm bông, lá cây chuyển sang màu của lửa.",
+        "readings": "しゅう / あき、とき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/autumn.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "冬",
+        "hanViet": "ĐÔNG",
+        "meaning": "mùa đông",
+        "mnemonicText": "Sẽ rất trơn trượt khi đi trên băng vào mùa đông.",
+        "readings": "とう / ふゆ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/winter.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "朝",
+        "hanViet": "TRIỀU",
+        "meaning": "buổi sáng, triều đình",
+        "mnemonicText": "Buổi sáng ngày 10 tháng 10.",
+        "readings": "ちょう / あさ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/morning.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "昼",
+        "hanViet": "TRÚ",
+        "meaning": "buổi trưa",
+        "mnemonicText": "Khi mặt trời lên cao vào buổi trưa chúng ta sẽ treo những tấm bạt che nắng lên.",
+        "readings": "ちゅう / ひる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/daytime.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "夕",
+        "hanViet": "TỊCH",
+        "meaning": "tịch dương",
+        "mnemonicText": "Vào xế chiều bạn sẽ thấy mặt trăng và chim chóc.",
+        "readings": "せき / ゆう、ゆうべ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/early_evening.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "方",
+        "hanViet": "PHƯƠNG",
+        "meaning": "phương hướng, phương pháp",
+        "mnemonicText": "Vui lòng đi theo hướng của lá cờ.",
+        "readings": "ほう / かた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/direction_person.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "晩",
+        "hanViet": "VÃN",
+        "meaning": "buổi tối",
+        "mnemonicText": "Hối hả về nhà trong lúc trời chưa tối.",
+        "readings": "ばん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/evening.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "夜",
+        "hanViet": "DẠ",
+        "meaning": "ban đêm, dạ cảnh, dạ quang",
+        "mnemonicText": "Buổi tối, một người đội mũ ngắm trăng và mây.",
+        "readings": "や / よ、よる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/night.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "心",
+        "hanViet": "TÂM",
+        "meaning": "tâm lí, nội tâm",
+        "mnemonicText": "Trái tim đang đập.",
+        "readings": "しん / こころ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/heart.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "手",
+        "hanViet": "THỦ",
+        "meaning": "tay, thủ đoạn",
+        "mnemonicText": "Hình dạng của bàn tay.",
+        "readings": "しゅ / て, て-, -て, た-",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/hand.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "足",
+        "hanViet": "TÚC",
+        "meaning": "chân, bổ túc, sung túc",
+        "mnemonicText": "Chúng ta hãy duỗi chân chạy nào!",
+        "readings": "そく / あし、た-りる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/foot_leg.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "体",
+        "hanViet": "THỂ",
+        "meaning": "hình thể, thân thể, thể thao",
+        "mnemonicText": "Khi cơ thể bị thương thì chúng ta băng bó lại rồi nghỉ ngơi （休）.",
+        "readings": "たい, てい / からだ］ 身体(しんたい、からだ)→體［豊",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/body.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "首",
+        "hanViet": "THỦ",
+        "meaning": "đầu, cổ, thủ tướng",
+        "mnemonicText": "Hình dáng của người cổ dài.",
+        "readings": "しゅ / くび",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/neck_head.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "道",
+        "hanViet": "ĐẠO",
+        "meaning": "đạo lộ, đạo đức, đạo lí",
+        "mnemonicText": "Đang dài cổ đợi ai đó trên đường.",
+        "readings": "どう, とう / みち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai9/road.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 10,
+    "title": "Bài 10",
+    "kanjis": [
+      {
+        "kanji": "山",
+        "hanViet": "SƠN",
+        "meaning": "núi, sơn hà",
+        "mnemonicText": "Hình dáng của ngọn núi.",
+        "readings": "さん / やま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/mountain.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "川",
+        "hanViet": "XUYÊN",
+        "meaning": "sông",
+        "mnemonicText": "Dòng sông đang chảy.",
+        "readings": "せん / かわ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/river.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "林",
+        "hanViet": "LÂM",
+        "meaning": "lâm sản, lâm nghiệp",
+        "mnemonicText": "Hai cây trở thành rừng.",
+        "readings": "りん / はやし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/small_forest.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "森",
+        "hanViet": "SÂM",
+        "meaning": "rừng",
+        "mnemonicText": "Ba cây trở thành rừng rậm.",
+        "readings": "しん / もり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/forest.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "空",
+        "hanViet": "KHÔNG",
+        "meaning": "không khí, hư không, hàng không",
+        "mnemonicText": "Hãy mở cửa, đo bầu trời bằng cây thước .",
+        "readings": "くう / そら、から、あ-く、うつ-ろ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/sky.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "海",
+        "hanViet": "HẢI",
+        "meaning": "hải cảng, hải phận",
+        "mnemonicText": "Đi biển bơi mỗi ngày.",
+        "readings": "かい / うみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/sea.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "化",
+        "hanViet": "HÓA",
+        "meaning": "biến hóa",
+        "mnemonicText": "Một người đứng lên rồi ngồi xuống, thay đổi tư thế của mình.",
+        "readings": "か, け / ば-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/change.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "花",
+        "hanViet": "HOA",
+        "meaning": "hoa, bông hoa",
+        "mnemonicText": "Cỏ biến đổi và trở thành hoa.",
+        "readings": "か / はな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/flower.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "天",
+        "hanViet": "THIÊN",
+        "meaning": "thiên thạch, thiên nhiên, thiên đường",
+        "mnemonicText": "Dang rộng đôi tay ngước nhìn trời.",
+        "readings": "てん / あま、あめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/heaven.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "赤",
+        "hanViet": "XÍCH",
+        "meaning": "đỏ, xích kì, xích đạo, xích thập tự",
+        "mnemonicText": "Đặt đất lên trên lửa và làm ra viên gạch màu đỏ.",
+        "readings": "せき, しゃく / あか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/red.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "青",
+        "hanViet": "THANH",
+        "meaning": "xanh, thanh thiên, thanh niên",
+        "mnemonicText": "Cỏ xanh và mặt trăng cũng màu xanh.",
+        "readings": "せい, しょう / あお、あお-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/blue.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "白",
+        "hanViet": "BẠCH",
+        "meaning": "thanh bạch, bạch sắc",
+        "mnemonicText": "Có 1 toà nhà màu trắng.",
+        "readings": "かく, びゃく / しろ、しら、しろ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/white.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "黒",
+        "hanViet": "HẮC",
+        "meaning": "đen, hắc ám",
+        "mnemonicText": "Đồng ruộng khô cháy và mặt đất trở thành màu đen.",
+        "readings": "こく / くろ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/black.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "色",
+        "hanViet": "SẮC",
+        "meaning": "màu sắc, sắc dục",
+        "mnemonicText": "Hình xoáy của hai màu.",
+        "readings": "しょく, しき / いろ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/color.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "魚",
+        "hanViet": "NGƯ",
+        "meaning": "cá",
+        "mnemonicText": "Hình dạng của con cá.",
+        "readings": "ぎょ / さかな、うお",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/fish.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "犬",
+        "hanViet": "KHUYỂN",
+        "meaning": "con chó",
+        "mnemonicText": "Hình dáng của con chó.",
+        "readings": "けん / いぬ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai10/dog.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 11,
+    "title": "Bài 11",
+    "kanjis": [
+      {
+        "kanji": "料",
+        "hanViet": "LIỆU",
+        "meaning": "nguyên liệu, tài liệu, nhiên liệu",
+        "mnemonicText": "Cân gạo và các nguyên liệu khác bằng cái cân.",
+        "readings": "りょう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/ingredient.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "理",
+        "hanViet": "LÍ",
+        "meaning": "lý do, lý luận, nguyên lý",
+        "mnemonicText": "Nhà Vua suy nghĩ tính hợp lý và làm ra những thửa ruộng.",
+        "readings": "り",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/logic.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "反",
+        "hanViet": "PHẢN",
+        "meaning": "phản loạn, phản đối",
+        "mnemonicText": "Tôi phản đối.",
+        "readings": "はん, ほん, たん / かえ-す、そ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/oppose.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "飯",
+        "hanViet": "PHẠN",
+        "meaning": "cơm",
+        "mnemonicText": "Mọi người phản đối với việc tôi ăn quá nhiều cơm.",
+        "readings": "はん / めし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/meal_cookedrice.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "牛",
+        "hanViet": "NGƯU",
+        "meaning": "con trâu",
+        "mnemonicText": "Hình dạnh của con bò chỉ có một sừng.",
+        "readings": "ぎゅう / うし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/cow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "豚",
+        "hanViet": "ĐỒN",
+        "meaning": "con lợn",
+        "mnemonicText": "Con heo đang nhìn mặt trăng.",
+        "readings": "とん / ぶた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/pig.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "鳥",
+        "hanViet": "ĐIỂU",
+        "meaning": "chim chóc",
+        "mnemonicText": "Hình dạng của một con chim.",
+        "readings": "ちょう / とり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/bird.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "肉",
+        "hanViet": "NHỤC",
+        "meaning": "thịt",
+        "mnemonicText": "Hình của miếng thịt.",
+        "readings": "にく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/meat.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "茶",
+        "hanViet": "TRÀ",
+        "meaning": "trà",
+        "mnemonicText": "Hai người đang uống trà.",
+        "readings": "ちゃ, さ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/tea.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "予",
+        "hanViet": "DỰ",
+        "meaning": "dự đoán, dự báo",
+        "mnemonicText": "Người mẹ （マザー）sắp xếp （アレンジ）trước một người trông trẻ.",
+        "readings": "よ / あらかじ-め",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/advance.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "野",
+        "hanViet": "DÃ",
+        "meaning": "cánh đồng, hoang dã, thôn dã",
+        "mnemonicText": "Đi đến cánh đồng và cày ruộng trước.",
+        "readings": "や / の",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/field.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "菜",
+        "hanViet": "THÁI",
+        "meaning": "rau",
+        "mnemonicText": "Hái rau từ trong đám cỏ cây.",
+        "readings": "さい / な",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/vegetable.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "切",
+        "hanViet": "THIẾT",
+        "meaning": "cắt, thiết thực, thân thiết",
+        "mnemonicText": "Bảy võ sĩ đạo cắt bằng kiếm của họ.",
+        "readings": "せつ, さい / き-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/cut.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "作",
+        "hanViet": "TÁC",
+        "meaning": "tác phẩm, công tác, canh tác",
+        "mnemonicText": "Một người cầm cây cưa làm gì đó.",
+        "readings": "さく, さ / つく-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/make.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "未",
+        "hanViet": "VỊ",
+        "meaning": "vị thành niên, vị lai",
+        "mnemonicText": "Cái cây này vẫn chưa lớn.",
+        "readings": "み / ひつじ、いま-だ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/not_yet.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "味",
+        "hanViet": "VỊ",
+        "meaning": "vị giác, mùi vị",
+        "mnemonicText": "Tôi không biết nó có vị thế nào bởi vì tôi vẫn chưa ăn nó.",
+        "readings": "み / あじ、あじ-わう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai11/taste.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 12,
+    "title": "Bài 12",
+    "kanjis": [
+      {
+        "kanji": "音",
+        "hanViet": "ÂM",
+        "meaning": "âm thanh, phát âm",
+        "mnemonicText": "Khi mặt trời lên, mọi người đứng dậy và phát ra âm thanh.",
+        "readings": "おん, いん / おと、ね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/sound.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "楽",
+        "hanViet": "LẠC, NHẠC",
+        "meaning": "an lạc, lạc thú, âm nhạc",
+        "mnemonicText": "Hãy thưởng thức gõ cái trống màu trắng trên cái giá đỡ gỗ!",
+        "readings": "がく, らく / たの-しい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/fun_comfortable.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "歌",
+        "hanViet": "CA",
+        "meaning": "ca dao, ca khúc",
+        "mnemonicText": "Tất cả mọi người đang mở to miệng hát.",
+        "readings": "か / うた、うた-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/sing.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "自",
+        "hanViet": "TỰ",
+        "meaning": "tự do, tự kỉ, tự thân",
+        "mnemonicText": "Ở Nhật người ta ám chỉ \"bản thân\" bằng cách chỉ vào mũi của mình.",
+        "readings": "じ, し / みずか-ら、おの-ずから",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/self.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "転",
+        "hanViet": "CHUYỂN",
+        "meaning": "chuyển động",
+        "mnemonicText": "Tôi đã bị ngã nhào ra khỏi xe hơi.",
+        "readings": "てん / ころ-ぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/roll_over.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "乗",
+        "hanViet": "THỪA",
+        "meaning": "lên xe",
+        "mnemonicText": "Một người đang đứng trên cây và định leo lên cành cây.",
+        "readings": "じょう / の-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/get%20on.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "写",
+        "hanViet": "TẢ",
+        "meaning": "miêu tả",
+        "mnemonicText": "Tấm hình của người đàn ông đội mũ.",
+        "readings": "しゃ / うつ-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/photograph.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "台",
+        "hanViet": "ĐÀI",
+        "meaning": "lâu đài, đài",
+        "mnemonicText": "Tôi đang ở trên bục.",
+        "readings": "だい, たい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/stand.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "央",
+        "hanViet": "ƯƠNG",
+        "meaning": "trung ương",
+        "mnemonicText": "Người đó là nhân vật chính.",
+        "readings": "うう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/center.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "映",
+        "hanViet": "ÁNH",
+        "meaning": "phản ánh",
+        "mnemonicText": "Vai chính của bộ phim đã được chiếu trên màn ảnh.",
+        "readings": "えい / うつ-る、は-える］ 光が反射する→暎［英",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/project.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "画",
+        "hanViet": "HỌA, HOẠCH",
+        "meaning": "họa sĩ; kế hoạch",
+        "mnemonicText": "Vẽ bức tranh đồng lúa trên vải vẽ.",
+        "readings": "が, かく / えが-く, かく-する, かぎ-る, はかりごと, はか-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/picture.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "羊",
+        "hanViet": "DƯƠNG",
+        "meaning": "con dê, con cừu",
+        "mnemonicText": "Hình dạng của con cừu.",
+        "readings": "よう / ひつじ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/sheep.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "洋",
+        "hanViet": "DƯƠNG",
+        "meaning": "đại dương, tây dương",
+        "mnemonicText": "Con cừu đã băng qua biển đến Nhật.",
+        "readings": "よう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/oversea.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "服",
+        "hanViet": "PHỤC",
+        "meaning": "y phục, cảm phục, phục vụ",
+        "mnemonicText": "Treo quần áo dưới mặt trăng.",
+        "readings": "ふく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/clothes_submit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "着",
+        "hanViet": "TRƯỚC",
+        "meaning": "đến, đáo trước, mặc",
+        "mnemonicText": "Tôi đã thấy con cừu mặc áo len.",
+        "readings": "ちゃく, じゃく / き-る, -ぎ, き-せる, -き-せ, つ-く, つ-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai12/wear.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "真",
+        "hanViet": "CHÂN",
+        "meaning": "chân lí, chân thực",
+        "mnemonicText": "Tivi phản chiếu hình ảnh thật",
+        "readings": "しん / ま、まこと",
+        "imgUrl": "",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 13,
+    "title": "Bài 13",
+    "kanjis": [
+      {
+        "kanji": "家",
+        "hanViet": "GIA",
+        "meaning": "gia đình, chuyên gia",
+        "mnemonicText": "Ngày xưa mọi người nuôi heo ở trong nhà.",
+        "readings": "か, け / いえ、や",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/house.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "矢",
+        "hanViet": "THỈ",
+        "meaning": "mũi tên",
+        "mnemonicText": "Hình dạng của mũi tên",
+        "readings": "し",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/arrow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "族",
+        "hanViet": "TỘC",
+        "meaning": "gia tộc, dân tộc, chủng tộc",
+        "mnemonicText": "Dưới lá cờ, mọi người sẽ bảo vệ gia đình họ bằng mũi tên.",
+        "readings": "ぞく / やから",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/family.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "親",
+        "hanViet": "THÂN",
+        "meaning": "thân thuộc, thân thích, thân thiết",
+        "mnemonicText": "Ba mẹ đứng trên ngọn cây trông chừng con.",
+        "readings": "しん / おや、した-しい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/parent.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "兄",
+        "hanViet": "HUYNH",
+        "meaning": "phụ huynh",
+        "mnemonicText": "Anh trai tôi ngoác miệng bốc phét.",
+        "readings": "けい, きょう / あに",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/older_brother.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "姉",
+        "hanViet": "TỈ",
+        "meaning": "chị gái",
+        "mnemonicText": "Chị tôi sống ở thành thị.",
+        "readings": "し / あね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/older_sister.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "弟",
+        "hanViet": "ĐỆ",
+        "meaning": "đệ tử",
+        "mnemonicText": "Em trai tôi chơi cung.",
+        "readings": "てい, だい, で / おとうと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/younger_brother.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "妹",
+        "hanViet": "MUỘI",
+        "meaning": "em gái",
+        "mnemonicText": "Người nữ và cái cây vẫn còn trẻ, nghĩa là nói về cô em gái.",
+        "readings": "まい / いもうと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/younger_sister.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "私",
+        "hanViet": "TƯ",
+        "meaning": "tư nhân, công tư, tư lợi",
+        "mnemonicText": "Đây là cây lúa tôi trồng.",
+        "readings": "し / わたくし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/i_private.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "夫",
+        "hanViet": "PHU",
+        "meaning": "trượng phu, phu phụ",
+        "mnemonicText": "Chồng tôi và tôi, 2 người luôn luôn bên nhau.",
+        "readings": "ふ, ふう / おっと、そ-れ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/husband.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "妻",
+        "hanViet": "THÊ",
+        "meaning": "thê tử",
+        "mnemonicText": "Người phụ nữ cầm cây chổi là vợ tôi.",
+        "readings": "さい / つま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/wife.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "主",
+        "hanViet": "CHỦ",
+        "meaning": "chủ yếu, chủ nhân",
+        "mnemonicText": "Người đàn ông đội nón là chồng tôi.",
+        "readings": "しゅ, す / おも-な、ぬし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/main.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "住",
+        "hanViet": "TRÚ, TRỤ",
+        "meaning": "cư trú; trụ sở",
+        "mnemonicText": "Ông chủ sống với một người nào đó.",
+        "readings": "じゅう / す-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/live.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "糸",
+        "hanViet": "MỊCH",
+        "meaning": "sợ chỉ",
+        "mnemonicText": "Hình dạng của cuộn chỉ.",
+        "readings": "し / いと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/thread.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "氏",
+        "hanViet": "THỊ",
+        "meaning": "họ",
+        "mnemonicText": "Có ghi tên trên bảng tên.",
+        "readings": "し / うじ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/surname.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "紙",
+        "hanViet": "CHỈ",
+        "meaning": "giấy",
+        "mnemonicText": "Viết họ tên lên giấy và luồn sợi chỉ qua.",
+        "readings": "し / かみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai13/paper.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 14,
+    "title": "Bài 14",
+    "kanjis": [
+      {
+        "kanji": "教",
+        "hanViet": "GIÁO",
+        "meaning": "giáo dục, giáo viên",
+        "mnemonicText": "Ông lão dạy đứa trẻ.",
+        "readings": "きょう / おし-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/teach.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "室",
+        "hanViet": "THẤT",
+        "meaning": "phòng, giáo thất",
+        "mnemonicText": "Thứ bảy nào tôi cũng ở trong phòng của tôi.",
+        "readings": "しつ / むろ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/room.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "羽",
+        "hanViet": "VŨ",
+        "meaning": "lông vũ",
+        "mnemonicText": "Hình dạng của đôi cánh.",
+        "readings": "う / はね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/wing.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "習",
+        "hanViet": "TẬP",
+        "meaning": "học tập",
+        "mnemonicText": "Trên toà nhà màu trắng, những con chim vỗ cánh tập bay.",
+        "readings": "しゅう / なら-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/learn.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "漢",
+        "hanViet": "HÁN",
+        "meaning": "hảo hán",
+        "mnemonicText": "Ông chồng người Trung Quốc chất cỏ lên đầu rồi băng qua sông.",
+        "readings": "かん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/chinese.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "字",
+        "hanViet": "TỰ",
+        "meaning": "chữ, văn tự",
+        "mnemonicText": "Đứa trẻ học chữ ở trường.",
+        "readings": "じ / あざ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/letter_character.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "式",
+        "hanViet": "THỨC",
+        "meaning": "hình thức, phương thức, công thức",
+        "mnemonicText": "Đây là lễ cưới của tôi.",
+        "readings": "しき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/ceremony_style.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "試",
+        "hanViet": "THÍ",
+        "meaning": "thí nghiệm, thí điểm",
+        "mnemonicText": "Tại buổi lễ: ”Con sẽ yêu người này đến hết cuộc đời không?”\n”Vâng, con sẽ thử cố gắng.”",
+        "readings": "し / こころ-みる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/try.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "験",
+        "hanViet": "NGHIỆM",
+        "meaning": "thí nghiệm, hiệu nghiệm, kinh nghiệm",
+        "mnemonicText": "Ta sẽ kiểm tra con ngựa trước khi leo núi.",
+        "readings": "けん, げん / ため-す、しるし、げん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/examine.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "宿",
+        "hanViet": "TÚC",
+        "meaning": "tá túc, kí túc xá",
+        "mnemonicText": "Nhà trọ này có thể cho 100 khách trọ lại.",
+        "readings": "しゅく / やど-る、やど",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/inn.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "題",
+        "hanViet": "ĐỀ",
+        "meaning": "đề tài, đề mục, chủ đề",
+        "mnemonicText": "Nhà báo sử dụng đầu và chân để tìm kiếm đề tài.",
+        "readings": "だい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/topic.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "文",
+        "hanViet": "VĂN",
+        "meaning": "văn chương, văn học",
+        "mnemonicText": "Hoa văn của chiếc bình cổ đã trở thành văn tự.",
+        "readings": "ぶん, もん / ふみ、あや",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/letter_character1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "英",
+        "hanViet": "ANH",
+        "meaning": "anh hùng, anh tú, anh tuấn",
+        "mnemonicText": "Người ở chính giữa là anh hùng. Đã được sinh ra từ sự chuyển động của cội rễ cỏ cây.",
+        "readings": "えい / はなぶさ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/english_excellent.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "質",
+        "hanViet": "CHẤT",
+        "meaning": "vật chất, phẩm chất, khí chất",
+        "mnemonicText": "Làm vỡ vỏ sò lớn bằng rìu và kiểm tra chất lượng của nó.",
+        "readings": "しつ, しち, ち / たち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/quality.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "問",
+        "hanViet": "VẤN",
+        "meaning": "vấn đáp, chất vấn, vấn đề",
+        "mnemonicText": "Tôi đã hỏi bên cánh cổng.",
+        "readings": "もん / と-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/question.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "説",
+        "hanViet": "THUYẾT",
+        "meaning": "tiểu thuyết, học thuyết, lí thuyết",
+        "mnemonicText": "Anh trai đang giải thích.",
+        "readings": "せつ, ぜい / と-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai14/explain.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 15,
+    "title": "Bài 15",
+    "kanjis": [
+      {
+        "kanji": "遠",
+        "hanViet": "VIỄN",
+        "meaning": "viễn phương, vĩnh viễn",
+        "mnemonicText": "Thứ bảy tôi sẽ đi xa.",
+        "readings": "えん, おん / とお-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/far.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "近",
+        "hanViet": "CẬN",
+        "meaning": "thân cận, cận thị, cận cảnh",
+        "mnemonicText": "Hễ mà đốn cây bằng rìu thì nơi đến sẽ trở nên gần hơn.",
+        "readings": "きん / ちか-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/near.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "者",
+        "hanViet": "GIẢ",
+        "meaning": "học giả, tác giả",
+        "mnemonicText": "Ngày qua ngày, ai rồi cũng sẽ già đi.",
+        "readings": "しゃ / もの",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/person.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "暑",
+        "hanViet": "THỬ",
+        "meaning": "hè nóng",
+        "mnemonicText": "Người đứng dưới mặt trời sẽ thấy nóng.",
+        "readings": "しょ / あつ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/hot.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "寒",
+        "hanViet": "HÀN",
+        "meaning": "lạnh",
+        "mnemonicText": "Vào những ngày lạnh giá, tôi đến nhà bạn và để lại những dấu chân trên tuyết.",
+        "readings": "かん / さ,さむ-い, さん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/cold.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "重",
+        "hanViet": "TRỌNG, TRÙNG",
+        "meaning": "trọng lượng; trùng phùng",
+        "mnemonicText": "Một ngàn quyển sách （千）sẽ rất nặng.",
+        "readings": "じゅう, ちょう / おも-い、かさ-なる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/heavy.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "軽",
+        "hanViet": "KHINH",
+        "meaning": "khinh suất, khinh khi",
+        "mnemonicText": "Chiếc xe hơi nhẹ sẽ chạy nếu ta đẩy bằng tay.",
+        "readings": "けい / かる-い、かろ-やか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/light.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "低",
+        "hanViet": "ĐÊ",
+        "meaning": "thấp, đê hèn, đê tiện",
+        "mnemonicText": "”Vì sao cô gạch dưới tên của em vậy?”\n”Vì điểm của em bị thấp.”",
+        "readings": "てい / ひく-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/low.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "弱",
+        "hanViet": "NHƯỢC",
+        "meaning": "nhược điểm, nhược tiểu",
+        "mnemonicText": "Những con chim non yếu ớt.",
+        "readings": "じゃく / よわ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/weak.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "悪",
+        "hanViet": "ÁC, Ố",
+        "meaning": "hung ác, độc ác; tăng ố",
+        "mnemonicText": "Họ có những tình cảm （心）không tốt về nhau.",
+        "readings": "あく, お / わる-い］ 正しくない→惡［亞",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/bad.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "暗",
+        "hanViet": "ÁM",
+        "meaning": "ám sát",
+        "mnemonicText": "Vì bên trong tối nên chỉ có thể nghe thấy âm thanh mà thôi.",
+        "readings": "あん / くら-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/dark.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "太",
+        "hanViet": "THÁI",
+        "meaning": "thái dương, thái bình",
+        "mnemonicText": "Khúc gỗ to tròn.",
+        "readings": "たい, た / ふと-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/thick.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "豆",
+        "hanViet": "ĐẬU",
+        "meaning": "hạt đậu",
+        "mnemonicText": "Cái bát đựng đậu.",
+        "readings": "とう, ず / まめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/bean.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "短",
+        "hanViet": "ĐOẢN",
+        "meaning": "đoản mệnh, sở đoản",
+        "mnemonicText": "Cả mũi tên （矢）lẫn hạt đậu （豆）đều ngắn.",
+        "readings": "たん / みじか-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/short.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "光",
+        "hanViet": "QUANG",
+        "meaning": "ánh sáng, nhật quang, quang minh",
+        "mnemonicText": "Hình dạng của các tia nắng mặt trời.",
+        "readings": "こう / ひかり、ひか-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/the_light.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "風",
+        "hanViet": "PHONG",
+        "meaning": "phong ba, phong cách, phong tục",
+        "mnemonicText": "Côn trùng tránh gió bằng lá cây.",
+        "readings": "ふう, ふ / かぜ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai15/wind.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 16,
+    "title": "Bài 16",
+    "kanjis": [
+      {
+        "kanji": "運",
+        "hanViet": "VẬN",
+        "meaning": "vận chuyển, vận mệnh",
+        "mnemonicText": "Chiếc xe chở tấm nệm.",
+        "readings": "うん / はこ-ぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/transport.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "動",
+        "hanViet": "ĐỘNG",
+        "meaning": "hoạt động, chuyển động",
+        "mnemonicText": "Dùng sức lực （力） dịch chuyển quyển sách nặng（重）.",
+        "readings": "どう / うご-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/move.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "止",
+        "hanViet": "CHỈ",
+        "meaning": "đình chỉ",
+        "mnemonicText": "Đèn tín hiệu màu đỏ. Hãy dừng lại!",
+        "readings": "し / と-まる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/stop.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "歩",
+        "hanViet": "BỘ",
+        "meaning": "bộ hành, tiến bộ",
+        "mnemonicText": "Dừng lại （止）một chút （少）rồi bước đi tiếp!",
+        "readings": "ほ, ぶ, ふ / ある-く、あゆ-み",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/walk.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "使",
+        "hanViet": "SỬ, SỨ",
+        "meaning": "sử dụng; sứ giả, thiên sứ",
+        "mnemonicText": "Dùng người.",
+        "readings": "し / つか-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/use.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "送",
+        "hanViet": "TỐNG",
+        "meaning": "tiễn, tống tiễn, tống đạt",
+        "mnemonicText": "Ai đó đã gửi cho tôi một món quà.",
+        "readings": "そう / おく-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/send.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "洗",
+        "hanViet": "TIỂN",
+        "meaning": "rửa",
+        "mnemonicText": "Thầy giáo đi （先生）rửa tay.",
+        "readings": "せん / あら-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/wash.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "急",
+        "hanViet": "CẤP",
+        "meaning": "khẩn cấp, cấp cứu",
+        "mnemonicText": "”Nếu nhanh lên thì tôi sẽ không sao.”",
+        "readings": "きゅう / いそ-ぐ, いそ-ぎ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/hurry.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "開",
+        "hanViet": "KHAI",
+        "meaning": "khai mạc, khai giảng",
+        "mnemonicText": "Hai người mở cổng （門）.",
+        "readings": "かい / あ-く、ひら-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/open.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "閉",
+        "hanViet": "BẾ",
+        "meaning": "bế mạc, bế quan",
+        "mnemonicText": "Một người sẽ đóng cổng （門）.",
+        "readings": "へい / し-める、と-ざす",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/close.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "押",
+        "hanViet": "ÁP",
+        "meaning": "ấn",
+        "mnemonicText": "Tôi đã thử đẩy biển báo.",
+        "readings": "うう / お-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/push.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "引",
+        "hanViet": "DẪN",
+        "meaning": "dẫn hỏa",
+        "mnemonicText": "Cây cung và sợi dây. Phần để kéo chính là sợi dây.",
+        "readings": "いん / ひ-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/pull.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "思",
+        "hanViet": "TƯ",
+        "meaning": "nghĩ, suy tư, tư tưởng, tư duy",
+        "mnemonicText": "Bên đồng ruộng （田）, tôi nghĩ về người yêu trong lòng mình（心）.",
+        "readings": "し / おも-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/think.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "知",
+        "hanViet": "TRI",
+        "meaning": "tri thức, tri giác",
+        "mnemonicText": "Người có miệng to biết mọi thứ.",
+        "readings": "ち / し-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/know.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "考",
+        "hanViet": "KHẢO",
+        "meaning": "khảo sát, tư khảo",
+        "mnemonicText": "Tôi suy nghĩ lý do vì sao người ta già đi.",
+        "readings": "こう / かんが-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/think_ideas.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "死",
+        "hanViet": "TỬ",
+        "meaning": "tử thi, tự tử",
+        "mnemonicText": "Nghe nói có tiểu thuyết [chết ở tahiti] nhỉ? Không có đâu",
+        "readings": "し / し-ぬ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai16/death.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 17,
+    "title": "Bài 17",
+    "kanjis": [
+      {
+        "kanji": "医",
+        "hanViet": "Y",
+        "meaning": "y học, y viện",
+        "mnemonicText": "Bác sĩ chữa trị cho bệnh nhân bị thương do trúng tên.",
+        "readings": "い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/doctor_medicine.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "始",
+        "hanViet": "THỦY",
+        "meaning": "ban đầu, khai thủy, nguyên thủy",
+        "mnemonicText": "Khi tôi bắt đầu bài diễn thuyết trên bục, người phụ nữ đã lắng nghe.",
+        "readings": "し / はじ-め",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/begin.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "終",
+        "hanViet": "CHUNG",
+        "meaning": "chung kết, chung liễu",
+        "mnemonicText": "Mối quan hệ của chúng tôi kéo dài như sợi chỉ nhưng đã kết thúc vào mùa đông rồi.",
+        "readings": "しゅう / お-わる、つい-に",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/end.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "石",
+        "hanViet": "THẠCH",
+        "meaning": "đá, thạch anh, bảo thạch",
+        "mnemonicText": "Hình dạng của một vách đá dốc đứng và một hòn đá.",
+        "readings": "せき, しゃく, こく / いし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/stone.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "研",
+        "hanViet": "NGHIÊN",
+        "meaning": "mài, nghiên cứu",
+        "mnemonicText": "Tôi ngồi trên cái bục và đánh bóng hòn đá.",
+        "readings": "けん / と-ぐ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/polish.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "究",
+        "hanViet": "CỨU",
+        "meaning": "nghiên cứu, cứu cánh",
+        "mnemonicText": "Tôi đã ở trong nhà nghiên cứu 9（九） năm.",
+        "readings": "きゅう / きわ-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/research.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "留",
+        "hanViet": "LƯU",
+        "meaning": "lưu học, lưu trữ",
+        "mnemonicText": "Tôi ở trên đồng ruộng và gặt lúa bằng dao.",
+        "readings": "りゅう, る / と-まる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/stay.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "有",
+        "hanViet": "HỮU",
+        "meaning": "sở hữu, hữu hạn",
+        "mnemonicText": "Mặt trăng （月）hiện hữu nhưng không thể chạm đến nó.",
+        "readings": "ゆう, う / あ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/exist.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "産",
+        "hanViet": "SẢN",
+        "meaning": "sản xuất, sinh sản, cộng sản",
+        "mnemonicText": "Mặt trăng （月）hiện hữu nhưng không thể chạm đến nó.",
+        "readings": "さん / うぶ、う-まれる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/produce.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "業",
+        "hanViet": "NGHIỆP",
+        "meaning": "nghề nghiệp, công nghiệp, sự nghiệp",
+        "mnemonicText": "Nuôi cừu bên trong hàng rào. Đây là công việc của tôi.",
+        "readings": "ぎょう, ごう / なり,わざ, のぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/business.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "薬",
+        "hanViet": "DƯỢC",
+        "meaning": "thuốc",
+        "mnemonicText": "Hãy uống thảo dược này để cảm thấy khoẻ lên và cùng nào vui chơi nào!",
+        "readings": "やく / くすり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/medicine.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "働",
+        "hanViet": "ĐỘNG",
+        "meaning": "lao động",
+        "mnemonicText": "Mọi người di chuyển làm việc.",
+        "readings": "どう / はたら-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/work.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "員",
+        "hanViet": "VIÊN",
+        "meaning": "thành viên, nhân viên",
+        "mnemonicText": "Trả tiền và nhận được thẻ hội viên.",
+        "readings": "いん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/member.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "士",
+        "hanViet": "SĨ",
+        "meaning": "chiến sĩ, sĩ tử, bác sĩ",
+        "mnemonicText": "Mười một võ sĩ đạo （十一）.",
+        "readings": "し",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/warrior_samurai.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "仕",
+        "hanViet": "SĨ",
+        "meaning": "làm việc",
+        "mnemonicText": "Võ sĩ đạo phục vụ cho ông chủ của anh ta.",
+        "readings": "し, じ / つか-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/serve.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "事",
+        "hanViet": "SỰ",
+        "meaning": "sự việc",
+        "mnemonicText": "Tôi viết toàn bộ những việc sẽ làm.",
+        "readings": "じ, ず / ろ,こと, つか-う, つか-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai17/thing.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 18,
+    "title": "Bài 18",
+    "kanjis": [
+      {
+        "kanji": "図",
+        "hanViet": "ĐỒ",
+        "meaning": "bản đồ, đồ án, địa đồ",
+        "mnemonicText": "Đây là bức tranh ai đó đã vẽ. Trông như là chữ 「ツ、メ」 vậy.",
+        "readings": "ず, と / づ,え, はか-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/drawing.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "管",
+        "hanViet": "QUẢN",
+        "meaning": "ống, mao quản, quản lí",
+        "mnemonicText": "Một quan chức mập đang ở trong nhà.",
+        "readings": "かん / くだ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/government_offical.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "館",
+        "hanViet": "QUÁN",
+        "meaning": "đại sứ quán, hội quán",
+        "mnemonicText": "Các quan chức sẽ dùng bữa ở toà nhà này.",
+        "readings": "かん / たち、たて、やかた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/building.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "昔",
+        "hanViet": "TÍCH",
+        "meaning": "ngày xưa",
+        "mnemonicText": "Cách đây 21 ngày là chuyện của xưa kia.",
+        "readings": "せき, しゃく / むかし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/long_time_ago.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "借",
+        "hanViet": "TÁ",
+        "meaning": "mượn, tá điền",
+        "mnemonicText": "Khi xưa （昔）tôi đã mượn cái gì đó từ một ai đó.",
+        "readings": "しゃく / か-りる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/borrow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "代",
+        "hanViet": "ĐẠI",
+        "meaning": "đại biểu, thời đại, đại diện, đại thế",
+        "mnemonicText": "”Để tôi thay thế anh.”",
+        "readings": "だい, たい / かわ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/replace.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "貸",
+        "hanViet": "THẢI",
+        "meaning": "cho mượn",
+        "mnemonicText": "Tôi sẽ cho bạn mượn tiền thay cho anh ấy.",
+        "readings": "たい / か-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/lend.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "地",
+        "hanViet": "ĐỊA",
+        "meaning": "thổ địa, địa đạo",
+        "mnemonicText": "Ở vùng đất này, có con bò cạp ở dưới lòng đất.",
+        "readings": "ち, じ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/land.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "世",
+        "hanViet": "THẾ",
+        "meaning": "thế giới, thế gian, thế sự",
+        "mnemonicText": "Chữ 「せ」 trong từ 「せかい」 (thế giới) được tạo thành từ chữ Hán này.",
+        "readings": "せい, せ / よ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/world.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "界",
+        "hanViet": "GIỚI",
+        "meaning": "thế giới, giới hạn, địa giới",
+        "mnemonicText": "Có ranh giới giữa ruộng của bạn và ruộng của tôi.",
+        "readings": "かい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/boundary.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "度",
+        "hanViet": "ĐỘ",
+        "meaning": "mức độ, quá độ, độ lượng",
+        "mnemonicText": "Khi nhiệt độ trong nhà là 21 độ thì bàn tay ta sẽ rất ấm.",
+        "readings": "ど, と, たく / たび",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/degree.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "回",
+        "hanViet": "HỒI",
+        "meaning": "vu hồi, chương hồi",
+        "mnemonicText": "Xoay vòng quanh.",
+        "readings": "かい, え / まわ-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/turning_around.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "用",
+        "hanViet": "DỤNG",
+        "meaning": "sử dụng, dụng cụ, công dụng",
+        "mnemonicText": "Đây là hàng rào cọc mà chúng tôi đang sử dụng.",
+        "readings": "よう / たから,もち-いる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/use1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "民",
+        "hanViet": "DÂN",
+        "meaning": "quốc dân, dân tộc",
+        "mnemonicText": "Con người có miệng và họ tên.",
+        "readings": "みん / たみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/people1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "注",
+        "hanViet": "CHÚ",
+        "meaning": "chú ý, chú thích",
+        "mnemonicText": "”Cẩn thận đừng làm đổ nước vào ông chủ!”",
+        "readings": "ちゅう / そそ-ぐ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/pour.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "意",
+        "hanViet": "Ý",
+        "meaning": "ý nghĩa, ý thức, ý kiến, chú ý",
+        "mnemonicText": "Lắng nghe âm thanh của trái tim! Có lẽ bạn sẽ hiểu được tâm tình của chính mình.",
+        "readings": "い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai18/mind.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 19,
+    "title": "Bài 19",
+    "kanjis": [
+      {
+        "kanji": "頭",
+        "hanViet": "ĐẦU",
+        "meaning": "đầu não",
+        "mnemonicText": "Đầu của tôi trông giống hạt đậu.",
+        "readings": "とう, ず, と / あたま、かしら",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/head.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "顔",
+        "hanViet": "NHAN",
+        "meaning": "nhan sắc, hồng nhan",
+        "mnemonicText": "Khi gỡ nón ra khỏi đầu thì thấy các vết xước trên mặt.",
+        "readings": "がん / かお",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/face.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "声",
+        "hanViet": "THANH",
+        "meaning": "âm thanh, thanh điệu",
+        "mnemonicText": "Võ sĩ đạo （士）cất giọng phát ra âm thanh 「コエ」ở bên cửa.",
+        "readings": "せい, しょう / こえ, こわ-",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/voice.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "特",
+        "hanViet": "ĐẶC",
+        "meaning": "đặc biệt, đặc công",
+        "mnemonicText": "Bò là một con vật đặc biệt ở đền thờ của đạo Hindu.",
+        "readings": "とく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/special.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "別",
+        "hanViet": "BIỆT",
+        "meaning": "biệt li, đặc biệt, tạm biệt",
+        "mnemonicText": "Chia thịt ra thành 10.000 miếng bằng dao.",
+        "readings": "べつ / わか-れる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/separate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "竹",
+        "hanViet": "TRÚC",
+        "meaning": "trúc",
+        "mnemonicText": "Hình dạng của cây tre.",
+        "readings": "ちく / たか,たけ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/bamboo.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "合",
+        "hanViet": "HỢP",
+        "meaning": "thích hợp, hội họp, hợp lí",
+        "mnemonicText": "Cái hộp và nắp của nó vừa vặn với nhau.",
+        "readings": "ごう, が, か / あ-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/fit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "琴",
+        "hanViet": "CẦM",
+        "meaning": "đàn, độc huyền cầm",
+        "mnemonicText": "Câu trả lời của chúng tôi rất khớp giống như cái hộp tre và nắp của nó.",
+        "readings": "きん / こと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/answer.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "正",
+        "hanViet": "CHÍNH",
+        "meaning": "chính đáng, chính nghĩa, chân chính",
+        "mnemonicText": "Việc dừng lại khi đèn đỏ là việc làm đúng đắn.",
+        "readings": "せい, しょう / ただ-しい、まさ-に",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/right1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "同",
+        "hanViet": "ĐỒNG",
+        "meaning": "đồng nhất, tương đồng",
+        "mnemonicText": "Người ra kẻ vào đều sử dụng chung lối ra vào.",
+        "readings": "どう / おな-じ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/same.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "計",
+        "hanViet": "KÊ, KẾ",
+        "meaning": "thống kê; kế hoạch, kế toán",
+        "mnemonicText": "”Chúng ta hãy tính thời gian bằng cách đếm.”\n”1, 2, .......10.”",
+        "readings": "けい / はか-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/to_measure.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "京",
+        "hanViet": "KINH",
+        "meaning": "kinh đô, kinh thành",
+        "mnemonicText": "Căn nhà được xây trên đồi, nó trở thành thủ đô.",
+        "readings": "きょう, けい / みやこ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/capital.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "集",
+        "hanViet": "TẬP",
+        "meaning": "tập hợp, tụ tập",
+        "mnemonicText": "Những con chim tụ tập trên cây.",
+        "readings": "しゅう / あつ-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/gather.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "不",
+        "hanViet": "BẤT",
+        "meaning": "bất công, bất bình đẳng, bất tài",
+        "mnemonicText": "Không đúng.",
+        "readings": "ふ, ぶ / ず",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/non.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "便",
+        "hanViet": "TIỆN",
+        "meaning": "thuận tiện",
+        "mnemonicText": "Nếu thư đến trong vòng 1 ngày thì tiện lợi nhỉ.",
+        "readings": "べん, びん / たよ-り",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/convenient.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "以",
+        "hanViet": "DĨ",
+        "meaning": "dĩ tiền, dĩ vãng",
+        "mnemonicText": "Chỗ này là vạch xuất phát.",
+        "readings": "い / も-って",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai19/starting_point.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 20,
+    "title": "Bài 20",
+    "kanjis": [
+      {
+        "kanji": "場",
+        "hanViet": "TRƯỜNG",
+        "meaning": "hội trường, quảng trường",
+        "mnemonicText": "Chọn nơi có đất tốt và ánh sáng tốt này.",
+        "readings": "じょう / ば",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/place.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "戸",
+        "hanViet": "HỘ",
+        "meaning": "hộ khẩu",
+        "mnemonicText": "Hình dạng của cánh cửa.",
+        "readings": "こ / と",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/door.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "所",
+        "hanViet": "SỞ",
+        "meaning": "trụ sở",
+        "mnemonicText": "Để biết địa điểm tôi đã đánh dấu lên cánh cửa bằng rìu.",
+        "readings": "しょ / ところ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/place1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "屋",
+        "hanViet": "ỐC",
+        "meaning": "phòng ốc",
+        "mnemonicText": "Con người cần đất và mái nhà.",
+        "readings": "おく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/roof_shop.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "堂",
+        "hanViet": "ĐƯỜNG",
+        "meaning": "thực đường, thiên đường",
+        "mnemonicText": "Một toà nhà to trên đất.",
+        "readings": "どう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/hall.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "都",
+        "hanViet": "ĐÔ",
+        "meaning": "đô thị, đô thành",
+        "mnemonicText": "Một người đang đợi xe buýt lên thủ đô tại trạm xe buýt.",
+        "readings": "と, つ / みやこ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/metropolis.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "県",
+        "hanViet": "HUYỆN",
+        "meaning": "huyện, tỉnh",
+        "mnemonicText": "Quốc gia đang để mắt tới các tỉnh nhỏ.",
+        "readings": "けん / あがた,か-ける, がた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/prefecture.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "区",
+        "hanViet": "KHU",
+        "meaning": "khu vực, địa khu",
+        "mnemonicText": "Khu này được phân chia bởi 3 bức tường và 2 con đường.",
+        "readings": "く / 区分(くぶん)→區［區",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/zone.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "池",
+        "hanViet": "TRÌ",
+        "meaning": "cái ao",
+        "mnemonicText": "Có con tôm trong ao.",
+        "readings": "ち / いけ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/pond.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "発",
+        "hanViet": "PHÁT",
+        "meaning": "xuất phát, phát kiến, phát hiện, phát ngôn",
+        "mnemonicText": "Con người bắt đầu bước đi trên hai chân.",
+        "readings": "はつ, ほつ / あば-く］ 明るみに出す、放つ、起る→發［發",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/to_start_to_reveal.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "建",
+        "hanViet": "KIẾN",
+        "meaning": "kiến thiết, kiến tạo",
+        "mnemonicText": "Việc có gì đó để viết và thiết kế trước khi xây dựng toà nhà thì rất quan trọng.",
+        "readings": "けん, こん / た-てる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/build.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "物",
+        "hanViet": "VẬT",
+        "meaning": "động vật",
+        "mnemonicText": "Bò và cáo là những sinh vật.",
+        "readings": "ぶつ, もつ / もの",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/things.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "品",
+        "hanViet": "PHẨM",
+        "meaning": "sản phẩm",
+        "mnemonicText": "Hình dạng của 3 món hàng.",
+        "readings": "ひん / しな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/goods.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "旅",
+        "hanViet": "LỮ",
+        "meaning": "lữ hành, lữ khách",
+        "mnemonicText": "Hai người đang đi du lịch theo hướng dẫn viên cầm cờ.",
+        "readings": "りょ / たび",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/travel.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "通",
+        "hanViet": "THÔNG",
+        "meaning": "thông qua, thông hành, phổ thông",
+        "mnemonicText": "Tôi trèo lên hàng rào để đi học.",
+        "readings": "つう, つ / かよ-う、とお-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/commute.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "進",
+        "hanViet": "TIẾN",
+        "meaning": "thăng tiến, tiền tiến, tiến lên",
+        "mnemonicText": "Con chinh đang hướng về phía trước",
+        "readings": "しん / すす-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai20/advance.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 21,
+    "title": "Bài 21",
+    "kanjis": [
+      {
+        "kanji": "丸",
+        "hanViet": "HOÀN",
+        "meaning": "tròn",
+        "mnemonicText": "Tôi cuộn tròn mình lại.",
+        "readings": "がん / まる、まる-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/to_round.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "熱",
+        "hanViet": "NHIỆT",
+        "meaning": "nhiệt độ, nhiệt tình",
+        "mnemonicText": "Tôi cuộn tròn mình lại để sao cho hơi nóng không thoát ra.",
+        "readings": "ねつ / あつ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/heat.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "冷",
+        "hanViet": "LÃNH",
+        "meaning": "lạnh, lãnh đạm",
+        "mnemonicText": "Đang run lập cập trong cơn gió lạnh.",
+        "readings": "れい / つめ-たい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/freezing.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "甘",
+        "hanViet": "CAM",
+        "meaning": "ngọt, cam chịu",
+        "mnemonicText": "Có mật ong ngọt ở trong lọ.",
+        "readings": "かん / あま-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/sweet.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "汚",
+        "hanViet": "Ô",
+        "meaning": "ô nhiễm",
+        "mnemonicText": "Uống nước bẩn.",
+        "readings": "お / けが-す, けが-れる, けが-らわしい, よご-す, よご-れる, きたな-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/dirty.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "果",
+        "hanViet": "QUẢ",
+        "meaning": "hoa quả, thành quả, kết quả",
+        "mnemonicText": "Cây đang ra quả.",
+        "readings": "か / は-たす",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/fruit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "卵",
+        "hanViet": "NOÃN",
+        "meaning": "trứng",
+        "mnemonicText": "Hãy làm vỡ quả trứng!",
+        "readings": "らん / たまご",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/egg.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "皿",
+        "hanViet": "MÃNH",
+        "meaning": "đĩa",
+        "mnemonicText": "Đặt cái bánh lên trên dĩa.",
+        "readings": "- / さら",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/plate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "酒",
+        "hanViet": "TỬU",
+        "meaning": "rượu",
+        "mnemonicText": "Rượu ngon được làm từ nguồn nước sạch.",
+        "readings": "しゅ / き,さけ, さか-, さ, し",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/alcohol.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "塩",
+        "hanViet": "DIÊM",
+        "meaning": "muối",
+        "mnemonicText": "Thức ăn trên đĩa bị mặn.",
+        "readings": "えん / しお",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/salty.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "付",
+        "hanViet": "PHỤ",
+        "meaning": "phụ thuộc, phụ lục",
+        "mnemonicText": "Đính gì đó lên một người.",
+        "readings": "ふ / つ-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/attach.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "片",
+        "hanViet": "PHIẾN",
+        "meaning": "tấm",
+        "mnemonicText": "Một bên cây.",
+        "readings": "へん / かた-, かた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/one_side.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "焼",
+        "hanViet": "THIÊU",
+        "meaning": "thiêu đốt",
+        "mnemonicText": "Tôi đã đốt 30 thanh gỗ.",
+        "readings": "しょう / や-く］ 燃やす→燒［堯",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/burn.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "消",
+        "hanViet": "TIÊU",
+        "meaning": "tiêu diệt, tiêu hao, tiêu thất",
+        "mnemonicText": "Mặt trăng biến mất trong làn nước.",
+        "readings": "しょう / き-える、け-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/to_turn_off_disappear.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "固",
+        "hanViet": "CỐ",
+        "meaning": "ngoan cố, cố thủ",
+        "mnemonicText": "Những bức tường bao quanh nhà thờ cổ rất cứng và bền.",
+        "readings": "こ / かた-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/hard.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "個",
+        "hanViet": "CÁ",
+        "meaning": "cá nhân, cá thể",
+        "mnemonicText": "Mỗi cá nhân đều có một niềm tin vững chắc.",
+        "readings": "こ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/individual.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 22,
+    "title": "Bài 22",
+    "kanjis": [
+      {
+        "kanji": "笑",
+        "hanViet": "TIẾU",
+        "meaning": "cười",
+        "mnemonicText": "Con người cười lớn rằng [ke ke]",
+        "readings": "しょう / え-む、わら-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/laugh.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "泣",
+        "hanViet": "KHẤP",
+        "meaning": "khóc",
+        "mnemonicText": "Đang đứng khóc.",
+        "readings": "きゅう / な-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/cry.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "怒",
+        "hanViet": "NỘ",
+        "meaning": "thịnh nộ",
+        "mnemonicText": "Tôi đã bị người phụ nữ nổi giận đánh.",
+        "readings": "ど / いか-る、おこ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/angry.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "幸",
+        "hanViet": "HẠNH",
+        "meaning": "hạnh phúc, hạnh vận",
+        "mnemonicText": "Vì tôi có nhiều tiền yên （￥）ở dưới đất nên tôi rất hạnh phúc.",
+        "readings": "こう / さいわ-い、しあわ-せ、さち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/happy.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "悲",
+        "hanViet": "BI",
+        "meaning": "sầu bi, bi quan",
+        "mnemonicText": "Vì anh ấy đang ở trong nhà giam nên trái tim tôi rất đau khổ.",
+        "readings": "ひ / かな-しい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/sad.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "苦",
+        "hanViet": "KHỔ",
+        "meaning": "khổ cực, cùng khổ",
+        "mnemonicText": "Nếu ăn cỏ cũ sẽ bị đau.",
+        "readings": "く / くる-しい、にが-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/to_suffer.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "痛",
+        "hanViet": "THỐNG",
+        "meaning": "thống khổ",
+        "mnemonicText": "Vừa cảm nhận nỗi đau, vừa vượt qua hàng rào của bệnh viện.",
+        "readings": "つう / いた-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/pain.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "恥",
+        "hanViet": "SỈ",
+        "meaning": "sỉ nhục",
+        "mnemonicText": "Thật đáng xấu hổ nếu bạn không lắng nghe nhịp đập con tim mình.",
+        "readings": "ち / はじ、はじ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/shame.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "配",
+        "hanViet": "PHỐI",
+        "meaning": "phân phối, chi phối, phối ngẫu",
+        "mnemonicText": "Quỳ gối đưa rượu.",
+        "readings": "はい / くば-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/to_deliver.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "困",
+        "hanViet": "KHỐN",
+        "meaning": "khốn cùng",
+        "mnemonicText": "Gặp khó khăn vì có cái cây to.",
+        "readings": "こん / こま-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/trouble.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "辛",
+        "hanViet": "TÂN",
+        "meaning": "cay",
+        "mnemonicText": "Việc đứng trên cây sào rất khổ sở.",
+        "readings": "しん / から-い、つら-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/painful_spicy.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "眠",
+        "hanViet": "MIÊN",
+        "meaning": "thôi miên",
+        "mnemonicText": "Mọi người nhắm mắt lại ngủ.",
+        "readings": "みん / ねむ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/to_sleep.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "残",
+        "hanViet": "TÀN",
+        "meaning": "tàn dư, tàn tích, tàn đảng",
+        "mnemonicText": "Ba người chết và chỉ còn sót lại vũ khí của họ.",
+        "readings": "ざん / のこ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/remain.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "念",
+        "hanViet": "NIỆM",
+        "meaning": "ý niệm, tưởng niệm",
+        "mnemonicText": "Bây giờ （今）anh đang nghĩ về em.",
+        "readings": "ねん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/thought.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "感",
+        "hanViet": "CẢM",
+        "meaning": "cảm giác, cảm xúc, cảm tình",
+        "mnemonicText": "Tôi đã bị sốc khi nhìn thấy một người mang vũ khí.",
+        "readings": "かん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/felt.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "情",
+        "hanViet": "TÌNH",
+        "meaning": "tình cảm, tình thế",
+        "mnemonicText": "Tim tôi thấy buồn（青）.",
+        "readings": "じょう, せい / なさ-け",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai22/feel.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 23,
+    "title": "Bài 23",
+    "kanjis": [
+      {
+        "kanji": "覚",
+        "hanViet": "GIÁC",
+        "meaning": "cảm giác, giác ngộ",
+        "mnemonicText": "Nhớ những điều đã thấy ở trường.",
+        "readings": "かく / おぼ-える、さめ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/memorize.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "忘",
+        "hanViet": "VONG",
+        "meaning": "quên",
+        "mnemonicText": "Tôi đã quên xây bức tường bên phải.",
+        "readings": "ぼう / わす-れる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/forget.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "決",
+        "hanViet": "QUYẾT",
+        "meaning": "quyết định",
+        "mnemonicText": "Quyết định tiết kiệm nước.",
+        "readings": "けつ / き-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/decide.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "定",
+        "hanViet": "ĐỊNH",
+        "meaning": "thiết định, quyết định, định mệnh",
+        "mnemonicText": "Chúng ta hãy ấn định ngày dọn nhà.",
+        "readings": "てい, じょう / さだ-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_fix.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "比",
+        "hanViet": "TỈ",
+        "meaning": "so sánh, tỉ lệ, tỉ dụ",
+        "mnemonicText": "Cả hai đều là chữ 「ヒ」trong Katakana phải không? Chúng ta hãy thử so sánh chúng.",
+        "readings": "ひ / くら-べる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_compare.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "受",
+        "hanViet": "THỤ",
+        "meaning": "nhận, tiếp thụ",
+        "mnemonicText": "Truyền tay nhau nhận lấy vật.",
+        "readings": "じゅ / う-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_receive.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "授",
+        "hanViet": "THỤ",
+        "meaning": "đưa cho, truyền thụ, giáo thụ",
+        "mnemonicText": "Được chỉ bảo là việc nhận lấy cái gì đó từ người khác.",
+        "readings": "じゅ / さず-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_instruct.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "練",
+        "hanViet": "LUYỆN",
+        "meaning": "rèn luyện, luyện tập",
+        "mnemonicText": "Đệ tử đang chạy trên đường",
+        "readings": "れん / ね-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/elaborate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "徒",
+        "hanViet": "ĐỒ",
+        "meaning": "môn đồ, đồ đệ",
+        "mnemonicText": "Tôi đã luyện kéo sợi ở Đông Dương.",
+        "readings": "と / かち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/follow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "復",
+        "hanViet": "PHỤC",
+        "meaning": "phục thù, hồi phục",
+        "mnemonicText": "Con người cứ bước đi trên cùng con đường mỗi ngày.",
+        "readings": "ふく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/repetition.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "表",
+        "hanViet": "BIỂU",
+        "meaning": "biểu hiện, bảng biểu, biểu diễn",
+        "mnemonicText": "Con người cứ bước đi trên cùng con đường mỗi ngày.",
+        "readings": "ひょう / おもて、あらわ-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_express_surface.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "卒",
+        "hanViet": "TỐT",
+        "meaning": "tốt nghiệp",
+        "mnemonicText": "10 （十）người đã tốt nghiệp.",
+        "readings": "そつ / →卆［卆",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/to_granduate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "違",
+        "hanViet": "VI",
+        "meaning": "vi phạm, tương vi",
+        "mnemonicText": "Vì đường sá phức tạp nên dường như tôi đã đi nhầm đường.",
+        "readings": "い / ちが-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/different.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "役",
+        "hanViet": "DỊCH",
+        "meaning": "chức vụ, nô dịch",
+        "mnemonicText": "Nhiệm vụ của tôi là mang hòn đá.",
+        "readings": "えき, やく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/duty.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "皆",
+        "hanViet": "GIAI",
+        "meaning": "tất cả",
+        "mnemonicText": "Hãy so sánh （比）những người trên toà nhà màu trắng（白）. Mọi người trông giống nhau.",
+        "readings": "かい / みな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/everyone.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "彼",
+        "hanViet": "BỈ",
+        "meaning": "anh ta",
+        "mnemonicText": "Tôi đã định nắm lấy tay anh ấy nhưng anh ấy đã đi rồi.",
+        "readings": "ひ / かの、かれ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai23/he.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 24,
+    "title": "Bài 24",
+    "kanjis": [
+      {
+        "kanji": "全",
+        "hanViet": "TOÀN",
+        "meaning": "toàn bộ",
+        "mnemonicText": "Nhà vua thống trị toàn bộ những thứ có trên núi.",
+        "readings": "ぜん / すべ-て、まった-く、まっと-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/all.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "部",
+        "hanViet": "BỘ",
+        "meaning": "bộ môn, bộ phận",
+        "mnemonicText": "Một người đang đứng trong khu vực trạm chờ xe buýt.",
+        "readings": "ぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/section.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "必",
+        "hanViet": "TẤT",
+        "meaning": "tất nhiên, tất yếu",
+        "mnemonicText": "Anh nhất định sẽ bắn trúng tim em cho xem.",
+        "readings": "ひつ / かなら-ず",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/surely.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "要",
+        "hanViet": "YÊU, YẾU",
+        "meaning": "yêu cầu; chủ yếu",
+        "mnemonicText": "Phụ nữ cất những vật cần thiết trong giỏ.",
+        "readings": "よう / い-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/necessary.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "荷",
+        "hanViet": "HÀ",
+        "meaning": "hành lí",
+        "mnemonicText": "Tôi nhìn thấy cỏ từ hành lý đó. Có cái gì trong đó vậy?",
+        "readings": "か / に",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/baggage.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "由",
+        "hanViet": "DO",
+        "meaning": "tự do, lí do",
+        "mnemonicText": "Đừng mở cái hộp ra. Vì không chừng sẽ có vật gì đó đáng sợ xuất hiện ra.",
+        "readings": "ゆ, ゆう, ゆい / よし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/because.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "届",
+        "hanViet": "GIỚI",
+        "meaning": "đưa đến",
+        "mnemonicText": "Gói hàng đã được đưa đến nhà tôi.",
+        "readings": "- / とど-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/to_deliver1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "利",
+        "hanViet": "LỢI",
+        "meaning": "phúc lợi, lợi ích",
+        "mnemonicText": "Gặt lúa và thu lợi.",
+        "readings": "り / き-く、とし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/profit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "払",
+        "hanViet": "PHẤT",
+        "meaning": "trả tiền",
+        "mnemonicText": "Tôi sẽ trả tiền.",
+        "readings": "ふつ / はら-う］ 拭(ぬぐ)う、除き去る→拂［弗",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/to_pay.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "濯",
+        "hanViet": "TRẠC",
+        "meaning": "rửa",
+        "mnemonicText": "Thứ mấy bạn giặt đồ?",
+        "readings": "たく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/to_wash.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "寝",
+        "hanViet": "TẨM",
+        "meaning": "ngủ",
+        "mnemonicText": "Hai người đang ngủ.",
+        "readings": "しん / ね-る, ね-かす, い-ぬ, みたまや, や-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/to_sleep1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "踊",
+        "hanViet": "DŨNG",
+        "meaning": "nhảy múa",
+        "mnemonicText": "Hãy cử động đôi chân và nhảy múa trên hàng rào!",
+        "readings": "よう / おど-る］ 舞う→踴［勇",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/dance.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "活",
+        "hanViet": "HOẠT",
+        "meaning": "hoạt động, sinh hoạt",
+        "mnemonicText": "Uống nhiều nước và trở nên khoẻ mạnh.",
+        "readings": "かつ / い-きる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/active.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "末",
+        "hanViet": "MẠT",
+        "meaning": "kết thúc, mạt vận, mạt kì",
+        "mnemonicText": "Đời sống của cái cây （木）sắp sửa kết thúc.",
+        "readings": "まつ, ばつ / すえ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/end1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "宅",
+        "hanViet": "TRẠCH",
+        "meaning": "nhà ở",
+        "mnemonicText": "Tôi thích ở trong nhà mình.",
+        "readings": "たく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/house1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "祭",
+        "hanViet": "TẾ",
+        "meaning": "lễ hội",
+        "mnemonicText": "Vào ngày lễ, thịt được dâng lên bàn thờ.",
+        "readings": "さい / まつり、まつ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai24/festival.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 25,
+    "title": "Bài 25",
+    "kanjis": [
+      {
+        "kanji": "平",
+        "hanViet": "BÌNH",
+        "meaning": "hòa bình, bình đẳng, trung bình, bình thường",
+        "mnemonicText": "Bập bênh đang ngang bằng.",
+        "readings": "へい, びょう / たい-ら、ひら",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/flat_calm.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "和",
+        "hanViet": "HÒA",
+        "meaning": "hòa bình, tổng hòa, điều hòa",
+        "mnemonicText": "Đồ ăn Nhật đi kèm với cơm.",
+        "readings": "わ, お / やわ-らぐ、なご-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/peace.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "戦",
+        "hanViet": "CHIẾN",
+        "meaning": "chiến tranh, chiến đấu",
+        "mnemonicText": "Nhiều loại vũ khí được sử dụng trong chiến tranh.",
+        "readings": "せん / いくさ、たたか-う］ →戰［單",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/war.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "争",
+        "hanViet": "TRANH",
+        "meaning": "đấu tranh, chiến tranh, tranh luận, cạnh tranh",
+        "mnemonicText": "Người đó cầm vũ khí trong tay chuẩn bị đánh nhau.",
+        "readings": "そう / あらそ-う］ 競争(きょうそう)→爭［爭",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/conflict.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "政",
+        "hanViet": "CHÍNH",
+        "meaning": "chính phủ, chính sách, hành chính",
+        "mnemonicText": "Chính phủ nên thực thi những điều đúng đắn（正）.",
+        "readings": "せい, しょう / まつりごと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/government.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "治",
+        "hanViet": "TRỊ",
+        "meaning": "cai trị, trị an, trị bệnh",
+        "mnemonicText": "Tôi quản lý vùng ven biển.",
+        "readings": "ち, じ / おさ-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/to_govern_cure.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "経",
+        "hanViet": "KINH",
+        "meaning": "kinh tế, sách kinh, kinh độ",
+        "mnemonicText": "Khi thì cày đất, khi thì kéo sợi, thời gian khá dài đã trôi qua.",
+        "readings": "けい, きょう / へ-る、た-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/to_pass_through.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "済",
+        "hanViet": "TẾ",
+        "meaning": "kinh tế, cứu tế",
+        "mnemonicText": "Tôi đã viết câu văn lên bảng hiệu và hoàn tất công việc.",
+        "readings": "さい / す-む］ 終わる、助ける→濟［齊",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/to_finish.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "法",
+        "hanViet": "PHÁP",
+        "meaning": "pháp luật, phương pháp",
+        "mnemonicText": "Năm ngoái, các luật về nước đã được thi hành.",
+        "readings": "ほう, は, ほ / のり、のっと-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/law_method.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "律",
+        "hanViet": "LUẬT",
+        "meaning": "luật pháp",
+        "mnemonicText": "Tôi đã viết các luật lệ giao thông.",
+        "readings": "りつ, りち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/regulation.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "際",
+        "hanViet": "TẾ",
+        "meaning": "quốc tế",
+        "mnemonicText": "Lễ hội là sự kiện đặc biệt.",
+        "readings": "さい / きわ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/occasion.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "関",
+        "hanViet": "QUAN",
+        "meaning": "hải quan, quan hệ",
+        "mnemonicText": "Tôi đã mang quà tặng đến tận cổng để tạo mối quan hệ tốt.",
+        "readings": "かん / せき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/to_relate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "係",
+        "hanViet": "HỆ",
+        "meaning": "quan hệ, hệ số",
+        "mnemonicText": "Mọi người kết nối với nhau giống như sợi chỉ （糸）vậy.",
+        "readings": "けい / かか-る、かかり",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/to_connect.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "義",
+        "hanViet": "NGHĨA",
+        "meaning": "ý nghĩa, nghĩa lí, đạo nghĩa",
+        "mnemonicText": "Việc chiến đấu vì đàn cừu là việc làm đúng đắn!",
+        "readings": "ぎ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/rightenousnes.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "議",
+        "hanViet": "NGHỊ",
+        "meaning": "nghị luận, nghị sự",
+        "mnemonicText": "Đang thảo luận xem có đúng （義）hay không.",
+        "readings": "ぎ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/discuss.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "党",
+        "hanViet": "ĐẢNG",
+        "meaning": "đảng phái",
+        "mnemonicText": "Anh trai tôi （兄）gia nhập vào chính đảng.",
+        "readings": "とう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai25/political_party.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 26,
+    "title": "Bài 26",
+    "kanjis": [
+      {
+        "kanji": "遊",
+        "hanViet": "DU",
+        "meaning": "du hí, du lịch",
+        "mnemonicText": "Đứa bé cầm lá cờ chạy đi chơi.",
+        "readings": "ゆう, ゆ / あそ-ぶ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/to_play.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "泳",
+        "hanViet": "VỊNH",
+        "meaning": "bơi",
+        "mnemonicText": "Tôi bơi trong nước.",
+        "readings": "えい / およ-ぐ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/to_swim.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "疲",
+        "hanViet": "BÌ",
+        "meaning": "mệt",
+        "mnemonicText": "Anh ấy mệt lả nên đã đi bệnh viện.",
+        "readings": "ひ / つか-れる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/exhausted.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "暖",
+        "hanViet": "NOÃN",
+        "meaning": "ấm",
+        "mnemonicText": "Chắp tay cùng bạn bè ta sẽ thấy ấm áp.",
+        "readings": "だん / あたた-か",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/warm.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "涼",
+        "hanViet": "LƯƠNG",
+        "meaning": "mát",
+        "mnemonicText": "Mưa xuống làm mát thủ đô.",
+        "readings": "りょう / すず-しい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/cool.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "静",
+        "hanViet": "TĨNH",
+        "meaning": "bình tĩnh, trấn tĩnh",
+        "mnemonicText": "Xung đột kết thúc, bầu trời trong xanh và nơi chốn trở nên tĩnh lặng.",
+        "readings": "せい, じょう / しず-か",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/quiet.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "公",
+        "hanViet": "CÔNG",
+        "meaning": "công cộng, công thức, công tước",
+        "mnemonicText": "Làm việc vì công chúng rất vất vả.",
+        "readings": "こう / おおやけ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/public.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "園",
+        "hanViet": "VIÊN",
+        "meaning": "vườn, điền viên, hoa viên, công viên",
+        "mnemonicText": "Thứ bảy đi công viên nhảy múa.",
+        "readings": "えん / その",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/park.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "込",
+        "hanViet": "<VÀO>",
+        "meaning": "",
+        "mnemonicText": "Nhiều người đang đi vào. Chắc bên trong đông đúc lắm.",
+        "readings": "- / こ-む、こめ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/crowd.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "連",
+        "hanViet": "LIÊN",
+        "meaning": "liên tục, liên lạc",
+        "mnemonicText": "Lái xe trên con đường nối với nơi đến.",
+        "readings": "れん / つら-なる、つ-れる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/link.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "窓",
+        "hanViet": "SONG",
+        "meaning": "cửa sổ",
+        "mnemonicText": "Chúng ta hãy mở cửa sổ tâm hồn ra!",
+        "readings": "そう / まど, てんまど, けむだし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/window_counter.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "側",
+        "hanViet": "TRẮC",
+        "meaning": "bên cạnh",
+        "mnemonicText": "Để tiền và con dao bên cạnh.",
+        "readings": "そく / かわ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/side.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "葉",
+        "hanViet": "DIỆP",
+        "meaning": "lá, lạc diệp, hồng diệp",
+        "mnemonicText": "Thế giới bị phủ bởi cỏ và lá cây.",
+        "readings": "よう / は",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/leaves.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "景",
+        "hanViet": "CẢNH",
+        "meaning": "cảnh sắc, thắng cảnh, quang cảnh",
+        "mnemonicText": "Ngày trời （日）đẹp trông kinh thành（京） rất đẹp.",
+        "readings": "けい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/view.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "記",
+        "hanViet": "KÍ",
+        "meaning": "thư kí, kí sự, kí ức",
+        "mnemonicText": "Tôi đã viết những điều anh nói.",
+        "readings": "き / しる-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/write_down.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "形",
+        "hanViet": "HÌNH",
+        "meaning": "hình thức, hình hài, định hình",
+        "mnemonicText": "Tôi đang tạo hình cái gì đó.",
+        "readings": "けい,ぎょう / かた、かたち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai26/shape.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 27,
+    "title": "Bài 27",
+    "kanjis": [
+      {
+        "kanji": "吉",
+        "hanViet": "CÁT",
+        "meaning": "tốt lành, cát tường",
+        "mnemonicText": "Võ sĩ đạo hét to: ”Chúc may mắn!”",
+        "readings": "きち, きつ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/goodluck.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "結",
+        "hanViet": "KẾT",
+        "meaning": "đoàn kết, kết thúc",
+        "mnemonicText": "Kết chỉ làm bùa may mắn.",
+        "readings": "けつ / むす-ぶ、ゆ-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/to_tie.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "婚",
+        "hanViet": "HÔN",
+        "meaning": "kết hôn, hôn nhân",
+        "mnemonicText": "Phụ nữ đổi họ sau khi kết hôn.",
+        "readings": "こん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/marriage.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "共",
+        "hanViet": "CỘNG",
+        "meaning": "tổng cộng, cộng sản, công cộng",
+        "mnemonicText": "Cùng với bạn.",
+        "readings": "きょう / とも",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/together.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "供",
+        "hanViet": "CUNG",
+        "meaning": "cung cấp, cung phụng",
+        "mnemonicText": "Cùng nhau giúp đỡ bạn.",
+        "readings": "きょう, く / そな-える、とも",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/offer.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "両",
+        "hanViet": "LƯỠNG",
+        "meaning": "hai, lưỡng quốc",
+        "mnemonicText": "Người bán cá vác quang gánh trên cả hai vai.",
+        "readings": "りょう / →兩［兩",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/both.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "若",
+        "hanViet": "NHƯỢC",
+        "meaning": "trẻ, nhược niên",
+        "mnemonicText": "Hái những chiếc lá non bằng tay phải.",
+        "readings": "じゃく, にゃく / わか-い、も-し",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/young.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "老",
+        "hanViet": "LÃO",
+        "meaning": "già, lão luyện",
+        "mnemonicText": "Ông lão cầm cây gậy còn bà lão thì đang ngồi.",
+        "readings": "ろう / お-いる、ふ-ける",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/old_age.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "息",
+        "hanViet": "TỨC",
+        "meaning": "con trai, tử tức",
+        "mnemonicText": "Phải thở để giữ cho trái tim đập.",
+        "readings": "そく / いき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/breathe.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "娘",
+        "hanViet": "NƯƠNG",
+        "meaning": "cô nương",
+        "mnemonicText": "Con gái tôi là một đứa con tốt （良）.",
+        "readings": "- / むすめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/daughter.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "奥",
+        "hanViet": "ÁO",
+        "meaning": "trong cùng",
+        "mnemonicText": "Tôi bỏ gạo （米）vào trong cái hộp lớn （大）rồi cất nó vào trong góc.",
+        "readings": "うう / →奧［奧",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/back.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "将",
+        "hanViet": "TƯỚNG",
+        "meaning": "tướng quân",
+        "mnemonicText": "Tướng quân đang suy nghĩ về tương lai.",
+        "readings": "しょう / まさ-に］ 今にも、助ける、養う→將［將",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/commander.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "組",
+        "hanViet": "TỔ",
+        "meaning": "tổ hợp, tổ chức",
+        "mnemonicText": "Đi đến mộ tổ tiên cúng kiến.",
+        "readings": "そ / くみ、く-む",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/ancestor.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "育",
+        "hanViet": "DỤC",
+        "meaning": "giáo dục, dưỡng dục",
+        "mnemonicText": "Tôi vừa ngắm trăng vừa lớn lên.",
+        "readings": "いく / そだ-つ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/grew.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "性",
+        "hanViet": "TÍNH",
+        "meaning": "tính dục, giới tính, bản tính, tính chất",
+        "mnemonicText": "Giới tính sẽ được biết lúc sinh ra.",
+        "readings": "せい, しょう / さが",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/sex_character.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "招",
+        "hanViet": "CHIÊU",
+        "meaning": "chiêu đãi",
+        "mnemonicText": "Tôi sẽ chiêu đãi bữa ăn.",
+        "readings": "しょう / まね-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/invite.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 28,
+    "title": "Bài 28",
+    "kanjis": [
+      {
+        "kanji": "取",
+        "hanViet": "THỦ",
+        "meaning": "lấy, nhận",
+        "mnemonicText": "Đừng kéo tai tôi!",
+        "readings": "しゅ / と-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/take.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "最",
+        "hanViet": "TỐI",
+        "meaning": "nhất (tối cao, tối đa)",
+        "mnemonicText": "Bắt lấy ánh mặt trời là điều khó khăn nhất.",
+        "readings": "さい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/utmost.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "初",
+        "hanViet": "SƠ",
+        "meaning": "sơ cấp",
+        "mnemonicText": "Khi làm kimono thì trước tiên sẽ cắt vải bằng dao.",
+        "readings": "しょ / し,はじ-め, はじ-めて, はつ, はつ-, うい-, -そ-める, -ぞ-め, はっ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/first.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "番",
+        "hanViet": "PHIÊN",
+        "meaning": "thứ tự, phiên hiệu",
+        "mnemonicText": "Thay phiên nhau gặt lúa trên đồng.",
+        "readings": "ばん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/turn.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "歳",
+        "hanViet": "TUẾ",
+        "meaning": "tuổi, năm, tuế nguyệt",
+        "mnemonicText": "Hãy thôi hỏi tôi bao nhiêu tuổi!",
+        "readings": "さい, せい / とし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/age.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "枚",
+        "hanViet": "MAI",
+        "meaning": "tờ",
+        "mnemonicText": "Tôi đã làm một mảnh giấy từ cây.",
+        "readings": "まい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/sheet_of.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "冊",
+        "hanViet": "SÁCH",
+        "meaning": "quyển sách",
+        "mnemonicText": "Bó các tờ giấy làm thành một quyển sách.",
+        "readings": "さつ, さく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/counter%20for%20books.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "億",
+        "hanViet": "ỨC",
+        "meaning": "trăm triệu",
+        "mnemonicText": "Một trăm triệu người có ý chí （意）khác nhau của riêng từng người.",
+        "readings": "おく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/hundred_million.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "点",
+        "hanViet": "ĐIỂM",
+        "meaning": "điểm số, điểm hỏa",
+        "mnemonicText": "Đã ấn dấu 4 điểm.",
+        "readings": "てん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/point_dot.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "階",
+        "hanViet": "GIAI",
+        "meaning": "giai cấp, giai tầng",
+        "mnemonicText": "Mọi người （皆）đang ở trên xe buýt 2 tầng.",
+        "readings": "かい / きざはし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/floor.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "段",
+        "hanViet": "ĐOẠN",
+        "meaning": "giai đoạn",
+        "mnemonicText": "Làm cầu thang bằng đá.",
+        "readings": "だん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/stair.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "号",
+        "hanViet": "HIỆU",
+        "meaning": "phiên hiệu, tín hiệu, phù hiệu",
+        "mnemonicText": "Hãy nói to con số của bạn!",
+        "readings": "ごう / さけ-ぶ, よびな",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/number.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "倍",
+        "hanViet": "BỘI",
+        "meaning": "bội thu, bội số",
+        "mnemonicText": "Chiều cao của người có dáng cao gấp đôi chiều cao của người thấp.",
+        "readings": "ばい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/double.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "次",
+        "hanViet": "THỨ",
+        "meaning": "thứ nam, thứ nữ",
+        "mnemonicText": "Há to miệng và hét lên: ”Kế tiếp!”",
+        "readings": "じ, し / つぎ、つ-ぐ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/next.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "々",
+        "hanViet": "",
+        "meaning": "",
+        "mnemonicText": "Ký hiệu này biểu thị sự lặp lại.",
+        "readings": "",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/symbol_of_repetition.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "他",
+        "hanViet": "THA",
+        "meaning": "khác, tha hương, vị tha",
+        "mnemonicText": "Tôi muốn nuôi con thú cưng khác chứ không phải con bò cạp.",
+        "readings": "た / ほか",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/other.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 29,
+    "title": "Bài 29",
+    "kanjis": [
+      {
+        "kanji": "勝",
+        "hanViet": "THẮNG",
+        "meaning": "thắng lợi, thắng cảnh",
+        "mnemonicText": "Ngày thắng là thứ hai（月）, không phải thứ ba.",
+        "readings": "しょう / か-つ、まさ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/won.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "負",
+        "hanViet": "PHỤ",
+        "meaning": "âm, mang, phụ thương, phụ trách",
+        "mnemonicText": "Người thua sẽ trả tiền.",
+        "readings": "ふ / ま-ける, ま-かす, お-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/defeat.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "賛",
+        "hanViet": "TÁN",
+        "meaning": "tán đồng, tán thành",
+        "mnemonicText": "Mọi người đã tán thưởng những người chồng （夫）mang chiếc vỏ sò lớn về nhà.",
+        "readings": "さん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/praised.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "成",
+        "hanViet": "THÀNH",
+        "meaning": "thành tựu, hoàn thành, trở thành",
+        "mnemonicText": "Tôi hoàn thành sứ mệnh bằng việc sử dụng vũ khí.",
+        "readings": "せい, じょう / な-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/accomplished.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "絶",
+        "hanViet": "TUYỆT",
+        "meaning": "đoạn tuyệt, tuyệt diệu",
+        "mnemonicText": "Chỉ màu （色）này không được sản xuất nữa.",
+        "readings": "ぜつ / た-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/discontinue.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "対",
+        "hanViet": "ĐỐI",
+        "meaning": "đối diện, phản đối, đối với",
+        "mnemonicText": "Tôi phản đối cậu.",
+        "readings": "たい, つい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/oppose.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "続",
+        "hanViet": "TỤC",
+        "meaning": "tiếp tục",
+        "mnemonicText": "Tôi tiếp tục bán（売）chỉ（糸）.",
+        "readings": "ぞく / つづ-く",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/continue.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "辞",
+        "hanViet": "TỪ",
+        "meaning": "từ vựng, từ chức",
+        "mnemonicText": "Thật khổ sở （辛）để tra từ điển 1000 （千）từ.",
+        "readings": "じ / や-める",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/word_toresign.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "投",
+        "hanViet": "ĐẦU",
+        "meaning": "đầu tư, đầu cơ",
+        "mnemonicText": "Tôi ném đá bằng tay.",
+        "readings": "とう / な-げる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/to_throw.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "選",
+        "hanViet": "TUYỂN",
+        "meaning": "tuyển chọn",
+        "mnemonicText": "Tất cả mọi người cùng （共）chọn ra người lãnh đạo.",
+        "readings": "せん / えら-ぶ、え-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/choose.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "約",
+        "hanViet": "ƯỚC",
+        "meaning": "lời hứa (ước nguyện), ước tính",
+        "mnemonicText": "Hãy nắm một lượng chỉ （糸）thích hợp.",
+        "readings": "やく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/to_promise_approximate.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "束",
+        "hanViet": "THÚC",
+        "meaning": "bó (hoa)",
+        "mnemonicText": "Anh ấy cho tôi bó hoa.",
+        "readings": "そく / たば",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/bundle.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "守",
+        "hanViet": "THỦ",
+        "meaning": "cố thủ, bảo thủ",
+        "mnemonicText": "Chiếc chìa khoá này sẽ bảo vệ ngôi nhà.",
+        "readings": "しゅ, す / まも-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/protect.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "過",
+        "hanViet": "QUA, QUÁ",
+        "meaning": "thông qua; quá khứ, quá độ",
+        "mnemonicText": "Hãy đi qua toà nhà lớn ở con đường kia.",
+        "readings": "か / あやま-ち、す-ぎる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/pass.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "夢",
+        "hanViet": "MỘNG",
+        "meaning": "mơ",
+        "mnemonicText": "Tôi đã thấy một giấc mơ về thảo nguyên vào buổi chiều tà.",
+        "readings": "む / ゆめ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/dream.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "的",
+        "hanViet": "ĐÍCH",
+        "meaning": "mục đích, đích thực",
+        "mnemonicText": "Đó là tấm bia để bắn màu trắng （白）.",
+        "readings": "てき / まと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/target.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 30,
+    "title": "Bài 30",
+    "kanjis": [
+      {
+        "kanji": "飛",
+        "hanViet": "PHI",
+        "meaning": "bay, phi công, phi hành",
+        "mnemonicText": "Những con chim dang rộng cánh bay.",
+        "readings": "ひ / あす,と-ぶ, と-ばす, -と-ばす, とび",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/fly.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "機",
+        "hanViet": "CƠ",
+        "meaning": "cơ khí, thời cơ, phi cơ",
+        "mnemonicText": "Đã sử dụng máy gỗ để dệt vải từ sợi.",
+        "readings": "き / はた",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/machine_occasion.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "失",
+        "hanViet": "THẤT",
+        "meaning": "thất nghiệp, thất bại",
+        "mnemonicText": "Chồng tôi đang khóc vì mất việc .",
+        "readings": "しつ / うしな-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/lost.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "鉄",
+        "hanViet": "THIẾT",
+        "meaning": "sắt, thiết đạo, thiết giáp",
+        "mnemonicText": "Sắt mất （失）giá trị so với vàng（金）.",
+        "readings": "てつ / →銕［夷",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/iron.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "速",
+        "hanViet": "TỐC",
+        "meaning": "tốc độ, tăng tốc",
+        "mnemonicText": "Tôi sẽ nhanh chóng giao bó hoa đến.",
+        "readings": "そく / はや-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/quickly.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "遅",
+        "hanViet": "TRÌ",
+        "meaning": "muộn",
+        "mnemonicText": "Vì con cừu nghỉ ngơi nên đã bị trễ.",
+        "readings": "ち / じ,おく-れる, おく-らす, おそ-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/late.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "駐",
+        "hanViet": "TRÚ",
+        "meaning": "đồn trú",
+        "mnemonicText": "Ông chủ và con ngựa đang ở đây.",
+        "readings": "ちゅう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/to_stay.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "泊",
+        "hanViet": "BẠC",
+        "meaning": "ngủ lại",
+        "mnemonicText": "Tôi đã trọ ở khách sạn màu trắng ở cạnh bãi biển.",
+        "readings": "はく / と-まる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/to_stay_over.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "船",
+        "hanViet": "THUYỀN",
+        "meaning": "thuyền",
+        "mnemonicText": "Nghe nói con tàu này có thể chở 8 người.",
+        "readings": "せん / ふな、ふね",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/ship.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "座",
+        "hanViet": "TỌA",
+        "meaning": "chỗ ngồi, tọa đàm, tọa độ",
+        "mnemonicText": "Hai người ngồi trên đất.",
+        "readings": "ざ / すわ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/sit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "席",
+        "hanViet": "TỊCH",
+        "meaning": "chủ tịch, xuất tịch (tham gia)",
+        "mnemonicText": "Ở cửa hàng có 21 chỗ ngồi.",
+        "readings": "せき",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/seats.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "島",
+        "hanViet": "ĐẢO",
+        "meaning": "hải đảo",
+        "mnemonicText": "Con chim （鳥）đang nghỉ trên ngọn núi （山）ở đảo.",
+        "readings": "とう / しま］ →嶋嶌［鳥",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/island.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "陸",
+        "hanViet": "LỤC",
+        "meaning": "lục địa, lục quân",
+        "mnemonicText": "Ở chỗ này chỉ có trạm xe buýt.",
+        "readings": "りく",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/land1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "港",
+        "hanViet": "CẢNG",
+        "meaning": "hải cảng, không cảng",
+        "mnemonicText": "Tất cả chúng ta hãy tập hợp ở cảng.",
+        "readings": "こう / みなと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/port.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "橋",
+        "hanViet": "KIỀU",
+        "meaning": "cây cầu",
+        "mnemonicText": "Toà nhà và cầu xây bằng gỗ （木）.",
+        "readings": "きょう / はし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/bridge.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "交",
+        "hanViet": "GIAO",
+        "meaning": "giao hảo, giao hoán",
+        "mnemonicText": "Ba tôi đang băng qua giao lộ.",
+        "readings": "こう / まじ-わる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai30/crossing.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 31,
+    "title": "Bài 31",
+    "kanjis": [
+      {
+        "kanji": "申",
+        "hanViet": "THÂN",
+        "meaning": "thân thỉnh (xin)",
+        "mnemonicText": "Sấm sét đã nói là ”Tôi tên là Sấm Sét”.",
+        "readings": "しん / もう-す、さる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/tell.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "神",
+        "hanViet": "THẦN",
+        "meaning": "thần, thần thánh, thần dược",
+        "mnemonicText": "Cúng bái với Thần Sấm.",
+        "readings": "しん, じん / かみ、かん、こう",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/god.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "様",
+        "hanViet": "DẠNG",
+        "meaning": "đa dạng, hình dạng",
+        "mnemonicText": "Cái cây, con cừu, dòng nước tạo ra dáng vẻ thanh bình.",
+        "readings": "よう / さま",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/situation.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "信",
+        "hanViet": "TÍN",
+        "meaning": "uy tín, tín thác, thư tín",
+        "mnemonicText": "Tin những gì mọi người nói.",
+        "readings": "しん / まこと",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/believe.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "調",
+        "hanViet": "ĐIỀU, ĐIỆU",
+        "meaning": "điều tra, điều hòa; thanh điệu, giai điệu",
+        "mnemonicText": "Họ bảo sẽ điều tra xung quanh.",
+        "readings": "ちょう / しら-べる、ととの-える",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/to_investigate_tone.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "査",
+        "hanViet": "TRA",
+        "meaning": "điều tra",
+        "mnemonicText": "Đã kiểm tra bia mộ dưới cái cây.",
+        "readings": "さ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/inspect.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "相",
+        "hanViet": "TƯƠNG, TƯỚNG",
+        "meaning": "tương hỗ, tương tự, tương đương; thủ tướng",
+        "mnemonicText": "Hãy nhìn cái cây! Cái cây và bạn đang đối mặt nhau.",
+        "readings": "そう, しょう / あい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/each_other.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "談",
+        "hanViet": "ĐÀM",
+        "meaning": "hội đàm, đàm thoại",
+        "mnemonicText": "Chúng ta hãy trò chuyện bên đống lửa（火）",
+        "readings": "だん",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/talk.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "案",
+        "hanViet": "ÁN",
+        "meaning": "luận án, đề án",
+        "mnemonicText": "Bên gốc cây tôi bình tâm lập bản thảo.",
+        "readings": "あん / あん、あん-ずる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/plan.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "内",
+        "hanViet": "NỘI",
+        "meaning": "nội thành, nội bộ",
+        "mnemonicText": "Một người đi vào trong cái hộp lớn.",
+        "readings": "ない, だい / うち",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/inside.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "君",
+        "hanViet": "QUÂN",
+        "meaning": "quân chủ, quân vương",
+        "mnemonicText": "Nhà vua ra lệnh bằng cây trượng và miệng.",
+        "readings": "くん / きみ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/lord.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "達",
+        "hanViet": "ĐẠT",
+        "meaning": "đạt tới, điều đạt, thành đạt",
+        "mnemonicText": "Con cừu（羊） chở đất （土）cuối cùng đã đến nơi.",
+        "readings": "たつ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/to_reach.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "星",
+        "hanViet": "TINH",
+        "meaning": "hành tinh, tinh tú",
+        "mnemonicText": "Bạn có nghĩ rằng ngôi sao （生）được sinh ra từ mặt trời （日）không?",
+        "readings": "せい, しょう / ほし",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/star.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "雪",
+        "hanViet": "TUYẾT",
+        "meaning": "tuyết",
+        "mnemonicText": "”Mưa （雨）à?” ”Không phải, sờ thử xem, là tuyết đấy!”",
+        "readings": "せつ / ゆき、すす-ぐ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/snow.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "降",
+        "hanViet": "GIÁNG, HÀNG",
+        "meaning": "giáng trần; đầu hàng",
+        "mnemonicText": "Xuống ở trạm xe buýt đó.",
+        "readings": "こう / お-りる、ふ-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/get_off_to_descend.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "直",
+        "hanViet": "TRỰC",
+        "meaning": "trực tiếp, chính trực",
+        "mnemonicText": "”Nhìn kìa, nó bị hư đấy!” ”Chúng ta hãy sửa nó đi!”",
+        "readings": "ちょく, じき / ただ-ちに、なお-す",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/fix_direct.jpg",
+        "examples": []
+      }
+    ]
+  },
+  {
+    "lessonId": 32,
+    "title": "Bài 32",
+    "kanjis": [
+      {
+        "kanji": "危",
+        "hanViet": "NGUY",
+        "meaning": "nguy hiểm, nguy cơ",
+        "mnemonicText": "Hãy nhìn hòn đá trên dốc đứng kia! Thật nguy hiểm!",
+        "readings": "き / あや-うい、あぶ-ない",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/dangerous.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "険",
+        "hanViet": "HIỂM",
+        "meaning": "nguy hiểm, mạo hiểm, hiểm ác",
+        "mnemonicText": "Một người đang ngắm ngọn núi hiểm trở.",
+        "readings": "けん / けわ-しい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/steep.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "拾",
+        "hanViet": "THẬP",
+        "meaning": "nhặt",
+        "mnemonicText": "Tôi đã nhặt tờ 10000 yên tờ sọt rác.",
+        "readings": "しゅう, じゅう / ひろ-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/pickup.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "捨",
+        "hanViet": "XẢ",
+        "meaning": "vứt",
+        "mnemonicText": "Vứt rác vào thứ bảy.",
+        "readings": "しゃ / す-てる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/throw_away.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "戻",
+        "hanViet": "LỆ",
+        "meaning": "quay lại",
+        "mnemonicText": "Anh ấy đã lớn lên và trở về, bây giờ đang ở trước cửa.",
+        "readings": "れい / もど-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/to_return.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "吸",
+        "hanViet": "HẤP",
+        "meaning": "hô hấp, hấp thu",
+        "mnemonicText": "Hít khói thuốc vào.",
+        "readings": "きゅう / す-う",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/inhale.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "放",
+        "hanViet": "PHÓNG",
+        "meaning": "giải phóng, phóng hỏa, phóng lao",
+        "mnemonicText": "Được giải phóng dưới lá cờ.",
+        "readings": "ほう / はな-す、ほう-る",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/release.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "変",
+        "hanViet": "BIẾN",
+        "meaning": "biến đổi, biến thiên",
+        "mnemonicText": "Anh ta mặc trang phục kỳ quái.",
+        "readings": "へん / か-わる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/change_weird.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "歯",
+        "hanViet": "XỈ",
+        "meaning": "răng",
+        "mnemonicText": "Chúng ta hãy ngừng （止）nói chuyện và nhai kỹ cơm （米）bằng răng.",
+        "readings": "し / は",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/tooth.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "髪",
+        "hanViet": "PHÁT",
+        "meaning": "tóc",
+        "mnemonicText": "Bạn tôi （友）có mái tóc dài（長）.",
+        "readings": "はつ / がた,かみ, ひげ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/hair.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "絵",
+        "hanViet": "HỘI",
+        "meaning": "hội họa",
+        "mnemonicText": "Gặp nhau và thêu nên bức tranh này.",
+        "readings": "かい, え / え］ 絵画(かいが)→繪［會",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/picture1.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "横",
+        "hanViet": "HOÀNH",
+        "meaning": "tung hoành, hoành độ, hoành hành",
+        "mnemonicText": "Bọn trẻ đang chơi bên trong cái hộp ở cạnh gốc cây.",
+        "readings": "うう / よこ",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/beside.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "当",
+        "hanViet": "ĐƯƠNG, ĐÁNG",
+        "meaning": "chính đáng; đương thời, tương đương",
+        "mnemonicText": "Mũi tên đã trúng đích.",
+        "readings": "とう / あ-たる",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/to_hit.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "伝",
+        "hanViet": "TRUYỀN, TRUYỆN",
+        "meaning": "truyền đạt, truyền động; tự truyện",
+        "mnemonicText": "Hai （二）người truyền tải thông điệp.",
+        "readings": "でん / つた-える］ 口で取り次ぐ→傳［專",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/to_convey.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "細",
+        "hanViet": "TẾ",
+        "meaning": "tinh tế, tường tế, tế bào",
+        "mnemonicText": "Lúa trên đồng （田）mảnh như sợi chỉ（糸）.",
+        "readings": "さい / ほそ-い、こま-かい",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/thin.jpg",
+        "examples": []
+      },
+      {
+        "kanji": "無",
+        "hanViet": "VÔ",
+        "meaning": "hư vô, vô ý nghĩa",
+        "mnemonicText": "Trong cơn hoả hoạn căn nhà bị cháy không còn lại gì.",
+        "readings": "む, ぶ / な-い",
+        "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai32/none.jpg",
+        "examples": []
+      }
+    ]
+  }
+]

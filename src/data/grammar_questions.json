@@ -1,0 +1,2236 @@
+{
+  "fillInBlanks": [
+    {
+      "id": "fib_1",
+      "grammarId": 1,
+      "range": "1-20",
+      "questionJp": "<ruby>健康<rp>（</rp><rt>けんこう</rt><rp>）</rp></ruby>のため、<ruby>毎朝<rp>（</rp><rt>まいあさ</rt><rp>）</rp></ruby><ruby>牛乳<rp>（</rp><rt>ぎゅうにゅう</rt><rp>）</rp></ruby>を<ruby>飲<rp>（</rp><rt>の</rt><rp>）</rp></ruby>む_______。",
+      "translation": "Vì sức khỏe, sáng nào tôi cũng uống sữa.",
+      "choices": [
+        "～せい",
+        "～ことにしている",
+        "～らしい",
+        "～てほしい／もらいたい"
+      ],
+      "correctAnswer": "～ことにしている"
+    },
+    {
+      "id": "fib_2",
+      "grammarId": 2,
+      "range": "1-20",
+      "questionJp": "<ruby>本校<rp>（</rp><rt>ほんこう</rt><rp>）</rp></ruby>では、<ruby>教室<rp>（</rp><rt>きょうしつ</rt><rp>）</rp></ruby>では<ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby><ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>しか<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>せない_______。",
+      "translation": "Trường tôi quy định trong lớp chỉ được nói tiếng Nhật.",
+      "choices": [
+        "使役形を使った表現",
+        "～ことになっている",
+        "～から～にかけて",
+        "～せい"
+      ],
+      "correctAnswer": "～ことになっている"
+    },
+    {
+      "id": "fib_3",
+      "grammarId": 3,
+      "range": "1-20",
+      "questionJp": "このストーブは<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きく<ruby>傾<rp>（</rp><rt>かたむ</rt><rp>）</rp></ruby>くと、<ruby>自動的<rp>（</rp><rt>じどうてき</rt><rp>）</rp></ruby>に<ruby>火<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>が<ruby>消<rp>（</rp><rt>き</rt><rp>）</rp></ruby>える_______。",
+      "translation": "Cái lò sưởi này nếu nghiêng mạnh thì lửa tự động tắt.",
+      "choices": [
+        "～ようになっている",
+        "自動詞を使った表現",
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "～だらけ"
+      ],
+      "correctAnswer": "～ようになっている"
+    },
+    {
+      "id": "fib_4",
+      "grammarId": 4,
+      "range": "1-20",
+      "questionJp": "<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は<ruby>赤<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>いやピンクの_______、<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るい<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>が<ruby>好<rp>（</rp><rt>す</rt><rp>）</rp></ruby>きだ。",
+      "translation": "Tôi thích những màu sáng như đỏ hay hồng.",
+      "choices": [
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "～ような／ように",
+        "～ことになっている",
+        "～おかげ"
+      ],
+      "correctAnswer": "～ような／ように"
+    },
+    {
+      "id": "fib_5",
+      "grammarId": 5,
+      "range": "1-20",
+      "questionJp": "「<ruby>星<rp>（</rp><rt>ほし</rt><rp>）</rp></ruby>がたくさん<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ている。あしたも<ruby>晴<rp>（</rp><rt>は</rt><rp>）</rp></ruby>れ_______",
+      "translation": "Trời có nhiều sao. Có vẻ mai cũng sẽ nắng.",
+      "choices": [
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "～みたいだ",
+        "～ことになっている",
+        "～つもり"
+      ],
+      "correctAnswer": "～みたいだ"
+    },
+    {
+      "id": "fib_6",
+      "grammarId": 6,
+      "range": "1-20",
+      "questionJp": "<ruby>大山<rp>（</rp><rt>おおやま</rt><rp>）</rp></ruby>さんは<ruby>拾<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>ってきたネコを<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>てているそうだ。いかにも<ruby>動物<rp>（</rp><rt>どうぶつ</rt><rp>）</rp></ruby><ruby>好<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>きな<ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>_______。",
+      "translation": "Nghe nói ông Oyama nuôi một con mèo nhặt được. Đúng là người rất yêu động vật.",
+      "choices": [
+        "～らしい",
+        "自動詞を使った表現",
+        "～つもり",
+        "～ことにしている"
+      ],
+      "correctAnswer": "～らしい"
+    },
+    {
+      "id": "fib_7",
+      "grammarId": 7,
+      "range": "1-20",
+      "questionJp": "メールを<ruby>送<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>った_______だったが、<ruby>届<rp>（</rp><rt>とど</rt><rp>）</rp></ruby>いていなかった。",
+      "translation": "Tôi cứ tưởng đã gửi email rồi, nhưng hóa ra chưa gửi.",
+      "choices": [
+        "～ような／ように",
+        "自動詞を使った表現",
+        "～だらけ",
+        "～つもり"
+      ],
+      "correctAnswer": "～つもり"
+    },
+    {
+      "id": "fib_8",
+      "grammarId": 8,
+      "range": "1-20",
+      "questionJp": "<ruby>悲<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>しくて、<ruby>涙<rp>（</rp><rt>なみだ</rt><rp>）</rp></ruby>が<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>てきた。 (_______)",
+      "translation": "Buồn quá nên nước mắt cứ trào ra.",
+      "choices": [
+        "～らしい",
+        "～だらけ",
+        "縮約形（～ている／～でいる）",
+        "～てくる"
+      ],
+      "correctAnswer": "～てくる"
+    },
+    {
+      "id": "fib_9",
+      "grammarId": 9,
+      "range": "1-20",
+      "questionJp": "<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>には<ruby>長生<rp>（</rp><rt>ながい</rt><rp>）</rp></ruby>きしてもらいたい。 (_______)",
+      "translation": "Tôi muốn bố mẹ sống lâu.",
+      "choices": [
+        "～てほしい／もらいたい",
+        "縮約形（～ている／～でいる）",
+        "～ような／ように",
+        "～てくる"
+      ],
+      "correctAnswer": "～てほしい／もらいたい"
+    },
+    {
+      "id": "fib_10",
+      "grammarId": 10,
+      "range": "1-20",
+      "questionJp": "もし<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>が<ruby>医者<rp>（</rp><rt>いしゃ</rt><rp>）</rp></ruby>だったら、<ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>で<ruby>苦<rp>（</rp><rt>くる</rt><rp>）</rp></ruby>しむ<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>たちを<ruby>助<rp>（</rp><rt>たす</rt><rp>）</rp></ruby>けてあげられるのに。 (_______)",
+      "translation": "Nếu tôi là bác sĩ thì đã có thể giúp những người đang khổ vì bệnh tật.",
+      "choices": [
+        "～のではないだろうか／～ないかと思う",
+        "～せい",
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "～だらけ"
+      ],
+      "correctAnswer": "～ば／たら／と。。。たい／のに／よかった　など"
+    },
+    {
+      "id": "fib_11",
+      "grammarId": 11,
+      "range": "1-20",
+      "questionJp": "<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>どもが<ruby>習<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>いたいというので、ピアノを<ruby>習<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>わせることにした。 (_______)",
+      "translation": "Con nói muốn học nên tôi quyết định cho con học piano.",
+      "choices": [
+        "自動詞を使った表現",
+        "～み",
+        "～てくる",
+        "使役形を使った表現"
+      ],
+      "correctAnswer": "使役形を使った表現"
+    },
+    {
+      "id": "fib_12",
+      "grammarId": 12,
+      "range": "1-20",
+      "questionJp": "このかばんは<ruby>軽<rp>（</rp><rt>かる</rt><rp>）</rp></ruby>くてたくさん<ruby>入<rp>（</rp><rt>はい</rt><rp>）</rp></ruby>るので、<ruby>旅行<rp>（</rp><rt>りょこう</rt><rp>）</rp></ruby>に<ruby>便利<rp>（</rp><rt>べんり</rt><rp>）</rp></ruby>だ。 (_______)",
+      "translation": "Cái túi này nhẹ mà đựng được nhiều nên rất tiện khi đi du lịch.",
+      "choices": [
+        "～み",
+        "～のではないだろうか／～ないかと思う",
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "自動詞を使った表現"
+      ],
+      "correctAnswer": "自動詞を使った表現"
+    },
+    {
+      "id": "fib_13",
+      "grammarId": 13,
+      "range": "1-20",
+      "questionJp": "<ruby>丸<rp>（</rp><rt>まる</rt><rp>）</rp></ruby>_______を<ruby>帯<rp>（</rp><rt>お</rt><rp>）</rp></ruby>びた<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>・<ruby>青<rp>（</rp><rt>あお</rt><rp>）</rp></ruby>_______を<ruby>帯<rp>（</rp><rt>お</rt><rp>）</rp></ruby>びた<ruby>白<rp>（</rp><rt>しろ</rt><rp>）</rp></ruby>・<ruby>厚<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>_______のある<ruby>板<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>",
+      "translation": "Hình tròn hơi bo; màu trắng hơi pha xanh; tấm ván dày.",
+      "choices": [
+        "～ば／たら／と。。。たい／のに／よかった　など",
+        "～み",
+        "自動詞を使った表現",
+        "～ことになっている"
+      ],
+      "correctAnswer": "～み"
+    },
+    {
+      "id": "fib_14",
+      "grammarId": 14,
+      "range": "1-20",
+      "questionJp": "<ruby>道<rp>（</rp><rt>みち</rt><rp>）</rp></ruby>が<ruby>混<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいる。これでは<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わない_______。",
+      "translation": "Đường đông thế này, liệu có kịp giờ không nhỉ.",
+      "choices": [
+        "～だらけ",
+        "～ことになっている",
+        "～のではないだろうか／～ないかと思う",
+        "～つもり"
+      ],
+      "correctAnswer": "～のではないだろうか／～ないかと思う"
+    },
+    {
+      "id": "fib_15",
+      "grammarId": 15,
+      "range": "1-20",
+      "questionJp": "「あそこに<ruby>座<rp>（</rp><rt>すわ</rt><rp>）</rp></ruby>ってる<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>、だれ？」 (_______)",
+      "translation": "Người đang ngồi ở kia là ai thế?",
+      "choices": [
+        "自動詞を使った表現",
+        "～らしい",
+        "縮約形（～ている／～でいる）",
+        "～から～にかけて"
+      ],
+      "correctAnswer": "縮約形（～ている／～でいる）"
+    },
+    {
+      "id": "fib_16",
+      "grammarId": 16,
+      "range": "1-20",
+      "questionJp": "このあたりでは、４<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>から５<ruby>月<rp>（</rp><rt>がつ</rt><rp>）</rp></ruby>にかけていろいろな<ruby>花<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>が<ruby>咲<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>く。 (_______)",
+      "translation": "Ở vùng này, từ tháng 4 đến tháng 5 có nhiều loài hoa nở.",
+      "choices": [
+        "～ようになっている",
+        "～のではないだろうか／～ないかと思う",
+        "～から～にかけて",
+        "～せい"
+      ],
+      "correctAnswer": "～から～にかけて"
+    },
+    {
+      "id": "fib_17",
+      "grammarId": 17,
+      "range": "1-20",
+      "questionJp": "ほこり_______の<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>／<ruby>泥<rp>（</rp><rt>どろ</rt><rp>）</rp></ruby>_______のくつ",
+      "translation": "Phòng đầy bụi / giày đầy bùn.",
+      "choices": [
+        "使役形を使った表現",
+        "縮約形（～ている／～でいる）",
+        "～み",
+        "～だらけ"
+      ],
+      "correctAnswer": "～だらけ"
+    },
+    {
+      "id": "fib_18",
+      "grammarId": 18,
+      "range": "1-20",
+      "questionJp": "<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>が<ruby>早<rp>（</rp><rt>はや</rt><rp>）</rp></ruby>く<ruby>済<rp>（</rp><rt>す</rt><rp>）</rp></ruby>んだのは、<ruby>友<rp>（</rp><rt>とも</rt><rp>）</rp></ruby>だちが<ruby>手伝<rp>（</rp><rt>てつだ</rt><rp>）</rp></ruby>ってくれた_______だ。",
+      "translation": "Công việc xong sớm là nhờ bạn bè giúp đỡ.",
+      "choices": [
+        "～せい",
+        "～ようになっている",
+        "～おかげ",
+        "～つもり"
+      ],
+      "correctAnswer": "～おかげ"
+    },
+    {
+      "id": "fib_19",
+      "grammarId": 19,
+      "range": "1-20",
+      "questionJp": "あの<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>の_______でみんなが<ruby>迷惑<rp>（</rp><rt>めいわく</rt><rp>）</rp></ruby>している。",
+      "translation": "Vì người đó mà mọi người đều bị làm phiền.",
+      "choices": [
+        "～てほしい／もらいたい",
+        "～せい",
+        "～てくる",
+        "～ような／ように"
+      ],
+      "correctAnswer": "～せい"
+    },
+    {
+      "id": "fib_20",
+      "grammarId": 20,
+      "range": "1-20",
+      "questionJp": "<ruby>学生<rp>（</rp><rt>がくせい</rt><rp>）</rp></ruby>たちは、<ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>が<ruby>黒板<rp>（</rp><rt>こくばん</rt><rp>）</rp></ruby>に<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いたとおりにノートに<ruby>写<rp>（</rp><rt>うつ</rt><rp>）</rp></ruby>した。 (_______)",
+      "translation": "Học sinh chép vào vở đúng như những gì thầy viết trên bảng.",
+      "choices": [
+        "～おかげ",
+        "～ようになっている",
+        "～とおり（に）／～どおり（に）",
+        "～ことにしている"
+      ],
+      "correctAnswer": "～とおり（に）／～どおり（に）"
+    },
+    {
+      "id": "fib_21",
+      "grammarId": 21,
+      "range": "21-40",
+      "questionJp": "<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>は<ruby>大学<rp>（</rp><rt>だいがく</rt><rp>）</rp></ruby>で<ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>の<ruby>歴史<rp>（</rp><rt>れきし</rt><rp>）</rp></ruby>_______<ruby>勉強<rp>（</rp><rt>べんきょう</rt><rp>）</rp></ruby>したい。",
+      "translation": "Tôi muốn học về lịch sử Nhật Bản ở đại học.",
+      "choices": [
+        "～について／～につき",
+        "～くらいなら／～ぐらいなら",
+        "～とは／というのは",
+        "～に対し（て）"
+      ],
+      "correctAnswer": "～について／～につき"
+    },
+    {
+      "id": "fib_22",
+      "grammarId": 22,
+      "range": "21-40",
+      "questionJp": "「<ruby>申<rp>（</rp><rt>もう</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>み<ruby>手続<rp>（</rp><rt>てつづ</rt><rp>）</rp></ruby>きに<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>してお<ruby>伺<rp>（</rp><rt>うかが</rt><rp>）</rp></ruby>いしたいのですが」 (_______)",
+      "translation": "Tôi muốn hỏi về thủ tục đăng ký.",
+      "choices": [
+        "～に関し（て）",
+        "～たびに",
+        "～に違いない",
+        "～とは／というのは"
+      ],
+      "correctAnswer": "～に関し（て）"
+    },
+    {
+      "id": "fib_23",
+      "grammarId": 23,
+      "range": "21-40",
+      "questionJp": "<ruby>昼間<rp>（</rp><rt>ひるま</rt><rp>）</rp></ruby>に<ruby>比<rp>（</rp><rt>くら</rt><rp>）</rp></ruby>べて<ruby>深夜<rp>（</rp><rt>しんや</rt><rp>）</rp></ruby>は<ruby>電器<rp>（</rp><rt>でんき</rt><rp>）</rp></ruby><ruby>料金<rp>（</rp><rt>りょうきん</rt><rp>）</rp></ruby>が<ruby>安<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>い。 (_______)",
+      "translation": "So với ban ngày thì nửa đêm giá điện rẻ hơn.",
+      "choices": [
+        "～うちに",
+        "～に関し（て）",
+        "～に比べ（て）",
+        "～くらいなら／～ぐらいなら"
+      ],
+      "correctAnswer": "～に比べ（て）"
+    },
+    {
+      "id": "fib_24",
+      "grammarId": 24,
+      "range": "21-40",
+      "questionJp": "<ruby>今週<rp>（</rp><rt>こんしゅう</rt><rp>）</rp></ruby>はいつものテストに<ruby>加<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>えてレポート<ruby>提出<rp>（</rp><rt>ていしゅつ</rt><rp>）</rp></ruby>もあり、とても<ruby>忙<rp>（</rp><rt>いそが</rt><rp>）</rp></ruby>しい。 (_______)",
+      "translation": "Tuần này ngoài bài kiểm tra thường lệ còn phải nộp báo cáo nên rất bận.",
+      "choices": [
+        "～に加え（て）",
+        "～に比べ（て）",
+        "～にわたって／わたり",
+        "～くらい／～ぐらい"
+      ],
+      "correctAnswer": "～に加え（て）"
+    },
+    {
+      "id": "fib_25",
+      "grammarId": 25,
+      "range": "21-40",
+      "questionJp": "あの<ruby>二人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>はふたごなのに、<ruby>兄<rp>（</rp><rt>あに</rt><rp>）</rp></ruby>はおとなしいのに<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>して、<ruby>弟<rp>（</rp><rt>おとうと</rt><rp>）</rp></ruby>はよくしゃべる。 (_______)",
+      "translation": "Dù là sinh đôi nhưng anh thì trầm tính còn em thì nói nhiều.",
+      "choices": [
+        "～に比べ（て）",
+        "～くらい／～ぐらい",
+        "～を中心に／を中心として／を中心にして",
+        "～に対し（て）"
+      ],
+      "correctAnswer": "～に対し（て）"
+    },
+    {
+      "id": "fib_26",
+      "grammarId": 26,
+      "range": "21-40",
+      "questionJp": "バーゲンセールの_______、ついいらないものも<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>ってしまう。",
+      "translation": "Cứ mỗi lần sale là tôi lại lỡ mua cả những thứ không cần.",
+      "choices": [
+        "～くらい／～ぐらい",
+        "～に比べ（て）",
+        "～たびに",
+        "～に違いない"
+      ],
+      "correctAnswer": "～たびに"
+    },
+    {
+      "id": "fib_27",
+      "grammarId": 27,
+      "range": "21-40",
+      "questionJp": "_______<ruby>少々<rp>（</rp><rt>しょうしょう</rt><rp>）</rp></ruby><ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>くても、<ruby>質<rp>（</rp><rt>しつ</rt><rp>）</rp></ruby>のいいものが<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いたい。",
+      "translation": "Dù hơi đắt một chút tôi vẫn muốn mua đồ chất lượng tốt.",
+      "choices": [
+        "～に加え（て）",
+        "たとえ～ても",
+        "～に対し（て）",
+        "～にとって"
+      ],
+      "correctAnswer": "たとえ～ても"
+    },
+    {
+      "id": "fib_28",
+      "grammarId": 28,
+      "range": "21-40",
+      "questionJp": "「お<ruby>母<rp>（</rp><rt>かあ</rt><rp>）</rp></ruby>さん、お<ruby>父<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>さん、きょうは<ruby>遅<rp>（</rp><rt>おそ</rt><rp>）</rp></ruby>くなる_______」",
+      "translation": "Mẹ ơi, bố bảo hôm nay bố sẽ về muộn.",
+      "choices": [
+        "～による／より／よって／よっては",
+        "たとえ～ても",
+        "～って",
+        "～をはじめ"
+      ],
+      "correctAnswer": "～って"
+    },
+    {
+      "id": "fib_29",
+      "grammarId": 29,
+      "range": "21-40",
+      "questionJp": "ここから<ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>まで１０<ruby>分<rp>（</rp><rt>ふん</rt><rp>）</rp></ruby>ぐらいだ。 (_______)",
+      "translation": "Từ đây đến ga khoảng 10 phút.",
+      "choices": [
+        "～くらい／～ぐらい",
+        "～に加え（て）",
+        "～うちに",
+        "～に対し（て）"
+      ],
+      "correctAnswer": "～くらい／～ぐらい"
+    },
+    {
+      "id": "fib_30",
+      "grammarId": 30,
+      "range": "21-40",
+      "questionJp": "<ruby>途中<rp>（</rp><rt>とちゅう</rt><rp>）</rp></ruby>でやめる_______、<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めからやらないほうがいい。",
+      "translation": "Nếu bỏ dở giữa chừng thì thà đừng làm từ đầu còn hơn.",
+      "choices": [
+        "～による／より／よって／よっては",
+        "～に違いない",
+        "～たびに",
+        "～くらいなら／～ぐらいなら"
+      ],
+      "correctAnswer": "～くらいなら／～ぐらいなら"
+    },
+    {
+      "id": "fib_31",
+      "grammarId": 31,
+      "range": "21-40",
+      "questionJp": "<ruby>暗<rp>（</rp><rt>くら</rt><rp>）</rp></ruby>くならない_______（＝<ruby>暗<rp>（</rp><rt>くら</rt><rp>）</rp></ruby>くなるまえに／<ruby>明<rp>（</rp><rt>あか</rt><rp>）</rp></ruby>るい_______）<ruby>山<rp>（</rp><rt>やま</rt><rp>）</rp></ruby>を<ruby>下<rp>（</rp><rt>お</rt><rp>）</rp></ruby>りたい。",
+      "translation": "Tôi muốn xuống núi trong khi trời chưa tối.",
+      "choices": [
+        "～うちに",
+        "～にとって",
+        "たとえ～ても",
+        "～くらい／～ぐらい"
+      ],
+      "correctAnswer": "～うちに"
+    },
+    {
+      "id": "fib_32",
+      "grammarId": 32,
+      "range": "21-40",
+      "questionJp": "<ruby>駅前<rp>（</rp><rt>えきまえ</rt><rp>）</rp></ruby>を<ruby>中心<rp>（</rp><rt>ちゅうしん</rt><rp>）</rp></ruby>に<ruby>再開発<rp>（</rp><rt>さいかいはつ</rt><rp>）</rp></ruby>が<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>められ、<ruby>新<rp>（</rp><rt>あたら</rt><rp>）</rp></ruby>しいビルが<ruby>次々<rp>（</rp><rt>つぎつぎ</rt><rp>）</rp></ruby>と<ruby>建<rp>（</rp><rt>た</rt><rp>）</rp></ruby>てられている。 (_______)",
+      "translation": "Việc tái phát triển đã được tiến hành lấy khu vực trước nhà ga làm trung tâm, và các tòa nhà mới được xây dựng liên tiếp.",
+      "choices": [
+        "～を中心に／を中心として／を中心にして",
+        "～に関し（て）",
+        "～について／～につき",
+        "～にとって"
+      ],
+      "correctAnswer": "～を中心に／を中心として／を中心にして"
+    },
+    {
+      "id": "fib_33",
+      "grammarId": 33,
+      "range": "21-40",
+      "questionJp": "<ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby>の<ruby>携帯<rp>（</rp><rt>けいたい</rt><rp>）</rp></ruby><ruby>電話<rp>（</rp><rt>でんわ</rt><rp>）</rp></ruby>にはカメラ_______として、いろいろな<ruby>機能<rp>（</rp><rt>きのう</rt><rp>）</rp></ruby>がついている。",
+      "translation": "Điện thoại di động gần đây có rất nhiều tính năng chẳng hạn như camera.",
+      "choices": [
+        "～に違いない",
+        "～に対し（て）",
+        "～にとって",
+        "～をはじめ"
+      ],
+      "correctAnswer": "～をはじめ"
+    },
+    {
+      "id": "fib_34",
+      "grammarId": 34,
+      "range": "21-40",
+      "questionJp": "<ruby>目上<rp>（</rp><rt>めうえ</rt><rp>）</rp></ruby>の<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>に<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>しては<ruby>敬語<rp>（</rp><rt>けいご</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>わなければならない。 (_______)",
+      "translation": "Đối với sếp phải sử dụng kính ngữ.",
+      "choices": [
+        "～くらいなら／～ぐらいなら",
+        "～うちに",
+        "～に比べ（て）",
+        "～に対し（て）"
+      ],
+      "correctAnswer": "～に対し（て）"
+    },
+    {
+      "id": "fib_35",
+      "grammarId": 35,
+      "range": "21-40",
+      "questionJp": "<ruby>近代<rp>（</rp><rt>きんだい</rt><rp>）</rp></ruby><ruby>工業<rp>（</rp><rt>こうぎょう</rt><rp>）</rp></ruby>はヨーロッパ_______<ruby>誕生<rp>（</rp><rt>たんじょう</rt><rp>）</rp></ruby>した。",
+      "translation": "Nền công nghiệp cận đại ra đời ở Châu Âu.",
+      "choices": [
+        "～に比べ（て）",
+        "～くらいなら／～ぐらいなら",
+        "～に違いない",
+        "～において"
+      ],
+      "correctAnswer": "～において"
+    },
+    {
+      "id": "fib_36",
+      "grammarId": 36,
+      "range": "21-40",
+      "questionJp": "<ruby>国立<rp>（</rp><rt>こくりつ</rt><rp>）</rp></ruby><ruby>競技場<rp>（</rp><rt>きょうぎじょう</rt><rp>）</rp></ruby>では２<ruby>週間<rp>（</rp><rt>しゅうかん</rt><rp>）</rp></ruby>_______<ruby>熱戦<rp>（</rp><rt>ねっせん</rt><rp>）</rp></ruby>が<ruby>繰<rp>（</rp><rt>く</rt><rp>）</rp></ruby>り<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>げられた。",
+      "translation": "Một trò chơi thú vị đã được tổ chức ở sân vận động quốc gia trong 2 tuần.",
+      "choices": [
+        "～にとって",
+        "～に関し（て）",
+        "～に違いない",
+        "～にわたって／わたり"
+      ],
+      "correctAnswer": "～にわたって／わたり"
+    },
+    {
+      "id": "fib_37",
+      "grammarId": 37,
+      "range": "21-40",
+      "questionJp": "<ruby>東京<rp>（</rp><rt>とうきょう</rt><rp>）</rp></ruby>は<ruby>若者<rp>（</rp><rt>わかもの</rt><rp>）</rp></ruby>_______は<ruby>刺激<rp>（</rp><rt>しげき</rt><rp>）</rp></ruby>のある<ruby>魅力的<rp>（</rp><rt>みりょくてき</rt><rp>）</rp></ruby>な<ruby>街<rp>（</rp><rt>まち</rt><rp>）</rp></ruby>だ。",
+      "translation": "Tokyo là thành phố đầy sức hút đối với giới trẻ.",
+      "choices": [
+        "～において",
+        "～くらいなら／～ぐらいなら",
+        "～にとって",
+        "～くらい／～ぐらい"
+      ],
+      "correctAnswer": "～にとって"
+    },
+    {
+      "id": "fib_38",
+      "grammarId": 38,
+      "range": "21-40",
+      "questionJp": "<ruby>森林<rp>（</rp><rt>しんりん</rt><rp>）</rp></ruby>の<ruby>伐採<rp>（</rp><rt>ばっさい</rt><rp>）</rp></ruby>により、<ruby>世界<rp>（</rp><rt>せかい</rt><rp>）</rp></ruby><ruby>各地<rp>（</rp><rt>かくち</rt><rp>）</rp></ruby>で<ruby>砂漠化<rp>（</rp><rt>さばくか</rt><rp>）</rp></ruby><ruby>現象<rp>（</rp><rt>げんしょう</rt><rp>）</rp></ruby>が<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby>こっている。 (_______)",
+      "translation": "Do việc chặt phá rừng, hiện tượng sa mạc hóa đang xảy ra ở khắp nơi trên thế giới.",
+      "choices": [
+        "～をはじめ",
+        "～において",
+        "～による／より／よって／よっては",
+        "～に違いない"
+      ],
+      "correctAnswer": "～による／より／よって／よっては"
+    },
+    {
+      "id": "fib_39",
+      "grammarId": 39,
+      "range": "21-40",
+      "questionJp": "<ruby>夜<rp>（</rp><rt>よる</rt><rp>）</rp></ruby>になっても<ruby>電気<rp>（</rp><rt>でんき</rt><rp>）</rp></ruby>がつかない。きっと<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>かけているに<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いない。 (_______)",
+      "translation": "Trời tối rồi mà điện không bật. Chắc chắn họ ra ngoài rồi.",
+      "choices": [
+        "～に違いない",
+        "～に加え（て）",
+        "～に関し（て）",
+        "～くらい／～ぐらい"
+      ],
+      "correctAnswer": "～に違いない"
+    },
+    {
+      "id": "fib_40",
+      "grammarId": 40,
+      "range": "21-40",
+      "questionJp": "<ruby>著者<rp>（</rp><rt>ちょしゃ</rt><rp>）</rp></ruby>というのはその<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>人<rp>（</rp><rt>ひと</rt><rp>）</rp></ruby>のことです。 (_______)",
+      "translation": "Tác giả là người viết cuốn sách.",
+      "choices": [
+        "～たびに",
+        "～に関し（て）",
+        "たとえ～ても",
+        "～とは／というのは"
+      ],
+      "correctAnswer": "～とは／というのは"
+    },
+    {
+      "id": "fib_41",
+      "grammarId": 41,
+      "range": "41-60",
+      "questionJp": "<ruby>一口<rp>（</rp><rt>ひとくち</rt><rp>）</rp></ruby><ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べたとたん、まずくて<ruby>吐<rp>（</rp><rt>は</rt><rp>）</rp></ruby>き<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>した。 (_______)",
+      "translation": "Ngay khi vừa bỏ vào miệng một miếng, tôi đã nhè ra ngay vì quá tệ.",
+      "choices": [
+        "はもちろん／もとより",
+        "～たところ",
+        "～たとたん（に）",
+        "～てからでないと／なければ。。。ない"
+      ],
+      "correctAnswer": "～たとたん（に）"
+    },
+    {
+      "id": "fib_42",
+      "grammarId": 42,
+      "range": "41-60",
+      "questionJp": "<ruby>試験<rp>（</rp><rt>しけん</rt><rp>）</rp></ruby>が<ruby>近<rp>（</rp><rt>ちか</rt><rp>）</rp></ruby>づくにつれて、だんだん<ruby>心配<rp>（</rp><rt>しんぱい</rt><rp>）</rp></ruby>になってきた。 (_______)",
+      "translation": "Kì thi đang đến gần và tôi thấy lo lắng dần.",
+      "choices": [
+        "～て以来",
+        "～一方だ",
+        "～につれ（て）",
+        "～ということだ"
+      ],
+      "correctAnswer": "～につれ（て）"
+    },
+    {
+      "id": "fib_43",
+      "grammarId": 43,
+      "range": "41-60",
+      "questionJp": "<ruby>北半球<rp>（</rp><rt>きたはんきゅう</rt><rp>）</rp></ruby>では<ruby>北<rp>（</rp><rt>きた</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く_______<ruby>気温<rp>（</rp><rt>きおん</rt><rp>）</rp></ruby>が<ruby>下<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>がる。",
+      "translation": "Ở bắc bán cầu nếu đi về phía bắc nhiệt độ giảm dần.",
+      "choices": [
+        "～もの（もん）",
+        "～たところ",
+        "にしたがって／したがい",
+        "～ことはない"
+      ],
+      "correctAnswer": "にしたがって／したがい"
+    },
+    {
+      "id": "fib_44",
+      "grammarId": 44,
+      "range": "41-60",
+      "questionJp": "<ruby>着替<rp>（</rp><rt>きが</rt><rp>）</rp></ruby>えをしている<ruby>_______<rp>（</rp><rt>さいちゅう</rt><rp>）</rp></ruby>に<ruby>玄関<rp>（</rp><rt>げんかん</rt><rp>）</rp></ruby>のチャイムが<ruby>鳴<rp>（</rp><rt>な</rt><rp>）</rp></ruby>った。",
+      "translation": "Trong khi tôi đang thay quần áo thì chuông cửa ra vào vang lên.",
+      "choices": [
+        "～てからでないと／なければ。。。ない",
+        "～につれ（て）",
+        "～しかない／ほかない／よりない／よりほかない／ほかしかたがない",
+        "～最中"
+      ],
+      "correctAnswer": "～最中"
+    },
+    {
+      "id": "fib_45",
+      "grammarId": 45,
+      "range": "41-60",
+      "questionJp": "<ruby>実物<rp>（</rp><rt>じつぶつ</rt><rp>）</rp></ruby>を<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>_______<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>うかどうかは<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>められない。",
+      "translation": "Trừ khi sau khi xem tận mắt, tôi không thể quyết định mua nó hay không.",
+      "choices": [
+        "～ものか",
+        "～最中",
+        "～てからでないと／なければ。。。ない",
+        "はもちろん／もとより"
+      ],
+      "correctAnswer": "～てからでないと／なければ。。。ない"
+    },
+    {
+      "id": "fib_46",
+      "grammarId": 46,
+      "range": "41-60",
+      "questionJp": "<ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>へ<ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>て<ruby>以来<rp>（</rp><rt>いらい</rt><rp>）</rp></ruby>、<ruby>忙<rp>（</rp><rt>いそが</rt><rp>）</rp></ruby>しくてまだ<ruby>一度<rp>（</rp><rt>いちど</rt><rp>）</rp></ruby>も<ruby>帰国<rp>（</rp><rt>きこく</rt><rp>）</rp></ruby>していない。 (_______)",
+      "translation": "Kể từ khi đến Nhật, do bận rộn nên tôi chưa một lần trở về nước.",
+      "choices": [
+        "～一方だ",
+        "～て以来",
+        "～もの（もん）",
+        "はもちろん／もとより"
+      ],
+      "correctAnswer": "～て以来"
+    },
+    {
+      "id": "fib_47",
+      "grammarId": 47,
+      "range": "41-60",
+      "questionJp": "<ruby>不況<rp>（</rp><rt>ふきょう</rt><rp>）</rp></ruby>のせいで<ruby>収入<rp>（</rp><rt>しゅうにゅう</rt><rp>）</rp></ruby>が<ruby>減<rp>（</rp><rt>へ</rt><rp>）</rp></ruby>った。<ruby>貯金<rp>（</rp><rt>ちょきん</rt><rp>）</rp></ruby>も<ruby>減<rp>（</rp><rt>へ</rt><rp>）</rp></ruby>る<ruby>一方<rp>（</rp><rt>いっぽう</rt><rp>）</rp></ruby>だ。 (_______)",
+      "translation": "Thu nhập giảm do suy thoái kinh tế. Tiền gửi tiết kiệm cũng ngày càng giảm.",
+      "choices": [
+        "～ものか",
+        "～一方だ",
+        "～につれ（て）",
+        "～ところに／へ／を／で"
+      ],
+      "correctAnswer": "～一方だ"
+    },
+    {
+      "id": "fib_48",
+      "grammarId": 48,
+      "range": "41-60",
+      "questionJp": "かさを<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っていなかったので、ぬれて<ruby>帰<rp>（</rp><rt>かえ</rt><rp>）</rp></ruby>る_______。",
+      "translation": "Vì tôi không mang ô nên chỉ còn cách đội mưa về.",
+      "choices": [
+        "はもちろん／もとより",
+        "～一方だ",
+        "～もの（もん）",
+        "～しかない／ほかない／よりない／よりほかない／ほかしかたがない"
+      ],
+      "correctAnswer": "～しかない／ほかない／よりない／よりほかない／ほかしかたがない"
+    },
+    {
+      "id": "fib_49",
+      "grammarId": 49,
+      "range": "41-60",
+      "questionJp": "<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>の<ruby>経営<rp>（</rp><rt>けいえい</rt><rp>）</rp></ruby>が<ruby>悪化<rp>（</rp><rt>あっか</rt><rp>）</rp></ruby>して、ボーナス_______<ruby>給料<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby>も<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ない<ruby>状態<rp>（</rp><rt>じょうたい</rt><rp>）</rp></ruby>だ。",
+      "translation": "Do tình hình kinh doanh của công ty mà tiền thưởng thì đương nhiên rồi, đến tiền lương còn chẳng có.",
+      "choices": [
+        "にしたがって／したがい",
+        "～ものだから／もので",
+        "～たところ",
+        "はもちろん／もとより"
+      ],
+      "correctAnswer": "はもちろん／もとより"
+    },
+    {
+      "id": "fib_50",
+      "grammarId": 50,
+      "range": "41-60",
+      "questionJp": "<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>い<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby>の_______クリーニング<ruby>屋<rp>（</rp><rt>や</rt><rp>）</rp></ruby>に<ruby>寄<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>って、できあがった<ruby>洗濯物<rp>（</rp><rt>せんたくもの</rt><rp>）</rp></ruby>を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>け<ruby>取<rp>（</rp><rt>と</rt><rp>）</rp></ruby>ってきた。",
+      "translation": "Nhân tiện mua sắm thì tôi ghé qua tiệm giặt là lấy quần áo giặt xong rồi.",
+      "choices": [
+        "～ところに／へ／を／で",
+        "～ものか",
+        "～ついでに",
+        "～ということだ"
+      ],
+      "correctAnswer": "～ついでに"
+    },
+    {
+      "id": "fib_51",
+      "grammarId": 51,
+      "range": "41-60",
+      "questionJp": "<ruby>長期<rp>（</rp><rt>ちょうき</rt><rp>）</rp></ruby><ruby>予報<rp>（</rp><rt>よほう</rt><rp>）</rp></ruby>によると、<ruby>今年<rp>（</rp><rt>ことし</rt><rp>）</rp></ruby>の<ruby>夏<rp>（</rp><rt>なつ</rt><rp>）</rp></ruby>は<ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>い_______。",
+      "translation": "Theo dự báo dài hạn, mùa hè năm nay sẽ nóng.",
+      "choices": [
+        "～ついでに",
+        "～ところに／へ／を／で",
+        "こと",
+        "～ということだ"
+      ],
+      "correctAnswer": "～ということだ"
+    },
+    {
+      "id": "fib_52",
+      "grammarId": 52,
+      "range": "41-60",
+      "questionJp": "「<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>は<ruby>十分<rp>（</rp><rt>じゅうぶん</rt><rp>）</rp></ruby>にあるから、そんなに<ruby>急<rp>（</rp><rt>いそ</rt><rp>）</rp></ruby>ぐ_______",
+      "translation": "「Vì còn đủ thời gian nên không cần phải gấp gáp thế đâu」",
+      "choices": [
+        "～てからでないと／なければ。。。ない",
+        "～ことはない",
+        "～たとたん（に）",
+        "～一方だ"
+      ],
+      "correctAnswer": "～ことはない"
+    },
+    {
+      "id": "fib_53",
+      "grammarId": 53,
+      "range": "41-60",
+      "questionJp": "あしたは８<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>までに<ruby>来<rp>（</rp><rt>く</rt><rp>）</rp></ruby>る_______。<ruby>時間<rp>（</rp><rt>じかん</rt><rp>）</rp></ruby>に<ruby>遅<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>れない_______。",
+      "translation": "Cậu phải đến trước 8 giờ ngày mai. Đừng đến trễ đấy.",
+      "choices": [
+        "～ものだから／もので",
+        "～最中",
+        "～ものか",
+        "こと"
+      ],
+      "correctAnswer": "こと"
+    },
+    {
+      "id": "fib_54",
+      "grammarId": 54,
+      "range": "41-60",
+      "questionJp": "なっとうは、<ruby>食<rp>（</rp><rt>た</rt><rp>）</rp></ruby>べ_______が、あまり<ruby>好<rp>（</rp><rt>す</rt><rp>）</rp></ruby>きではない。",
+      "translation": "Không phải tôi không thể ăn được đậu tương thối nhưng không thích nó lắm.",
+      "choices": [
+        "～たとたん（に）",
+        "～一方だ",
+        "～ないことはない／もない",
+        "～ものだから／もので"
+      ],
+      "correctAnswer": "～ないことはない／もない"
+    },
+    {
+      "id": "fib_55",
+      "grammarId": 55,
+      "range": "41-60",
+      "questionJp": "「<ruby>肉体<rp>（</rp><rt>にくたい</rt><rp>）</rp></ruby><ruby>労働<rp>（</rp><rt>ろうどう</rt><rp>）</rp></ruby>のアルバイトはぼくには<ruby>無理<rp>（</rp><rt>むり</rt><rp>）</rp></ruby>だよ。そんなに<ruby>体力<rp>（</rp><rt>たいりょく</rt><rp>）</rp></ruby>ないもん」 (_______)",
+      "translation": "「Làm thêm với công việc lao động chân tay thì thật khó với tôi. Vì thể lực của tôi yếu」",
+      "choices": [
+        "～ことはない",
+        "～最中",
+        "～もの（もん）",
+        "～たとたん（に）"
+      ],
+      "correctAnswer": "～もの（もん）"
+    },
+    {
+      "id": "fib_56",
+      "grammarId": 56,
+      "range": "41-60",
+      "questionJp": "「なぜ<ruby>遅刻<rp>（</rp><rt>ちこく</rt><rp>）</rp></ruby>したのですか」「すみません、<ruby>事故<rp>（</rp><rt>じこ</rt><rp>）</rp></ruby>で<ruby>電車<rp>（</rp><rt>でんしゃ</rt><rp>）</rp></ruby>が<ruby>止<rp>（</rp><rt>と</rt><rp>）</rp></ruby>まってしまったものですから」 (_______)",
+      "translation": "「Sao cậu đến trễ thế」「Xin lỗi. Vì sự cố mà xe điện dừng lại giữa chừng」",
+      "choices": [
+        "～しかない／ほかない／よりない／よりほかない／ほかしかたがない",
+        "～ものだから／もので",
+        "～てからでないと／なければ。。。ない",
+        "～たところ"
+      ],
+      "correctAnswer": "～ものだから／もので"
+    },
+    {
+      "id": "fib_57",
+      "grammarId": 57,
+      "range": "41-60",
+      "questionJp": "あんなまずい<ruby>店<rp>（</rp><rt>みせ</rt><rp>）</rp></ruby>、<ruby>二度<rp>（</rp><rt>にど</rt><rp>）</rp></ruby>と<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>く_______。",
+      "translation": "Nhất định tôi không đến lần thứ hai với cửa hàng tồi như thế.",
+      "choices": [
+        "～もの（もん）",
+        "にしたがって／したがい",
+        "はもちろん／もとより",
+        "～ものか"
+      ],
+      "correctAnswer": "～ものか"
+    },
+    {
+      "id": "fib_58",
+      "grammarId": 58,
+      "range": "41-60",
+      "questionJp": "<ruby>先生<rp>（</rp><rt>せんせい</rt><rp>）</rp></ruby>にお<ruby>願<rp>（</rp><rt>ねが</rt><rp>）</rp></ruby>いし_______、<ruby>快<rp>（</rp><rt>こころよ</rt><rp>）</rp></ruby>く<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>き<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>けてくださった。",
+      "translation": "Thầy giáo vui vẻ nhận lời sau khi tôi nhờ.",
+      "choices": [
+        "～ところに／へ／を／で",
+        "～ということだ",
+        "～ものか",
+        "～たところ"
+      ],
+      "correctAnswer": "～たところ"
+    },
+    {
+      "id": "fib_59",
+      "grammarId": 59,
+      "range": "41-60",
+      "questionJp": "<ruby>家<rp>（</rp><rt>いえ</rt><rp>）</rp></ruby>を<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>ようとした_______<ruby>電話<rp>（</rp><rt>でんわ</rt><rp>）</rp></ruby>がかかってきた。",
+      "translation": "Khi tôi định ra khỏi nhà thì chuông điện thoại vang lên.",
+      "choices": [
+        "～ことはない",
+        "～もの（もん）",
+        "～最中",
+        "～ところに／へ／を／で"
+      ],
+      "correctAnswer": "～ところに／へ／を／で"
+    },
+    {
+      "id": "fib_60",
+      "grammarId": 60,
+      "range": "41-60",
+      "questionJp": "<ruby>駅<rp>（</rp><rt>えき</rt><rp>）</rp></ruby>のホームで<ruby>押<rp>（</rp><rt>お</rt><rp>）</rp></ruby>されて、あやうく<ruby>線路<rp>（</rp><rt>せんろ</rt><rp>）</rp></ruby>に<ruby>落<rp>（</rp><rt>お</rt><rp>）</rp></ruby>ちる_______。",
+      "translation": "Tôi bị đẩy ở sân ga và suýt chút nữa ngã vào làn đường sắt.",
+      "choices": [
+        "～ついでに",
+        "こと",
+        "～につれ（て）",
+        "～ところだった"
+      ],
+      "correctAnswer": "～ところだった"
+    },
+    {
+      "id": "fib_61",
+      "grammarId": 61,
+      "range": "61-80",
+      "questionJp": "うちから<ruby>学校<rp>（</rp><rt>がっこう</rt><rp>）</rp></ruby>まで３０<ruby>分<rp>（</rp><rt>ふん</rt><rp>）</rp></ruby>_______で<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ける。",
+      "translation": "Tôi có thể đi bộ trong khoảng 30 phút từ nhà tới trường.",
+      "choices": [
+        "～ほど",
+        "～はずだ（đương nhiên）",
+        "～などと（なんて）言う／思う",
+        "～ようがない"
+      ],
+      "correctAnswer": "～ほど"
+    },
+    {
+      "id": "fib_62",
+      "grammarId": 62,
+      "range": "61-80",
+      "questionJp": "<ruby>外国語<rp>（</rp><rt>がいこくご</rt><rp>）</rp></ruby>はだれでも、<ruby>練習<rp>（</rp><rt>れんしゅう</rt><rp>）</rp></ruby>すればするほど<ruby>上手<rp>（</rp><rt>じょうず</rt><rp>）</rp></ruby>になる。 (_______)",
+      "translation": "Ai cũng vậy, tiếng nước ngoài càng luyện tập thì càng giỏi.",
+      "choices": [
+        "～ば～ほど",
+        "～ようがない",
+        "～向け",
+        "～とともに"
+      ],
+      "correctAnswer": "～ば～ほど"
+    },
+    {
+      "id": "fib_63",
+      "grammarId": 63,
+      "range": "61-80",
+      "questionJp": "<ruby>真面目<rp>（</rp><rt>まじめ</rt><rp>）</rp></ruby>にがんばるひと_______ストレスを<ruby>抱<rp>（</rp><rt>かか</rt><rp>）</rp></ruby>え<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>みやすい。",
+      "translation": "Người càng chăm chỉ càng dễ ôm stress.",
+      "choices": [
+        "～を通じて／通して",
+        "～向き",
+        "～ほど",
+        "～ようがない"
+      ],
+      "correctAnswer": "～ほど"
+    },
+    {
+      "id": "fib_64",
+      "grammarId": 64,
+      "range": "61-80",
+      "questionJp": "「<ruby>会計<rp>（</rp><rt>かいけい</rt><rp>）</rp></ruby>の<ruby>仕事<rp>（</rp><rt>しごと</rt><rp>）</rp></ruby>、だれに<ruby>頼<rp>（</rp><rt>たの</rt><rp>）</rp></ruby>もうか」「<ruby>小林<rp>（</rp><rt>こばやし</rt><rp>）</rp></ruby>さんなんかどう？」 (_______)",
+      "translation": "“Việc kế toán nhờ ai đây?” “Anh Kobayashi thì sao?”",
+      "choices": [
+        "など／なんか／なんて",
+        "～きる",
+        "～はずだ（đương nhiên）",
+        "～っけ"
+      ],
+      "correctAnswer": "など／なんか／なんて"
+    },
+    {
+      "id": "fib_65",
+      "grammarId": 65,
+      "range": "61-80",
+      "questionJp": "<ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>が<ruby>犯人<rp>（</rp><rt>はんにん</rt><rp>）</rp></ruby>だなんて<ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>じられない。 (_______)",
+      "translation": "Không thể tin anh ấy lại là thủ phạm.",
+      "choices": [
+        "～などと（なんて）言う／思う",
+        "～がち",
+        "～っけ",
+        "～向け"
+      ],
+      "correctAnswer": "～などと（なんて）言う／思う"
+    },
+    {
+      "id": "fib_66",
+      "grammarId": 66,
+      "range": "61-80",
+      "questionJp": "「やると<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>めた_______<ruby>最後<rp>（</rp><rt>さいご</rt><rp>）</rp></ruby>までがんばるつもりです」",
+      "translation": "Đã quyết làm thì tôi sẽ cố đến cùng.",
+      "choices": [
+        "～ようがない",
+        "～はずだ（đương nhiên）",
+        "～からには",
+        "など／なんか／なんて"
+      ],
+      "correctAnswer": "～からには"
+    },
+    {
+      "id": "fib_67",
+      "grammarId": 67,
+      "range": "61-80",
+      "questionJp": "<ruby>夫<rp>（</rp><rt>おっと</rt><rp>）</rp></ruby>は<ruby>疲<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>れきった<ruby>顔<rp>（</rp><rt>かお</rt><rp>）</rp></ruby>で<ruby>帰<rp>（</rp><rt>かえ</rt><rp>）</rp></ruby>ってきた。 (_______)",
+      "translation": "Chồng tôi về nhà với gương mặt mệt rã rời.",
+      "choices": [
+        "～向け",
+        "～きる",
+        "～を通じて／通して",
+        "～っぽい"
+      ],
+      "correctAnswer": "～きる"
+    },
+    {
+      "id": "fib_68",
+      "grammarId": 68,
+      "range": "61-80",
+      "questionJp": "この２、３<ruby>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby>、かぜ_______で<ruby>調子<rp>（</rp><rt>ちょうし</rt><rp>）</rp></ruby>が<ruby>悪<rp>（</rp><rt>わる</rt><rp>）</rp></ruby>い。",
+      "translation": "2–3 ngày nay tôi hơi cảm nên người không khỏe.",
+      "choices": [
+        "～ようがない",
+        "～向け",
+        "など／なんか／なんて",
+        "～ぎみ"
+      ],
+      "correctAnswer": "～ぎみ"
+    },
+    {
+      "id": "fib_69",
+      "grammarId": 69,
+      "range": "61-80",
+      "questionJp": "<ruby>年<rp>（</rp><rt>とし</rt><rp>）</rp></ruby>のせいか、<ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>は<ruby>最近<rp>（</rp><rt>さいきん</rt><rp>）</rp></ruby><ruby>病気<rp>（</rp><rt>びょうき</rt><rp>）</rp></ruby>_______だ。",
+      "translation": "Có lẽ do tuổi tác, mẹ tôi dạo này hay ốm.",
+      "choices": [
+        "～ようがない",
+        "～に決まっている",
+        "～がち",
+        "～などと（なんて）言う／思う"
+      ],
+      "correctAnswer": "～がち"
+    },
+    {
+      "id": "fib_70",
+      "grammarId": 70,
+      "range": "61-80",
+      "questionJp": "<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>ども<ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>きのデザイン / <ruby>初心者<rp>（</rp><rt>しょしんしゃ</rt><rp>）</rp></ruby><ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>きのコース (_______)",
+      "translation": "Thiết kế dành cho trẻ em / khóa học dành cho người mới bắt đầu.",
+      "choices": [
+        "～ようがない",
+        "～とともに",
+        "～ほど",
+        "～向き"
+      ],
+      "correctAnswer": "～向き"
+    },
+    {
+      "id": "fib_71",
+      "grammarId": 71,
+      "range": "61-80",
+      "questionJp": "この<ruby>工場<rp>（</rp><rt>こうじょう</rt><rp>）</rp></ruby>では<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>にアメリカ<ruby>向<rp>（</rp><rt>む</rt><rp>）</rp></ruby>けの<ruby>車<rp>（</rp><rt>くるま</rt><rp>）</rp></ruby>を<ruby>造<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>っている。 (_______)",
+      "translation": "Nhà máy này chuyên chế tạo ô tô kiểu Mĩ.",
+      "choices": [
+        "～きる",
+        "～向け",
+        "～とともに",
+        "～ぎみ"
+      ],
+      "correctAnswer": "～向け"
+    },
+    {
+      "id": "fib_72",
+      "grammarId": 72,
+      "range": "61-80",
+      "questionJp": "<ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>とサークルの<ruby>先輩<rp>（</rp><rt>せんぱい</rt><rp>）</rp></ruby>を<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>して<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>り<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>った。 (_______)",
+      "translation": "Tôi quen cô ấy thông qua đàn anh trong câu lạc bộ.",
+      "choices": [
+        "～を通じて／通して",
+        "～ほど",
+        "～ようがない",
+        "～っぽい"
+      ],
+      "correctAnswer": "～を通じて／通して"
+    },
+    {
+      "id": "fib_73",
+      "grammarId": 73,
+      "range": "61-80",
+      "questionJp": "ほこり_______<ruby>部屋<rp>（</rp><rt>へや</rt><rp>）</rp></ruby>",
+      "translation": "Phòng đầy bụi.",
+      "choices": [
+        "～に決まっている",
+        "～などと（なんて）言う／思う",
+        "～きる",
+        "～っぽい"
+      ],
+      "correctAnswer": "～っぽい"
+    },
+    {
+      "id": "fib_74",
+      "grammarId": 74,
+      "range": "61-80",
+      "questionJp": "３<ruby>年間<rp>（</rp><rt>ねんかん</rt><rp>）</rp></ruby><ruby>仲間<rp>（</rp><rt>なかま</rt><rp>）</rp></ruby>_______がんばった<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い<ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby>は、<ruby>一生<rp>（</rp><rt>いっしょう</rt><rp>）</rp></ruby><ruby>忘<rp>（</rp><rt>わす</rt><rp>）</rp></ruby>れないだろう。",
+      "translation": "Tôi sẽ không thể quên kỉ niệm tôi cùng với bạn mình cố gắng trong 3 năm.",
+      "choices": [
+        "～向き",
+        "～などと（なんて）言う／思う",
+        "～とともに",
+        "～を通じて／通して"
+      ],
+      "correctAnswer": "～とともに"
+    },
+    {
+      "id": "fib_75",
+      "grammarId": 75,
+      "range": "61-80",
+      "questionJp": "<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>の<ruby>倒産<rp>（</rp><rt>とうさん</rt><rp>）</rp></ruby>_______、<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>くの<ruby>社員<rp>（</rp><rt>しゃいん</rt><rp>）</rp></ruby>が<ruby>失業<rp>（</rp><rt>しつぎょう</rt><rp>）</rp></ruby>した。",
+      "translation": "Công ty bị phá sản và có rất nhiều nhân viên thất nghiệp.",
+      "choices": [
+        "～ば～ほど",
+        "～がち",
+        "～にともなって／ともない",
+        "～などと（なんて）言う／思う"
+      ],
+      "correctAnswer": "～にともなって／ともない"
+    },
+    {
+      "id": "fib_76",
+      "grammarId": 76,
+      "range": "61-80",
+      "questionJp": "「そんなのうそに<ruby>決<rp>（</rp><rt>き</rt><rp>）</rp></ruby>まっている。<ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>じられない」 (_______)",
+      "translation": "“Chắc chắn đó là lời nói dối. Không thể tin được.”",
+      "choices": [
+        "～に決まっている",
+        "～ほど",
+        "～きる",
+        "～とともに"
+      ],
+      "correctAnswer": "～に決まっている"
+    },
+    {
+      "id": "fib_77",
+      "grammarId": 77,
+      "range": "61-80",
+      "questionJp": "「レポートの<ruby>提出<rp>（</rp><rt>ていしゅつ</rt><rp>）</rp></ruby><ruby>期限<rp>（</rp><rt>きげん</rt><rp>）</rp></ruby>は<ruby>来週<rp>（</rp><rt>らいしゅう</rt><rp>）</rp></ruby>の<ruby>月曜日<rp>（</rp><rt>げつようび</rt><rp>）</rp></ruby>だった_______（／だ_______）」",
+      "translation": "“Hạn nộp báo cáo là thứ hai tuần sau phải không?”",
+      "choices": [
+        "～ぎみ",
+        "～っけ",
+        "～ようがない",
+        "～ほど"
+      ],
+      "correctAnswer": "～っけ"
+    },
+    {
+      "id": "fib_78",
+      "grammarId": 78,
+      "range": "61-80",
+      "questionJp": "<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>どもは<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>の<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>うようにはならないのがふつうだ。 (_______)",
+      "translation": "Con cái không như mong muốn của bố mẹ là điều bình thường.",
+      "choices": [
+        "～ほど",
+        "～ように（giống như／theo như）",
+        "～に決まっている",
+        "～にともなって／ともない"
+      ],
+      "correctAnswer": "～ように（giống như／theo như）"
+    },
+    {
+      "id": "fib_79",
+      "grammarId": 79,
+      "range": "61-80",
+      "questionJp": "<ruby>手紙<rp>（</rp><rt>てがみ</rt><rp>）</rp></ruby>に<ruby>彼<rp>（</rp><rt>かれ</rt><rp>）</rp></ruby>の<ruby>住所<rp>（</rp><rt>じゅうしょ</rt><rp>）</rp></ruby>が<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いてない。これでは<ruby>返事<rp>（</rp><rt>へんじ</rt><rp>）</rp></ruby>の<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>し_______。",
+      "translation": "Trên lá thư không ghi địa chỉ của anh ta. Vì thế không thể trả lời được.",
+      "choices": [
+        "～ほど",
+        "～はずだ（đương nhiên）",
+        "～ようがない",
+        "～にともなって／ともない"
+      ],
+      "correctAnswer": "～ようがない"
+    },
+    {
+      "id": "fib_80",
+      "grammarId": 80,
+      "range": "61-80",
+      "questionJp": "ドアが<ruby>開<rp>（</rp><rt>ひら</rt><rp>）</rp></ruby>かないはずだ。かぎが<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>っていた。 (_______)",
+      "translation": "Thảo nào cửa không thể mở được. Nhầm khóa rồi.",
+      "choices": [
+        "～などと（なんて）言う／思う",
+        "～からには",
+        "～向け",
+        "～はずだ（đương nhiên）"
+      ],
+      "correctAnswer": "～はずだ（đương nhiên）"
+    },
+    {
+      "id": "fib_81",
+      "grammarId": 81,
+      "range": "81-100",
+      "questionJp": "<ruby>消費税<rp>（</rp><rt>しょうひぜい</rt><rp>）</rp></ruby>は５％だから、１０５０<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby><ruby>払<rp>（</rp><rt>はら</rt><rp>）</rp></ruby>ったら、５０<ruby>円<rp>（</rp><rt>えん</rt><rp>）</rp></ruby>は<ruby>税金<rp>（</rp><rt>ぜいきん</rt><rp>）</rp></ruby>という_______。",
+      "translation": "Vì thuế tiêu dùng là 5% nên nếu trả 1050 yên thì đương nhiên trong đó 50 yên là tiền thuế.",
+      "choices": [
+        "～にかわって／かわり",
+        "～わけだ",
+        "～をもとに（して）",
+        "～からといって"
+      ],
+      "correctAnswer": "～わけだ"
+    },
+    {
+      "id": "fib_82",
+      "grammarId": 82,
+      "range": "81-100",
+      "questionJp": "この<ruby>問題<rp>（</rp><rt>もんだい</rt><rp>）</rp></ruby>はまだ<ruby>習<rp>（</rp><rt>なら</rt><rp>）</rp></ruby>っていないのだから、できる_______。",
+      "translation": "Vì bài này tôi chưa học nên tôi đương nhiên là tôi không làm được.",
+      "choices": [
+        "～として",
+        "～てならない",
+        "～わけがない",
+        "～からといって"
+      ],
+      "correctAnswer": "～わけがない"
+    },
+    {
+      "id": "fib_83",
+      "grammarId": 83,
+      "range": "81-100",
+      "questionJp": "<ruby>日本人<rp>（</rp><rt>にほんじん</rt><rp>）</rp></ruby>が<ruby>皆<rp>（</rp><rt>みな</rt><rp>）</rp></ruby>、<ruby>日本<rp>（</rp><rt>にほん</rt><rp>）</rp></ruby><ruby>文化<rp>（</rp><rt>ぶんか</rt><rp>）</rp></ruby>に<ruby>詳<rp>（</rp><rt>くわ</rt><rp>）</rp></ruby>しい_______。",
+      "translation": "Không phải người Nhật nào cũng biết rõ về văn hóa Nhật Bản.",
+      "choices": [
+        "～反面／半面",
+        "～てたまらない",
+        "～をもとに（して）",
+        "～わけではない"
+      ],
+      "correctAnswer": "～わけではない"
+    },
+    {
+      "id": "fib_84",
+      "grammarId": 84,
+      "range": "81-100",
+      "questionJp": "あしたは<ruby>大事<rp>（</rp><rt>だいじ</rt><rp>）</rp></ruby>な<ruby>試験<rp>（</rp><rt>しけん</rt><rp>）</rp></ruby>があるから<ruby>休<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>む_______。",
+      "translation": "Tôi không thể nghỉ vì ngày mai có bài thi rất quan trọng.",
+      "choices": [
+        "～だけ",
+        "～わけにはいかない",
+        "～とか",
+        "～さえ"
+      ],
+      "correctAnswer": "～わけにはいかない"
+    },
+    {
+      "id": "fib_85",
+      "grammarId": 85,
+      "range": "81-100",
+      "questionJp": "<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>くと<ruby>約束<rp>（</rp><rt>やくそく</rt><rp>）</rp></ruby>したからには、<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>か_______だろう。",
+      "translation": "Vì đã hứa là sẽ đến nên tôi không thể không đến.",
+      "choices": [
+        "～だけ",
+        "～さえ",
+        "～をもとに（して）",
+        "～ないわけにはいかない"
+      ],
+      "correctAnswer": "～ないわけにはいかない"
+    },
+    {
+      "id": "fib_86",
+      "grammarId": 86,
+      "range": "81-100",
+      "questionJp": "お<ruby>金<rp>（</rp><rt>かね</rt><rp>）</rp></ruby>がないので、<ruby>新車<rp>（</rp><rt>しんしゃ</rt><rp>）</rp></ruby>を<ruby>買<rp>（</rp><rt>か</rt><rp>）</rp></ruby>うかわりに<ruby>中古車<rp>（</rp><rt>ちゅうこしゃ</rt><rp>）</rp></ruby>でがまんした。 (_______)",
+      "translation": "Vì không có tiền, thay vì mua chiếc xe mới tôi mua một chiếc xe đã qua sử dụng.",
+      "choices": [
+        "～かわり（に）",
+        "～てならない",
+        "～わけにはいかない",
+        "～にかわって／かわり"
+      ],
+      "correctAnswer": "～かわり（に）"
+    },
+    {
+      "id": "fib_87",
+      "grammarId": 87,
+      "range": "81-100",
+      "questionJp": "「<ruby>社長<rp>（</rp><rt>しゃちょう</rt><rp>）</rp></ruby>_______<ruby>挨拶<rp>（</rp><rt>あいさつ</rt><rp>）</rp></ruby>させていただきます」",
+      "translation": "Thay mặt giám đốc công ty, tôi xin gửi lời chào đến các bạn.",
+      "choices": [
+        "～わけにはいかない",
+        "～として",
+        "～さえ",
+        "～にかわって／かわり"
+      ],
+      "correctAnswer": "～にかわって／かわり"
+    },
+    {
+      "id": "fib_88",
+      "grammarId": 88,
+      "range": "81-100",
+      "questionJp": "「どうぞよろしく」「こちら_______」",
+      "translation": "Rất mong được giúp đỡ - Chính tôi mới mong được giúp đỡ.",
+      "choices": [
+        "～として",
+        "～てならない",
+        "～だけ",
+        "～こそ"
+      ],
+      "correctAnswer": "～こそ"
+    },
+    {
+      "id": "fib_89",
+      "grammarId": 89,
+      "range": "81-100",
+      "questionJp": "この<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>はもう６<ruby>歳<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>だが、まだ<ruby>自分<rp>（</rp><rt>じぶん</rt><rp>）</rp></ruby>の<ruby>名前<rp>（</rp><rt>なまえ</rt><rp>）</rp></ruby>_______<ruby>読<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>めない。",
+      "translation": "Đứa trẻ này đã 6 tuổi nhưng đến tên mình cũng chưa thể đọc được.",
+      "choices": [
+        "～だけ",
+        "～てならない",
+        "～さえ",
+        "～わけがない"
+      ],
+      "correctAnswer": "～さえ"
+    },
+    {
+      "id": "fib_90",
+      "grammarId": 90,
+      "range": "81-100",
+      "questionJp": "<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>は<ruby>留学生<rp>（</rp><rt>りゅうがくせい</rt><rp>）</rp></ruby>だが、<ruby>以前<rp>（</rp><rt>いぜん</rt><rp>）</rp></ruby>に<ruby>一度<rp>（</rp><rt>いちど</rt><rp>）</rp></ruby><ruby>観光客<rp>（</rp><rt>かんこうきゃく</rt><rp>）</rp></ruby>_______<ruby>来日<rp>（</rp><rt>らいにち</rt><rp>）</rp></ruby>したことがある。",
+      "translation": "Bây giờ tôi là du hoc sinh nhưng trước đây tôi đã từng một lần đến Nhật Bản với tư cách là khách du lịch.",
+      "choices": [
+        "～かわり（に）",
+        "～に反し（て）",
+        "～として",
+        "～てならない"
+      ],
+      "correctAnswer": "～として"
+    },
+    {
+      "id": "fib_91",
+      "grammarId": 91,
+      "range": "81-100",
+      "questionJp": "やせている_______、<ruby>体<rp>（</rp><rt>からだ</rt><rp>）</rp></ruby>が<ruby>弱<rp>（</rp><rt>よわ</rt><rp>）</rp></ruby>いとは<ruby>限<rp>（</rp><rt>かぎ</rt><rp>）</rp></ruby>らない。",
+      "translation": "Không phải cứ gầy là thể lực yếu.",
+      "choices": [
+        "～からといって",
+        "～とか",
+        "～れる／られる（tự phát）",
+        "～だけ"
+      ],
+      "correctAnswer": "～からといって"
+    },
+    {
+      "id": "fib_92",
+      "grammarId": 92,
+      "range": "81-100",
+      "questionJp": "Aチームが<ruby>勝<rp>（</rp><rt>か</rt><rp>）</rp></ruby>つだろうという<ruby>予想<rp>（</rp><rt>よそう</rt><rp>）</rp></ruby>に<ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>してBチームが<ruby>勝<rp>（</rp><rt>か</rt><rp>）</rp></ruby>った。 (_______)",
+      "translation": "Trái với dự đoán là đội A sẽ thắng, đội B đã thắng.",
+      "choices": [
+        "～ないわけにはいかない",
+        "～かわり（に）",
+        "～てならない",
+        "～に反し（て）"
+      ],
+      "correctAnswer": "～に反し（て）"
+    },
+    {
+      "id": "fib_93",
+      "grammarId": 93,
+      "range": "81-100",
+      "questionJp": "この<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>は<ruby>実際<rp>（</rp><rt>じっさい</rt><rp>）</rp></ruby>にあった<ruby>事件<rp>（</rp><rt>じけん</rt><rp>）</rp></ruby>に<ruby>基<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>づいて<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた。 (_______)",
+      "translation": "Bộ phim này được làm dựa trên sự kiện có thực.",
+      "choices": [
+        "～をもとに（して）",
+        "～ないわけにはいかない",
+        "～てたまらない",
+        "～にもとづいて／もとづき"
+      ],
+      "correctAnswer": "～にもとづいて／もとづき"
+    },
+    {
+      "id": "fib_94",
+      "grammarId": 94,
+      "range": "81-100",
+      "questionJp": "この<ruby>映画<rp>（</rp><rt>えいが</rt><rp>）</rp></ruby>は<ruby>実際<rp>（</rp><rt>じっさい</rt><rp>）</rp></ruby>にあった<ruby>事件<rp>（</rp><rt>じけん</rt><rp>）</rp></ruby>をもとに<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>られた。 (_______)",
+      "translation": "Bộ phim này được làm dựa trên sự kiện có thật.",
+      "choices": [
+        "～わけがない",
+        "～をもとに（して）",
+        "～わけだ",
+        "～れる／られる（tự phát）"
+      ],
+      "correctAnswer": "～をもとに（して）"
+    },
+    {
+      "id": "fib_95",
+      "grammarId": 95,
+      "range": "81-100",
+      "questionJp": "この<ruby>新<rp>（</rp><rt>あたら</rt><rp>）</rp></ruby>しい<ruby>薬<rp>（</rp><rt>くすり</rt><rp>）</rp></ruby>はよく<ruby>効<rp>（</rp><rt>き</rt><rp>）</rp></ruby>く<ruby>_______<rp>（</rp><rt>はんめん</rt><rp>）</rp></ruby>、<ruby>副作用<rp>（</rp><rt>ふくさよう</rt><rp>）</rp></ruby>も<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>い。",
+      "translation": "Thuốc mới này có hiệu quả tốt nhưng mặt khác cũng có tác dụng phụ mạnh.",
+      "choices": [
+        "～かわり（に）",
+        "～てならない",
+        "～からといって",
+        "～反面／半面"
+      ],
+      "correctAnswer": "～反面／半面"
+    },
+    {
+      "id": "fib_96",
+      "grammarId": 96,
+      "range": "81-100",
+      "questionJp": "この<ruby>歌<rp>（</rp><rt>うた</rt><rp>）</rp></ruby>を<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>くと、<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>どものころのことが<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>い<ruby>出<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>さ_______。",
+      "translation": "Nghe bài hát này, tôi tự nhiên nhớ về thủa ấu thơ.",
+      "choices": [
+        "～れる／られる（tự phát）",
+        "～てたまらない",
+        "～にもとづいて／もとづき",
+        "～さえ"
+      ],
+      "correctAnswer": "～れる／られる（tự phát）"
+    },
+    {
+      "id": "fib_97",
+      "grammarId": 97,
+      "range": "81-100",
+      "questionJp": "<ruby>壊<rp>（</rp><rt>こわ</rt><rp>）</rp></ruby>れてしまい、<ruby>暑<rp>（</rp><rt>あつ</rt><rp>）</rp></ruby>く_______。",
+      "translation": "Máy điều hòa bị hỏng và tôi thấy nóng không thể chịu nổi.",
+      "choices": [
+        "～にかわって／かわり",
+        "～てたまらない",
+        "～とか",
+        "～に反し（て）"
+      ],
+      "correctAnswer": "～てたまらない"
+    },
+    {
+      "id": "fib_98",
+      "grammarId": 98,
+      "range": "81-100",
+      "questionJp": "<ruby>希望<rp>（</rp><rt>きぼう</rt><rp>）</rp></ruby>どおりの<ruby>会社<rp>（</rp><rt>かいしゃ</rt><rp>）</rp></ruby>に<ruby>就職<rp>（</rp><rt>しゅうしょく</rt><rp>）</rp></ruby>でき、うれしく_______。",
+      "translation": "Được làm việc ở công ty mà mình thích tôi thấy rất vui.",
+      "choices": [
+        "～てならない",
+        "～に反し（て）",
+        "～かわり（に）",
+        "～わけにはいかない"
+      ],
+      "correctAnswer": "～てならない"
+    },
+    {
+      "id": "fib_99",
+      "grammarId": 99,
+      "range": "81-100",
+      "questionJp": "「あしたの<ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>の<ruby>授業<rp>（</rp><rt>じゅぎょう</rt><rp>）</rp></ruby>は<ruby>休<rp>（</rp><rt>やす</rt><rp>）</rp></ruby>みだ_______<ruby>聞<rp>（</rp><rt>き</rt><rp>）</rp></ruby>いたけど、<ruby>本当<rp>（</rp><rt>ほんとう</rt><rp>）</rp></ruby>？」",
+      "translation": "Tớ nghe nói buổi học Anh văn ngày mai được nghỉ, đúng không?",
+      "choices": [
+        "～かわり（に）",
+        "～からといって",
+        "～わけではない",
+        "～とか"
+      ],
+      "correctAnswer": "～とか"
+    },
+    {
+      "id": "fib_100",
+      "grammarId": 100,
+      "range": "81-100",
+      "questionJp": "<ruby>試験<rp>（</rp><rt>しけん</rt><rp>）</rp></ruby>が<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わったら、<ruby>好<rp>（</rp><rt>す</rt><rp>）</rp></ruby>きな_______<ruby>遊<rp>（</rp><rt>あそ</rt><rp>）</rp></ruby>びたい。",
+      "translation": "Khi kì thi kết thúc, tôi muốn chơi thỏa thích.",
+      "choices": [
+        "～だけ",
+        "～反面／半面",
+        "～わけにはいかない",
+        "～こそ"
+      ],
+      "correctAnswer": "～だけ"
+    },
+    {
+      "id": "fib_101",
+      "grammarId": 101,
+      "range": "101-110",
+      "questionJp": "<ruby>彼女<rp>（</rp><rt>かのじょ</rt><rp>）</rp></ruby>は<ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>_______、フランス<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>やドイツ<ruby>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>も<ruby>話<rp>（</rp><rt>はな</rt><rp>）</rp></ruby>せる。",
+      "translation": "Cô ta không những nói được tiếng Anh mà còn nói được cả tiếng Đức và tiếng Pháp nữa.",
+      "choices": [
+        "～をこめて",
+        "～おそれがある",
+        "～ばかりでなく",
+        "～とする"
+      ],
+      "correctAnswer": "～ばかりでなく"
+    },
+    {
+      "id": "fib_102",
+      "grammarId": 102,
+      "range": "101-110",
+      "questionJp": "<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>き_______の<ruby>手紙<rp>（</rp><rt>てがみ</rt><rp>）</rp></ruby>",
+      "translation": "Lá thư viết dở",
+      "choices": [
+        "～際に／際（に）は",
+        "～おそれがある",
+        "～てみせる",
+        "～かけ／かける"
+      ],
+      "correctAnswer": "～かけ／かける"
+    },
+    {
+      "id": "fib_103",
+      "grammarId": 103,
+      "range": "101-110",
+      "questionJp": "<ruby>母<rp>（</rp><rt>はは</rt><rp>）</rp></ruby>の<ruby>誕生日<rp>（</rp><rt>たんじょうび</rt><rp>）</rp></ruby>に、<ruby>心<rp>（</rp><rt>こころ</rt><rp>）</rp></ruby>_______<ruby>編<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>んだセーターを<ruby>贈<rp>（</rp><rt>おく</rt><rp>）</rp></ruby>った。",
+      "translation": "Vào dịp sinh nhật mẹ, tôi tặng bà chiếc áo len tôi tự đan với cả trái tim.",
+      "choices": [
+        "～をきっかけに／にして／として",
+        "～てみせる",
+        "～かけ／かける",
+        "～をこめて"
+      ],
+      "correctAnswer": "～をこめて"
+    },
+    {
+      "id": "fib_104",
+      "grammarId": 104,
+      "range": "101-110",
+      "questionJp": "「<ruby>山田<rp>（</rp><rt>やまだ</rt><rp>）</rp></ruby>さんは<ruby>留学<rp>（</rp><rt>りゅうがく</rt><rp>）</rp></ruby><ruby>経験<rp>（</rp><rt>けいけん</rt><rp>）</rp></ruby>がないわりに<ruby>英語<rp>（</rp><rt>えいご</rt><rp>）</rp></ruby>の<ruby>発音<rp>（</rp><rt>はつおん</rt><rp>）</rp></ruby>がきれいですね」 (_______)",
+      "translation": "Anh Yamada dù chưa từng du học nhưng nói tiếng Anh hay nhỉ.",
+      "choices": [
+        "～てみせる",
+        "～をきっかけに／にして／として",
+        "～わりに（は）",
+        "～ばかりでなく"
+      ],
+      "correctAnswer": "～わりに（は）"
+    },
+    {
+      "id": "fib_105",
+      "grammarId": 105,
+      "range": "101-110",
+      "questionJp": "<ruby>石田<rp>（</rp><rt>いしだ</rt><rp>）</rp></ruby>さんは<ruby>次<rp>（</rp><rt>つぎ</rt><rp>）</rp></ruby>の<ruby>日<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>にテストがあることを<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>っていた_______、<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えてくれなかった。",
+      "translation": "Ishida dù biết ngày hôm sau có bài kiểm tra nhưng không bảo với tôi.",
+      "choices": [
+        "～ばかりでなく",
+        "～とする",
+        "～くせに",
+        "～てみせる"
+      ],
+      "correctAnswer": "～くせに"
+    },
+    {
+      "id": "fib_106",
+      "grammarId": 106,
+      "range": "101-110",
+      "questionJp": "<ruby>言葉<rp>（</rp><rt>ことば</rt><rp>）</rp></ruby>で<ruby>説明<rp>（</rp><rt>せつめい</rt><rp>）</rp></ruby>するのが<ruby>難<rp>（</rp><rt>むずか</rt><rp>）</rp></ruby>しいことでも、<ruby>実際<rp>（</rp><rt>じっさい</rt><rp>）</rp></ruby>にやっ_______。",
+      "translation": "Điều đó là khó giải thích bằng lời nhưng nếu tôi làm thật thì cậu sẽ hiểu ngay.",
+      "choices": [
+        "～かけ／かける",
+        "～てみせる",
+        "～をきっかけに／にして／として",
+        "～わりに（は）"
+      ],
+      "correctAnswer": "～てみせる"
+    },
+    {
+      "id": "fib_107",
+      "grammarId": 107,
+      "range": "101-110",
+      "questionJp": "<ruby>大学<rp>（</rp><rt>だいがく</rt><rp>）</rp></ruby><ruby>入学<rp>（</rp><rt>にゅうがく</rt><rp>）</rp></ruby>_______、<ruby>一人<rp>（</rp><rt>ひとり</rt><rp>）</rp></ruby><ruby>暮<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby>らしを<ruby>始<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めた。",
+      "translation": "Nhân dịp vào đại học, tôi bắt đầu sống một mình.",
+      "choices": [
+        "～かけ／かける",
+        "～てみせる",
+        "～をこめて",
+        "～をきっかけに／にして／として"
+      ],
+      "correctAnswer": "～をきっかけに／にして／として"
+    },
+    {
+      "id": "fib_108",
+      "grammarId": 108,
+      "range": "101-110",
+      "questionJp": "<ruby>太陽<rp>（</rp><rt>たいよう</rt><rp>）</rp></ruby>を<ruby>直径<rp>（</rp><rt>ちょっけい</rt><rp>）</rp></ruby>１メートルの<ruby>球<rp>（</rp><rt>たま</rt><rp>）</rp></ruby>だとします。すると<ruby>地球<rp>（</rp><rt>ちきゅう</rt><rp>）</rp></ruby>は９ミリくらいです。 (_______)",
+      "translation": "Giả sử mặt trời là trái bóng có đường kính 1 mét. Thì trái đất có đường kính khoảng 9 milimét.",
+      "choices": [
+        "～をきっかけに／にして／として",
+        "～てみせる",
+        "～とする",
+        "～おそれがある"
+      ],
+      "correctAnswer": "～とする"
+    },
+    {
+      "id": "fib_109",
+      "grammarId": 109,
+      "range": "101-110",
+      "questionJp": "「お<ruby>降<rp>（</rp><rt>お</rt><rp>）</rp></ruby>りの<ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>は<ruby>足元<rp>（</rp><rt>あしもと</rt><rp>）</rp></ruby>にご<ruby>注意<rp>（</rp><rt>ちゅうい</rt><rp>）</rp></ruby>ください」（<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>り<ruby>物<rp>（</rp><rt>もの</rt><rp>）</rp></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>のアナウンス） (_______)",
+      "translation": "Lúc xuống xe xin hãy chú ý bước chân (thông báo trong xe)",
+      "choices": [
+        "～てみせる",
+        "～際に／際（に）は",
+        "～をこめて",
+        "～くせに"
+      ],
+      "correctAnswer": "～際に／際（に）は"
+    },
+    {
+      "id": "fib_110",
+      "grammarId": 110,
+      "range": "101-110",
+      "questionJp": "この<ruby>薬<rp>（</rp><rt>くすり</rt><rp>）</rp></ruby>は<ruby>副作用<rp>（</rp><rt>ふくさよう</rt><rp>）</rp></ruby>の_______ので<ruby>注意<rp>（</rp><rt>ちゅうい</rt><rp>）</rp></ruby>しなければならない。",
+      "translation": "Thuốc này e là có tác dụng phụ nên anh phải cẩn trọng.",
+      "choices": [
+        "～をこめて",
+        "～くせに",
+        "～ばかりでなく",
+        "～おそれがある"
+      ],
+      "correctAnswer": "～おそれがある"
+    }
+  ],
+  "starArrangements": [
+    {
+      "range": "1-20",
+      "prefix": "健康のため、毎朝",
+      "suffix": "いる。",
+      "words": [
+        "牛乳を",
+        "飲む",
+        "ことに",
+        "して"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Vì sức khỏe, sáng nào tôi cũng uống sữa.",
+      "explanation": "Cấu trúc ~ことにしている (tự quyết định thói quen). Thứ tự: 毎朝 [牛乳を (0)] [飲む (1)] [ことに (2)] [して (3)] いる。"
+    },
+    {
+      "range": "1-20",
+      "prefix": "この建物では、タバコを",
+      "suffix": "いる。",
+      "words": [
+        "吸って",
+        "いけない",
+        "ことに",
+        "なって"
+      ],
+      "words_real": [
+        "吸って",
+        "いけない",
+        "ことに",
+        "なって"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Ở tòa nhà này, quy định là không được hút thuốc.",
+      "explanation": "Cấu trúc ~ことになっている (quy định chung). Thứ tự: タバコを [吸って (0)] [いけない (1)] [ことに (2)] [なって (3)] いる。"
+    },
+    {
+      "range": "1-20",
+      "prefix": "この自動販売機は、ボタンを",
+      "suffix": "いる。",
+      "words": [
+        "押すと",
+        "おつりが",
+        "出る",
+        "ようになって"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Máy bán hàng tự động này được thiết kế để khi bấm nút thì tiền lẻ sẽ thối ra.",
+      "explanation": "Cấu trúc ~ようになっている (chức năng máy móc). Thứ tự: [押すと (0)] [おつりが (1)] [出る (2)] [ようになって (3)] いる。"
+    },
+    {
+      "range": "1-20",
+      "prefix": "子供のころ、私はよく弟と",
+      "suffix": "叱られた。",
+      "words": [
+        "けんかを",
+        "しては",
+        "母に",
+        "よく"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Hồi nhỏ, tôi cứ hễ đánh nhau với em trai là lại bị mẹ mắng.",
+      "explanation": "Cấu trúc ~ては (hễ... là lại). Thứ tự: [けんかを (0)] [しては (1)] [母に (2)] [よく (3)] 叱られた。"
+    },
+    {
+      "range": "1-20",
+      "prefix": "彼女はまるで",
+      "suffix": "話す。",
+      "words": [
+        "日本の",
+        "すべてを",
+        "知っている",
+        "かのように"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Cô ấy nói chuyện cứ như thể biết tuốt mọi thứ về Nhật Bản vậy.",
+      "explanation": "Cấu trúc ~かのように (như thể là). Thứ tự: [日本の (0)] [すべてを (1)] [知っている (2)] [かのように (3)] 話す。"
+    },
+    {
+      "range": "1-20",
+      "prefix": "天気予報に",
+      "suffix": "雨が降るそうだ。",
+      "words": [
+        "よると",
+        "午後から",
+        "激しい",
+        "雨が"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Theo dự báo thời tiết, từ chiều sẽ có mưa lớn.",
+      "explanation": "Cấu trúc ~によると (theo như). Thứ tự: [よると (0)] [午後から (1)] [激しい (2)] [雨が (3)] 降るそうだ。"
+    },
+    {
+      "range": "21-40",
+      "prefix": "留学生のリンさんは、漢字を",
+      "suffix": "書けるようになった。",
+      "words": [
+        "書く",
+        "ばかりでなく",
+        "難しい",
+        "文も"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Bạn du học sinh Linh không chỉ viết được chữ Kanji mà còn viết được cả những câu khó.",
+      "explanation": "Cấu trúc ~ばかりでなく (không chỉ... mà còn). Thứ tự: [書く (0)] [bpr (1)] [mj (2)] [v (3)] 書けるようになった。"
+    },
+    {
+      "range": "21-40",
+      "prefix": "先生にお願いした",
+      "suffix": "推薦書を書いてくださった。",
+      "words": [
+        "ところ",
+        "先生は",
+        "こころよく",
+        "すぐに"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Khi tôi nhờ thầy giáo thì thầy đã vui vẻ viết thư giới thiệu ngay lập tức cho tôi.",
+      "explanation": "Cấu trúc ~たところ (sau khi làm gì thì nhận được kết quả). Thứ tự: [ところ (0)] [先生は (1)] [こころよく (2)] [すぐに (3)]"
+    },
+    {
+      "range": "21-40",
+      "prefix": "遅刻しそうになって、急いで",
+      "suffix": "転んでしまった。",
+      "words": [
+        "走って",
+        "いる",
+        "ところに",
+        "道で"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Suýt nữa thì muộn học, đang lúc chạy vội thì tôi bị ngã ngay trên đường.",
+      "explanation": "Cấu trúc ~ところに (đúng lúc đang làm gì thì sự việc khác xen vào). Thứ tự: [走って (0)] [いる (1)] [ところに (2)] [道で (3)]"
+    },
+    {
+      "range": "21-40",
+      "prefix": "あぶなく車に",
+      "suffix": "。危なかった。",
+      "words": [
+        "ひかれる",
+        "ところ",
+        "だった",
+        "本当に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Suýt chút nữa là bị xe đâm trúng rồi. Thật là nguy hiểm.",
+      "explanation": "Cấu trúc ~ところだった (suýt chút nữa thì). Thứ tự: [ひかれる (0)] [tiền tố/danh từ] [ところ (1)] [だった (2)] [本当に (3) / 危なかった]。"
+    },
+    {
+      "range": "21-40",
+      "prefix": "この電子辞書は、使えば",
+      "suffix": "便利さがわかる。",
+      "words": [
+        "使うほど",
+        "その",
+        "機能の",
+        "良さと"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Cái từ điển điện tử này càng dùng thì càng thấy được sự tiện lợi và điểm tốt của chức năng của nó.",
+      "explanation": "Cấu trúc ~ば~ほど (càng... càng). Thứ tự: [使うほど (0)] [その (1)] [機能の (2)] [良さと (3)]"
+    },
+    {
+      "range": "21-40",
+      "prefix": "彼女ほど",
+      "suffix": "人はいないと思う。",
+      "words": [
+        "仕事が",
+        "速くて",
+        "正確な",
+        "優秀な"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Tôi nghĩ không có ai xuất sắc, làm việc nhanh và chính xác như cô ấy cả.",
+      "explanation": "Cấu trúc N + ほど + phủ định (không có ai bằng...). Thứ tự: [仕事が (0)] [速くて (1)] [正確な (2)] [優秀な (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "彼は日本語だけでなく、英語",
+      "suffix": "ペラペラだ。",
+      "words": [
+        "はもちろん",
+        "中国語",
+        "まで",
+        "上手に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Anh ấy không chỉ tiếng Nhật, mà cả tiếng Anh là đương nhiên, đến cả tiếng Trung Quốc cũng nói trôi chảy.",
+      "explanation": "Cấu trúc ~はもちろん (là đương nhiên). Thứ tự: [はもちろん (0)] [中国語 (1)] [まで (2)] [上手に (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "スーパーへ行く",
+      "suffix": "牛乳を買ってきてください。",
+      "words": [
+        "ついでに",
+        "私の",
+        "分の",
+        "お茶と"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Tiện đường đi siêu thị thì mua hộ tôi chai trà và sữa nhé.",
+      "explanation": "Cấu trúc ~ついでに (nhân tiện, tiện thể). Thứ tự: [ついでに (0)] [私の (1)] [分の (2)] [お茶と (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "山田さんは来月",
+      "suffix": "ということだ。",
+      "words": [
+        "イギリスへ",
+        "仕事で",
+        "行く",
+        "予定だ"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Nghe nói tháng sau anh Yamada sẽ đi Anh vì công việc.",
+      "explanation": "Cấu trúc ~ということだ (nghe nói là, nghĩa là). Thứ tự: [イギリスへ (0)] [仕事で (1)] [行く (2)] [予定だ (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "あきらめる",
+      "suffix": "最後まで頑張りましょう。",
+      "words": [
+        "ことはない",
+        "まだまだ",
+        "チャンスは",
+        "あるのだから"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Không việc gì phải từ bỏ cả, vì cơ hội vẫn còn rất nhiều mà, hãy cố gắng đến cùng.",
+      "explanation": "Cấu trúc ~ことはない (không việc gì phải...). Thứ tự: [ことはない (0)] [mdd (1)] [cs (2)] [a (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "少し熱があるが、仕事を",
+      "suffix": "休めない。",
+      "words": [
+        "休まない",
+        "わけではない",
+        "が",
+        "今日は"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Hơi sốt một chút, không phải là tôi không muốn nghỉ, nhưng hôm nay thì không thể nghỉ được.",
+      "explanation": "Cấu trúc ~わけではない (không hẳn là, không phải là). Thứ tự: [休まない (0)] [わけ (1)] [が (2)] [hôm nay (3)]"
+    },
+    {
+      "range": "41-60",
+      "prefix": "大事な試験の前だから、風邪を",
+      "suffix": "いけない。",
+      "words": [
+        "ひく",
+        "わけには",
+        "いかない",
+        "絶対に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Vì trước kỳ thi quan trọng, tuyệt đối tôi không thể để bị cảm cúm được.",
+      "explanation": "Cấu trúc ~わけにはいかない (không thể làm gì vì lý do đạo đức/hoàn cảnh). Thứ tự: [ひく (0)] [w (1)] [ik (2)] [zt (3)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "一度約束した",
+      "suffix": "守らなければならない。",
+      "words": [
+        "からには",
+        "最後まで",
+        "約束を",
+        "絶対に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Một khi đã hứa thì phải tuyệt đối giữ lời hứa đến cùng.",
+      "explanation": "Cấu trúc ~からには (một khi đã... thì phải). Thứ tự: [からには (0)] [最後まで (1)] [約束を (2)] [絶対に (3)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "この厚い本を、一日で",
+      "suffix": "しまった。",
+      "words": [
+        "読み",
+        "きって",
+        "彼は",
+        "本当に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Cuốn sách dày thế này mà anh ấy thực sự đã đọc xong toàn bộ chỉ trong một ngày.",
+      "explanation": "Cấu trúc ~きる (làm xong hoàn toàn). Thứ tự: [読み (0)] [きって (1)] [cđ (2)] [ht (3)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "風邪を",
+      "suffix": "学校を休んだ。",
+      "words": [
+        "ひき",
+        "ぎみで",
+        "体調が",
+        "悪かったので"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Có vẻ hơi bị cảm cúm, tình trạng sức khỏe không tốt nên tôi đã nghỉ học.",
+      "explanation": "Cấu trúc ~gi mi (có vẻ hơi, có triệu chứng). Thứ tự: [ひき (0)] [gi mi (1)] [thể trạng (2)] [xấu (3)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "一人暮らしの部屋だから、彼女は",
+      "suffix": "選んだ。",
+      "words": [
+        "安全性を",
+        "重視した",
+        "女性向けの",
+        "マンションを"
+      ],
+      "correctOrder": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "translation": "Vì là phòng tự lập một mình, cô ấy đã chọn căn hộ hướng tới đối tượng nữ giới chú trọng tính an toàn.",
+      "explanation": "Cấu trúc ~向け (hướng tới đối tượng). Thứ tự: [女性向けの (2)] [マンションを (3)] [安全性を (0)] [重視した (1)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "私たちは10年間の活動を",
+      "suffix": "理解し合えた。",
+      "words": [
+        "通じて",
+        "お互いの",
+        "気持ちを",
+        "深く"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Thông qua 10 năm hoạt động chung, chúng tôi đã thấu hiểu sâu sắc tâm tư tình cảm của nhau.",
+      "explanation": "Cấu trúc ~を通じて (thông qua). Thứ tự: [通じて (0)] [otn (1)] [km (2)] [fk (3)]"
+    },
+    {
+      "range": "61-80",
+      "prefix": "この白くて",
+      "suffix": "ジュースのようだ。",
+      "words": [
+        "甘い",
+        "飲み物は",
+        "まるで",
+        "お酒っぽくなくて"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Thức uống ngọt màu trắng này hoàn toàn không giống rượu chút nào, giống như nước trái cây vậy.",
+      "explanation": "Cấu trúc ~っぽい (có vẻ, giống như). Thứ tự: [甘い (0)] [nmw (1)] [mr (2)] [os (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "彼は日本語の専門家だから、漢字を",
+      "suffix": "わけがない。",
+      "words": [
+        "間違える",
+        "はずが",
+        "ない",
+        "絶対に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Anh ấy là chuyên gia tiếng Nhật, tuyệt đối không có lý nào lại viết sai chữ Kanji được.",
+      "explanation": "Cấu trúc ~はずがない / わけがない (lẽ nào lại, không thể nào). Thứ tự: [間違える (0)] [h (1)] [n (2)] [z (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "彼女は私の代わりに",
+      "suffix": "くれた。",
+      "words": [
+        "会議に",
+        "出席して",
+        "大切な",
+        "意見を言って"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Cô ấy đã thay tôi đi họp và phát biểu những ý kiến quan trọng.",
+      "explanation": "Cấu trúc ~代わりに (thay vì, đại diện cho). Thứ tự: [giao tế (0)] [đi họp (1)] [trọng đại (2)] [phát biểu (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "漢字のテストだから、ひらがなで",
+      "suffix": "意味がない。",
+      "words": [
+        "書いた",
+        "ところで",
+        "点数に",
+        "ならないので"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Vì là bài kiểm tra Kanji, cho dù viết bằng hiragana thì cũng không được tính điểm nên chẳng có ý nghĩa gì.",
+      "explanation": "Cấu trúc ~たところで (dù có làm gì đi nữa thì cũng vô ích). Thứ tự: [書いた (0)] [tc (1)] [tiêu (2)] [không (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "あの素晴らしいコンサートは、今でも",
+      "suffix": "思い出される。",
+      "words": [
+        "目を",
+        "閉じる",
+        "たびに",
+        "鮮やかに"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Buổi hòa nhạc tuyệt vời đó, mỗi lần nhắm mắt lại tôi lại nhớ về nó một cách rõ rệt.",
+      "explanation": "Cấu trúc ~たびに (mỗi lần... lại). Thứ tự: [目を (0)] [閉じる (1)] [tb (2)] [ay (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "長年欲しかったカメラをようやく手に入れて、",
+      "suffix": "たまらない。",
+      "words": [
+        "欲しくて",
+        "たまらなかった",
+        "ので",
+        "うれしくて"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Cuối cùng cũng có được chiếc máy ảnh thèm khát từ lâu, tôi vui sướng không chịu được.",
+      "explanation": "Cấu trúc ~てたまらない (vô cùng, không chịu được). Thứ tự: [欲しくて (0)] [t (1)] [n (2)] [u (3)]"
+    },
+    {
+      "range": "81-100",
+      "prefix": "彼の一生懸命な姿を見て、将来が",
+      "suffix": "ならない。",
+      "words": [
+        "期待",
+        "できて",
+        "楽しみに",
+        "なって"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Nhìn dáng vẻ nỗ lực hết mình của anh ấy, tôi vô cùng kỳ vọng và mong đợi vào tương lai của anh ấy.",
+      "explanation": "Cấu trúc ~てならない (vô cùng, cảm xúc tự nhiên trào dâng). Thứ tự: [期待 (0)] [được (1)] [mong đợi (2)] [trở thành (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "彼は日本語",
+      "suffix": "英語も話せるらしい。",
+      "words": [
+        "ばかりでなく",
+        "フランス語も",
+        "さらに",
+        "上手に"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Anh ấy không chỉ tiếng Nhật, mà nghe nói cả tiếng Pháp và thậm chí tiếng Anh cũng nói rất giỏi.",
+      "explanation": "Cấu trúc ~ばかり (không chỉ... mà còn). Thứ tự: [ばかりでなく (0)] [fr (1)] [cr (2)] [jt (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "飲みかけの",
+      "suffix": "テーブルに置いてある。",
+      "words": [
+        "お茶が",
+        "まだ",
+        "冷めないまま",
+        "そのまま"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Tách trà uống dở vẫn đang được để nguyên trên bàn chưa nguội lạnh.",
+      "explanation": "Cấu trúc ~かけ (làm dở dang chưa xong). Thứ tự: [お茶が (0)] [m (1)] [c (2)] [s (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "感謝の気持ちを",
+      "suffix": "彼にプレゼントを贈った。",
+      "words": [
+        "こめて",
+        "みんなで",
+        "手作りの",
+        "カードと"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Chứa đựng tấm lòng biết ơn, mọi người cùng nhau gửi tặng anh ấy một tấm thiệp tự tay làm và món quà.",
+      "explanation": "Cấu trúc ~をこめて (gửi gắm tâm tư, tình cảm vào...). Thứ tự: [こめて (0)] [m (1)] [t (2)] [c (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "彼は新入社員の",
+      "suffix": "仕事がよくできる。",
+      "words": [
+        "わりには",
+        "ベテランのように",
+        "難しい",
+        "システム開発の"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Anh ấy so với một nhân viên mới thì làm việc rất tốt như một cựu binh trong việc phát triển hệ thống khó.",
+      "explanation": "Cấu trúc ~わりに (so với... thì trái ngược lại). Thứ tự: [わりには (0)] [b (1)] [m (2)] [s (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "お金がない",
+      "suffix": "新しいスマホを買った。",
+      "words": [
+        "くせに",
+        "彼は",
+        "自慢げに",
+        "また"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Mặc dù không có tiền thế mà anh ta lại tự đắc mua một chiếc smartphone mới.",
+      "explanation": "Cấu trúc ~くせに (mặc dù... thế mà - mang hàm ý mỉa mai, chỉ trích). Thứ tự: [くせに (0)] [k (1)] [j (2)] [m (3)]"
+    },
+    {
+      "range": "101-110",
+      "prefix": "地震が発生した",
+      "suffix": "落ち着いて行動してください。",
+      "words": [
+        "際には",
+        "決して",
+        "慌てずに",
+        "すぐに"
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "translation": "Trong trường hợp xảy ra động đất, tuyệt đối không được hoảng loạn và hãy hành động bình tĩnh ngay lập tức.",
+      "explanation": "Cấu trúc ~際に (trong trường hợp, khi làm gì). Thứ tự: [際には (0)] [ks (1)] [aw (2)] [sg (3)]"
+    }
+  ]
+}
