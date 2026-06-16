@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const notebookController_1 = require("../controllers/notebookController");
+const auth_1 = require("../middleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticateToken);
+router.get('/', notebookController_1.getNotebookEntries);
+router.post('/', notebookController_1.upsertNotebookEntry);
+router.delete('/:id', notebookController_1.deleteNotebookEntry);
+exports.default = router;

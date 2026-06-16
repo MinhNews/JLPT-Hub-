@@ -257,7 +257,7 @@ function parseKaiwa(html: string): any {
     const cells = row.match(/<td[^>]*>([\s\S]*?)<\/td>/gi) || [];
     if (cells.length < 2) continue;
     
-    let speaker = unescapeHtml(stripTags(cleanRuby(cells[0]))).replace(/[:：]/g, '').trim();
+    let speaker = unescapeHtml(stripTags(cleanRuby(cells[0] || ''))).replace(/[:：]/g, '').trim();
     if (speaker) {
       currentSpeaker = speaker;
     }

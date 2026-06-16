@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const progressController_1 = require("../controllers/progressController");
+const auth_1 = require("../middleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticateToken);
+router.get('/', progressController_1.getUserProgress);
+router.post('/sync', progressController_1.syncProgress);
+router.post('/toggle', progressController_1.toggleProgressItem);
+exports.default = router;
