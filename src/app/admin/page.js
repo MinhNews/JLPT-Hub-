@@ -32,7 +32,7 @@ export default function AdminDashboard() {
   const [loadingUsers, setLoadingUsers] = useState(true);
   const [actionLoading, setActionLoading] = useState(null); // stores user ID currently being modified
 
-  const API_BASE_URL = 'http://localhost:5000/api/admin';
+  const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/admin';
 
   // Fetch Stats
   const fetchStats = async () => {

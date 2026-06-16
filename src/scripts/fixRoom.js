@@ -9,7 +9,7 @@ content = content.replace("import '../exams.css';", "import '../../exams.css';")
 content = content.replace("const { examId, section } = useParams();", "const { level, examId, section } = useParams();");
 
 // Replace API fetch
-content = content.replace("fetch(`http://localhost:5000/api/exams/n3/${examId}`)", "fetch(`http://localhost:5000/api/exams/${level}/${examId}`)");
+content = content.replace("fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/exams/n3/${examId}`)", "fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/exams/${level}/${examId}`)");
 
 // Replace any leftover n3 links
 content = content.replace(/exams\/n3/g, "exams/${level}");

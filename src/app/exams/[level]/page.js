@@ -13,7 +13,7 @@ export default function ExamList() {
   const level = params?.level || 'n3';
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/exams/${level}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/exams/${level}`)
       .then(res => res.json())
       .then(data => {
         setExams(data);

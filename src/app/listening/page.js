@@ -11,7 +11,7 @@ import {
   FastForward, VolumeX, AlertCircle, Loader2
 } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 const cleanForCompare = (text) => {
   if (!text) return '';

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Save, FileText, Loader2 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function NotebookPage() {
   const { token, user } = useAuth();

@@ -9,3 +9,4 @@ export * from './Grammar';
 export * from './Kanji';
 export * from './ReadingLesson';
 export * from './ListeningLesson';
+export * from './Exam';

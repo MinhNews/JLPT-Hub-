@@ -6,7 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useProgress } from '@/context/ProgressContext';
 import { ChevronLeft, ChevronRight, Lock, CheckCircle, RotateCcw, Volume2 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 const TABS = [
   { id: 'vocab',       label: '📝 Từ vựng',    emoji: '📝' },

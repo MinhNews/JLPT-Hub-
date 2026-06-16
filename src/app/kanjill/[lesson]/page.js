@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft, CheckCircle, RotateCw } from 'lucide-react';
 import '../kanjill.css';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function KanjiLLLesson() {
   const params = useParams();

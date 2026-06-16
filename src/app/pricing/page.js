@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Check, ShieldCheck, ArrowLeft, Loader2, Sparkles, CreditCard, QrCode } from 'lucide-react';
 import Link from 'next/link';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function PricingPage() {
   const { user, token, isVip, subscription, checkSubscription, loading } = useAuth();

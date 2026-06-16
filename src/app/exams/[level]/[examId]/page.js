@@ -13,7 +13,7 @@ export default function ExamGateway() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/exams/${level}/${examId}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/exams/${level}/${examId}`)
       .then(res => res.json())
       .then(data => {
         setExam(data);

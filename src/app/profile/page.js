@@ -80,7 +80,7 @@ export default function UserProfile() {
 
     setLoadingProfile(true);
     try {
-      const res = await fetch('http://localhost:5000/api/users/profile', {
+      const res = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/users/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ export default function UserProfile() {
     if (!token) return;
     setLoadingAvatar(true);
     try {
-      const res = await fetch('http://localhost:5000/api/users/profile/avatar', {
+      const res = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/users/profile/avatar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -367,11 +367,17 @@ export default function UserProfile() {
           text-decoration: none;
           font-size: 13.5px;
           font-weight: 600;
+          padding: 6px 14px;
+          border-radius: 20px;
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
           margin-bottom: 16px;
           transition: var(--transition);
         }
         .back-to-home-link:hover {
           color: var(--primary);
+          background: rgba(99, 102, 241, 0.08);
+          border-color: rgba(99, 102, 241, 0.3);
         }
         .profile-title-text {
           font-size: 26px;

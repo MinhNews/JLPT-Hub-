@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { BookOpen, ChevronRight } from 'lucide-react';
 import './kanjill.css';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function KanjiLLDashboard() {
   const [lessons, setLessons] = useState([]);

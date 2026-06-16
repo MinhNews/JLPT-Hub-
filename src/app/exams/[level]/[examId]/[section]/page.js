@@ -22,7 +22,7 @@ export default function ExamRoom() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/exams/${level}/${examId}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/exams/${level}/${examId}`)
       .then(res => res.json())
       .then(data => {
         setExam(data);

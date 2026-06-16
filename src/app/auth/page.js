@@ -85,12 +85,11 @@ export default function AuthPage() {
 
   return (
     <div className="auth-wrapper fade-in">
-      <Link href="/" className="back-home-btn">
-        <ArrowLeft size={16} />
-        <span>Quay lại trang chủ</span>
-      </Link>
-
       <div className="auth-card">
+        <Link href="/" className="back-home-btn">
+          <ArrowLeft size={16} />
+          <span>Quay lại</span>
+        </Link>
         <div className="auth-header">
           <div className="brand-logo">👑</div>
           <h1>JLPT Hub N3</h1>
@@ -227,25 +226,22 @@ export default function AuthPage() {
           position: relative;
         }
         .back-home-btn {
-          position: absolute;
-          top: 24px;
-          left: 24px;
-          display: flex;
+          display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 6px;
           color: var(--text-secondary);
           text-decoration: none;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 600;
-          padding: 8px 16px;
-          border-radius: var(--radius-sm);
-          border: 1px solid var(--border-color);
-          background: var(--card-bg);
+          padding: 6px 12px;
+          border-radius: 20px;
+          background: var(--bg-color);
           transition: var(--transition);
+          margin-bottom: 20px;
         }
         .back-home-btn:hover {
-          color: var(--text-primary);
-          border-color: var(--primary);
+          color: var(--primary);
+          background: rgba(99, 102, 241, 0.1);
         }
         .auth-card {
           width: 100%;
