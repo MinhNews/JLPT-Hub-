@@ -92,8 +92,17 @@ export default function LayoutClientWrapper({ children }) {
     N5: { primary: '#22c55e', glow: 'rgba(34,197,94,0.35)',  bg: 'rgba(34,197,94,0.08)',  label: 'N5 · Sơ cấp I' },
     N4: { primary: '#0ea5e9', glow: 'rgba(14,165,233,0.35)', bg: 'rgba(14,165,233,0.08)', label: 'N4 · Sơ cấp II' },
     N3: { primary: '#8b5cf6', glow: 'rgba(139,92,246,0.35)', bg: 'rgba(139,92,246,0.08)', label: 'N3 · Trung cấp' },
+    N2: { primary: '#f59e0b', glow: 'rgba(245,158,11,0.35)', bg: 'rgba(245,158,11,0.08)', label: 'N2 · Sắp có' },
+    N1: { primary: '#ef4444', glow: 'rgba(239,68,68,0.35)', bg: 'rgba(239,68,68,0.08)', label: 'N1 · Sắp có' },
   };
   const lc = levelColors[currentLevel];
+  const levels = [
+    { id: 'N5', disabled: false },
+    { id: 'N4', disabled: false },
+    { id: 'N3', disabled: false },
+    { id: 'N2', disabled: true },
+    { id: 'N1', disabled: true },
+  ];
 
   // ── Sidebar progress block ────────────────────────────────────────────────
   const progressBlock = currentLevel === 'N3' ? (
@@ -210,12 +219,15 @@ export default function LayoutClientWrapper({ children }) {
           <div className="level-switcher-wrap">
             <p className="level-switcher-label">CẤP ĐỘ</p>
             <div className="level-switcher">
-              {['N5', 'N4', 'N3'].map((lvl) => (
+              {levels.map(({ id: lvl, disabled }) => (
                 <button
                   key={lvl}
                   id={`level-btn-${lvl}`}
-                  className={`level-btn ${currentLevel === lvl ? 'active' : ''}`}
-                  onClick={() => changeLevel(lvl)}
+                  className={`level-btn ${currentLevel === lvl ? 'active' : ''} ${disabled ? 'disabled' : ''}`}
+                  onClick={() => !disabled && changeLevel(lvl)}
+                  disabled={disabled}
+                  aria-disabled={disabled}
+                  title={disabled ? `${lvl} sắp có` : `Chuyển sang ${lvl}`}
                   style={currentLevel === lvl ? {
                     background: levelColors[lvl].primary,
                     boxShadow: `0 2px 10px ${levelColors[lvl].glow}`,
@@ -319,18 +331,19 @@ export default function LayoutClientWrapper({ children }) {
           background: var(--bg-tertiary);
           border-radius: 10px;
           padding: 3px;
-          gap: 2px;
+          gap: 3px;
           border: 1px solid var(--border-color);
         }
         .level-btn {
           flex: 1;
-          padding: 7px 4px;
+          min-width: 0;
+          padding: 7px 2px;
           border-radius: 7px;
           border: none;
           background: transparent;
           color: var(--text-secondary);
           font-weight: 800;
-          font-size: 13px;
+          font-size: 12px;
           cursor: pointer;
           transition: all 0.2s ease;
           letter-spacing: 0.05em;
@@ -338,6 +351,18 @@ export default function LayoutClientWrapper({ children }) {
         .level-btn:hover:not(.active) {
           background: var(--border-color);
           color: var(--text-primary);
+        }
+        .level-btn.disabled {
+          color: var(--text-muted);
+          cursor: not-allowed;
+          opacity: 0.45;
+          background: repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 5px,
+            rgba(148, 163, 184, 0.1) 5px,
+            rgba(148, 163, 184, 0.1) 10px
+          );
         }
         .level-subtitle {
           font-size: 10px;
