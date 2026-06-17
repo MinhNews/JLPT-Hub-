@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useProgress } from '@/context/ProgressContext';
-import grammarData from '@/data/mimikara_n3_grammar.json';
-import questionData from '@/data/grammar_questions.json';
+
 import { 
   Search, 
   ChevronLeft, 
@@ -20,8 +19,27 @@ import {
   RefreshCw
 } from 'lucide-react';
 
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
+
 export default function GrammarPage() {
   const { grammarMastered, toggleGrammarMastered } = useProgress();
+  const [grammarData, setGrammarData] = useState([]);
+  const [questionData, setQuestionData] = useState({ fillInBlanks: [], starArrangements: [] });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([
+      fetch(`${API_BASE_URL}/grammar`).then(res => res.json()),
+      fetch(`${API_BASE_URL}/grammar/questions`).then(res => res.json())
+    ]).then(([grammar, questions]) => {
+      setGrammarData(grammar);
+      setQuestionData(questions);
+      setIsLoading(false);
+    }).catch(err => {
+      console.error(err);
+      setIsLoading(false);
+    });
+  }, []);
 
   // Mode tabs: 'list' (List), 'flashcard' (Cards), 'quiz' (Quiz)
   const [activeTab, setActiveTab] = useState('list');
@@ -311,6 +329,8 @@ export default function GrammarPage() {
     setIsQuizFinished(false);
     setCurrentQuestions([]);
   };
+
+  if (isLoading) return <div style={{textAlign:'center', padding: '100px'}}>Đang tải dữ liệu ngữ pháp...</div>;
 
   return (
     <div className={`grammar-page-container ${hideFurigana ? 'hide-furigana' : ''} ${hideTranslation ? 'hide-translation' : ''}`}>

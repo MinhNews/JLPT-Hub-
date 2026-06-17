@@ -6,6 +6,7 @@ import { Kanji } from '../models/Kanji';
 import { Vocabulary } from '../models/Vocabulary';
 import { Grammar } from '../models/Grammar';
 import { ReadingLesson } from '../models/ReadingLesson';
+import { GrammarQuiz } from '../models/GrammarQuiz';
 import mongoose from 'mongoose';
 
 dotenv.config();
@@ -52,6 +53,18 @@ const seedAllOtherData = async () => {
         grammarCount++;
       }
       console.log(`Successfully seeded ${grammarCount} Grammar patterns.`);
+    }
+
+    // 2.5 Seed Grammar Quiz
+    console.log('\n--- Seeding Grammar Quiz N3 ---');
+    await GrammarQuiz.deleteMany({});
+    const grammarQuizDataPath = path.join(dataDir, 'grammar_questions.json');
+    if (fs.existsSync(grammarQuizDataPath)) {
+      const rawQuiz = fs.readFileSync(grammarQuizDataPath, 'utf8');
+      const quizData = JSON.parse(rawQuiz);
+      const newQuiz = new GrammarQuiz(quizData);
+      await newQuiz.save();
+      console.log(`Successfully seeded Grammar Quiz (fillInBlanks: ${quizData.fillInBlanks?.length}, starArrangements: ${quizData.starArrangements?.length}).`);
     }
 
     // 3. Seed Vocabulary

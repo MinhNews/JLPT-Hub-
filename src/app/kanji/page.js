@@ -2,11 +2,36 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useProgress } from '@/context/ProgressContext';
-import kanjiData from '@/data/enriched_kanji.json';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 import { Check, X, ChevronLeft, ChevronRight, RotateCw, Search, Eye, HelpCircle, Grid, Play } from 'lucide-react';
 
 export default function KanjiPage() {
   const { kanjiMastered, toggleKanjiMastered } = useProgress();
+  const [kanjiData, setKanjiData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/kanji`)
+      .then(res => res.json())
+      .then(data => {
+        // Grouping API data by lesson, since the frontend expects { lesson: '...', cards: [...] } format.
+        // Actually, the API returns a flat list of all Kanji from the database.
+        // We can just reconstruct kanjiData format if needed, or directly use the flat list!
+        // Let's reconstruct kanjiData to keep existing useMemo hooks working without big changes.
+        const lessonMap = {};
+        data.forEach(item => {
+          if (!lessonMap[item.lesson]) lessonMap[item.lesson] = [];
+          lessonMap[item.lesson].push(item);
+        });
+        const grouped = Object.keys(lessonMap).map(k => ({ lesson: k, cards: lessonMap[k] }));
+        setKanjiData(grouped);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setIsLoading(false);
+      });
+  }, []);
 
   // Active study tab: 'grid', 'flashcard', 'quiz'
   const [activeTab, setActiveTab] = useState('grid');
@@ -199,6 +224,8 @@ export default function KanjiPage() {
       setQuizFinished(true);
     }
   };
+
+  if (isLoading) return <div style={{textAlign:'center', padding: '100px'}}>Đang tải dữ liệu Kanji...</div>;
 
   return (
     <div>

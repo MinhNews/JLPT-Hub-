@@ -2,11 +2,35 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useProgress } from '@/context/ProgressContext';
-import vocabData from '@/data/mimikara_n3_vocab.json';
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 import { Check, ChevronLeft, ChevronRight, RotateCw, Search, CheckCircle, HelpCircle, List, Play } from 'lucide-react';
 
 export default function VocabPage() {
   const { vocabMastered, toggleVocabMastered } = useProgress();
+  const [vocabData, setVocabData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/vocab`)
+      .then(res => res.json())
+      .then(data => {
+        // Reconstruct vocabData tree format so existing useMemo logic works
+        const reconstructed = {};
+        data.forEach(item => {
+          const unit = item.category || 'Unknown';
+          const lesson = item.section || 'Unknown';
+          if (!reconstructed[unit]) reconstructed[unit] = {};
+          if (!reconstructed[unit][lesson]) reconstructed[unit][lesson] = [];
+          reconstructed[unit][lesson].push(item);
+        });
+        setVocabData(reconstructed);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setIsLoading(false);
+      });
+  }, []);
 
   // Mode tabs: 'list', 'flashcard', 'quiz'
   const [activeTab, setActiveTab] = useState('list');
@@ -264,6 +288,8 @@ export default function VocabPage() {
       setQuizFinished(true);
     }
   };
+
+  if (isLoading) return <div style={{textAlign:'center', padding: '100px'}}>Đang tải dữ liệu Từ vựng...</div>;
 
   return (
     <div>

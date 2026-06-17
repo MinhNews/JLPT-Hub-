@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { Grammar } from '../models/Grammar';
+import { GrammarQuiz } from '../models/GrammarQuiz';
 import { Progress } from '../models/Progress';
 import jwt from 'jsonwebtoken';
 
@@ -62,6 +63,16 @@ export const getGrammarById = async (req: Request, res: Response) => {
     }
 
     res.status(200).json(item);
+  } catch (error: any) {
+    res.status(500).json({ message: error.message || 'Server Error' });
+  }
+};
+
+export const getGrammarQuestions = async (req: Request, res: Response) => {
+  try {
+    const quizData = await GrammarQuiz.findOne();
+    if (!quizData) return res.status(200).json({ fillInBlanks: [], starArrangements: [] });
+    res.status(200).json(quizData);
   } catch (error: any) {
     res.status(500).json({ message: error.message || 'Server Error' });
   }

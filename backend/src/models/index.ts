@@ -11,3 +11,4 @@ export * from './ReadingLesson';
 export * from './ListeningLesson';
 export * from './Exam';
 export * from './KanjiLL';
+export * from './GrammarQuiz';
