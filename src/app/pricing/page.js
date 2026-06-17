@@ -151,7 +151,7 @@ export default function PricingPage() {
     <div className="pricing-wrapper fade-in">
       <Link href="/" className="back-btn">
         <ArrowLeft size={16} />
-        <span>Quay lại Dashboard (Update)</span>
+        <span>Quay lại Dashboard</span>
       </Link>
 
       <div className="pricing-container">
@@ -322,18 +322,27 @@ export default function PricingPage() {
           text-decoration: none;
           font-weight: 600;
           font-size: 14px;
-          padding: 10px 20px;
+          padding: 9px 18px;
           border-radius: 100px;
-          background: rgba(99, 102, 241, 0.1);
+          background: rgba(99, 102, 241, 0.08);
           margin-bottom: 32px;
-          transition: all 0.3s ease;
-          border: 1px solid transparent;
+          transition: all 0.25s ease;
+          border: 1.5px solid rgba(99, 102, 241, 0.35);
+          letter-spacing: 0.01em;
+          backdrop-filter: blur(4px);
+        }
+        .back-btn svg {
+          transition: transform 0.25s ease;
+          flex-shrink: 0;
         }
         .back-btn:hover {
           background: var(--primary);
           color: white;
-          transform: translateX(-4px);
-          box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+          border-color: var(--primary);
+          box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+        }
+        .back-btn:hover svg {
+          transform: translateX(-3px);
         }
         .pricing-container {
           max-width: 960px;
