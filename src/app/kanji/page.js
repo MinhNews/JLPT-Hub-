@@ -29,6 +29,9 @@ export default function KanjiPage() {
       })
       .catch(err => {
         console.error(err);
+        setKanjiData([
+          { lesson: 'Error', cards: [{ kanji: 'LỖI', reading: String(err.message || err), meaning_vn: `URL API: ${API_BASE_URL}/kanji`, globalId: 'err_1' }] }
+        ]);
         setIsLoading(false);
       });
   }, []);

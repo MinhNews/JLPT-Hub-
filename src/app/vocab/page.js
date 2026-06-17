@@ -28,6 +28,16 @@ export default function VocabPage() {
       })
       .catch(err => {
         console.error(err);
+        setVocabData({
+          'Error': {
+            'Chi tiết lỗi': [{
+              globalId: 'error_1',
+              kanji: 'LỖI MẠNG / API',
+              reading: String(err.message || err),
+              meaning: `URL API: ${API_BASE_URL}/vocab`
+            }]
+          }
+        });
         setIsLoading(false);
       });
   }, []);

@@ -37,6 +37,14 @@ export default function GrammarPage() {
       setIsLoading(false);
     }).catch(err => {
       console.error(err);
+      setGrammarData([{
+        id: 'err_1',
+        title: 'LỖI MẠNG',
+        meaning: String(err.message || err),
+        structure: `URL API: ${API_BASE_URL}/grammar`,
+        explain: 'Vui lòng kiểm tra kết nối hoặc API server.',
+        examples: []
+      }]);
       setIsLoading(false);
     });
   }, []);
