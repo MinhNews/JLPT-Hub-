@@ -190,7 +190,7 @@ export default function ExamRoom() {
       </div>
 
       {/* Main Content Area */}
-      <div className="exam-main">
+      <div className={`exam-main ${showAnswers ? 'show-answers' : 'hide-answers'}`}>
         {isSubmitted && (
           <div className="result-banner">
             <h2>Kết Quả Bài Thi</h2>
@@ -198,36 +198,70 @@ export default function ExamRoom() {
           </div>
         )}
 
-        {sectionData.mondais && section === 'listening' ? (
-          <div className="mondais-container">
-            {sectionData.mondais.map((mondai) => {
-              const mondaiQuestions = sectionData.questions.filter(q => q.mondai_id === mondai.id);
-              return (
-                <div key={mondai.id} className="mondai-block" style={{marginBottom: '3rem'}}>
-                  <div className="mondai-header" style={{background: '#f1f5f9', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem'}}>
-                    <h3 className="mondai-title" style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e293b'}} dangerouslySetInnerHTML={{ __html: mondai.title }} />
-                    {(mondai.local_audio || mondai.audio_url) && (
-                      <audio controls className="q-audio" style={{marginTop: '1rem', width: '100%'}}>
-                        <source src={mondai.local_audio || mondai.audio_url} type="audio/mpeg" />
-                        Trình duyệt của bạn không hỗ trợ phát âm thanh.
-                      </audio>
-                    )}
-                  </div>
-                  <div className="questions-container">
-                    {mondaiQuestions.map(q => {
-                      const idx = sectionData.questions.findIndex(sq => sq.id === q.id);
-                      return renderQuestion(q, idx);
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="questions-container">
-            {sectionData.questions.map((q, idx) => renderQuestion(q, idx))}
-          </div>
-        )}
+        {(() => {
+          let displayMondais = sectionData.mondais || [];
+          if (displayMondais.length === 0 && sectionData.questions.length > 0) {
+            const mondaiIds = [...new Set(sectionData.questions.map(q => q.mondai_id))].filter(id => id != null);
+            mondaiIds.sort((a, b) => a - b);
+            const defaultTitles = {
+              vocabulary: [
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>１ ＿＿＿のことばの<ruby>読<rp>(</rp><rt>よ</rt><rp>)</rp></ruby>み<ruby>方<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>として<ruby>最<rp>(</rp><rt>もっと</rt><rp>)</rp></ruby>もよいものを、1・2・3・4 から<ruby>一<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ えらびなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>2＿＿＿のことばを漢字(かんじ)で書(か)くとき、最(もっと)もよいものを、1・2・3・4から一(ひと)つ選(えら)びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>3 （ ）に入(い)れるのに最(もっと)もよいものを、1・2・3・4から一(ひと)つえらびなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>4____に意味(いみ)が最(もっと)も近(ちか)いものを、1・2・3・4から一(ひと)つ選(えら)びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>５ 次(つぎ)の言葉(ことば)の使(つか)い方(かた)として最(もっと)も近(ちか)いものを、１・２・３・４から一(ひと)つ選(えら)びなさい।'
+              ],
+              grammar_reading: [
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>1 つぎの文の( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>2 次の文の ★ に入る最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>3 次の文章を読んで、文章の中の ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>4 次の(1)から(4)の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>5 次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>6 次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。',
+                '<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>7 右のページを読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。'
+              ]
+            };
+            displayMondais = mondaiIds.map((id, index) => ({
+              id,
+              title: defaultTitles[section] && defaultTitles[section][index] ? defaultTitles[section][index] : `問題${index + 1}`
+            }));
+          }
+
+          if (displayMondais.length > 0) {
+            return (
+              <div className="mondais-container">
+                {displayMondais.map((mondai) => {
+                  const mondaiQuestions = sectionData.questions.filter(q => q.mondai_id === mondai.id);
+                  if (mondaiQuestions.length === 0) return null;
+                  return (
+                    <div key={mondai.id} className="mondai-block" style={{marginBottom: '3rem'}}>
+                      <div className="mondai-header" style={{background: '#f1f5f9', padding: '1.5rem', borderRadius: '12px', marginBottom: '2rem'}}>
+                        <h3 className="mondai-title" style={{fontSize: '1.2rem', fontWeight: 700, color: '#1e293b'}} dangerouslySetInnerHTML={{ __html: mondai.title }} />
+                        {(mondai.local_audio || mondai.audio_url) && (
+                          <audio controls className="q-audio" style={{marginTop: '1rem', width: '100%'}}>
+                            <source src={mondai.local_audio || mondai.audio_url} type="audio/mpeg" />
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                          </audio>
+                        )}
+                      </div>
+                      <div className="questions-container">
+                        {mondaiQuestions.map(q => {
+                          const idx = sectionData.questions.findIndex(sq => sq.id === q.id);
+                          return renderQuestion(q, idx);
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          }
+          return (
+            <div className="questions-container">
+              {sectionData.questions.map((q, idx) => renderQuestion(q, idx))}
+            </div>
+          );
+        })()}
       </div>
     </div>
   );

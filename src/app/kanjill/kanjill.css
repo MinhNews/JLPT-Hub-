@@ -286,6 +286,18 @@
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+.kll-card-face::-webkit-scrollbar {
+  width: 6px;
+}
+.kll-card-face::-webkit-scrollbar-track {
+  background: transparent;
+}
+.kll-card-face::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .kll-card-front {
@@ -380,12 +392,26 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
 }
 
 @media (min-width: 768px) {
   .kll-back-body {
     flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.kll-back-left, .kll-back-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .kll-back-left, .kll-back-right {
+    width: 50%;
   }
 }
 
@@ -399,10 +425,6 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .kll-img-container { width: 50%; }
-}
-
 .kll-img-container img {
   max-height: 12rem;
   object-fit: contain;
@@ -410,7 +432,7 @@
 
 .kll-mnemonic-text {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
   line-height: 1.6;
   text-align: center;
@@ -420,7 +442,7 @@
 }
 
 @media (min-width: 768px) {
-  .kll-mnemonic-text { width: 50%; font-size: 1.5rem; }
+  .kll-mnemonic-text { font-size: 1.3rem; }
 }
 
 .kll-controls {
@@ -520,7 +542,6 @@
 /* Vocabulary Block */
 .kll-vocab-container {
   width: 100%;
-  margin-top: 1.5rem;
   padding: 1rem;
   border-radius: 0.75rem;
   background: rgba(255, 255, 255, 0.03);

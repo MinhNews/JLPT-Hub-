@@ -7,6 +7,12 @@ backend/node_modules
 # Ignore scraped/proprietary data files
 *.py
 scratch/
+backend/data/*.json
+backend/data/*.html
+backend/data/*.txt
+src/data/*_cache/
+src/data/*.json
+src/data/*.html
 /.pnp
 .pnp.*
 .yarn/*

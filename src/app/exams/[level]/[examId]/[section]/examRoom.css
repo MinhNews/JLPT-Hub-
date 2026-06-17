@@ -186,3 +186,9 @@ u rt {
 u rp {
   display: none !important;
 }
+
+/* Hide furigana in choices during the exam */
+.hide-answers .choice-item rt,
+.hide-answers .choice-item rp {
+  display: none !important;
+}

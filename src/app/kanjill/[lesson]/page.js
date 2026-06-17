@@ -150,29 +150,33 @@ export default function KanjiLLLesson() {
               </div>
 
               <div className="kll-back-body">
-                {currentKanji.imgUrl && (
-                  <div className="kll-img-container">
-                    <img src={currentKanji.imgUrl} alt="Mnemonic" />
+                <div className="kll-back-left">
+                  {currentKanji.imgUrl && (
+                    <div className="kll-img-container">
+                      <img src={currentKanji.imgUrl} alt="Mnemonic" />
+                    </div>
+                  )}
+                  <div className="kll-mnemonic-text">
+                    "{currentKanji.mnemonicText}"
                   </div>
-                )}
-                <div className="kll-mnemonic-text">
-                  "{currentKanji.mnemonicText}"
                 </div>
                 
                 {currentKanji.examples && currentKanji.examples.length > 0 && (
-                  <div className="kll-vocab-container">
-                    <div className="kll-vocab-grid">
-                      {currentKanji.examples.map((ex, idx) => {
-                        const parts = ex.split(':');
-                        const word = parts[0] ? parts[0].trim() : '';
-                        const meaning = parts[1] ? parts[1].trim() : '';
-                        return (
-                          <div key={idx} className="kll-vocab-item">
-                            <span className="kll-vocab-word">{word}</span>
-                            <span className="kll-vocab-meaning">{meaning}</span>
-                          </div>
-                        );
-                      })}
+                  <div className="kll-back-right">
+                    <div className="kll-vocab-container">
+                      <div className="kll-vocab-grid">
+                        {currentKanji.examples.map((ex, idx) => {
+                          const parts = ex.split(':');
+                          const word = parts[0] ? parts[0].trim() : '';
+                          const meaning = parts[1] ? parts[1].trim() : '';
+                          return (
+                            <div key={idx} className="kll-vocab-item">
+                              <span className="kll-vocab-word">{word}</span>
+                              <span className="kll-vocab-meaning">{meaning}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 )}

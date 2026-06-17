@@ -1,14 +1,9 @@
 import { Request, Response } from 'express';
-import fs from 'fs';
-import path from 'path';
+import { KanjiLL } from '../models';
 
-export const getAllLessons = (req: Request, res: Response) => {
+export const getAllLessons = async (req: Request, res: Response) => {
   try {
-    const dataPath = path.join(__dirname, '../../data/kanji_look_learn.json');
-    if (!fs.existsSync(dataPath)) {
-      return res.status(404).json({ message: 'Kanji Look and Learn data not found' });
-    }
-    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    const data = await KanjiLL.find().select('lessonId title kanjis').sort({ lessonId: 1 });
     // Only return summary to save bandwidth
     const summary = data.map((lesson: any) => ({
       lessonId: lesson.lessonId,
@@ -17,24 +12,21 @@ export const getAllLessons = (req: Request, res: Response) => {
     }));
     res.json(summary);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server Error' });
   }
 };
 
-export const getLessonById = (req: Request, res: Response) => {
+export const getLessonById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const dataPath = path.join(__dirname, '../../data/kanji_look_learn.json');
-    if (!fs.existsSync(dataPath)) {
-      return res.status(404).json({ message: 'Data not found' });
-    }
-    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    const lesson = data.find((l: any) => l.lessonId.toString() === id);
+    const lesson = await KanjiLL.findOne({ lessonId: Number(id) });
     if (!lesson) {
       return res.status(404).json({ message: 'Lesson not found' });
     }
     res.json(lesson);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server Error' });
   }
 };
