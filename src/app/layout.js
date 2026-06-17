@@ -1,6 +1,7 @@
 import { AuthProvider } from '@/context/AuthContext';
 import { ProgressProvider } from '@/context/ProgressContext';
 import LayoutClientWrapper from '@/components/LayoutClientWrapper';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import './globals.css';
 
 export const metadata = {
@@ -18,11 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="vi" suppressHydrationWarning>
       <body>
-        <AuthProvider>
-          <ProgressProvider>
-            <LayoutClientWrapper>{children}</LayoutClientWrapper>
-          </ProgressProvider>
-        </AuthProvider>
+        <GoogleOAuthProvider clientId="1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com">
+          <AuthProvider>
+            <ProgressProvider>
+              <LayoutClientWrapper>{children}</LayoutClientWrapper>
+            </ProgressProvider>
+          </AuthProvider>
+        </GoogleOAuthProvider>
       </body>
     </html>
   );

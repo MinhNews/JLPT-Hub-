@@ -153,7 +153,7 @@ export default function PricingPage() {
     <div className="pricing-wrapper fade-in">
       <Link href="/" className="back-btn">
         <ArrowLeft size={16} />
-        <span>Quay lại Dashboard</span>
+        <span>Quay lại Dashboard (Update)</span>
       </Link>
 
       <div className="pricing-container">

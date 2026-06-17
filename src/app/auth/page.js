@@ -5,9 +5,10 @@ import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { LogIn, UserPlus, Key, Mail, User, AlertCircle, ArrowLeft, Loader2, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { GoogleLogin } from '@react-oauth/google';
 
 export default function AuthPage() {
-  const { user, login, register, loading } = useAuth();
+  const { user, login, register, googleLoginAuth, loading } = useAuth();
   const router = useRouter();
   
   const [isLogin, setIsLogin] = useState(true);
@@ -184,6 +185,34 @@ export default function AuthPage() {
             )}
           </button>
         </form>
+
+        <div className="auth-divider">
+          <span>HOẶC</span>
+        </div>
+
+        <div className="google-login-wrapper">
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              try {
+                setIsSubmitting(true);
+                setErrorMsg('');
+                await googleLoginAuth(credentialResponse.credential);
+                router.push('/');
+              } catch (err) {
+                setErrorMsg(err.message || 'Đăng nhập Google thất bại');
+                setIsSubmitting(false);
+              }
+            }}
+            onError={() => {
+              setErrorMsg('Đăng nhập Google thất bại');
+            }}
+            useOneTap
+            theme="outline"
+            text={isLogin ? 'signin_with' : 'signup_with'}
+            shape="pill"
+            width="100%"
+          />
+        </div>
 
         <div className="auth-footer">
           <p>
@@ -374,6 +403,35 @@ export default function AuthPage() {
         }
         @keyframes spin {
           to { transform: rotate(360deg); }
+        }
+        .auth-divider {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin: 24px 0;
+          color: var(--text-muted);
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .auth-divider::before,
+        .auth-divider::after {
+          content: '';
+          flex: 1;
+          border-bottom: 1px solid var(--border-color);
+        }
+        .auth-divider span {
+          padding: 0 16px;
+        }
+        .google-login-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 24px;
+          width: 100%;
+        }
+        .google-login-wrapper > div {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
       `}</style>
     </div>

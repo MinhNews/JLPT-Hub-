@@ -112,6 +112,37 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Google Login action
+  const googleLoginAuth = async (credential) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/google`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ credential })
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || 'Google Login failed');
+      }
+
+      localStorage.setItem('jlpt_auth_token', data.token);
+      localStorage.setItem('jlpt_auth_user', JSON.stringify(data.user));
+      
+      setToken(data.token);
+      setUser(data.user);
+
+      await checkSubscription(data.token);
+      
+      return data;
+    } catch (err) {
+      console.error('Google login error:', err);
+      throw err;
+    }
+  };
+
   // Logout action
   const logout = () => {
     localStorage.removeItem('jlpt_auth_token');
@@ -139,6 +170,7 @@ export function AuthProvider({ children }) {
         loading,
         login,
         register,
+        googleLoginAuth,
         logout,
         checkSubscription,
         updateUserData
