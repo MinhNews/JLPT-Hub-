@@ -1,61 +1,97 @@
-import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
+import puppeteer from 'puppeteer';
 import * as cheerio from 'cheerio';
-import * as fs from 'fs';
-import * as path from 'path';
 
-const dataPath = path.join(__dirname, '../../data/kanji_look_learn.json');
+const DATA_PATH = path.join(__dirname, '../../data/kanji_look_learn.json');
 
-async function scrape() {
-  let kanjiData: any[] = [];
-  if (fs.existsSync(dataPath)) {
-    kanjiData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-  }
-
-  for (let i = 1; i <= 32; i++) {
-    console.log(`Scraping lesson ${i}...`);
-    try {
-      const { data } = await axios.get(`https://www.vnjpclub.com/kanji-look-and-learn/bai-${i}.html`);
-      const $ = cheerio.load(data);
-      
-      const lessonEntry = kanjiData.find((l: any) => l.lessonId === i);
-      if (!lessonEntry) continue;
-
-      $('.ka-card').each((_, card) => {
-        const kanjiChar = $(card).find('.ka-kanji').text().trim();
-        
-        const examples: string[] = [];
-        $(card).find('.ka-vocab-grid .col').each((_, col) => {
-          const html = $(col).html();
-          if (html) {
-            const lines = html.split(/<br\s*\/?>/i);
-            for (const line of lines) {
-              const text = cheerio.load(line).text().trim();
-              // text looks like "見（み）る : Nhìn, xem"
-              if (text && text.includes(':')) {
-                const [word, meaning] = text.split(/\s*:\s*/);
-                // Clean up any extra parentheses that vnjpclub might have added via <rp>
-                const cleanWord = word.replace(/（/g, '(').replace(/）/g, ')');
-                examples.push(`${cleanWord}: ${meaning}`);
-              }
-            }
-          }
-        });
-
-        // Find this kanji in our database and update it
-        const targetKanji = lessonEntry.kanjis.find((k: any) => k.kanji === kanjiChar);
-        if (targetKanji) {
-          targetKanji.examples = examples;
-        }
-      });
-    } catch (err: any) {
-      console.error(`Error scraping lesson ${i}:`, err.message);
-    }
-    // Wait 1s to not overload server
-    await new Promise(r => setTimeout(r, 1000));
-  }
-
-  fs.writeFileSync(dataPath, JSON.stringify(kanjiData, null, 2), 'utf8');
-  console.log('Successfully updated kanji_look_learn.json with vocabularies!');
+function getLessonUrl(lessonNum: number): string {
+  return `https://www.vnjpclub.com/kanji-look-and-learn/bai-${lessonNum}.html`;
 }
 
-scrape().catch(console.error);
+async function scrapeLessonWithPuppeteer(lessonNum: number, page: any) {
+  const url = getLessonUrl(lessonNum);
+  console.log(`Navigating to lesson ${lessonNum}: ${url}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
+    // Wait for the content to be decrypted by their JS
+    await new Promise(r => setTimeout(r, 2000));
+    
+    const html = await page.content();
+    const $ = cheerio.load(html);
+    const kanjisData: any = {};
+    
+    const cards = $('.ka-card');
+    if (cards.length > 0) {
+        console.log(`Found ${cards.length} cards using .ka-card logic`);
+        cards.each((_, card) => {
+          const kanjiChar = $(card).find('.ka-kanji').text().trim();
+          if (!kanjiChar) return;
+
+          const examples: string[] = [];
+          $(card).find('.ka-vocab-grid .col').each((_, col) => {
+            const colHtml = $(col).html();
+            if (colHtml) {
+              const lines = colHtml.split(/<br\s*\/?>/i);
+              for (const line of lines) {
+                const text = cheerio.load(line).text().trim();
+                if (text && text.includes(':')) {
+                  const [word, meaning] = text.split(/\s*:\s*/);
+                  const cleanWord = word.replace(/（/g, '(').replace(/）/g, ')');
+                  examples.push(`${cleanWord}: ${meaning}`);
+                }
+              }
+            }
+          });
+          kanjisData[kanjiChar] = examples;
+        });
+    } else {
+       // Fallback for older layouts (maybe tables?)
+       console.log('No .ka-card found, checking for tables...');
+    }
+    
+    return kanjisData;
+  } catch (error) {
+    console.error(`Error scraping lesson ${lessonNum}:`, error);
+    return {};
+  }
+}
+
+async function main() {
+  console.log('Reading database...');
+  if (!fs.existsSync(DATA_PATH)) {
+    console.error('Data file not found!');
+    return;
+  }
+  
+  const rawData = fs.readFileSync(DATA_PATH, 'utf-8');
+  const kanjiLookLearn = JSON.parse(rawData);
+  
+  console.log('Launching browser...');
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  
+  let updatedCount = 0;
+  for (const lesson of kanjiLookLearn) {
+    if (lesson.lessonId > 32) continue;
+    
+    console.log(`\n--- Processing Lesson ${lesson.lessonId} ---`);
+    const scrapedData = await scrapeLessonWithPuppeteer(lesson.lessonId, page);
+    
+    for (const k of lesson.kanjis) {
+      if (scrapedData[k.kanji] && scrapedData[k.kanji].length > 0) {
+        k.examples = scrapedData[k.kanji];
+        updatedCount++;
+      }
+    }
+  }
+  
+  await browser.close();
+  
+  console.log(`\nDone! Updated ${updatedCount} kanjis with examples.`);
+  fs.writeFileSync(DATA_PATH, JSON.stringify(kanjiLookLearn, null, 2), 'utf-8');
+  console.log('Database saved successfully.');
+}
+
+main().catch(console.error);
