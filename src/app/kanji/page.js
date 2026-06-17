@@ -73,12 +73,12 @@ export default function KanjiPage() {
       });
     });
     return list;
-  }, []);
+  }, [kanjiData]);
 
   // List of lessons for selector
   const lessonsList = useMemo(() => {
     return ['Tất cả', ...kanjiData.map((l) => l.lesson)];
-  }, []);
+  }, [kanjiData]);
 
   // Filter Kanji cards based on selected lesson
   const filteredKanji = useMemo(() => {

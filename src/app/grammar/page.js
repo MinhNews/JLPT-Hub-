@@ -100,7 +100,7 @@ export default function GrammarPage() {
     if (cardRange === 'Tất cả') return grammarData;
     const [start, end] = cardRange.split('-').map(Number);
     return grammarData.filter((item) => item.id >= start && item.id <= end);
-  }, [cardRange]);
+  }, [cardRange, grammarData]);
 
   // Current Card
   const currentCard = filteredCards[currentCardIndex] || filteredCards[0];
@@ -180,7 +180,7 @@ export default function GrammarPage() {
 
       return true;
     });
-  }, [searchQuery, listRange, listMasterFilter, grammarMastered]);
+  }, [searchQuery, listRange, listMasterFilter, grammarMastered, grammarData]);
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);

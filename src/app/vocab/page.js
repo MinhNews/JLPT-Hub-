@@ -110,7 +110,7 @@ export default function VocabPage() {
     });
 
     return list;
-  }, []);
+  }, [vocabData]);
 
   // Get list of units
   const unitsList = useMemo(() => {
@@ -122,7 +122,7 @@ export default function VocabPage() {
     };
     const sorted = [...keys].sort((a, b) => getUnitNumber(a) - getUnitNumber(b));
     return ['Tất cả', ...sorted];
-  }, []);
+  }, [vocabData]);
 
   // Get list of lessons for selected unit
   const lessonsList = useMemo(() => {
