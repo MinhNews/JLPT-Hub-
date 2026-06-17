@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
-import { Check, ShieldCheck, ArrowLeft, Loader2, Sparkles, Home, Info, AlertCircle } from 'lucide-react';
+import { Check, ShieldCheck, ArrowLeft, Loader2, Sparkles, Info, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
@@ -203,7 +203,6 @@ export default function PricingPage() {
         <span className="back-icon-wrap">
           <ArrowLeft size={16} />
         </span>
-        <Home size={15} />
         <span>Quay lại Dashboard</span>
       </Link>
 
@@ -374,7 +373,7 @@ export default function PricingPage() {
           min-height: 100vh;
           background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.05) 0%, transparent 40%), var(--bg-color);
         }
-        .back-btn {
+        :global(.pricing-wrapper .back-btn) {
           display: inline-flex;
           align-items: center;
           gap: 10px;
@@ -391,18 +390,18 @@ export default function PricingPage() {
           box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
           width: fit-content;
         }
-        .back-btn:visited,
-        .back-btn:focus,
-        .back-btn:hover {
+        :global(.pricing-wrapper .back-btn:visited),
+        :global(.pricing-wrapper .back-btn:focus),
+        :global(.pricing-wrapper .back-btn:hover) {
           color: var(--text-primary) !important;
           text-decoration: none !important;
         }
-        .back-btn span,
-        .back-btn svg {
+        :global(.pricing-wrapper .back-btn span),
+        :global(.pricing-wrapper .back-btn svg) {
           color: inherit;
           text-decoration: none !important;
         }
-        .back-icon-wrap {
+        :global(.pricing-wrapper .back-icon-wrap) {
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -413,16 +412,16 @@ export default function PricingPage() {
           background: var(--primary-gradient);
           box-shadow: 0 6px 14px rgba(99, 102, 241, 0.28);
         }
-        .back-icon-wrap svg {
+        :global(.pricing-wrapper .back-icon-wrap svg) {
           transition: transform 0.25s ease;
           flex-shrink: 0;
         }
-        .back-btn:hover {
+        :global(.pricing-wrapper .back-btn:hover) {
           transform: translateY(-2px);
           border-color: rgba(99, 102, 241, 0.45);
           box-shadow: 0 14px 34px rgba(99, 102, 241, 0.18);
         }
-        .back-btn:hover .back-icon-wrap svg {
+        :global(.pricing-wrapper .back-btn:hover .back-icon-wrap svg) {
           transform: translateX(-3px);
         }
         .pricing-container {
