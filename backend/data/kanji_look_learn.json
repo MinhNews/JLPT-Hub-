@@ -3010,7 +3010,12 @@
         "mnemonicText": "Tôi cuộn tròn mình lại.",
         "readings": "がん / まる、まる-い",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/to_round.jpg",
-        "examples": []
+        "examples": [
+          "丸(まる)い: Tròn",
+          "丸(まる): Hình tròn",
+          "丸(まる)める: Cuộn tròn, vo viên",
+          "弾丸(だんがん): Viên đạn"
+        ]
       },
       {
         "kanji": "熱",
@@ -3019,7 +3024,16 @@
         "mnemonicText": "Tôi cuộn tròn mình lại để sao cho hơi nóng không thoát ra.",
         "readings": "ねつ / あつ-い",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/heat.jpg",
-        "examples": []
+        "examples": [
+          "暑(あつ)い: Nóng",
+          "熱(ねつ): Nhiệt độ",
+          "熱心(ねっしん)な: Nhiệt tâm, nhiệt tình",
+          "熱中(ねっちゅう)する: Chìm đắm, hào hứng,",
+          "熱帯(ねったい): nhiệt đới",
+          "熱(ねっ)する: Kích động; hưng phấn; say mê, tăng nhiệt; biến nhiệt",
+          "加熱(かねつ): Sự đốt nóng, sự đun nóng",
+          "熱湯(ねっとう): nước sôi"
+        ]
       },
       {
         "kanji": "冷",
@@ -3028,7 +3042,16 @@
         "mnemonicText": "Đang run lập cập trong cơn gió lạnh.",
         "readings": "れい / つめ-たい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/freezing.jpg",
-        "examples": []
+        "examples": [
+          "冷(つめ)たい: Lạnh",
+          "冷(ひ)える: Lạnh đi; nguội đi; lạnh",
+          "冷(ひ)やす: Làm lạnh",
+          "冷(さ)ます: Làm lạnh",
+          "冷蔵庫(れいぞうこ): Tủ lạnh",
+          "冷房(れいぼう): Phòng lạnh",
+          "冷凍(れいとう)する: Làm lạnh; làm đông lạnh",
+          "冷静(れいせい)な: Bình tĩnh; điềm tĩnh"
+        ]
       },
       {
         "kanji": "甘",
@@ -3037,7 +3060,12 @@
         "mnemonicText": "Có mật ong ngọt ở trong lọ.",
         "readings": "かん / あま-い",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/sweet.jpg",
-        "examples": []
+        "examples": [
+          "甘(あま)い: Ngọt",
+          "甘(あま)やかす: chiều chuộng, nuông chiều",
+          "甘(あま)える: Nuông chiều",
+          "甘味料(かんみりょう): Đồ ngọt"
+        ]
       },
       {
         "kanji": "汚",
@@ -3046,7 +3074,15 @@
         "mnemonicText": "Uống nước bẩn.",
         "readings": "お / けが-す, けが-れる, けが-らわしい, よご-す, よご-れる, きたな-い",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/dirty.jpg",
-        "examples": []
+        "examples": [
+          "汚(きたな)い: Bẩn",
+          "汚(よご)れる: Bị bẩn",
+          "汚(よご)す: Làm bẩn",
+          "汚染(おせん): Ô nhiễm",
+          "汚(よご)れ: Bẩn; vệt bẩn",
+          "汚職(おしょく): sự tham ô, sự tham nhũng",
+          "汚(けが)れる: Vấy bẩn; bị bẩn; bị bôi nhọ; hoen ố"
+        ]
       },
       {
         "kanji": "果",
@@ -3055,7 +3091,14 @@
         "mnemonicText": "Cây đang ra quả.",
         "readings": "か / は-たす",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/fruit.jpg",
-        "examples": []
+        "examples": [
+          "果物(くだもの): hoa quả, trái cây",
+          "結果(けっか): Kết quả",
+          "効果(こうか): có hiệu quả, có tác dụng",
+          "果実(かじつ): quả",
+          "果(は)たして: Quả nhiên; quả thật",
+          "成果(せいか): thành quả, kết quả"
+        ]
       },
       {
         "kanji": "卵",
@@ -3064,7 +3107,12 @@
         "mnemonicText": "Hãy làm vỡ quả trứng!",
         "readings": "らん / たまご",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/egg.jpg",
-        "examples": []
+        "examples": [
+          "卵(たまご): Trứng",
+          "卵黄(らんおう): Lòng đỏ",
+          "卵白(らんぱく): Lòng trắng",
+          "卵焼(たまごや)き: Trứng nướng"
+        ]
       },
       {
         "kanji": "皿",
@@ -3073,7 +3121,14 @@
         "mnemonicText": "Đặt cái bánh lên trên dĩa.",
         "readings": "- / さら",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/plate.jpg",
-        "examples": []
+        "examples": [
+          "お皿(さら): Đĩa",
+          "灰皿(はいざら): Gạt tàn thuốc",
+          "紙(かみ)皿(ざら): Đĩa giấy",
+          "大皿(おおざら): Cái đĩa lớn",
+          "小皿(こざら): Cái đĩa nhỏ",
+          "皿洗(さらあら)い: Việc rửa chén đĩa"
+        ]
       },
       {
         "kanji": "酒",
@@ -3082,7 +3137,15 @@
         "mnemonicText": "Rượu ngon được làm từ nguồn nước sạch.",
         "readings": "しゅ / き,さけ, さか-, さ, し",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/alcohol.jpg",
-        "examples": []
+        "examples": [
+          "お酒(さけ): Rược",
+          "酒屋(さかや): tửu quán ,tiệm rượu ,quán rượu",
+          "日本酒(にほんしゅ): Rược Nhật",
+          "飲酒(いんしゅ)運転(うんてん): Lái xe trong tình trạng say rượu",
+          "洋酒(ようしゅ): Rượu Tây",
+          "居酒屋(いざかや): Quán rượu",
+          "地酒(じざけ): Rượu địa phương"
+        ]
       },
       {
         "kanji": "塩",
@@ -3091,7 +3154,13 @@
         "mnemonicText": "Thức ăn trên đĩa bị mặn.",
         "readings": "えん / しお",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/salty.jpg",
-        "examples": []
+        "examples": [
+          "塩(しお): Muối ăn",
+          "塩辛(しおから)い: Mặn",
+          "食塩(しょくえん): muối ăn",
+          "塩分(えんぶん): lượng muối",
+          "塩水(しおみず): nước muối"
+        ]
       },
       {
         "kanji": "付",
@@ -3100,7 +3169,18 @@
         "mnemonicText": "Đính gì đó lên một người.",
         "readings": "ふ / つ-く",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/attach.jpg",
-        "examples": []
+        "examples": [
+          "付(つ)き合(あ)う: Kết hợp; giao tiếp; liên kết",
+          "片付(かたづ)ける: Dọn dẹp",
+          "付(つ)ける: Gắn vào, ứng dụng",
+          "付(つ)く: Được gắn vào",
+          "日付(ひづけ): ngày tháng",
+          "日付(ひづ)け: Ngày tháng",
+          "受付(うけつけ): lễ tân, quầy thường trực",
+          "受(う)け付(つ)け: lễ tân, quầy thường trực",
+          "寄付(きふ): Sự tặng cho, kính tặng, quyên cúng",
+          "付録(ふろく): Túi xách"
+        ]
       },
       {
         "kanji": "片",
@@ -3109,7 +3189,15 @@
         "mnemonicText": "Một bên cây.",
         "readings": "へん / かた-, かた",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/one_side.jpg",
-        "examples": []
+        "examples": [
+          "片付(かたづ)ける: Dọn dẹp",
+          "片道(かたみち): một chiều, một lượt",
+          "片方(かたほう): Một hướng; một chiều; một chiếc; một bên",
+          "片手(かたて): một tay",
+          "片言(かたこと): Kiến thức nông cạn; sự biết lõm bõm",
+          "片寄(かたよ)る: Nghiêng; lệch; không cân bằng; không công bằng",
+          "破片(はへん): mảnh vụn, mảnh vỡ"
+        ]
       },
       {
         "kanji": "焼",
@@ -3118,7 +3206,15 @@
         "mnemonicText": "Tôi đã đốt 30 thanh gỗ.",
         "readings": "しょう / や-く］ 燃やす→燒［堯",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/burn.jpg",
-        "examples": []
+        "examples": [
+          "焼(や)く: Nướng",
+          "焼(や)ける: Nướng, rán (tự động từ)",
+          "夕焼(ゆうや)け: Ánh chiều tà đỏ rực; ánh nắng chiều tà đỏ rực",
+          "日焼(ひや)け: Rám nắng, tắm nắng",
+          "焼(や)き鳥(とり): Gà quay, gà nướng",
+          "焼肉(やきにく): thịt quay, thịt nướng",
+          "燃焼(ねんしょう): Sự đốt cháy"
+        ]
       },
       {
         "kanji": "消",
@@ -3127,7 +3223,14 @@
         "mnemonicText": "Mặt trăng biến mất trong làn nước.",
         "readings": "しょう / き-える、け-す",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/to_turn_off_disappear.jpg",
-        "examples": []
+        "examples": [
+          "消(け)す: Tắt, xóa bỏ (tự động từ)",
+          "消(き)える: Tắt, tan đi, biến mất",
+          "消化(しょうか)する: Tiêu hóa",
+          "消防署(しょうぼうしょ): Cục phòng cháy chữa cháy",
+          "取(と)り消(け)す: Thủ tiêu",
+          "消去(しょうきょ)する: loại ra, loại trừ, bài tiết, (thể dục, thể thao) cuộc đấu loại"
+        ]
       },
       {
         "kanji": "固",
@@ -3136,7 +3239,14 @@
         "mnemonicText": "Những bức tường bao quanh nhà thờ cổ rất cứng và bền.",
         "readings": "こ / かた-い",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/hard.jpg",
-        "examples": []
+        "examples": [
+          "固(かた)い: Bền, cứng",
+          "固(かた)まる: Làm cứng, cố nhiên, kín đáo",
+          "固体(こたい): thể rắn, dạng rắn, chất rắn",
+          "固定(こてい): cố định, sự cố định, sự giữ nguyên, giữ nguyên, giữ cố định",
+          "頑固(がんこ): Ngoan cố, cố chấp",
+          "固有(こゆう)の: Riêng tư,Cái vốn có; truyền thống"
+        ]
       },
       {
         "kanji": "個",
@@ -3145,7 +3255,15 @@
         "mnemonicText": "Mỗi cá nhân đều có một niềm tin vững chắc.",
         "readings": "こ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai21/individual.jpg",
-        "examples": []
+        "examples": [
+          "一個(いっこ): một cái, một cục, một viên",
+          "個人(こじん): cá nhân, cá thể",
+          "個人(こじん)主義(しゅぎ): Chủ nghĩa cá nhân",
+          "個展(こてん): Triển lãm cá nhân (tự tổ chức triển lãm)",
+          "個性(こせい): Cá tính, tính cách",
+          "個数(こすう): Số của mỗi thứ",
+          "個室(こしつ): Phòng riêng"
+        ]
       }
     ]
   },
@@ -3910,7 +4028,15 @@
         "mnemonicText": "Võ sĩ đạo hét to: ”Chúc may mắn!”",
         "readings": "きち, きつ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/goodluck.jpg",
-        "examples": []
+        "examples": [
+          "吉(きち): vận may, may mắn",
+          "大吉(だいきち): đại cát",
+          "吉日(きちじつ): ngày may mắn, ngày vui vẻ, ngày lành tháng tốt",
+          "不吉(ふきつ)な: điềm xấu, không may",
+          "吉報(きっぽう): tin vui, tin thắng trận",
+          "吉凶(きっきょう): sự hung cát,  lành dữ, điềm lành điềm dữ",
+          "吉田(よしだ)さん: anh,  chị Yoshida"
+        ]
       },
       {
         "kanji": "結",
@@ -3919,7 +4045,16 @@
         "mnemonicText": "Kết chỉ làm bùa may mắn.",
         "readings": "けつ / むす-ぶ、ゆ-う",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/to_tie.jpg",
-        "examples": []
+        "examples": [
+          "結婚(けっこん)する: kết hôn",
+          "結(むす)ぶ: nối, kết nối",
+          "結果(けっか): kết quả",
+          "結論(けつろん): kết luận",
+          "結(ゆ)う: buộc",
+          "結局(けっきょく): kết cục",
+          "団結(だんけつ)する: đoàn kết",
+          "結構(けっこう): tạm được, tương đối, cũng được, khá"
+        ]
       },
       {
         "kanji": "婚",
@@ -3928,7 +4063,16 @@
         "mnemonicText": "Phụ nữ đổi họ sau khi kết hôn.",
         "readings": "こん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/marriage.jpg",
-        "examples": []
+        "examples": [
+          "結婚(けっこん)する: kết hôn",
+          "離婚(りこん): ly hôn",
+          "婚約(こんやく): đính hôn",
+          "婚約者(こんやくしゃ): chồng chưa cưới",
+          "既婚(きこん): đã có gia đình, đã kết hôn",
+          "未婚(みこん): sự chưa kết hôn, sự chưa cưới",
+          "新婚(しんこん): tân hôn, mới cưới",
+          "求婚(きゅうこん)する: Cầu hôn"
+        ]
       },
       {
         "kanji": "共",
@@ -3937,7 +4081,15 @@
         "mnemonicText": "Cùng với bạn.",
         "readings": "きょう / とも",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/together.jpg",
-        "examples": []
+        "examples": [
+          "共(とも)に: cùng nhau, cùng với",
+          "共通(きょうつう): cộng đồng, thông thường, phổ thông",
+          "公共(こうきょう): Công cộng",
+          "共感(きょうかん)する: đồng cảm, thông cảm",
+          "共産(きょうさん)主義(しゅぎ): chủ nghĩa cộng sản",
+          "共学(きょうがく): sự học chung",
+          "共同(きょうどう): Cộng đồng; sự liên hiệp; sự liên đới"
+        ]
       },
       {
         "kanji": "供",
@@ -3946,7 +4098,15 @@
         "mnemonicText": "Cùng nhau giúp đỡ bạn.",
         "readings": "きょう, く / そな-える、とも",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/offer.jpg",
-        "examples": []
+        "examples": [
+          "子供(こども): Trẻ con, con cái",
+          "供(そな)える: Phúng viếng; cúng",
+          "供給(きょうきゅう)する: cung cấp",
+          "提供(ていきょう): sự cung cấp, đưa ra",
+          "試供品(しきょうひん): hàng mẫu, mẫu thử",
+          "お供(とも)する: đi theo, đi kèm",
+          "供養(くよう): lễ cúng, tưởng nhớ người đã khuất"
+        ]
       },
       {
         "kanji": "両",
@@ -3955,7 +4115,14 @@
         "mnemonicText": "Người bán cá vác quang gánh trên cả hai vai.",
         "readings": "りょう / →兩［兩",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/both.jpg",
-        "examples": []
+        "examples": [
+          "両親(りょうしん): thân sinh",
+          "両手(りょうて): hai tay",
+          "両方(りょうほう): song phương, hai bên",
+          "両側(りょうがわ): hai bên",
+          "両替(りょうがえ): đổi tiền",
+          "両立(りょうりつ)する: đồng thời, cùng tồn tại, song song"
+        ]
       },
       {
         "kanji": "若",
@@ -3964,7 +4131,14 @@
         "mnemonicText": "Hái những chiếc lá non bằng tay phải.",
         "readings": "じゃく, にゃく / わか-い、も-し",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/young.jpg",
-        "examples": []
+        "examples": [
+          "若(わか)い: trẻ",
+          "若者(わかもの): thanh niên, lớp trẻ, giới trẻ",
+          "若々(わかわか)しい: trẻ trung đầy sức sống",
+          "若(も)しくは: hoặc là, hay là",
+          "若輩(じゃくはい): Người tập việc; người mới học, người chưa có kinh nghiệm",
+          "老若(ろうにゃく)男女(なんにょ): nam nữ mọi lứa tuổi, bất kể già trẻ trai gái"
+        ]
       },
       {
         "kanji": "老",
@@ -3973,7 +4147,13 @@
         "mnemonicText": "Ông lão cầm cây gậy còn bà lão thì đang ngồi.",
         "readings": "ろう / お-いる、ふ-ける",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/old_age.jpg",
-        "examples": []
+        "examples": [
+          "老人(ろうじん): người già",
+          "老(お)いる: già, lão",
+          "老(ふ)ける: già, già lão",
+          "老化(ろうか): lão hóa",
+          "老眼(ろうがん): mắt lão"
+        ]
       },
       {
         "kanji": "息",
@@ -3982,7 +4162,16 @@
         "mnemonicText": "Phải thở để giữ cho trái tim đập.",
         "readings": "そく / いき",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/breathe.jpg",
-        "examples": []
+        "examples": [
+          "息(いき): hơi thở",
+          "息子(むすこ): con trai",
+          "休息(きゅうそく): nghỉ giải lao, nghĩ ngơi",
+          "息(いき)をする: thở",
+          "消息(しょうそく): tin tức, tình hình",
+          "ため息(いき): thở dài",
+          "息切(いきぎ)れ: hụt hơi, hết hơi",
+          "息抜(いきぬ)き: nới lỏng, dịu đi, bớt căng thẳng, giải trí"
+        ]
       },
       {
         "kanji": "娘",
@@ -3991,7 +4180,11 @@
         "mnemonicText": "Con gái tôi là một đứa con tốt （良）.",
         "readings": "- / むすめ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/daughter.jpg",
-        "examples": []
+        "examples": [
+          "娘(むすめ): con gái",
+          "一人娘(ひとりむすめ): con gái duy nhất, con gái một",
+          "娘婿(むすめむこ): con nuôi"
+        ]
       },
       {
         "kanji": "奥",
@@ -4000,7 +4193,13 @@
         "mnemonicText": "Tôi bỏ gạo （米）vào trong cái hộp lớn （大）rồi cất nó vào trong góc.",
         "readings": "うう / →奧［奧",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/back.jpg",
-        "examples": []
+        "examples": [
+          "奥(おく): bên trong",
+          "奥(おく)さん: vợ ( của người khác)",
+          "奥歯(おくば): răng cấm",
+          "奥(おく)ゆかしい: thanh lịch, nhã nhặn",
+          "奥行(おくゆ)き: chiều sâu"
+        ]
       },
       {
         "kanji": "将",
@@ -4009,7 +4208,12 @@
         "mnemonicText": "Tướng quân đang suy nghĩ về tương lai.",
         "readings": "しょう / まさ-に］ 今にも、助ける、養う→將［將",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/commander.jpg",
-        "examples": []
+        "examples": [
+          "将来(しょうらい): tương lai",
+          "将棋(しょうぎ): cờ tướng",
+          "将軍(しょうぐん): tươớng quân",
+          "主将(しゅしょう): đội trưởng, chủ tướng"
+        ]
       },
       {
         "kanji": "組",
@@ -4018,7 +4222,16 @@
         "mnemonicText": "Đi đến mộ tổ tiên cúng kiến.",
         "readings": "そ / くみ、く-む",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/ancestor.jpg",
-        "examples": []
+        "examples": [
+          "祖父(そふ): ông",
+          "祖母(そぼ): bà",
+          "祖先(そせん): tổ tiên",
+          "祖国(そこく): quê cha đất mẹ, tổ quốc",
+          "先祖(せんぞ): ông bà, tổ tiên",
+          "祖父母(そふぼ): ông bà",
+          "元祖(がんそ): tổ sư, người sáng lập, người sáng tạo ra",
+          "教祖(きょうそ): giáo tổ, người lập ra một tôn giáo"
+        ]
       },
       {
         "kanji": "育",
@@ -4027,7 +4240,15 @@
         "mnemonicText": "Tôi vừa ngắm trăng vừa lớn lên.",
         "readings": "いく / そだ-つ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/grew.jpg",
-        "examples": []
+        "examples": [
+          "教育(きょういく): sự giáo dục",
+          "育(そだ)てる: nuôi lớn",
+          "育(そだ)つ: lớn lên",
+          "体育(たいいく): môn thể dục, thể chất",
+          "育児(いくじ): sự nuôi , chăm sóc trẻ",
+          "保育(ほいく): việc nuôi dưỡng, chăm sóc",
+          "飼育(しいく)する: nuôi trồng"
+        ]
       },
       {
         "kanji": "性",
@@ -4036,7 +4257,16 @@
         "mnemonicText": "Giới tính sẽ được biết lúc sinh ra.",
         "readings": "せい, しょう / さが",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/sex_character.jpg",
-        "examples": []
+        "examples": [
+          "男性(だんせい): nam giới",
+          "女性(じょせい): nữ giới",
+          "性別(せいべつ): giới tính",
+          "性格(せいかく): tính cách",
+          "性質(せいしつ): tính chất",
+          "理性(りせい): lý trí, lý tính",
+          "酸性(さんせい): tính axit",
+          "相性(あいしょう): mối quan hệ thân thuộc, tính tương hợp"
+        ]
       },
       {
         "kanji": "招",
@@ -4045,7 +4275,12 @@
         "mnemonicText": "Tôi sẽ chiêu đãi bữa ăn.",
         "readings": "しょう / まね-く",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai27/invite.jpg",
-        "examples": []
+        "examples": [
+          "招待(しょうたい)する: mời",
+          "招(まね)く: rủ rê, mời mọc",
+          "招(まね)き: việc rủ rê, mời mọc",
+          "招待状(しょうたいじょう): thiệp mời"
+        ]
       }
     ]
   },
@@ -4060,7 +4295,15 @@
         "mnemonicText": "Đừng kéo tai tôi!",
         "readings": "しゅ / と-る",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/take.jpg",
-        "examples": []
+        "examples": [
+          "取(と)る: lấy, giành được, thu được",
+          "受(う)け取(と)る: tiếp thu; nhận",
+          "取(と)り出(だ)す: rút ra, chọn ra, móc ra",
+          "取(と)り消(け)す: thủ tiêu, xóa bỏ",
+          "取(と)り替(か)える: đổi lại, trao đổi",
+          "聞(き)き取(と)り: sự nghe hiểu",
+          "取材(しゅざい)する: thu thập dữ liệu"
+        ]
       },
       {
         "kanji": "最",
@@ -4069,7 +4312,16 @@
         "mnemonicText": "Bắt lấy ánh mặt trời là điều khó khăn nhất.",
         "readings": "さい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/utmost.jpg",
-        "examples": []
+        "examples": [
+          "最初(さいしょ): trước hết, mới đầu, lần đầu tiên",
+          "最後(さいご): cuối cùng",
+          "最近(さいきん): gần đây, mới đây",
+          "最高(さいこう): tuyệt nhất, tốt nhất",
+          "最低(さいてい): tồi nhất",
+          "最新(さいしん): cái mới nhất",
+          "最(もっと)も: rất",
+          "最終(さいしゅう)電車(でんしゃ): chuyến tàu điện cuối cùng"
+        ]
       },
       {
         "kanji": "初",
@@ -4078,7 +4330,16 @@
         "mnemonicText": "Khi làm kimono thì trước tiên sẽ cắt vải bằng dao.",
         "readings": "しょ / し,はじ-め, はじ-めて, はつ, はつ-, うい-, -そ-める, -ぞ-め, はっ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/first.jpg",
-        "examples": []
+        "examples": [
+          "初(はじ)めは: trước hết,trước tiên",
+          "初(はじ)めて: lần đầu tiên",
+          "最初(さいしょ): trước hết ,mới đầu ,lúc đầu ,lần đầu tiên ,đầu tiên",
+          "初級(しょきゅう): Sơ cấp, sự dành cho người mới bắt đầu",
+          "初恋(はつこい): mối tình đầu",
+          "初心者(しょしんしゃ): người mới nhập môn, người mới học, người mới vào nghề",
+          "初夏(しょか): đầu hè",
+          "初々(ういうい)しい: ngây thơ, vô tội"
+        ]
       },
       {
         "kanji": "番",
@@ -4087,7 +4348,16 @@
         "mnemonicText": "Thay phiên nhau gặt lúa trên đồng.",
         "readings": "ばん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/turn.jpg",
-        "examples": []
+        "examples": [
+          "一番(いちばん): Thứ nhất, đầu tiên",
+          "番号(ばんごう): số hiệu",
+          "二番目(にばんめ): vị trí thứ 2",
+          "当番(とうばん): phiên trực, lượt (làm việc)",
+          "交番(こうばん): đồn cảnh sát",
+          "番組(ばんぐみ): chương trình, kênh tv",
+          "留守番(るすばん)電話(でんわ): tín hiệu điện thoại trả lời tự động",
+          "順番(じゅんばん): thứ tự, lần lượt"
+        ]
       },
       {
         "kanji": "歳",
@@ -4096,7 +4366,16 @@
         "mnemonicText": "Hãy thôi hỏi tôi bao nhiêu tuổi!",
         "readings": "さい, せい / とし",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/age.jpg",
-        "examples": []
+        "examples": [
+          "五歳(ごさい): 5 tuổi",
+          "二十歳(はたち): 20 tuổi",
+          "に十歳(じゅっさい): 20 tuổi",
+          "万歳(ばんざい): Hoan hô, chào mừng, vạn tuế",
+          "お歳暮(せいぼ): quà cuối năm",
+          "歳月(さいげつ): tuế nguyệt, thời gian",
+          "歳入(さいにゅう): thu nhập",
+          "歳出(さいしゅつ): chi tiêu"
+        ]
       },
       {
         "kanji": "枚",
@@ -4105,7 +4384,11 @@
         "mnemonicText": "Tôi đã làm một mảnh giấy từ cây.",
         "readings": "まい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/sheet_of.jpg",
-        "examples": []
+        "examples": [
+          "一枚(いちまい): 1 tờ, 1 tấm",
+          "枚数(まいすう): số tờ,số tấm",
+          "二枚目(にまいめ): tấm thứ 2, tờ thứ 2"
+        ]
       },
       {
         "kanji": "冊",
@@ -4114,7 +4397,13 @@
         "mnemonicText": "Bó các tờ giấy làm thành một quyển sách.",
         "readings": "さつ, さく",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/counter%20for%20books.jpg",
-        "examples": []
+        "examples": [
+          "一冊(いっさつ): 1 quyển, 1 tập",
+          "小冊子(しょうさっし): cuốn sách nhỏ",
+          "別冊(べっさつ): tập riêng",
+          "短冊(たんざく): Mảnh giấy nhỏ dài dùng để làm thơ",
+          "冊数(さっすう): số quyển (sách vở)"
+        ]
       },
       {
         "kanji": "億",
@@ -4123,7 +4412,11 @@
         "mnemonicText": "Một trăm triệu người có ý chí （意）khác nhau của riêng từng người.",
         "readings": "おく",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/hundred_million.jpg",
-        "examples": []
+        "examples": [
+          "一億(いちおく): 1 trăm triệu",
+          "十億(じゅうおく): 1 tỷ",
+          "億万長者(おくまんちょうじゃ): tỷ phú"
+        ]
       },
       {
         "kanji": "点",
@@ -4132,7 +4425,16 @@
         "mnemonicText": "Đã ấn dấu 4 điểm.",
         "readings": "てん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/point_dot.jpg",
-        "examples": []
+        "examples": [
+          "点(てん): điểm",
+          "弱点(じゃくてん): nhược điểm, điểm yếu",
+          "交差点(こうさてん): ngã tư, bùng binh, nơi giao nhau",
+          "点数(てんすう): điểm số",
+          "欠点(けってん): thiếu sót, khuyết điểm",
+          "百点(ひゃくてん): 100 điểm",
+          "句読点(くとうてん): dấu chấm câu",
+          "要点(ようてん): yếu điểm, điểm trọng yếu"
+        ]
       },
       {
         "kanji": "階",
@@ -4141,7 +4443,12 @@
         "mnemonicText": "Mọi người （皆）đang ở trên xe buýt 2 tầng.",
         "readings": "かい / きざはし",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/floor.jpg",
-        "examples": []
+        "examples": [
+          "二階(にかい): tầng hai",
+          "階段(かいだん): cầu thang",
+          "段階(だんかい): giai đoạn",
+          "階級(かいきゅう): giai cấp"
+        ]
       },
       {
         "kanji": "段",
@@ -4150,7 +4457,15 @@
         "mnemonicText": "Làm cầu thang bằng đá.",
         "readings": "だん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/stair.jpg",
-        "examples": []
+        "examples": [
+          "階段(かいだん): cầu thang",
+          "一段(いちだん): 1 bậc (cầu thang)",
+          "一段(いちだん)と: hơn hẳn, hơn một bậc",
+          "段階(だんかい): giai đoạn",
+          "手段(しゅだん): phương thức, phương pháp",
+          "値段(ねだん): giá cả",
+          "普段(ふだん): bình thường, thông thường"
+        ]
       },
       {
         "kanji": "号",
@@ -4159,7 +4474,15 @@
         "mnemonicText": "Hãy nói to con số của bạn!",
         "readings": "ごう / さけ-ぶ, よびな",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/number.jpg",
-        "examples": []
+        "examples": [
+          "番号(ばんごう): số hiệu",
+          "記号(きごう): kí hiệu",
+          "一号車(いちごうしゃ): xe hạng nhất",
+          "信号(しんごう): đèn giao thông",
+          "第(だい)三号(さんごう): ấn phẩm thứ 3, số 3, lần thứ 3",
+          "年号(ねんごう): năm, niên hiệu",
+          "暗号(あんごう): ám hiệu, mật mã"
+        ]
       },
       {
         "kanji": "倍",
@@ -4168,7 +4491,13 @@
         "mnemonicText": "Chiều cao của người có dáng cao gấp đôi chiều cao của người thấp.",
         "readings": "ばい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/double.jpg",
-        "examples": []
+        "examples": [
+          "三倍(さんばい): ba lần (bội số)",
+          "倍数(ばいすう): bội số",
+          "倍率(ばいりつ): bội suất",
+          "倍増(ばいぞう)する: tăng gấp đôi",
+          "人一倍(ひといちばい): hơn hẳn những người khác, tuyệt vời"
+        ]
       },
       {
         "kanji": "次",
@@ -4177,7 +4506,16 @@
         "mnemonicText": "Há to miệng và hét lên: ”Kế tiếp!”",
         "readings": "じ, し / つぎ、つ-ぐ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/next.jpg",
-        "examples": []
+        "examples": [
+          "次(つぎ): tiếp theo, sau đây",
+          "次々(つぎつぎ): lần lượt, kế tiếp",
+          "目次(もくじ): mục lục",
+          "次第(しだい)に: tùy thuộc",
+          "次(つ)いで: sau đó, tiếp đến",
+          "次女(じじょ): thứ nữ, con gái thứ",
+          "次男(じなん): thứ nam, con trai thứ",
+          "次回(じかい): lần sau"
+        ]
       },
       {
         "kanji": "々",
@@ -4186,7 +4524,15 @@
         "mnemonicText": "Ký hiệu này biểu thị sự lặp lại.",
         "readings": "",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/symbol_of_repetition.jpg",
-        "examples": []
+        "examples": [
+          "人々(ひとびと): mọi người, người người",
+          "色々(いろいろ)な: đa dạng, nhiều điều, phong phú",
+          "時々(ときどき): thỉnh thoảng",
+          "少々(しょうしょう)する: 1 chút, 1 ít",
+          "先々週(せんせんしゅう): tuần trước nữa",
+          "別々(べつべつ)に: riêng lẻ, tách biệt",
+          "昔々(むかしむかし): Ngày xửa ngày xưa"
+        ]
       },
       {
         "kanji": "他",
@@ -4195,7 +4541,14 @@
         "mnemonicText": "Tôi muốn nuôi con thú cưng khác chứ không phải con bò cạp.",
         "readings": "た / ほか",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai28/other.jpg",
-        "examples": []
+        "examples": [
+          "その他(た): cái khác",
+          "その他(ほか): cái khác",
+          "他(た)の: thứ khác",
+          "他(ほか)の: thứ khác",
+          "他人(たにん): người khác",
+          "他動詞(たどうし): tha động từ"
+        ]
       }
     ]
   },
@@ -4210,7 +4563,15 @@
         "mnemonicText": "Ngày thắng là thứ hai（月）, không phải thứ ba.",
         "readings": "しょう / か-つ、まさ-る",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/won.jpg",
-        "examples": []
+        "examples": [
+          "勝(か)つ: chiến thắng",
+          "勝負(しょうぶ): Sự thi đấu, sự chơi phân thắng bại",
+          "勝手(かって)に: tự tiện, tùy ý, tùy thích",
+          "一勝(いっしょう): chiến thắng, giải nhất",
+          "優勝(ゆうしょう)する: vô địch",
+          "決勝(けっしょう): trận chung kết",
+          "勝(まさ)る: vượt trội hơn"
+        ]
       },
       {
         "kanji": "負",
@@ -4219,7 +4580,16 @@
         "mnemonicText": "Người thua sẽ trả tiền.",
         "readings": "ふ / ま-ける, ま-かす, お-う",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/defeat.jpg",
-        "examples": []
+        "examples": [
+          "負(ま)ける: thua, bị dánh bại",
+          "勝負(しょうぶ): Sự thi đấu, sự chơi phân thắng bại",
+          "勝(か)ち負(ま)け: sự thắng thua",
+          "負担(ふたん): gánh vác",
+          "背負(せお)う: cõng, gánh vác, đảm đương",
+          "負傷(ふしょう): bị thương",
+          "抱負(ほうふ): sự ấp ủ, ôm ấp (hoài bão)",
+          "負(ま)かす: đánh bại"
+        ]
       },
       {
         "kanji": "賛",
@@ -4228,7 +4598,12 @@
         "mnemonicText": "Mọi người đã tán thưởng những người chồng （夫）mang chiếc vỏ sò lớn về nhà.",
         "readings": "さん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/praised.jpg",
-        "examples": []
+        "examples": [
+          "賛成(さんせい)する: ủng hộ, tán thành",
+          "称賛(しょうさん)する: ban khen, truyền tụng, xưng tụng",
+          "賛美(さんび): sự tán dương, ca tụng",
+          "絶賛(ぜっさん): ngưỡng mộ"
+        ]
       },
       {
         "kanji": "成",
@@ -4237,7 +4612,16 @@
         "mnemonicText": "Tôi hoàn thành sứ mệnh bằng việc sử dụng vũ khí.",
         "readings": "せい, じょう / な-す",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/accomplished.jpg",
-        "examples": []
+        "examples": [
+          "賛成(さんせい)する: ủng hộ, tán thành",
+          "成長(せいちょう): trưởng thành, tăng trưởng",
+          "成人(せいじん): người trưởng thành",
+          "成(な)る: trở thành",
+          "成績(せいせき): thành tích",
+          "完成(かんせい): hoàn thành",
+          "成功(せいこう): thành công",
+          "成就(じょうじゅ)する: thành tựu"
+        ]
       },
       {
         "kanji": "絶",
@@ -4246,7 +4630,14 @@
         "mnemonicText": "Chỉ màu （色）này không được sản xuất nữa.",
         "readings": "ぜつ / た-える",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/discontinue.jpg",
-        "examples": []
+        "examples": [
+          "絶対(ぜったい)に: tuyệt đối",
+          "絶滅(ぜつめつ): tuyệt chủng",
+          "絶(た)えず: liên tục",
+          "気絶(きぜつ)する: bất tỉnh, ngất đi",
+          "絶望(ぜつぼう): tuyệt vọng",
+          "絶(た)える: tuyệt chủng"
+        ]
       },
       {
         "kanji": "対",
@@ -4255,7 +4646,15 @@
         "mnemonicText": "Tôi phản đối cậu.",
         "readings": "たい, つい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/oppose.jpg",
-        "examples": []
+        "examples": [
+          "絶対(ぜったい)に: tuyệt đối",
+          "反対(はんたい)する: Phản đối",
+          "日本(にほん)対(たい)スペイン: Nhật Bản đấu với Tây Ban Nha",
+          "対象(たいしょう): đối tượng",
+          "～に対(たい)して: đối với",
+          "一対(いっつい): một đôi, một cặp",
+          "相対的(そうたいてき)に: 1 cách tương đối"
+        ]
       },
       {
         "kanji": "続",
@@ -4264,7 +4663,16 @@
         "mnemonicText": "Tôi tiếp tục bán（売）chỉ（糸）.",
         "readings": "ぞく / つづ-く",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/continue.jpg",
-        "examples": []
+        "examples": [
+          "続(つづ)ける: tiếp tục, nối dõi (tha động từ)",
+          "続(つづ)く: tiếp tục (tự động từ)",
+          "続(つづ)き: sự tiếp tục",
+          "手続(てつづ)き: thủ tục",
+          "連続(れんぞく): sự liên tục,  liền tiếp",
+          "相続(そうぞく): sự kế tiếp, thừa kế",
+          "続々(ぞくぞく): Sự liên tục; sự kế tiếp; việc cái này tiếp theo cái khác",
+          "接続(せつぞく)し: Sự liên kết; mắt xích chuyển tiếp; kết nối"
+        ]
       },
       {
         "kanji": "辞",
@@ -4273,7 +4681,15 @@
         "mnemonicText": "Thật khổ sở （辛）để tra từ điển 1000 （千）từ.",
         "readings": "じ / や-める",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/word_toresign.jpg",
-        "examples": []
+        "examples": [
+          "辞書(じしょ): từ điển",
+          "辞(や)める: từ bỏ, thôi (học, làm việc)",
+          "辞典(じてん): từ điển",
+          "辞職(じしょく)する: từ chức, thôi việc",
+          "辞退(じたい)する: khước từ, từ chối",
+          "お世辞(せじ): nịnh hót, lời nịnh nọt",
+          "辞表(じひょう): đơn từ chức"
+        ]
       },
       {
         "kanji": "投",
@@ -4282,7 +4698,13 @@
         "mnemonicText": "Tôi ném đá bằng tay.",
         "readings": "とう / な-げる",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/to_throw.jpg",
-        "examples": []
+        "examples": [
+          "投(な)げる: ném",
+          "投票(とうひょう)する: bỏ phiếu",
+          "投書(とうしょ): Thư bạn đọc; bài cộng tác cho báo; thư gửi người biên tập",
+          "投資(とうし): đầu tư",
+          "投手(とうしゅ): người phát bóng (bóng chày)"
+        ]
       },
       {
         "kanji": "選",
@@ -4291,7 +4713,15 @@
         "mnemonicText": "Tất cả mọi người cùng （共）chọn ra người lãnh đạo.",
         "readings": "せん / えら-ぶ、え-る",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/choose.jpg",
-        "examples": []
+        "examples": [
+          "選(えら)ぶ: lựa chọn",
+          "選手(せんしゅ): tuyển thủ",
+          "選択(せんたく)する: lựa chọn",
+          "選挙(せんきょ): bầu cử, tuyển cử",
+          "抽選(ちゅうせん): sự rút thăm,  xổ số",
+          "当選(とうせん)する: trúng cử, trúng giải",
+          "選挙権(せんきょけん): quyền bầu cử"
+        ]
       },
       {
         "kanji": "約",
@@ -4300,7 +4730,15 @@
         "mnemonicText": "Hãy nắm một lượng chỉ （糸）thích hợp.",
         "readings": "やく",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/to_promise_approximate.jpg",
-        "examples": []
+        "examples": [
+          "約束(やくそく): lời hứa",
+          "予約(よやく): Đặt chỗ, hẹn trước",
+          "約(やく)百人(ひゃくにん): ước tính khoảng 100 người",
+          "婚約(こんやく): sự đính hôn, sự đính ước",
+          "節約(せつやく)する: tiết kiệm",
+          "契約(けいやく): hợp đồng, khế ước",
+          "要約(ようやく): sự tóm lược, sự khái quát"
+        ]
       },
       {
         "kanji": "束",
@@ -4309,7 +4747,13 @@
         "mnemonicText": "Anh ấy cho tôi bó hoa.",
         "readings": "そく / たば",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/bundle.jpg",
-        "examples": []
+        "examples": [
+          "約束(やくそく): lời hứa",
+          "花束(はなたば): bó hoa",
+          "束(たば): bó, búi, cuộn",
+          "束(たば)ねる: Buộc thành bó; bó lại",
+          "束縛(そくばく): Sự kiềm chế; sự hạn chế; sự trói buộc; sự giam cầm"
+        ]
       },
       {
         "kanji": "守",
@@ -4318,7 +4762,15 @@
         "mnemonicText": "Chiếc chìa khoá này sẽ bảo vệ ngôi nhà.",
         "readings": "しゅ, す / まも-る",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/protect.jpg",
-        "examples": []
+        "examples": [
+          "留守(るす): vắng nhà",
+          "留守番電話(るすばんでんわ): chế độ điện thoại trả lời tự động",
+          "守(まも)る: bảo vệ, tuân thủ (luật lệ)",
+          "保守的(ほしゅてき): có tính bảo thủ",
+          "子守歌(こもりうた): bài hát ru trẻ",
+          "お守(まも)り: bùa",
+          "守衛(しゅえい): nhân viên bảo vệ, cảnh vệ"
+        ]
       },
       {
         "kanji": "過",
@@ -4327,7 +4779,15 @@
         "mnemonicText": "Hãy đi qua toà nhà lớn ở con đường kia.",
         "readings": "か / あやま-ち、す-ぎる",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/pass.jpg",
-        "examples": []
+        "examples": [
+          "過去(かこ): quá khứ",
+          "過(す)ぎる: quá, vượt quá",
+          "三時過(さんじす)ぎ: 3 giờ hơn",
+          "過(す)ごす: trải qua, sống",
+          "過半数(かはんすう): đa số, số đông",
+          "通(とお)り過(す)ぎる: đi qua, đi ngang qua",
+          "過(あやま)ち: lỗi lầm, sai lầm"
+        ]
       },
       {
         "kanji": "夢",
@@ -4336,7 +4796,13 @@
         "mnemonicText": "Tôi đã thấy một giấc mơ về thảo nguyên vào buổi chiều tà.",
         "readings": "む / ゆめ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/dream.jpg",
-        "examples": []
+        "examples": [
+          "夢(ゆめ): giấc mơ",
+          "夢中(むちゅう): chìm đắm, say sưa, miệt mài",
+          "悪夢(あくむ): ác mộng",
+          "初夢(はつゆめ): giấc mơ đầu tiên trong năm",
+          "無我夢中(むがむちゅう): say sưa việc gì đó quên cả bản thân mình"
+        ]
       },
       {
         "kanji": "的",
@@ -4345,7 +4811,16 @@
         "mnemonicText": "Đó là tấm bia để bắn màu trắng （白）.",
         "readings": "てき / まと",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai29/target.jpg",
-        "examples": []
+        "examples": [
+          "目的(もくてき): mục đích",
+          "民主的(みんしゅてき): Có tính dân chủ",
+          "社会的(しゃかいてき): có tính xã hội, tập thể",
+          "国際的(こくさいてき): tính quốc tế",
+          "積極的(せっきょくてき): tích cực",
+          "消極的(しょうきょくてき): mang tính tiêu cực",
+          "比較的(ひかくてき): tương đối",
+          "的(まと): mục tiêu"
+        ]
       }
     ]
   },
@@ -4510,7 +4985,14 @@
         "mnemonicText": "Sấm sét đã nói là ”Tôi tên là Sấm Sét”.",
         "readings": "しん / もう-す、さる",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/tell.jpg",
-        "examples": []
+        "examples": [
+          "申(もう)す: được gọi là, tên là",
+          "申(もう)し上(あ)げる: diễn đạt, phát biểu",
+          "申(もう)し込(こ)む: đăng kí, nộp đơn, thỉnh cầu, cầu hôn",
+          "申(もう)し訳(わけ)ない: xin lỗi (lịch sự)",
+          "申請書(しんせいしょ): đơn xin việc",
+          "申(もう)し出(で)る: yêu cầu, đề nghị, khiếu nại"
+        ]
       },
       {
         "kanji": "神",
@@ -4519,7 +5001,16 @@
         "mnemonicText": "Cúng bái với Thần Sấm.",
         "readings": "しん, じん / かみ、かん、こう",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/god.jpg",
-        "examples": []
+        "examples": [
+          "神(かみ): thần, chúa",
+          "神様(かみさま): thần, thượng đế, chúa trời",
+          "神社(じんじゃ): Đền thờ thần đạo",
+          "神経(しんけい): thần kinh, sự nhạy cảm",
+          "精神(せいしん): tâm khí, tinh thần",
+          "神話(しんわ): thần thoại",
+          "神道(しんとう): thần đạo",
+          "神戸(こうべ): Kobe (Nhật Bản)"
+        ]
       },
       {
         "kanji": "様",
@@ -4528,7 +5019,17 @@
         "mnemonicText": "Cái cây, con cừu, dòng nước tạo ra dáng vẻ thanh bình.",
         "readings": "よう / さま",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/situation.jpg",
-        "examples": []
+        "examples": [
+          "神様(かみさま): thần, thượng đế, chúa trời",
+          "田中様(たなかさま): Ông, bà, ngài tanaka",
+          "様々(さまざま)な: phong phú, đa dạng",
+          "様子(ようす): thái độ, trạng thái",
+          "同様(どうよう)に: tương tự",
+          "皆様(みなさま): tất cả mọi người (cách xưng hô kính trọng)",
+          "お客様(きゃくさま): quý khách",
+          "王様(おうさま): vua",
+          "模様(もよう): hoa văn, mô hình"
+        ]
       },
       {
         "kanji": "信",
@@ -4537,7 +5038,15 @@
         "mnemonicText": "Tin những gì mọi người nói.",
         "readings": "しん / まこと",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/believe.jpg",
-        "examples": []
+        "examples": [
+          "信号(しんごう): đèn giao thông",
+          "信(しん)じる: tin tưởng",
+          "自信(じしん): tự tin",
+          "信用(しんよう): lòng tin, sự tin tưởng, sự tín nhiệm",
+          "信頼(しんらい): tin cậy, tín nhiệm",
+          "信仰(しんこう): tín ngưỡng",
+          "受信(じゅしん): sự thu tín hiệu"
+        ]
       },
       {
         "kanji": "調",
@@ -4546,7 +5055,15 @@
         "mnemonicText": "Họ bảo sẽ điều tra xung quanh.",
         "readings": "ちょう / しら-べる、ととの-える",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/to_investigate_tone.jpg",
-        "examples": []
+        "examples": [
+          "調(しら)べる: điều tra, xem xét",
+          "強調(きょうちょう)する: nhấn mạnh",
+          "調子(ちょうし): tình trạng",
+          "調査(ちょうさ): sự điều tra, cuộc điều tra khảo sát",
+          "調味料(ちょうみりょう): gia vị",
+          "調節(ちょうせつ): điều tiết, chỉnh lý",
+          "調(ととの)える: sắp xếp"
+        ]
       },
       {
         "kanji": "査",
@@ -4555,7 +5072,13 @@
         "mnemonicText": "Đã kiểm tra bia mộ dưới cái cây.",
         "readings": "さ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/inspect.jpg",
-        "examples": []
+        "examples": [
+          "調査(ちょうさ): sự điều tra, cuộc điều tra khảo sát",
+          "検査(けんさ): sự kiểm tra",
+          "検査(けんさ): tuần cảnh, tuần binh, cảnh sát tuần tiễu",
+          "操作(そうさ): thao tác, điều khiển",
+          "審査(しんさ): thẩm xét, thẩm tra"
+        ]
       },
       {
         "kanji": "相",
@@ -4564,7 +5087,16 @@
         "mnemonicText": "Hãy nhìn cái cây! Cái cây và bạn đang đối mặt nhau.",
         "readings": "そう, しょう / あい",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/each_other.jpg",
-        "examples": []
+        "examples": [
+          "相談(そうだん)する: đàm phán, thảo luận",
+          "相手(あいて): đối tượng, đối phương",
+          "首相(しゅしょう): thủ tướng",
+          "相当(そうとう): sự tương đương",
+          "相違(そうい): sự khác nhau",
+          "相続(そうぞく): sự kế tiếp, sự thừa kế",
+          "相変(あいか)わらず: như bình thường, như mọi khi",
+          "相撲(すもう): môn vật sumo"
+        ]
       },
       {
         "kanji": "談",
@@ -4573,7 +5105,15 @@
         "mnemonicText": "Chúng ta hãy trò chuyện bên đống lửa（火）",
         "readings": "だん",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/talk.jpg",
-        "examples": []
+        "examples": [
+          "相談(そうだん)する: dđàm phán, thảo luận",
+          "冗談(じょうだん): đùa, nói đùa, nói giỡn",
+          "階段(かいだん): cầu thang",
+          "座談会(ざだんかい): buổi tọa đàm",
+          "懇談会(こんだんかい): buổi họp mặt thân mật",
+          "雑談(ざつだん): nói chuyện phiếm",
+          "対談(たいだん): sự đối thoại, cuộc đối thoại"
+        ]
       },
       {
         "kanji": "案",
@@ -4582,7 +5122,15 @@
         "mnemonicText": "Bên gốc cây tôi bình tâm lập bản thảo.",
         "readings": "あん / あん、あん-ずる",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/plan.jpg",
-        "examples": []
+        "examples": [
+          "案内(あんない)する: hướng dẫn",
+          "案(あん): kế hoạch",
+          "案外(あんがい): bất ngờ, ngoại dự kiến",
+          "答案(とうあん)用紙(ようし): phiếu trả lời",
+          "提案(ていあん): sự đề nghị, lời đề nghị",
+          "案(あん)の定(じょう): Quả nhiên;  đúng như dự đoán",
+          "名案(めいあん): ý kiến hay"
+        ]
       },
       {
         "kanji": "内",
@@ -4591,7 +5139,16 @@
         "mnemonicText": "Một người đi vào trong cái hộp lớn.",
         "readings": "ない, だい / うち",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/inside.jpg",
-        "examples": []
+        "examples": [
+          "案内(あんない)する: hướng dẫn",
+          "十日以内(とおかいない): trong vòng 10 ngày",
+          "家内(かない): vợ (mình)",
+          "国内(こくない): trong nước, quốc nội",
+          "内(うち): bên trong",
+          "内科(ないか): nội khoa",
+          "内容(ないよう): nội dung",
+          "境内(けいだい): bên trong đền, chùa"
+        ]
       },
       {
         "kanji": "君",
@@ -4600,7 +5157,11 @@
         "mnemonicText": "Nhà vua ra lệnh bằng cây trượng và miệng.",
         "readings": "くん / きみ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/lord.jpg",
-        "examples": []
+        "examples": [
+          "山本君(やまもとくん): cậu, bạn Yamamoto",
+          "君(きみ): bạn, em (đại từ nhân xưng, khi đối phương là nữ)",
+          "君主(くんしゅ): vương giả, quân chủ"
+        ]
       },
       {
         "kanji": "達",
@@ -4609,7 +5170,16 @@
         "mnemonicText": "Con cừu（羊） chở đất （土）cuối cùng đã đến nơi.",
         "readings": "たつ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/to_reach.jpg",
-        "examples": []
+        "examples": [
+          "友達(ともだち): bạn bè, người bạn",
+          "私達(わたしたち): chúng tôi",
+          "速達(そくたつ): dịch vụ chuyển phát nhanh",
+          "上達(じょうたつ)する: tiến bộ, phát triển",
+          "配達(はいたつ): sự phân phát, sự đưa chuyển cho",
+          "達(たっ)する: tới, đạt tới",
+          "発達(はったつ)する: phát triển",
+          "達人(たつじん): chuyên gia, người thành thạo"
+        ]
       },
       {
         "kanji": "星",
@@ -4618,7 +5188,16 @@
         "mnemonicText": "Bạn có nghĩ rằng ngôi sao （生）được sinh ra từ mặt trời （日）không?",
         "readings": "せい, しょう / ほし",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/star.jpg",
-        "examples": []
+        "examples": [
+          "星(ほし): ngôi sao",
+          "衛星(えいせい): vệ tinh",
+          "星座(せいざ): chòm sao",
+          "星占(ほしうらな)い: bói sao",
+          "火星(かせい): sao Hỏa",
+          "惑星(わくせい): hành tinh",
+          "流(なが)れ星(ぼし): sao băng",
+          "明星(みょうじょう): sao mai"
+        ]
       },
       {
         "kanji": "雪",
@@ -4627,7 +5206,15 @@
         "mnemonicText": "”Mưa （雨）à?” ”Không phải, sờ thử xem, là tuyết đấy!”",
         "readings": "せつ / ゆき、すす-ぐ",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/snow.jpg",
-        "examples": []
+        "examples": [
+          "雪(ゆき): tuyết",
+          "大雪(おおゆき): tuyết rơi dày",
+          "雪(ゆき)だるま: người tuyết",
+          "新雪(しんせつ): tuyết mới",
+          "降雪(こうせつ): việc tuyết rơi",
+          "雪崩(なだれ): tuyết lở",
+          "吹雪(ふぶき): bão tuyết"
+        ]
       },
       {
         "kanji": "降",
@@ -4636,7 +5223,16 @@
         "mnemonicText": "Xuống ở trạm xe buýt đó.",
         "readings": "こう / お-りる、ふ-る",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/get_off_to_descend.jpg",
-        "examples": []
+        "examples": [
+          "降(お)りる: xuống (xe, tàu...)",
+          "降(ふ)る: rơi (mưa, tuyết...)",
+          "以降(いこう): sau đó trở đi, từ sau đó",
+          "下降(かこう): rơi xuống, tụt xuống",
+          "降(お)ろす: cho xuống",
+          "降水量(こうすいりょう): lượng mưa",
+          "飛(と)び降(お)りる: nhảy xuống, bay xuống",
+          "土砂降(どしゃぶ)り: mưa như trút nước, mưa xối xả"
+        ]
       },
       {
         "kanji": "直",
@@ -4645,7 +5241,16 @@
         "mnemonicText": "”Nhìn kìa, nó bị hư đấy!” ”Chúng ta hãy sửa nó đi!”",
         "readings": "ちょく, じき / ただ-ちに、なお-す",
         "imgUrl": "https://www.vnjpclub.com/images/kanji512/bai31/fix_direct.jpg",
-        "examples": []
+        "examples": [
+          "直(なお)す: sửa chữa (ngoại động từ)",
+          "直(なお)る: được sửa (nội động từ)",
+          "正直(しょうじき)な: thành thật",
+          "見直(みなお)す: nhìn lại, xem xét lại, đánh giá lại",
+          "直接(ちょくせつ): trực tiếp",
+          "直線(ちょくせん): đường thẳng",
+          "素直(すなお)な: ngoan ngoãn, dễ bảo",
+          "直(ただ)ちに: tức thì"
+        ]
       }
     ]
   },

@@ -158,6 +158,24 @@ export default function KanjiLLLesson() {
                 <div className="kll-mnemonic-text">
                   "{currentKanji.mnemonicText}"
                 </div>
+                
+                {currentKanji.examples && currentKanji.examples.length > 0 && (
+                  <div className="kll-vocab-container">
+                    <div className="kll-vocab-grid">
+                      {currentKanji.examples.map((ex, idx) => {
+                        const parts = ex.split(':');
+                        const word = parts[0] ? parts[0].trim() : '';
+                        const meaning = parts[1] ? parts[1].trim() : '';
+                        return (
+                          <div key={idx} className="kll-vocab-item">
+                            <span className="kll-vocab-word">{word}</span>
+                            <span className="kll-vocab-meaning">{meaning}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 

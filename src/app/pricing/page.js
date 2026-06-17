@@ -130,36 +130,6 @@ export default function PricingPage() {
     }
   };
 
-  const handleSimulatePayment = async () => {
-    if (!checkoutTx || !token) return;
-    setPaymentLoading(true);
-
-    try {
-      const res = await fetch(`${API_BASE_URL}/membership/simulate-payment`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          transactionId: checkoutTx.transactionId
-        })
-      });
-
-      if (res.ok) {
-        await checkPaymentStatus(false);
-      } else {
-        const error = await res.json();
-        alert(error.message || 'Lỗi khi kích hoạt');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Không thể kết nối máy chủ.');
-    } finally {
-      setPaymentLoading(false);
-    }
-  };
-
   const formatPrice = (price) => {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
   };
@@ -312,15 +282,6 @@ export default function PricingPage() {
                       ) : (
                         <span>Tôi đã chuyển khoản thành công ⚡</span>
                       )}
-                    </button>
-
-                    <button 
-                      className="simulate-success-btn"
-                      onClick={handleSimulatePayment}
-                      disabled={paymentLoading}
-                      style={{ fontSize: '10px', padding: '6px', opacity: 0.7, background: '#1e293b', marginTop: '12px' }}
-                    >
-                      Giả lập thanh toán (Developer Test)
                     </button>
                     
                     <button 
