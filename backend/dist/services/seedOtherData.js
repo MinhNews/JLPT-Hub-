@@ -11,6 +11,7 @@ const Kanji_1 = require("../models/Kanji");
 const Vocabulary_1 = require("../models/Vocabulary");
 const Grammar_1 = require("../models/Grammar");
 const ReadingLesson_1 = require("../models/ReadingLesson");
+const GrammarQuiz_1 = require("../models/GrammarQuiz");
 const mongoose_1 = __importDefault(require("mongoose"));
 dotenv_1.default.config();
 const seedAllOtherData = async () => {
@@ -52,6 +53,17 @@ const seedAllOtherData = async () => {
                 grammarCount++;
             }
             console.log(`Successfully seeded ${grammarCount} Grammar patterns.`);
+        }
+        // 2.5 Seed Grammar Quiz
+        console.log('\n--- Seeding Grammar Quiz N3 ---');
+        await GrammarQuiz_1.GrammarQuiz.deleteMany({});
+        const grammarQuizDataPath = path_1.default.join(dataDir, 'grammar_questions.json');
+        if (fs_1.default.existsSync(grammarQuizDataPath)) {
+            const rawQuiz = fs_1.default.readFileSync(grammarQuizDataPath, 'utf8');
+            const quizData = JSON.parse(rawQuiz);
+            const newQuiz = new GrammarQuiz_1.GrammarQuiz(quizData);
+            await newQuiz.save();
+            console.log(`Successfully seeded Grammar Quiz (fillInBlanks: ${quizData.fillInBlanks?.length}, starArrangements: ${quizData.starArrangements?.length}).`);
         }
         // 3. Seed Vocabulary
         console.log('\n--- Seeding Vocabulary N3 ---');

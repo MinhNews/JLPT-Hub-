@@ -1,29 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getListeningLessonById = exports.getAllListeningLessons = void 0;
 const ListeningLesson_1 = require("../models/ListeningLesson");
 const Progress_1 = require("../models/Progress");
 const Subscription_1 = require("../models/Subscription");
 const User_1 = require("../models/User");
-const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-// Helper to get userId optionally from token
-const getUserIdFromToken = (req) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    if (!token)
-        return null;
-    try {
-        const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-        const decoded = jsonwebtoken_1.default.verify(token, secret);
-        return decoded.id;
-    }
-    catch (err) {
-        return null;
-    }
-};
+const auth_1 = require("../utils/auth");
 // Helper to check if user has active VIP subscription
 const checkIsVip = async (userId) => {
     if (!userId)
@@ -45,7 +27,7 @@ const isLessonFree = (lessonId) => {
 };
 const getAllListeningLessons = async (req, res) => {
     try {
-        const userId = getUserIdFromToken(req);
+        const userId = (0, auth_1.getUserIdFromRequest)(req);
         const isVip = await checkIsVip(userId);
         const lessons = await ListeningLesson_1.ListeningLesson.find().select('id title part level audioUrl').sort({ id: 1 });
         // Fetch user progress if logged in
@@ -81,7 +63,7 @@ const getListeningLessonById = async (req, res) => {
         if (!lesson) {
             return res.status(404).json({ message: 'Listening lesson not found' });
         }
-        const userId = getUserIdFromToken(req);
+        const userId = (0, auth_1.getUserIdFromRequest)(req);
         const isVip = await checkIsVip(userId);
         const free = isLessonFree(lesson.id);
         // Lock check

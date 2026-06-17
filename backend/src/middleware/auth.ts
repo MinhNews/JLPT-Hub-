@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+import { getAuthTokenFromRequest, getJwtSecret } from '../utils/auth';
 
 export interface AuthRequest extends Request {
   user?: {
@@ -9,17 +10,19 @@ export interface AuthRequest extends Request {
 }
 
 export const authenticateToken = (req: AuthRequest, res: Response, next: NextFunction) => {
-  // Read token from HttpOnly cookie first, fallback to Authorization header (for backward compat)
-  const tokenFromCookie = req.cookies?.token;
-  const authHeader = req.headers['authorization'];
-  const tokenFromHeader = authHeader && authHeader.split(' ')[1];
-  const token = tokenFromCookie || tokenFromHeader;
+  const token = getAuthTokenFromRequest(req);
 
   if (!token) {
     return res.status(401).json({ message: 'Access token required' });
   }
 
-  const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
+  let secret: string;
+  try {
+    secret = getJwtSecret();
+  } catch (error: any) {
+    return res.status(500).json({ message: error.message || 'Server auth configuration error' });
+  }
+
   jwt.verify(token, secret, (err: any, user: any) => {
     if (err) {
       return res.status(403).json({ message: 'Invalid or expired token' });

@@ -4,7 +4,33 @@ import { CoursePlan } from '../models/CoursePlan';
 import { Subscription } from '../models/Subscription';
 import { Transaction } from '../models/Transaction';
 import { User } from '../models/User';
-import mongoose from 'mongoose';
+
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+const isPaymentWebhookAuthorized = (req: any) => {
+  const configuredSecret = process.env.PAYMENT_WEBHOOK_SECRET;
+  if (!configuredSecret) {
+    return !IS_PROD;
+  }
+
+  const headerSecret =
+    req.headers['x-webhook-secret'] ||
+    req.headers['x-payment-webhook-secret'] ||
+    req.headers['x-sepay-secret'] ||
+    '';
+  const bearerToken = String(req.headers.authorization || '').replace(/^Bearer\s+/i, '');
+  const queryToken = String(req.query?.token || '');
+
+  return headerSecret === configuredSecret || bearerToken === configuredSecret || queryToken === configuredSecret;
+};
+
+const parsePaymentAmount = (amount: any) => {
+  if (typeof amount === 'number') return amount;
+  if (typeof amount !== 'string') return Number(amount);
+
+  const normalized = amount.replace(/[^\d.-]/g, '');
+  return Number(normalized);
+};
 
 // Pre-seed plans if database is empty
 const seedPlansIfNeeded = async () => {
@@ -179,6 +205,10 @@ export const createSubscriptionTransaction = async (req: AuthRequest, res: Respo
 // Simulate Payment Success (Dev/Test helper)
 export const simulatePaymentSuccess = async (req: AuthRequest, res: Response) => {
   try {
+    if (IS_PROD || process.env.ENABLE_PAYMENT_SIMULATION !== 'true') {
+      return res.status(404).json({ message: 'Payment simulation is disabled' });
+    }
+
     const userId = req.user?.id;
     const { transactionId } = req.body;
 
@@ -235,13 +265,22 @@ export const getTransactionStatus = async (req: AuthRequest, res: Response) => {
 // Handle SePay/Cassso Webhook callback
 export const handlePaymentWebhook = async (req: any, res: Response) => {
   try {
+    if (!isPaymentWebhookAuthorized(req)) {
+      return res.status(401).json({ error: 1, message: 'Unauthorized payment webhook' });
+    }
+
     // SePay sends webhook data in body
     const { content, code, amount, transferType } = req.body;
 
     console.log('Received Payment Webhook:', req.body);
 
-    if (transferType !== 'in') {
+    if (transferType && transferType !== 'in') {
       return res.status(200).json({ error: 0, message: 'Ignore money out' });
+    }
+
+    const receivedAmount = parsePaymentAmount(amount);
+    if (!Number.isFinite(receivedAmount) || receivedAmount <= 0) {
+      return res.status(400).json({ error: 1, message: 'Invalid payment amount' });
     }
 
     const textToSearch = `${content || ''} ${code || ''}`.toLowerCase();
@@ -266,8 +305,12 @@ export const handlePaymentWebhook = async (req: any, res: Response) => {
     }
 
     // Check amount
-    if (amount < matchedTx.amount) {
-      console.log(`Amount mismatch: expected ${matchedTx.amount}, received ${amount}`);
+    if (matchedTx.status === 'completed') {
+      return res.status(200).json({ error: 0, message: 'Transaction already processed' });
+    }
+
+    if (receivedAmount < matchedTx.amount) {
+      console.log(`Amount mismatch: expected ${matchedTx.amount}, received ${receivedAmount}`);
       return res.status(400).json({ message: 'Amount mismatch' });
     }
 

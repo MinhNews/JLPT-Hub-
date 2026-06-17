@@ -5,6 +5,28 @@ const CoursePlan_1 = require("../models/CoursePlan");
 const Subscription_1 = require("../models/Subscription");
 const Transaction_1 = require("../models/Transaction");
 const User_1 = require("../models/User");
+const IS_PROD = process.env.NODE_ENV === 'production';
+const isPaymentWebhookAuthorized = (req) => {
+    const configuredSecret = process.env.PAYMENT_WEBHOOK_SECRET;
+    if (!configuredSecret) {
+        return !IS_PROD;
+    }
+    const headerSecret = req.headers['x-webhook-secret'] ||
+        req.headers['x-payment-webhook-secret'] ||
+        req.headers['x-sepay-secret'] ||
+        '';
+    const bearerToken = String(req.headers.authorization || '').replace(/^Bearer\s+/i, '');
+    const queryToken = String(req.query?.token || '');
+    return headerSecret === configuredSecret || bearerToken === configuredSecret || queryToken === configuredSecret;
+};
+const parsePaymentAmount = (amount) => {
+    if (typeof amount === 'number')
+        return amount;
+    if (typeof amount !== 'string')
+        return Number(amount);
+    const normalized = amount.replace(/[^\d.-]/g, '');
+    return Number(normalized);
+};
 // Pre-seed plans if database is empty
 const seedPlansIfNeeded = async () => {
     const count = await CoursePlan_1.CoursePlan.countDocuments();
@@ -165,6 +187,9 @@ exports.createSubscriptionTransaction = createSubscriptionTransaction;
 // Simulate Payment Success (Dev/Test helper)
 const simulatePaymentSuccess = async (req, res) => {
     try {
+        if (IS_PROD || process.env.ENABLE_PAYMENT_SIMULATION !== 'true') {
+            return res.status(404).json({ message: 'Payment simulation is disabled' });
+        }
         const userId = req.user?.id;
         const { transactionId } = req.body;
         if (!userId) {
@@ -214,11 +239,18 @@ exports.getTransactionStatus = getTransactionStatus;
 // Handle SePay/Cassso Webhook callback
 const handlePaymentWebhook = async (req, res) => {
     try {
+        if (!isPaymentWebhookAuthorized(req)) {
+            return res.status(401).json({ error: 1, message: 'Unauthorized payment webhook' });
+        }
         // SePay sends webhook data in body
         const { content, code, amount, transferType } = req.body;
         console.log('Received Payment Webhook:', req.body);
-        if (transferType !== 'in') {
+        if (transferType && transferType !== 'in') {
             return res.status(200).json({ error: 0, message: 'Ignore money out' });
+        }
+        const receivedAmount = parsePaymentAmount(amount);
+        if (!Number.isFinite(receivedAmount) || receivedAmount <= 0) {
+            return res.status(400).json({ error: 1, message: 'Invalid payment amount' });
         }
         const textToSearch = `${content || ''} ${code || ''}`.toLowerCase();
         // Find all pending transactions created in the last 2 days
@@ -238,8 +270,11 @@ const handlePaymentWebhook = async (req, res) => {
             return res.status(200).json({ error: 0, message: 'Transaction not found or already processed' });
         }
         // Check amount
-        if (amount < matchedTx.amount) {
-            console.log(`Amount mismatch: expected ${matchedTx.amount}, received ${amount}`);
+        if (matchedTx.status === 'completed') {
+            return res.status(200).json({ error: 0, message: 'Transaction already processed' });
+        }
+        if (receivedAmount < matchedTx.amount) {
+            console.log(`Amount mismatch: expected ${matchedTx.amount}, received ${receivedAmount}`);
             return res.status(400).json({ message: 'Amount mismatch' });
         }
         // Mark transaction as completed

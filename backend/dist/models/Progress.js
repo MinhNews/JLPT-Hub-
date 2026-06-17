@@ -5,7 +5,7 @@ const mongoose_1 = require("mongoose");
 const progressSchema = new mongoose_1.Schema({
     userId: { type: mongoose_1.Schema.Types.ObjectId, ref: 'User', required: true },
     lessonId: { type: String, required: true },
-    type: { type: String, enum: ['vocab', 'grammar', 'kanji', 'reading', 'listening'], required: true },
+    type: { type: String, enum: ['vocab', 'grammar', 'kanji', 'reading', 'listening', 'minna', 'kanjill', 'exam'], required: true },
     status: { type: String, enum: ['in_progress', 'mastered'], default: 'in_progress' },
     score: {
         correct: { type: Number, default: 0 },

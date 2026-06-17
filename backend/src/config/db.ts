@@ -3,6 +3,11 @@ import bcrypt from 'bcryptjs';
 import { User } from '../models/User';
 
 const seedAdminIfNeeded = async () => {
+  if (process.env.NODE_ENV === 'production' && process.env.ENABLE_DEFAULT_USER_SEED !== 'true') {
+    console.log('Skipping default user seed in production.');
+    return;
+  }
+
   try {
     // 1. Seed Admin
     const adminCount = await User.countDocuments({ role: 'admin' });

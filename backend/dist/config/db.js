@@ -8,6 +8,10 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const User_1 = require("../models/User");
 const seedAdminIfNeeded = async () => {
+    if (process.env.NODE_ENV === 'production' && process.env.ENABLE_DEFAULT_USER_SEED !== 'true') {
+        console.log('Skipping default user seed in production.');
+        return;
+    }
     try {
         // 1. Seed Admin
         const adminCount = await User_1.User.countDocuments({ role: 'admin' });

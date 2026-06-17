@@ -3,20 +3,7 @@ import { ReadingLesson } from '../models/ReadingLesson';
 import { Progress } from '../models/Progress';
 import { Subscription } from '../models/Subscription';
 import { User } from '../models/User';
-import jwt from 'jsonwebtoken';
-
-const getUserIdFromToken = (req: Request): string | null => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
-  if (!token) return null;
-  try {
-    const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-    const decoded: any = jwt.verify(token, secret);
-    return decoded.id;
-  } catch (err) {
-    return null;
-  }
-};
+import { getUserIdFromRequest } from '../utils/auth';
 
 const checkIsVip = async (userId: string | null): Promise<boolean> => {
   if (!userId) return false;
@@ -38,7 +25,7 @@ const isLessonFree = (lessonId: string): boolean => {
 
 export const getAllReadingLessons = async (req: Request, res: Response) => {
   try {
-    const userId = getUserIdFromToken(req);
+    const userId = getUserIdFromRequest(req);
     const isVip = await checkIsVip(userId);
 
     const lessons = await ReadingLesson.find().select('id title part level').sort({ id: 1 });
@@ -78,7 +65,7 @@ export const getReadingLessonById = async (req: Request, res: Response) => {
       return res.status(404).json({ message: 'Reading lesson not found' });
     }
 
-    const userId = getUserIdFromToken(req);
+    const userId = getUserIdFromRequest(req);
     const isVip = await checkIsVip(userId);
     const free = isLessonFree(lesson.id);
 

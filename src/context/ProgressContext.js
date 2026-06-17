@@ -70,19 +70,21 @@ export function ProgressProvider({ children }) {
             kanjiMastered,
             grammarMastered,
             readingMastered,
-            listeningMastered
+            listeningMastered,
+            minnaMastered
           })
         });
 
         if (res.ok) {
           const data = await res.json();
           if (data.progress) {
-            const { vocabMastered: vm, kanjiMastered: km, grammarMastered: gm, readingMastered: rm, listeningMastered: lm } = data.progress;
+            const { vocabMastered: vm, kanjiMastered: km, grammarMastered: gm, readingMastered: rm, listeningMastered: lm, minnaMastered: mm } = data.progress;
             if (vm) setVocabMastered(vm);
             if (km) setKanjiMastered(km);
             if (gm) setGrammarMastered(gm);
             if (rm) setReadingMastered(rm);
             if (lm) setListeningMastered(lm);
+            if (mm) setMinnaMastered(mm);
           }
         }
       } catch (err) {
@@ -91,7 +93,7 @@ export function ProgressProvider({ children }) {
     };
 
     syncWithCloud();
-  }, [isLoaded]);
+  }, [user, isLoaded]);
 
   // Clean local progress on logout (when user changes to null)
   useEffect(() => {
@@ -146,11 +148,13 @@ export function ProgressProvider({ children }) {
   };
 
   const toggleMinnaMastered = (lessonNumber) => {
+    const exists = minnaMastered.includes(lessonNumber);
     setMinnaMastered((prev) =>
       prev.includes(lessonNumber)
         ? prev.filter((n) => n !== lessonNumber)
         : [...prev, lessonNumber]
     );
+    syncToggleToServer(String(lessonNumber), 'minna', !exists);
   };
 
   const toggleTheme = () => {

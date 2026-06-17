@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
 const db_1 = require("./config/db");
@@ -25,10 +26,26 @@ const examRoutes_1 = __importDefault(require("./routes/examRoutes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5000;
+const ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://jlpt-hub.vercel.app',
+    process.env.FRONTEND_URL,
+].filter(Boolean);
 // Connect to Database
 (0, db_1.connectDB)();
 // Middlewares
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: (origin, callback) => {
+        if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+}));
+app.use((0, cookie_parser_1.default)());
 app.use(express_1.default.json());
 app.use('/public', express_1.default.static(path_1.default.join(__dirname, '../public')));
 // Routes

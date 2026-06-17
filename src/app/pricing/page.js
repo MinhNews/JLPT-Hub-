@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
-import { Check, ShieldCheck, ArrowLeft, Loader2, Sparkles, CreditCard, QrCode } from 'lucide-react';
+import { Check, ShieldCheck, ArrowLeft, Loader2, Sparkles, Home, Info, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
@@ -18,6 +18,7 @@ export default function PricingPage() {
   const [checkoutTx, setCheckoutTx] = useState(null);
   const [paymentLoading, setPaymentLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
+  const [paymentNotice, setPaymentNotice] = useState(null);
 
   // Fetch plans
   useEffect(() => {
@@ -39,34 +40,55 @@ export default function PricingPage() {
 
   const checkPaymentStatus = async (silent = false) => {
     if (!checkoutTx) return false;
-    if (!silent) setPaymentLoading(true);
+    if (!silent) {
+      setPaymentLoading(true);
+      setPaymentNotice(null);
+    }
     
     try {
       const res = await fetch(`${API_BASE_URL}/membership/transactions/${checkoutTx._id}/status`, {
         credentials: 'include'
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.status === 'completed') {
-          setSuccessMsg('Thanh toán thành công! Gói VIP đã được kích hoạt tự động. 🎉');
-          await checkSubscription();
-          
-          setTimeout(() => {
-            setCheckoutTx(null);
-            setSelectedPlan(null);
-            setSuccessMsg('');
-            router.push('/');
-          }, 3000);
-          return true;
-        } else {
-          // If manually checked and still pending
-          if (!silent) {
-            alert('Hệ thống chưa nhận được tín hiệu thanh toán chuyển khoản của bạn. Nếu bạn đã chuyển tiền thành công, vui lòng đợi 10-30 giây để hệ thống ngân hàng cập nhật hoặc liên hệ Admin hỗ trợ.');
-          }
+
+      if (!res.ok) {
+        if (!silent) {
+          setPaymentNotice({
+            type: 'error',
+            message: 'Không thể kiểm tra giao dịch lúc này. Vui lòng thử lại sau ít phút.'
+          });
         }
+        return false;
+      }
+
+      const data = await res.json();
+      if (data.status === 'completed') {
+        setSuccessMsg('Thanh toán thành công! Gói VIP đã được kích hoạt tự động. 🎉');
+        setPaymentNotice(null);
+        await checkSubscription();
+
+        setTimeout(() => {
+          setCheckoutTx(null);
+          setSelectedPlan(null);
+          setSuccessMsg('');
+          router.push('/');
+        }, 3000);
+        return true;
+      }
+
+      if (!silent) {
+        setPaymentNotice({
+          type: 'pending',
+          message: 'Hệ thống chưa nhận được tín hiệu thanh toán. Nếu bạn đã chuyển khoản, vui lòng đợi 10-30 giây rồi kiểm tra lại.'
+        });
       }
     } catch (err) {
       console.error('Failed to check payment status:', err);
+      if (!silent) {
+        setPaymentNotice({
+          type: 'error',
+          message: 'Không thể kết nối đến máy chủ để xác thực giao dịch.'
+        });
+      }
     } finally {
       if (!silent) setPaymentLoading(false);
     }
@@ -99,6 +121,7 @@ export default function PricingPage() {
     
     setSelectedPlan(plan);
     setPaymentLoading(true);
+    setPaymentNotice(null);
 
     try {
       const res = await fetch(`${API_BASE_URL}/membership/subscribe`, {
@@ -118,11 +141,17 @@ export default function PricingPage() {
         setCheckoutTx(data.transaction);
       } else {
         const error = await res.json();
-        alert(error.message || 'Lỗi khi khởi tạo thanh toán');
+        setPaymentNotice({
+          type: 'error',
+          message: error.message || 'Không thể khởi tạo thanh toán. Vui lòng thử lại.'
+        });
       }
     } catch (err) {
       console.error(err);
-      alert('Không thể kết nối đến máy chủ.');
+      setPaymentNotice({
+        type: 'error',
+        message: 'Không thể kết nối đến máy chủ.'
+      });
     } finally {
       setPaymentLoading(false);
     }
@@ -150,7 +179,10 @@ export default function PricingPage() {
   return (
     <div className="pricing-wrapper fade-in">
       <Link href="/" className="back-btn">
-        <ArrowLeft size={16} />
+        <span className="back-icon-wrap">
+          <ArrowLeft size={16} />
+        </span>
+        <Home size={15} />
         <span>Quay lại Dashboard</span>
       </Link>
 
@@ -179,6 +211,13 @@ export default function PricingPage() {
         )}
 
         {/* Main Content (Plans or Checkout) */}
+        {paymentNotice && (
+          <div className={`payment-notice ${paymentNotice.type}`}>
+            {paymentNotice.type === 'error' ? <AlertCircle size={18} /> : <Info size={18} />}
+            <span>{paymentNotice.message}</span>
+          </div>
+        )}
+
         {!checkoutTx ? (
           <div className="plans-grid">
             {plans.map((plan) => (
@@ -284,7 +323,7 @@ export default function PricingPage() {
                     
                     <button 
                       className="cancel-checkout-btn"
-                      onClick={() => { setCheckoutTx(null); setSelectedPlan(null); }}
+                      onClick={() => { setCheckoutTx(null); setSelectedPlan(null); setPaymentNotice(null); }}
                     >
                       Hủy giao dịch
                     </button>
@@ -317,31 +356,41 @@ export default function PricingPage() {
         .back-btn {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          color: var(--primary);
+          gap: 10px;
+          color: var(--text-primary);
           text-decoration: none;
-          font-weight: 600;
-          font-size: 14px;
-          padding: 9px 18px;
-          border-radius: 100px;
-          background: rgba(99, 102, 241, 0.08);
+          font-weight: 800;
+          font-size: 13px;
+          padding: 8px 14px 8px 8px;
+          border-radius: 14px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(99,102,241,0.08));
           margin-bottom: 32px;
           transition: all 0.25s ease;
-          border: 1.5px solid rgba(99, 102, 241, 0.35);
-          letter-spacing: 0.01em;
-          backdrop-filter: blur(4px);
+          border: 1px solid rgba(99, 102, 241, 0.22);
+          box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+          width: fit-content;
         }
-        .back-btn svg {
+        .back-icon-wrap {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 10px;
+          color: #fff;
+          background: var(--primary-gradient);
+          box-shadow: 0 6px 14px rgba(99, 102, 241, 0.28);
+        }
+        .back-icon-wrap svg {
           transition: transform 0.25s ease;
           flex-shrink: 0;
         }
         .back-btn:hover {
-          background: var(--primary);
-          color: white;
-          border-color: var(--primary);
-          box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+          transform: translateY(-2px);
+          border-color: rgba(99, 102, 241, 0.45);
+          box-shadow: 0 14px 34px rgba(99, 102, 241, 0.18);
         }
-        .back-btn:hover svg {
+        .back-btn:hover .back-icon-wrap svg {
           transform: translateX(-3px);
         }
         .pricing-container {
@@ -398,6 +447,28 @@ export default function PricingPage() {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 32px;
+        }
+        .payment-notice {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          max-width: 720px;
+          margin: 0 auto 24px;
+          padding: 13px 16px;
+          border-radius: 12px;
+          font-size: 13px;
+          font-weight: 650;
+          line-height: 1.55;
+        }
+        .payment-notice.pending {
+          color: #92400e;
+          background: rgba(245, 158, 11, 0.1);
+          border: 1px solid rgba(245, 158, 11, 0.24);
+        }
+        .payment-notice.error {
+          color: #b91c1c;
+          background: rgba(239, 68, 68, 0.1);
+          border: 1px solid rgba(239, 68, 68, 0.24);
         }
         .plan-card {
           background: var(--card-bg);

@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useProgress } from '@/context/ProgressContext';
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
-import { Check, X, ChevronLeft, ChevronRight, RotateCw, Search, Eye, HelpCircle, Grid, Play } from 'lucide-react';
+import { Check, CheckCircle, X, ChevronLeft, ChevronRight, RotateCw, Search, Eye, HelpCircle, Grid, Play } from 'lucide-react';
 
 export default function KanjiPage() {
   const { kanjiMastered, toggleKanjiMastered } = useProgress();

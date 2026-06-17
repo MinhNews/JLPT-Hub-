@@ -1,26 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getVocabCategories = exports.getVocabList = void 0;
 const Vocabulary_1 = require("../models/Vocabulary");
 const Progress_1 = require("../models/Progress");
-const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const getUserIdFromToken = (req) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    if (!token)
-        return null;
-    try {
-        const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-        const decoded = jsonwebtoken_1.default.verify(token, secret);
-        return decoded.id;
-    }
-    catch (err) {
-        return null;
-    }
-};
+const auth_1 = require("../utils/auth");
 const getVocabList = async (req, res) => {
     try {
         const { category, section, search } = req.query;
@@ -40,7 +23,7 @@ const getVocabList = async (req, res) => {
         }
         const vocabList = await Vocabulary_1.Vocabulary.find(filter).sort({ kanji: 1 });
         // Optional user progress linking
-        const userId = getUserIdFromToken(req);
+        const userId = (0, auth_1.getUserIdFromRequest)(req);
         let userProgress = [];
         if (userId) {
             userProgress = await Progress_1.Progress.find({ userId, type: 'vocab' });

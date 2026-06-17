@@ -1,20 +1,7 @@
 import { Request, Response } from 'express';
 import { Kanji } from '../models/Kanji';
 import { Progress } from '../models/Progress';
-import jwt from 'jsonwebtoken';
-
-const getUserIdFromToken = (req: Request): string | null => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
-  if (!token) return null;
-  try {
-    const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-    const decoded: any = jwt.verify(token, secret);
-    return decoded.id;
-  } catch (err) {
-    return null;
-  }
-};
+import { getUserIdFromRequest } from '../utils/auth';
 
 export const getKanjiList = async (req: Request, res: Response) => {
   try {
@@ -35,7 +22,7 @@ export const getKanjiList = async (req: Request, res: Response) => {
     // Sort by lesson string/number naturally or by creation
     const kanjiList = await Kanji.find(filter).sort({ lesson: 1, kanji: 1 });
 
-    const userId = getUserIdFromToken(req);
+    const userId = getUserIdFromRequest(req);
     let userProgress: any[] = [];
     if (userId) {
       userProgress = await Progress.find({ userId, type: 'kanji' });

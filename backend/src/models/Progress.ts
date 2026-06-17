@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose';
 const progressSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   lessonId: { type: String, required: true },
-  type: { type: String, enum: ['vocab', 'grammar', 'kanji', 'reading', 'listening'], required: true },
+  type: { type: String, enum: ['vocab', 'grammar', 'kanji', 'reading', 'listening', 'minna', 'kanjill', 'exam'], required: true },
   status: { type: String, enum: ['in_progress', 'mastered'], default: 'in_progress' },
   score: {
     correct: { type: Number, default: 0 },

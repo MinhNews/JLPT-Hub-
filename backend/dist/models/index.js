@@ -26,3 +26,5 @@ __exportStar(require("./Kanji"), exports);
 __exportStar(require("./ReadingLesson"), exports);
 __exportStar(require("./ListeningLesson"), exports);
 __exportStar(require("./Exam"), exports);
+__exportStar(require("./KanjiLL"), exports);
+__exportStar(require("./GrammarQuiz"), exports);

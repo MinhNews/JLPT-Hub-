@@ -1,31 +1,14 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getMinnaLessonDetail = exports.getMinnaLessons = void 0;
 const MinnaLesson_1 = require("../models/MinnaLesson");
 const Subscription_1 = require("../models/Subscription");
-const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-const getUserFromToken = (req) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    if (!token)
-        return null;
-    try {
-        const decoded = jsonwebtoken_1.default.verify(token, JWT_SECRET);
-        return { id: decoded.id, role: decoded.role };
-    }
-    catch {
-        return null;
-    }
-};
+const auth_1 = require("../utils/auth");
 const isVipUser = async (userId) => {
     const sub = await Subscription_1.Subscription.findOne({
         userId,
         status: 'active',
-        expiresAt: { $gt: new Date() }
+        endDate: { $gt: new Date() }
     });
     return !!sub;
 };
@@ -57,7 +40,7 @@ const getMinnaLessonDetail = async (req, res) => {
             return res.status(404).json({ message: 'Lesson not found' });
         // Lessons 1-2 are free; 3+ require VIP
         if (lessonNum > 2) {
-            const user = getUserFromToken(req);
+            const user = (0, auth_1.getUserFromRequest)(req);
             if (!user) {
                 return res.status(403).json({ message: 'vip_required', lessonNumber: lessonNum });
             }

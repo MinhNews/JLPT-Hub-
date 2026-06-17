@@ -28,6 +28,10 @@ const updateProfile = async (req, res) => {
             if (!currentPassword) {
                 return res.status(400).json({ message: 'Vui lòng cung cấp mật khẩu hiện tại để đổi mật khẩu mới' });
             }
+            // Google users don't have a password
+            if (!user.passwordHash) {
+                return res.status(400).json({ message: 'Tài khoản đăng nhập bằng Google không thể đổi mật khẩu theo cách này' });
+            }
             // Check current password
             const isMatch = await bcryptjs_1.default.compare(currentPassword, user.passwordHash);
             if (!isMatch) {

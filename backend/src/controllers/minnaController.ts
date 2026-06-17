@@ -1,27 +1,13 @@
 import { Request, Response } from 'express';
 import { MinnaLesson } from '../models/MinnaLesson';
 import { Subscription } from '../models/Subscription';
-import jwt from 'jsonwebtoken';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-
-const getUserFromToken = (req: Request): { id: string; role: string } | null => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
-  if (!token) return null;
-  try {
-    const decoded: any = jwt.verify(token, JWT_SECRET);
-    return { id: decoded.id, role: decoded.role };
-  } catch {
-    return null;
-  }
-};
+import { getUserFromRequest } from '../utils/auth';
 
 const isVipUser = async (userId: string): Promise<boolean> => {
   const sub = await Subscription.findOne({
     userId,
     status: 'active',
-    expiresAt: { $gt: new Date() }
+    endDate: { $gt: new Date() }
   });
   return !!sub;
 };
@@ -54,7 +40,7 @@ export const getMinnaLessonDetail = async (req: Request, res: Response) => {
 
     // Lessons 1-2 are free; 3+ require VIP
     if (lessonNum > 2) {
-      const user = getUserFromToken(req);
+      const user = getUserFromRequest(req);
       if (!user) {
         return res.status(403).json({ message: 'vip_required', lessonNumber: lessonNum });
       }

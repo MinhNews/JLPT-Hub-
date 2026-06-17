@@ -7,6 +7,8 @@ const User_1 = require("../models/User");
 const router = (0, express_1.Router)();
 router.post('/register', authController_1.registerUser);
 router.post('/login', authController_1.loginUser);
+router.post('/google', authController_1.googleLogin);
+router.post('/logout', authController_1.logoutUser);
 router.get('/me', auth_1.authenticateToken, async (req, res) => {
     try {
         const user = await User_1.User.findById(req.user?.id).select('-passwordHash');

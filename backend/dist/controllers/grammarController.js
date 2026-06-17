@@ -1,26 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getGrammarById = exports.getGrammarList = void 0;
+exports.getGrammarQuestions = exports.getGrammarById = exports.getGrammarList = void 0;
 const Grammar_1 = require("../models/Grammar");
+const GrammarQuiz_1 = require("../models/GrammarQuiz");
 const Progress_1 = require("../models/Progress");
-const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const getUserIdFromToken = (req) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    if (!token)
-        return null;
-    try {
-        const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-        const decoded = jsonwebtoken_1.default.verify(token, secret);
-        return decoded.id;
-    }
-    catch (err) {
-        return null;
-    }
-};
+const auth_1 = require("../utils/auth");
 const getGrammarList = async (req, res) => {
     try {
         const { search } = req.query;
@@ -34,7 +18,7 @@ const getGrammarList = async (req, res) => {
             ];
         }
         const grammarList = await Grammar_1.Grammar.find(filter).sort({ id: 1 });
-        const userId = getUserIdFromToken(req);
+        const userId = (0, auth_1.getUserIdFromRequest)(req);
         let userProgress = [];
         if (userId) {
             userProgress = await Progress_1.Progress.find({ userId, type: 'grammar' });
@@ -67,3 +51,15 @@ const getGrammarById = async (req, res) => {
     }
 };
 exports.getGrammarById = getGrammarById;
+const getGrammarQuestions = async (req, res) => {
+    try {
+        const quizData = await GrammarQuiz_1.GrammarQuiz.findOne();
+        if (!quizData)
+            return res.status(200).json({ fillInBlanks: [], starArrangements: [] });
+        res.status(200).json(quizData);
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message || 'Server Error' });
+    }
+};
+exports.getGrammarQuestions = getGrammarQuestions;

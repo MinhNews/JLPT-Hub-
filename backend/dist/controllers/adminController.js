@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUserRole = exports.toggleUserStatus = exports.toggleUserVip = exports.getAllUsers = exports.getSystemStats = void 0;
 const User_1 = require("../models/User");
 const Subscription_1 = require("../models/Subscription");
-const CoursePlan_1 = require("../models/CoursePlan");
 const Transaction_1 = require("../models/Transaction");
 // Get system statistics for admin dashboard
 const getSystemStats = async (req, res) => {
@@ -112,26 +111,12 @@ const toggleUserVip = async (req, res) => {
             return res.status(200).json({ message: 'Revoked VIP status successfully', isVip: false });
         }
         else {
-            // Grant VIP: Find or seed default course plan
-            let plan = await CoursePlan_1.CoursePlan.findOne({ status: 'active' });
-            if (!plan) {
-                // Create a default course plan if none exists
-                plan = new CoursePlan_1.CoursePlan({
-                    title: 'N3 VIP Trọn Đời',
-                    description: 'Mở khóa trọn bộ tính năng học tập',
-                    price: 299000,
-                    durationDays: 9999,
-                    features: ['All VIP Features'],
-                    status: 'active'
-                });
-                await plan.save();
-            }
-            // Create new Subscription
+            // Grant VIP: Always grant lifetime access (admin manual grant)
             const endDate = new Date();
-            endDate.setDate(endDate.getDate() + (plan.durationDays || 30));
+            endDate.setDate(endDate.getDate() + 9999); // ~27 years = effectively permanent
             const newSub = new Subscription_1.Subscription({
                 userId: id,
-                planId: plan._id,
+                planId: null,
                 status: 'active',
                 startDate: new Date(),
                 endDate

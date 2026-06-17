@@ -5,13 +5,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.authorizeAdmin = exports.authenticateToken = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const auth_1 = require("../utils/auth");
 const authenticateToken = (req, res, next) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
+    const token = (0, auth_1.getAuthTokenFromRequest)(req);
     if (!token) {
         return res.status(401).json({ message: 'Access token required' });
     }
-    const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
+    let secret;
+    try {
+        secret = (0, auth_1.getJwtSecret)();
+    }
+    catch (error) {
+        return res.status(500).json({ message: error.message || 'Server auth configuration error' });
+    }
     jsonwebtoken_1.default.verify(token, secret, (err, user) => {
         if (err) {
             return res.status(403).json({ message: 'Invalid or expired token' });

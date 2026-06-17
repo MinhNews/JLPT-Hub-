@@ -17,7 +17,11 @@ export const getUserProgress = async (req: AuthRequest, res: Response) => {
       kanjiMastered: progressRecords.filter(p => p.type === 'kanji' && p.status === 'mastered').map(p => p.lessonId),
       grammarMastered: progressRecords.filter(p => p.type === 'grammar' && p.status === 'mastered').map(p => p.lessonId),
       readingMastered: progressRecords.filter(p => p.type === 'reading' && p.status === 'mastered').map(p => p.lessonId),
-      listeningMastered: progressRecords.filter(p => p.type === 'listening' && p.status === 'mastered').map(p => p.lessonId)
+      listeningMastered: progressRecords.filter(p => p.type === 'listening' && p.status === 'mastered').map(p => p.lessonId),
+      minnaMastered: progressRecords
+        .filter(p => p.type === 'minna' && p.status === 'mastered')
+        .map(p => Number(p.lessonId))
+        .filter(n => Number.isFinite(n))
     };
 
     res.status(200).json(response);
@@ -34,14 +38,15 @@ export const syncProgress = async (req: AuthRequest, res: Response) => {
       return res.status(401).json({ message: 'Unauthorized' });
     }
 
-    const { vocabMastered, kanjiMastered, grammarMastered, readingMastered, listeningMastered } = req.body;
+    const { vocabMastered, kanjiMastered, grammarMastered, readingMastered, listeningMastered, minnaMastered } = req.body;
 
     const syncTypes = [
       { key: 'vocab', list: vocabMastered || [] },
       { key: 'kanji', list: kanjiMastered || [] },
       { key: 'grammar', list: grammarMastered || [] },
       { key: 'reading', list: readingMastered || [] },
-      { key: 'listening', list: listeningMastered || [] }
+      { key: 'listening', list: listeningMastered || [] },
+      { key: 'minna', list: (minnaMastered || []).map(String) }
     ];
 
     // Find all current progress records in DB
@@ -53,7 +58,8 @@ export const syncProgress = async (req: AuthRequest, res: Response) => {
       kanjiMastered: [],
       grammarMastered: [],
       readingMastered: [],
-      listeningMastered: []
+      listeningMastered: [],
+      minnaMastered: []
     };
 
     for (const syncType of syncTypes) {
@@ -65,7 +71,9 @@ export const syncProgress = async (req: AuthRequest, res: Response) => {
       const unionSet = new Set([...dbItems, ...syncType.list]);
       const unionList = Array.from(unionSet);
 
-      mergedResults[`${syncType.key}Mastered`] = unionList;
+      mergedResults[`${syncType.key}Mastered`] = syncType.key === 'minna'
+        ? unionList.map(Number).filter(n => Number.isFinite(n))
+        : unionList;
 
       // Identify items that need to be created/updated in DB
       for (const lessonId of unionList) {
@@ -104,7 +112,7 @@ export const toggleProgressItem = async (req: AuthRequest, res: Response) => {
 
     const { lessonId, type, status } = req.body; // status: 'mastered' | 'in_progress'
 
-    if (!lessonId || !type || !['vocab', 'kanji', 'grammar', 'reading', 'listening'].includes(type)) {
+    if (!lessonId || !type || !['vocab', 'kanji', 'grammar', 'reading', 'listening', 'minna', 'kanjill', 'exam'].includes(type)) {
       return res.status(400).json({ message: 'Invalid progress payload' });
     }
 

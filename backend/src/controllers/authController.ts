@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { User } from '../models/User';
 import { OAuth2Client } from 'google-auth-library';
+import { getJwtSecret } from '../utils/auth';
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com';
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
@@ -18,7 +19,7 @@ const COOKIE_OPTIONS = {
 };
 
 const signToken = (userId: any, role: string) => {
-  const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
+  const secret = getJwtSecret();
   return jwt.sign({ id: userId, role }, secret, { expiresIn: '30d' });
 };
 
