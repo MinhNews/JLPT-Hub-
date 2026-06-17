@@ -20,7 +20,12 @@ const checkIsVip = async (userId: string | null): Promise<boolean> => {
 
 const isLessonFree = (lessonId: string): boolean => {
   const idLower = lessonId.toLowerCase();
-  return idLower === 'dokkai_1' || idLower === 'dokkai_2';
+  return idLower === '1' || idLower === '2' || idLower === 'dokkai_1' || idLower === 'dokkai_2';
+};
+
+const getLessonOrder = (lessonId: string): number => {
+  const match = String(lessonId || '').match(/\d+/);
+  return match ? Number(match[0]) : Number.MAX_SAFE_INTEGER;
 };
 
 export const getAllReadingLessons = async (req: Request, res: Response) => {
@@ -28,7 +33,11 @@ export const getAllReadingLessons = async (req: Request, res: Response) => {
     const userId = getUserIdFromRequest(req);
     const isVip = await checkIsVip(userId);
 
-    const lessons = await ReadingLesson.find().select('id title part level').sort({ id: 1 });
+    const lessons = await ReadingLesson.find().select('id title part level questions').lean();
+    lessons.sort((a: any, b: any) => {
+      const orderDiff = getLessonOrder(a.id) - getLessonOrder(b.id);
+      return orderDiff || String(a.id).localeCompare(String(b.id), 'vi', { numeric: true });
+    });
     
     let userProgress: any[] = [];
     if (userId) {
@@ -43,6 +52,7 @@ export const getAllReadingLessons = async (req: Request, res: Response) => {
         title: lesson.title,
         part: lesson.part,
         level: lesson.level,
+        questionCount: lesson.questions?.length || 0,
         isFree: free,
         isLocked: !free && !isVip,
         isCompleted: progress ? progress.status === 'mastered' : false,

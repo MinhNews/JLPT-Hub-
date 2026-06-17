@@ -20,10 +20,32 @@ const cleanForCompare = (text) => {
     .toLowerCase();
 };
 
+const getLessonOrder = (lessonId) => {
+  const match = String(lessonId || '').match(/\d+/);
+  return match ? Number(match[0]) : Number.MAX_SAFE_INTEGER;
+};
+
+const sortLessonsNaturally = (list = []) => {
+  return [...list].sort((a, b) => {
+    const orderDiff = getLessonOrder(a.id) - getLessonOrder(b.id);
+    return orderDiff || String(a.id).localeCompare(String(b.id), 'vi', { numeric: true });
+  });
+};
+
+const normalizeSentenceTranslations = (sentenceTranslations = []) => {
+  return sentenceTranslations
+    .map((sent, index) => ({
+      jp: sent.jp || sent.japanese || sent.text || sent.original || sent.sentence || '',
+      vi: sent.vi || sent.vietnamese || sent.translation || sent.meaning || sent.translated || '',
+      originalIdx: index
+    }))
+    .filter((sent) => sent.jp);
+};
+
 const getTranslation = (jpText, sentenceTranslations) => {
   if (!jpText || !sentenceTranslations) return '';
   const compText = cleanForCompare(jpText);
-  const found = sentenceTranslations.find(sent => {
+  const found = normalizeSentenceTranslations(sentenceTranslations).find(sent => {
     const compSent = cleanForCompare(sent.jp);
     return compSent === compText || compText.includes(compSent) || compSent.includes(compText);
   });
@@ -395,7 +417,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
   // Group lessons by parts
   const groupedLessons = useMemo(() => {
     const groups = {};
-    lessons.forEach((lesson) => {
+    sortLessonsNaturally(lessons).forEach((lesson) => {
       const part = lesson.part || 'Khác';
       if (!groups[part]) {
         groups[part] = [];
@@ -417,7 +439,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
         lesson.part.toLowerCase().includes(query)
       );
       if (list.length > 0) {
-        filtered[part] = list;
+        filtered[part] = sortLessonsNaturally(list);
       }
     });
     return filtered;
@@ -494,13 +516,23 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
     let htmlText = selectedLesson.passage;
     if (!htmlText) return '';
 
-    const translations = selectedLesson.sentenceTranslations || [];
+    const translations = normalizeSentenceTranslations(selectedLesson.sentenceTranslations || []);
     
     // Sort translations by jp length descending to prevent sub-sentence replacement bugs
     const passageSents = translations
-      .map((sent, idx) => ({ ...sent, originalIdx: idx }))
+      .map((sent, idx) => ({ ...sent, originalIdx: sent.originalIdx ?? idx }))
       .filter((sent) => sent.jp && htmlText.includes(sent.jp))
       .sort((a, b) => b.jp.length - a.jp.length);
+
+    if (translations.length > 0 && passageSents.length === 0) {
+      return translations
+        .map((sent, idx) => (
+          `<span class="interactive-sentence sentence-line" data-idx="${sent.originalIdx ?? idx}">` +
+          `<sup class="sent-num font-sans">[${idx + 1}]</sup>${sent.jp}` +
+          `</span>`
+        ))
+        .join('');
+    }
 
     // Replace sents with placeholders
     passageSents.forEach((sent) => {
@@ -523,11 +555,12 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
     const target = e.target.closest('.interactive-sentence');
     if (target) {
       const idx = parseInt(target.getAttribute('data-idx'));
-      const sent = selectedLesson.sentenceTranslations[idx];
+      const translations = normalizeSentenceTranslations(selectedLesson.sentenceTranslations || []);
+      const sent = translations.find((item) => item.originalIdx === idx) || translations[idx];
       if (sent) {
         setActiveSentence({
           jp: sent.jp,
-          vi: sent.vi,
+          vi: sent.vi || 'Chưa có bản dịch tiếng Việt cho câu này trong dữ liệu.',
           index: idx
         });
       }
@@ -630,7 +663,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
                           <h3 className="lesson-card-title">{lesson.title}</h3>
                           <div className="card-bottom">
                             <span className="question-count">
-                              {isLocked ? '🔒 Nội dung VIP' : `❓ ${lesson.questions?.length || 0} câu hỏi`}
+                              {isLocked ? '🔒 Nội dung VIP' : `❓ ${lesson.questionCount ?? lesson.questions?.length ?? 0} câu hỏi`}
                             </span>
                             <span className="study-action">
                               {isLocked ? 'Kích hoạt' : 'Học ngay'} <ChevronRight size={14} />
@@ -1694,6 +1727,15 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
           text-decoration: underline;
           text-decoration-color: var(--primary-light);
           text-decoration-thickness: 1px;
+        }
+
+        .interactive-sentence.sentence-line {
+          display: block;
+          margin: 0 0 14px;
+          padding: 10px 12px;
+          border-left: 3px solid var(--primary-light);
+          background: var(--card-bg-hover);
+          line-height: 2;
         }
 
         .sent-num {
