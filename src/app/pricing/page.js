@@ -186,6 +186,8 @@ export default function PricingPage() {
     return date.toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
+  const formatPlanTitle = (title = '') => title.replace(/^N3 VIP/i, 'VIP Member');
+
   if (loading || plansLoading) {
     return (
       <div className="pricing-loading">
@@ -248,7 +250,7 @@ export default function PricingPage() {
                   <div className="popular-badge">👑 TRỌN ĐỜI TIẾT KIỆM nhất</div>
                 )}
                 
-                <h2 className="plan-title">{plan.title}</h2>
+                <h2 className="plan-title">{formatPlanTitle(plan.title)}</h2>
                 <p className="plan-desc">{plan.description}</p>
                 
                 <div className="plan-price-row">

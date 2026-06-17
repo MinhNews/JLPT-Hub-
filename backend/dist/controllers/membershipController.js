@@ -27,6 +27,7 @@ const parsePaymentAmount = (amount) => {
     const normalized = amount.replace(/[^\d.-]/g, '');
     return Number(normalized);
 };
+const normalizeVipPlanTitle = (title) => title.replace(/^N3 VIP/i, 'VIP Member');
 // Pre-seed plans if database is empty
 const seedPlansIfNeeded = async () => {
     const count = await CoursePlan_1.CoursePlan.countDocuments();
@@ -69,7 +70,12 @@ const getCoursePlans = async (req, res) => {
     try {
         await seedPlansIfNeeded();
         const plans = await CoursePlan_1.CoursePlan.find({ status: 'active' }).sort({ price: 1 });
-        res.status(200).json(plans);
+        const displayPlans = plans.map((plan) => {
+            const planObject = plan.toObject();
+            planObject.title = normalizeVipPlanTitle(planObject.title);
+            return planObject;
+        });
+        res.status(200).json(displayPlans);
     }
     catch (error) {
         res.status(500).json({ message: error.message || 'Server Error' });
