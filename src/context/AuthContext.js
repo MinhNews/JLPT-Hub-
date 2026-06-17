@@ -46,6 +46,13 @@ export function AuthProvider({ children }) {
       const timeoutId = setTimeout(() => controller.abort(), 5000);
       const res = await apiFetch('/membership/status', { signal: controller.signal });
       clearTimeout(timeoutId);
+      if (res.status === 401 || res.status === 403) {
+        localStorage.removeItem('jlpt_auth_user');
+        setUser(null);
+        setIsVip(false);
+        setSubscription(null);
+        return;
+      }
       if (res.ok) {
         const data = await res.json();
         setIsVip(data.isVip);

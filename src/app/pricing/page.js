@@ -9,7 +9,7 @@ import Link from 'next/link';
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function PricingPage() {
-  const { user, isVip, subscription, checkSubscription, loading } = useAuth();
+  const { user, isVip, subscription, checkSubscription, loading, logout } = useAuth();
   const router = useRouter();
 
   const [plans, setPlans] = useState([]);
@@ -49,6 +49,18 @@ export default function PricingPage() {
       const res = await fetch(`${API_BASE_URL}/membership/transactions/${checkoutTx._id}/status`, {
         credentials: 'include'
       });
+
+      if (res.status === 401 || res.status === 403) {
+        if (!silent) {
+          setPaymentNotice({
+            type: 'error',
+            message: 'Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại để tiếp tục thanh toán.'
+          });
+          await logout();
+          setTimeout(() => router.push('/auth'), 1200);
+        }
+        return false;
+      }
 
       if (!res.ok) {
         if (!silent) {
@@ -139,6 +151,13 @@ export default function PricingPage() {
       if (res.ok) {
         const data = await res.json();
         setCheckoutTx(data.transaction);
+      } else if (res.status === 401 || res.status === 403) {
+        setPaymentNotice({
+          type: 'error',
+          message: 'Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại để tiếp tục thanh toán.'
+        });
+        await logout();
+        setTimeout(() => router.push('/auth'), 1200);
       } else {
         const error = await res.json();
         setPaymentNotice({
@@ -357,8 +376,8 @@ export default function PricingPage() {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          color: var(--text-primary);
-          text-decoration: none;
+          color: var(--text-primary) !important;
+          text-decoration: none !important;
           font-weight: 800;
           font-size: 13px;
           padding: 8px 14px 8px 8px;
@@ -369,6 +388,17 @@ export default function PricingPage() {
           border: 1px solid rgba(99, 102, 241, 0.22);
           box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
           width: fit-content;
+        }
+        .back-btn:visited,
+        .back-btn:focus,
+        .back-btn:hover {
+          color: var(--text-primary) !important;
+          text-decoration: none !important;
+        }
+        .back-btn span,
+        .back-btn svg {
+          color: inherit;
+          text-decoration: none !important;
         }
         .back-icon-wrap {
           display: inline-flex;
