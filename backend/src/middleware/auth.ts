@@ -9,8 +9,11 @@ export interface AuthRequest extends Request {
 }
 
 export const authenticateToken = (req: AuthRequest, res: Response, next: NextFunction) => {
+  // Read token from HttpOnly cookie first, fallback to Authorization header (for backward compat)
+  const tokenFromCookie = req.cookies?.token;
   const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+  const tokenFromHeader = authHeader && authHeader.split(' ')[1];
+  const token = tokenFromCookie || tokenFromHeader;
 
   if (!token) {
     return res.status(401).json({ message: 'Access token required' });

@@ -8,7 +8,7 @@ const ProgressContext = createContext();
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export function ProgressProvider({ children }) {
-  const { token } = useAuth();
+  const { user } = useAuth();
   const [vocabMastered, setVocabMastered] = useState([]);
   const [kanjiMastered, setKanjiMastered] = useState([]);
   const [grammarMastered, setGrammarMastered] = useState([]);
@@ -55,15 +55,15 @@ export function ProgressProvider({ children }) {
 
   // Sync with cloud database when logged in
   useEffect(() => {
-    if (!token || !isLoaded) return;
+    if (!user || !isLoaded) return;
 
     const syncWithCloud = async () => {
       try {
         const res = await fetch(`${API_BASE_URL}/progress/sync`, {
           method: 'POST',
+          credentials: 'include',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
             vocabMastered,
@@ -91,15 +91,14 @@ export function ProgressProvider({ children }) {
     };
 
     syncWithCloud();
-  }, [token, isLoaded]);
+  }, [isLoaded]);
 
-  // Clean local progress on logout (when token changes to null)
+  // Clean local progress on logout (when user changes to null)
   useEffect(() => {
-    if (!token && isLoaded) {
-      // Keep local progress if desired, or clear it. Commercial SaaS usually keeps local progress
-      // but resets on new registration. We can just keep it.
+    if (isLoaded) {
+      // Keep local progress if desired, or clear it.
     }
-  }, [token, isLoaded]);
+  }, [isLoaded]);
 
   // Save to localStorage when state changes
   useEffect(() => {
@@ -162,13 +161,13 @@ export function ProgressProvider({ children }) {
   };
 
   const syncToggleToServer = async (lessonId, type, isCompleted) => {
-    if (!token) return;
+    if (!user) return;
     try {
       await fetch(`${API_BASE_URL}/progress/toggle`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           lessonId,

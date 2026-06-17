@@ -4,7 +4,24 @@ import jwt from 'jsonwebtoken';
 import { User } from '../models/User';
 import { OAuth2Client } from 'google-auth-library';
 
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID || '1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com');
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com';
+const client = new OAuth2Client(GOOGLE_CLIENT_ID);
+
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+const COOKIE_OPTIONS = {
+  httpOnly: true,
+  secure: IS_PROD,
+  sameSite: IS_PROD ? ('none' as const) : ('lax' as const),
+  maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+  path: '/',
+};
+
+const signToken = (userId: any, role: string) => {
+  const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
+  return jwt.sign({ id: userId, role }, secret, { expiresIn: '30d' });
+};
+
 export const registerUser = async (req: Request, res: Response) => {
   try {
     const { email, password, name } = req.body;
@@ -21,13 +38,7 @@ export const registerUser = async (req: Request, res: Response) => {
     const salt = await bcrypt.genSalt(10);
     const passwordHash = await bcrypt.hash(password, salt);
 
-    const user = new User({
-      email,
-      passwordHash,
-      name,
-      role: 'student'
-    });
-
+    const user = new User({ email, passwordHash, name, role: 'student' });
     await user.save();
 
     res.status(201).json({ message: 'User registered successfully' });
@@ -54,22 +65,17 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-    const accessToken = jwt.sign(
-      { id: user._id, role: user.role },
-      secret,
-      { expiresIn: '30d' }
-    );
+    const accessToken = signToken(user._id, user.role);
+    res.cookie('token', accessToken, COOKIE_OPTIONS);
 
     res.status(200).json({
-      token: accessToken,
       user: {
         id: user._id,
         email: user.email,
         name: user.name,
         role: user.role,
-        avatarUrl: user.avatarUrl || ''
-      }
+        avatarUrl: user.avatarUrl || '',
+      },
     });
   } catch (error: any) {
     res.status(500).json({ message: error.message || 'Server Error' });
@@ -85,7 +91,7 @@ export const googleLogin = async (req: Request, res: Response) => {
 
     const ticket = await client.verifyIdToken({
       idToken: credential,
-      audience: process.env.GOOGLE_CLIENT_ID || '1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com',
+      audience: GOOGLE_CLIENT_ID,
     });
     const payload = ticket.getPayload();
     if (!payload) {
@@ -104,32 +110,32 @@ export const googleLogin = async (req: Request, res: Response) => {
         name: name || 'Google User',
         role: 'student',
         avatarUrl: picture || '',
-        passwordHash: '' // Not required for google users
+        passwordHash: '',
       });
       await user.save();
     } else if (user.status === 'banned') {
       return res.status(403).json({ message: 'Tài khoản của bạn đã bị khóa.' });
     }
 
-    const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_for_jlpt_hub_321';
-    const accessToken = jwt.sign(
-      { id: user._id, role: user.role },
-      secret,
-      { expiresIn: '30d' }
-    );
+    const accessToken = signToken(user._id, user.role);
+    res.cookie('token', accessToken, COOKIE_OPTIONS);
 
     res.status(200).json({
-      token: accessToken,
       user: {
         id: user._id,
         email: user.email,
         name: user.name,
         role: user.role,
-        avatarUrl: user.avatarUrl || ''
-      }
+        avatarUrl: user.avatarUrl || '',
+      },
     });
   } catch (error: any) {
     console.error('Google Login Error:', error);
     res.status(500).json({ message: 'Lỗi xác thực Google: ' + (error.message || 'Server Error') });
   }
+};
+
+export const logoutUser = (_req: Request, res: Response) => {
+  res.clearCookie('token', { ...COOKIE_OPTIONS, maxAge: 0 });
+  res.status(200).json({ message: 'Logged out successfully' });
 };

@@ -403,7 +403,7 @@ function VipGate({ lessonNumber }) {
 export default function MinnaLessonPage() {
   const { lessonId } = useParams();
   const router = useRouter();
-  const { token, user, isVip } = useAuth();
+  const { user, isVip } = useAuth();
   const { toggleMinnaMastered, minnaMastered } = useProgress();
 
   const [lesson, setLesson] = useState(null);
@@ -419,10 +419,10 @@ export default function MinnaLessonPage() {
     const fetchLesson = async () => {
       setLoading(true);
       try {
-        const headers = { 'Content-Type': 'application/json' };
-        if (token) headers['Authorization'] = `Bearer ${token}`;
-
-        const res = await fetch(`${API_BASE}/minna/lessons/${lessonId}`, { headers });
+        const res = await fetch(`${API_BASE}/minna/lessons/${lessonId}`, {
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include'
+        });
 
         if (res.status === 403) {
           setVipRequired(true);
@@ -438,7 +438,7 @@ export default function MinnaLessonPage() {
       }
     };
     if (lessonId) fetchLesson();
-  }, [lessonId, token]);
+  }, [lessonId]);
 
   useEffect(() => {
     // 1. Handle playwrap audio button clicks dynamically

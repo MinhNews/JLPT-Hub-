@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useProgress } from '@/context/ProgressContext';
-import { useAuth } from '@/context/AuthContext';
+
 import Link from 'next/link';
 import { 
   Search, CheckCircle, ChevronRight, BookOpen, ArrowLeft, 
@@ -165,7 +165,7 @@ function BlockAudioPlayer({ blockId, audioUrl, playingAudioId, setPlayingAudioId
 }
 
 export default function ListeningPage() {
-  const { token } = useAuth();
+
   const { listeningMastered, toggleListeningMastered } = useProgress();
   const [activeTab, setActiveTab] = useState('list'); // 'list' | 'guide' | 'lesson' | 'locked'
   const [lessons, setLessons] = useState([]);
@@ -192,11 +192,7 @@ export default function ListeningPage() {
   const fetchLessons = async () => {
     setLessonsLoading(true);
     try {
-      const headers = {};
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-      }
-      const res = await fetch(`${API_BASE_URL}/listening`, { headers });
+      const res = await fetch(`${API_BASE_URL}/listening`, { credentials: 'include' });
       if (res.ok) {
         const data = await res.json();
         setLessons(data);
@@ -210,7 +206,7 @@ export default function ListeningPage() {
 
   useEffect(() => {
     fetchLessons();
-  }, [token]);
+  }, []);
 
   // Clean html helper
   const cleanHtml = (text) => {
@@ -232,11 +228,7 @@ export default function ListeningPage() {
     setLessonDetailLoading(true);
     setActiveTab('lesson');
     try {
-      const headers = {};
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-      }
-      const res = await fetch(`${API_BASE_URL}/listening/${lessonSummary.id}`, { headers });
+      const res = await fetch(`${API_BASE_URL}/listening/${lessonSummary.id}`, { credentials: 'include' });
       if (res.ok) {
         const fullLesson = await res.json();
         setSelectedLesson(fullLesson);

@@ -18,15 +18,15 @@ import {
 import Link from 'next/link';
 
 export default function UserProfile() {
-  const { user, token, isVip, updateUserData } = useAuth();
+  const { user, isVip, updateUserData } = useAuth();
   const router = useRouter();
 
   // Redirect if not logged in
   useEffect(() => {
-    if (!token && !user) {
+    if (!user) {
       router.push('/auth');
     }
-  }, [token, user, router]);
+  }, [user, router]);
 
   // Profile fields state
   const [name, setName] = useState('');
@@ -60,7 +60,6 @@ export default function UserProfile() {
   // Handle personal info & password save
   const handleSaveChanges = async (e) => {
     e.preventDefault();
-    if (!token) return;
 
     // Validation for password change
     if (newPassword || confirmPassword) {
@@ -83,9 +82,9 @@ export default function UserProfile() {
       const res = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/users/profile', {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({
           name,
           currentPassword: newPassword ? currentPassword : undefined,
@@ -134,15 +133,14 @@ export default function UserProfile() {
 
   // Upload avatar base64 data to backend
   const uploadAvatarImage = async (base64String) => {
-    if (!token) return;
     setLoadingAvatar(true);
     try {
       const res = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/users/profile/avatar', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({ avatarDataUri: base64String })
       });
 

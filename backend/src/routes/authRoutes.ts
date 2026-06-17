@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { registerUser, loginUser, googleLogin } from '../controllers/authController';
+import { registerUser, loginUser, googleLogin, logoutUser } from '../controllers/authController';
 import { authenticateToken, AuthRequest } from '../middleware/auth';
 import { User } from '../models/User';
 
@@ -8,6 +8,7 @@ const router = Router();
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 router.post('/google', googleLogin);
+router.post('/logout', logoutUser);
 
 router.get('/me', authenticateToken, async (req: AuthRequest, res) => {
   try {

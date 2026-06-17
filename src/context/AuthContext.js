@@ -6,27 +6,29 @@ const AuthContext = createContext();
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
+// Helper: fetch with credentials (sends HttpOnly cookie automatically)
+const apiFetch = (path, options = {}) =>
+  fetch(`${API_BASE_URL}${path}`, {
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+    ...options,
+  });
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
   const [isVip, setIsVip] = useState(false);
   const [subscription, setSubscription] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Load auth data on mount
+  // On mount: restore user from localStorage (non-sensitive display data only)
+  // Token is in HttpOnly cookie — browser sends it automatically
   useEffect(() => {
     const initAuth = async () => {
       try {
-        const storedToken = localStorage.getItem('jlpt_auth_token');
         const storedUser = localStorage.getItem('jlpt_auth_user');
-
-        if (storedToken && storedUser) {
-          setToken(storedToken);
-          const parsedUser = JSON.parse(storedUser);
-          setUser(parsedUser);
-          
-          // Check VIP status
-          await checkSubscription(storedToken);
+        if (storedUser) {
+          setUser(JSON.parse(storedUser));
+          await checkSubscription();
         }
       } catch (err) {
         console.error('Failed to initialize auth:', err);
@@ -37,124 +39,84 @@ export function AuthProvider({ children }) {
     initAuth();
   }, []);
 
-  // Check user subscription status
-  const checkSubscription = async (authToken = token) => {
-    if (!authToken) return;
+  // Check subscription — cookie sent automatically
+  const checkSubscription = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/membership/status`, {
-        headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
-      });
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      const res = await apiFetch('/membership/status', { signal: controller.signal });
+      clearTimeout(timeoutId);
       if (res.ok) {
         const data = await res.json();
         setIsVip(data.isVip);
         setSubscription(data.subscription);
       }
     } catch (err) {
-      console.error('Failed to check subscription:', err);
+      if (err.name !== 'AbortError') {
+        console.error('Failed to check subscription:', err);
+      }
     }
   };
 
-  // Login action
+  // Login — server sets HttpOnly cookie, we only store non-sensitive user info
   const login = async (email, password) => {
-    try {
-      const res = await fetch(`${API_BASE_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-      });
+    const res = await apiFetch('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+    });
 
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.message || 'Login failed');
-      }
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Login failed');
 
-      localStorage.setItem('jlpt_auth_token', data.token);
-      localStorage.setItem('jlpt_auth_user', JSON.stringify(data.user));
-      
-      setToken(data.token);
-      setUser(data.user);
-
-      // Fetch subscription status
-      await checkSubscription(data.token);
-      
-      return data;
-    } catch (err) {
-      console.error('Login error:', err);
-      throw err;
-    }
+    localStorage.setItem('jlpt_auth_user', JSON.stringify(data.user));
+    setUser(data.user);
+    await checkSubscription();
+    return data;
   };
 
-  // Register action
+  // Register then auto-login
   const register = async (name, email, password) => {
-    try {
-      const res = await fetch(`${API_BASE_URL}/auth/register`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, password })
-      });
+    const res = await apiFetch('/auth/register', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, password }),
+    });
 
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.message || 'Registration failed');
-      }
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Registration failed');
 
-      // Automatically login after successful signup
-      return await login(email, password);
-    } catch (err) {
-      console.error('Registration error:', err);
-      throw err;
-    }
+    return await login(email, password);
   };
 
-  // Google Login action
+  // Google Login — server sets HttpOnly cookie
   const googleLoginAuth = async (credential) => {
+    const res = await apiFetch('/auth/google', {
+      method: 'POST',
+      body: JSON.stringify({ credential }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Google Login failed');
+
+    localStorage.setItem('jlpt_auth_user', JSON.stringify(data.user));
+    setUser(data.user);
+    await checkSubscription();
+    return data;
+  };
+
+  // Logout — tell server to clear cookie, then clear local state
+  const logout = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/auth/google`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ credential })
-      });
-
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.message || 'Google Login failed');
-      }
-
-      localStorage.setItem('jlpt_auth_token', data.token);
-      localStorage.setItem('jlpt_auth_user', JSON.stringify(data.user));
-      
-      setToken(data.token);
-      setUser(data.user);
-
-      await checkSubscription(data.token);
-      
-      return data;
+      await apiFetch('/auth/logout', { method: 'POST' });
     } catch (err) {
-      console.error('Google login error:', err);
-      throw err;
+      console.error('Logout error:', err);
+    } finally {
+      localStorage.removeItem('jlpt_auth_user');
+      setUser(null);
+      setIsVip(false);
+      setSubscription(null);
     }
   };
 
-  // Logout action
-  const logout = () => {
-    localStorage.removeItem('jlpt_auth_token');
-    localStorage.removeItem('jlpt_auth_user');
-    
-    setToken(null);
-    setUser(null);
-    setIsVip(false);
-    setSubscription(null);
-  };
-
-  // Update user data locally
   const updateUserData = (updatedUser) => {
     setUser(updatedUser);
     localStorage.setItem('jlpt_auth_user', JSON.stringify(updatedUser));
@@ -164,7 +126,6 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider
       value={{
         user,
-        token,
         isVip,
         subscription,
         loading,
@@ -173,7 +134,7 @@ export function AuthProvider({ children }) {
         googleLoginAuth,
         logout,
         checkSubscription,
-        updateUserData
+        updateUserData,
       }}
     >
       {children}

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { useProgress } from '@/context/ProgressContext';
-import { useAuth } from '@/context/AuthContext';
+
 import Link from 'next/link';
 import { 
   Search, CheckCircle, ChevronRight, BookOpen, ArrowLeft, 
@@ -31,7 +31,6 @@ const getTranslation = (jpText, sentenceTranslations) => {
 };
 
 export default function ReadingPage() {
-  const { token } = useAuth();
   const { readingMastered, toggleReadingMastered } = useProgress();
   const [activeTab, setActiveTab] = useState('list'); // 'list' | 'guide' | 'lesson' | 'locked'
   const [lessons, setLessons] = useState([]);
@@ -62,11 +61,7 @@ export default function ReadingPage() {
   const fetchLessons = async () => {
     setLessonsLoading(true);
     try {
-      const headers = {};
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-      }
-      const res = await fetch(`${API_BASE_URL}/reading`, { headers });
+      const res = await fetch(`${API_BASE_URL}/reading`, { credentials: 'include' });
       if (res.ok) {
         const data = await res.json();
         setLessons(data);
@@ -80,7 +75,7 @@ export default function ReadingPage() {
 
   useEffect(() => {
     fetchLessons();
-  }, [token]);
+  }, []);
 
   // Load API Key on mount
   useEffect(() => {
@@ -441,11 +436,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
     setLessonDetailLoading(true);
     setActiveTab('lesson');
     try {
-      const headers = {};
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-      }
-      const res = await fetch(`${API_BASE_URL}/reading/${lessonSummary.id}`, { headers });
+      const res = await fetch(`${API_BASE_URL}/reading/${lessonSummary.id}`, { credentials: 'include' });
       if (res.ok) {
         const fullLesson = await res.json();
         setSelectedLesson(fullLesson);

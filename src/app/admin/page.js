@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function AdminDashboard() {
-  const { token, user } = useAuth();
+  const { user } = useAuth();
   
   const [stats, setStats] = useState(null);
   const [users, setUsers] = useState([]);
@@ -36,13 +36,10 @@ export default function AdminDashboard() {
 
   // Fetch Stats
   const fetchStats = async () => {
-    if (!token) return;
     setLoadingStats(true);
     try {
       const res = await fetch(`${API_BASE_URL}/stats`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
       if (res.ok) {
         const data = await res.json();
@@ -57,13 +54,10 @@ export default function AdminDashboard() {
 
   // Fetch Users
   const fetchUsers = async () => {
-    if (!token) return;
     setLoadingUsers(true);
     try {
       const res = await fetch(`${API_BASE_URL}/users?page=${page}&search=${search}&limit=8`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
       if (res.ok) {
         const data = await res.json();
@@ -79,16 +73,12 @@ export default function AdminDashboard() {
   };
 
   useEffect(() => {
-    if (token) {
-      fetchStats();
-    }
-  }, [token]);
+    fetchStats();
+  }, []);
 
   useEffect(() => {
-    if (token) {
-      fetchUsers();
-    }
-  }, [token, page, search]);
+    fetchUsers();
+  }, [page, search]);
 
   // Handle VIP Toggle
   const handleToggleVip = async (userId) => {
@@ -97,9 +87,7 @@ export default function AdminDashboard() {
     try {
       const res = await fetch(`${API_BASE_URL}/users/${userId}/vip`, {
         method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
       if (res.ok) {
         await fetchUsers();
@@ -119,9 +107,7 @@ export default function AdminDashboard() {
     try {
       const res = await fetch(`${API_BASE_URL}/users/${userId}/status`, {
         method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
       if (res.ok) {
         await fetchUsers();
@@ -145,9 +131,9 @@ export default function AdminDashboard() {
       const res = await fetch(`${API_BASE_URL}/users/${userId}/role`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({ role: newRole })
       });
       if (res.ok) {

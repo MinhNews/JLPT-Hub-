@@ -208,7 +208,7 @@ export default function AuthPage() {
             }}
             useOneTap
             theme="outline"
-            text={isLogin ? 'signin_with' : 'signup_with'}
+            text="signin_with"
             shape="pill"
             width="100%"
           />

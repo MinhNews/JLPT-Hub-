@@ -9,7 +9,7 @@ import Link from 'next/link';
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function PricingPage() {
-  const { user, token, isVip, subscription, checkSubscription, loading } = useAuth();
+  const { user, isVip, subscription, checkSubscription, loading } = useAuth();
   const router = useRouter();
 
   const [plans, setPlans] = useState([]);
@@ -38,20 +38,18 @@ export default function PricingPage() {
   }, []);
 
   const checkPaymentStatus = async (silent = false) => {
-    if (!checkoutTx || !token) return false;
+    if (!checkoutTx) return false;
     if (!silent) setPaymentLoading(true);
     
     try {
       const res = await fetch(`${API_BASE_URL}/membership/transactions/${checkoutTx._id}/status`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
       if (res.ok) {
         const data = await res.json();
         if (data.status === 'completed') {
           setSuccessMsg('Thanh toán thành công! Gói VIP đã được kích hoạt tự động. 🎉');
-          await checkSubscription(token);
+          await checkSubscription();
           
           setTimeout(() => {
             setCheckoutTx(null);
@@ -78,7 +76,7 @@ export default function PricingPage() {
   useEffect(() => {
     let intervalId = null;
     
-    if (checkoutTx && token && !successMsg) {
+    if (checkoutTx && !successMsg) {
       // Poll every 5 seconds
       intervalId = setInterval(async () => {
         const completed = await checkPaymentStatus(true);
@@ -91,7 +89,7 @@ export default function PricingPage() {
     return () => {
       if (intervalId) clearInterval(intervalId);
     };
-  }, [checkoutTx, token, successMsg]);
+  }, [checkoutTx, successMsg]);
 
   const handleSubscribe = async (plan) => {
     if (!user) {
@@ -106,9 +104,9 @@ export default function PricingPage() {
       const res = await fetch(`${API_BASE_URL}/membership/subscribe`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({
           planId: plan._id,
           paymentMethod: 'bank_transfer'

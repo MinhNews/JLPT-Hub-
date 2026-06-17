@@ -7,7 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
 
 export default function NotebookPage() {
-  const { token, user } = useAuth();
+  const { user } = useAuth();
   const [notes, setNotes] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState('');
@@ -25,12 +25,10 @@ export default function NotebookPage() {
       if (localTime) setLastSaved(localTime);
 
       // If logged in, fetch from DB
-      if (token) {
+      if (user) {
         try {
           const res = await fetch(`${API_BASE_URL}/notebook`, {
-            headers: {
-              'Authorization': `Bearer ${token}`
-            }
+            credentials: 'include'
           });
           if (res.ok) {
             const data = await res.json();
@@ -53,7 +51,7 @@ export default function NotebookPage() {
     };
 
     loadNotes();
-  }, [token]);
+  }, [user]);
 
   // Handle auto-save (debounce)
   useEffect(() => {
@@ -73,14 +71,14 @@ export default function NotebookPage() {
       setLastSaved(now);
 
       // Sync to backend DB if logged in
-      if (token) {
+      if (user) {
         try {
           const res = await fetch(`${API_BASE_URL}/notebook`, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`
+              'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify({
               type: 'global',
               originalId: 'global',
@@ -99,7 +97,7 @@ export default function NotebookPage() {
     }, 1000); // save after 1 second of inactivity
 
     return () => clearTimeout(timeout);
-  }, [notes, token, isInitialLoading]);
+  }, [notes, user, isInitialLoading]);
 
   const handleManualSave = async () => {
     const now = new Date().toLocaleTimeString('vi-VN', { 
@@ -112,15 +110,15 @@ export default function NotebookPage() {
     localStorage.setItem('jlpt_n3_notebook_time', now);
     setLastSaved(now);
 
-    if (token) {
+    if (user) {
       setIsSaving(true);
       try {
         const res = await fetch(`${API_BASE_URL}/notebook`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            'Content-Type': 'application/json'
           },
+          credentials: 'include',
           body: JSON.stringify({
             type: 'global',
             originalId: 'global',
