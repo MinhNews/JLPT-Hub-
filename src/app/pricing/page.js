@@ -320,20 +320,22 @@ export default function PricingPage() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          color: var(--text-secondary);
+          color: var(--primary);
           text-decoration: none;
           font-weight: 600;
           font-size: 14px;
-          padding: 8px 16px;
-          border-radius: var(--radius-sm);
-          border: 1px solid var(--border-color);
-          background: var(--card-bg);
+          padding: 10px 20px;
+          border-radius: 100px;
+          background: rgba(99, 102, 241, 0.1);
           margin-bottom: 32px;
-          transition: var(--transition);
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
         }
         .back-btn:hover {
-          color: var(--text-primary);
-          border-color: var(--primary);
+          background: var(--primary);
+          color: white;
+          transform: translateX(-4px);
+          box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
         }
         .pricing-container {
           max-width: 960px;
