@@ -1105,14 +1105,38 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
 
                   <div className="explanation-body">
                     {aiActiveTab === 'shinkanzen' ? (
-                      selectedLesson.explanation ? (
+                      <>
+                        <div className="full-translation-area">
+                          <h4 className="translation-title">📘 Bản dịch toàn bài</h4>
+                          {normalizeSentenceTranslations(selectedLesson.sentenceTranslations || []).length > 0 ? (
+                            <div className="translation-table">
+                              {normalizeSentenceTranslations(selectedLesson.sentenceTranslations || []).map((sent, idx) => (
+                                <div key={`${idx}-${sent.jp}`} className="translation-row">
+                                  <div className="jp-cell font-serif">
+                                    <span className="translation-index">{idx + 1}</span>
+                                    <span dangerouslySetInnerHTML={{ __html: sent.jp }} />
+                                  </div>
+                                  <div className="vi-cell">{sent.vi || 'Chưa có bản dịch tiếng Việt cho câu này.'}</div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <p className="no-explanation">Bài này chưa có bản dịch toàn bài trong dữ liệu.</p>
+                          )}
+                        </div>
+
+                        <div className="source-explanation-area">
+                          <h4 className="translation-title">📝 Giải thích gốc</h4>
+                          {selectedLesson.explanation ? (
                         <div 
                           className="raw-explanation-html font-serif"
                           dangerouslySetInnerHTML={{ __html: selectedLesson.explanation }}
                         />
-                      ) : (
-                        <p className="no-explanation">Không có giải thích chi tiết cho bài đọc này.</p>
-                      )
+                          ) : (
+                            <p className="no-explanation">Không có giải thích chi tiết cho bài đọc này.</p>
+                          )}
+                        </div>
+                      </>
                     ) : (
                       // AI TAB
                       <div className="ai-chatbot-container">
@@ -2031,7 +2055,10 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
 
         /* Full translation list */
         .full-translation-area {
-          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+
+        .source-explanation-area {
           border-top: 1px dashed var(--border-color);
           padding-top: 20px;
         }
@@ -2070,6 +2097,21 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
           font-size: 15px;
           line-height: 1.8;
           color: var(--text-primary);
+        }
+
+        .translation-index {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          border-radius: 999px;
+          background: var(--primary-glow);
+          color: var(--primary-light);
+          font-family: var(--font-sans);
+          font-size: 12px;
+          font-weight: 800;
         }
 
         .translation-row .vi-cell {
