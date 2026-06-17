@@ -2,6 +2,8 @@
 
 React Native + Expo mobile client for JLPT Hub.
 
+This project targets Expo SDK 55 so it can run in the current public Expo Go app on Android.
+
 ## What It Shares With The Web App
 
 - Same Render backend: `https://jlpt-hub.onrender.com/api`
@@ -17,6 +19,13 @@ npm run android
 ```
 
 For Expo Go:
+
+```bash
+cd mobile
+npm run start
+```
+
+If Expo Go previously showed an incompatible SDK error, stop the dev server and restart it after this SDK 55 update:
 
 ```bash
 cd mobile
