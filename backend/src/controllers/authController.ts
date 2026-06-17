@@ -72,6 +72,7 @@ export const loginUser = async (req: Request, res: Response) => {
     res.cookie('token', accessToken, COOKIE_OPTIONS);
 
     res.status(200).json({
+      accessToken,
       user: {
         id: user._id,
         email: user.email,
@@ -124,6 +125,7 @@ export const googleLogin = async (req: Request, res: Response) => {
     res.cookie('token', accessToken, COOKIE_OPTIONS);
 
     res.status(200).json({
+      accessToken,
       user: {
         id: user._id,
         email: user.email,

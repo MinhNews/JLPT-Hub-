@@ -63,6 +63,7 @@ const loginUser = async (req, res) => {
         const accessToken = signToken(user._id, user.role);
         res.cookie('token', accessToken, COOKIE_OPTIONS);
         res.status(200).json({
+            accessToken,
             user: {
                 id: user._id,
                 email: user.email,
@@ -112,6 +113,7 @@ const googleLogin = async (req, res) => {
         const accessToken = signToken(user._id, user.role);
         res.cookie('token', accessToken, COOKIE_OPTIONS);
         res.status(200).json({
+            accessToken,
             user: {
                 id: user._id,
                 email: user.email,
