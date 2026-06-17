@@ -8,7 +8,7 @@ Required environment variables:
 - `JWT_SECRET`
 - `FRONTEND_URL=https://jlpt-hub.vercel.app`
 - `GOOGLE_CLIENT_ID`
-- `PAYMENT_WEBHOOK_SECRET`
+- `PAYMENT_WEBHOOK_SECRET` (optional, recommended)
 
 Recommended:
 
@@ -16,7 +16,13 @@ Recommended:
 - Do not set `ENABLE_PAYMENT_SIMULATION` in production.
 - Keep `ENABLE_DEFAULT_USER_SEED` unset in production.
 
-SePay/Casso webhook URL:
+SePay/Casso webhook URL without extra authentication:
+
+```text
+https://<your-render-backend-domain>/api/membership/payment-webhook
+```
+
+If you set `PAYMENT_WEBHOOK_SECRET` on Render, use:
 
 ```text
 https://<your-render-backend-domain>/api/membership/payment-webhook?token=<PAYMENT_WEBHOOK_SECRET>
