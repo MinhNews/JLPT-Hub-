@@ -30,8 +30,13 @@ export const updateProfile = async (req: AuthRequest, res: Response) => {
         return res.status(400).json({ message: 'Vui lòng cung cấp mật khẩu hiện tại để đổi mật khẩu mới' });
       }
 
+      // Google users don't have a password
+      if (!user.passwordHash) {
+        return res.status(400).json({ message: 'Tài khoản đăng nhập bằng Google không thể đổi mật khẩu theo cách này' });
+      }
+
       // Check current password
-      const isMatch = await bcrypt.compare(currentPassword, user.passwordHash);
+      const isMatch = await bcrypt.compare(currentPassword, user.passwordHash as string);
       if (!isMatch) {
         return res.status(400).json({ message: 'Mật khẩu hiện tại không chính xác' });
       }

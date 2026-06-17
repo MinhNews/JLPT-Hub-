@@ -60,7 +60,9 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(400).json({ message: 'Invalid credentials or account is banned' });
     }
 
-    const isMatch = await bcrypt.compare(password, user.passwordHash);
+    const isMatch = user.passwordHash
+      ? await bcrypt.compare(password, user.passwordHash as string)
+      : false;
     if (!isMatch) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
