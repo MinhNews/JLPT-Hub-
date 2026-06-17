@@ -72,6 +72,44 @@ function HtmlBlock({ html, palette }: { html: string; palette: Palette }) {
   );
 }
 
+function getMockTestNumber(exam: Exam) {
+  return exam.month === '7' || exam.month === 7 ? '01' : '02';
+}
+
+function getExamTitle(level: string, exam: Exam) {
+  if (level === 'n3') return exam.title || `JLPT ${level.toUpperCase()} ${exam.year || ''}`;
+  return `JLPT ${level.toUpperCase()} - Mock Test ${getMockTestNumber(exam)}`;
+}
+
+function getExamSubtitle(level: string, exam: Exam) {
+  if (level === 'n3') return `Kỳ thi diễn ra vào tháng ${exam.month} năm ${exam.year}`;
+  return `Đề thi thử tổng hợp kiến thức ${level.toUpperCase()}`;
+}
+
+function buildExamSections(level: string, exam: Exam) {
+  const sections: { id: string; title: string; minutes: string; icon: string }[] = [];
+  if (exam.vocabulary) {
+    sections.push({ id: 'vocabulary', title: 'Từ vựng (Vocabulary)', minutes: '30 phút', icon: '✎' });
+  }
+  if (exam.grammar || exam.grammar_reading) {
+    sections.push({
+      id: exam.grammar_reading ? 'grammar_reading' : 'grammar',
+      title: 'Ngữ pháp & Đọc hiểu',
+      minutes: level === 'n5' || level === 'n4' ? '60 phút' : '70 phút',
+      icon: '▣',
+    });
+  }
+  if (exam.listening) {
+    sections.push({
+      id: 'listening',
+      title: 'Nghe hiểu (Listening)',
+      minutes: level === 'n5' ? '30 phút' : level === 'n4' ? '35 phút' : '40 phút',
+      icon: '♫',
+    });
+  }
+  return sections;
+}
+
 export default function App() {
   const [dark, setDark] = useState(true);
   const palette = useMemo(() => makePalette(dark), [dark]);
@@ -478,6 +516,32 @@ function ModuleScreen({
   palette,
   moduleId,
   back,
+  progress,
+  isVip,
+  setTab,
+  toggleProgress,
+}: {
+  palette: Palette;
+  moduleId: string;
+  back: ReactNode;
+  progress: ProgressState;
+  isVip: boolean;
+  setTab: (tab: MainTab) => void;
+  toggleProgress: (type: string, lessonId: string | number) => Promise<void>;
+}) {
+  if (moduleId === 'vocab') {
+    return <VocabStudyScreen palette={palette} back={back} progress={progress} toggleProgress={toggleProgress} />;
+  }
+  if (moduleId === 'reading') {
+    return <ReadingStudyScreen palette={palette} back={back} progress={progress} isVip={isVip} setTab={setTab} toggleProgress={toggleProgress} />;
+  }
+  return <GenericModuleScreen palette={palette} moduleId={moduleId} back={back} toggleProgress={toggleProgress} />;
+}
+
+function GenericModuleScreen({
+  palette,
+  moduleId,
+  back,
   toggleProgress,
 }: {
   palette: Palette;
@@ -550,6 +614,484 @@ function GenericDetail({ item, palette }: { item: any; palette: Palette }) {
           )}
         </View>
       ))}
+    </View>
+  );
+}
+
+function ChipRow({
+  palette,
+  items,
+  active,
+  onSelect,
+  labels = {},
+}: {
+  palette: Palette;
+  items: string[];
+  active: string;
+  onSelect: (value: string) => void;
+  labels?: Record<string, string>;
+}) {
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, paddingBottom: 10 }}>
+      {items.map((item) => {
+        const selected = active === item;
+        return (
+          <Pressable key={item} onPress={() => onSelect(item)}>
+            <View style={[styles.chip, { borderColor: selected ? palette.primary : palette.border, backgroundColor: selected ? palette.primary : palette.card }]}>
+              <Text style={{ color: selected ? '#fff' : palette.text, fontWeight: '900' }}>{labels[item] || item}</Text>
+            </View>
+          </Pressable>
+        );
+      })}
+    </ScrollView>
+  );
+}
+
+type VocabWord = {
+  _id?: string;
+  kanji?: string;
+  word?: string;
+  reading?: string;
+  hanviet?: string;
+  meaning?: string;
+  examples?: any[];
+  category?: string;
+  section?: string;
+  globalId: string;
+};
+
+type QuizQuestion = {
+  word: VocabWord;
+  type: 'reading' | 'meaning';
+  prompt: string;
+  correctAnswer: string;
+  options: string[];
+};
+
+function VocabStudyScreen({
+  palette,
+  back,
+  progress,
+  toggleProgress,
+}: {
+  palette: Palette;
+  back: ReactNode;
+  progress: ProgressState;
+  toggleProgress: (type: string, lessonId: string | number) => Promise<void>;
+}) {
+  const [words, setWords] = useState<VocabWord[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [mode, setMode] = useState<'list' | 'flashcard' | 'quiz'>('list');
+  const [selectedUnit, setSelectedUnit] = useState('Tất cả');
+  const [selectedLesson, setSelectedLesson] = useState('Tất cả');
+  const [search, setSearch] = useState('');
+  const [cardIndex, setCardIndex] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
+  const [quizIndex, setQuizIndex] = useState(0);
+  const [quizScore, setQuizScore] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      setLoading(true);
+      try {
+        const data = await apiFetch<any[]>('/vocab', { auth: false });
+        const flattened = (Array.isArray(data) ? data : []).map((item, index) => ({
+          ...item,
+          globalId: `${item.category || 'Unit'}-${item.section || 'Lesson'}-${item._id || index}`,
+        }));
+        setWords(flattened);
+      } catch (error: any) {
+        Alert.alert('Không tải được từ vựng', error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    load();
+  }, []);
+
+  const units = useMemo(() => ['Tất cả', ...Array.from(new Set(words.map((word) => word.category).filter(Boolean))) as string[]], [words]);
+  const lessons = useMemo(() => {
+    const source = selectedUnit === 'Tất cả' ? words : words.filter((word) => word.category === selectedUnit);
+    return ['Tất cả', ...Array.from(new Set(source.map((word) => word.section).filter(Boolean))) as string[]];
+  }, [words, selectedUnit]);
+
+  const filteredWords = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    return words.filter((word) => {
+      if (selectedUnit !== 'Tất cả' && word.category !== selectedUnit) return false;
+      if (selectedLesson !== 'Tất cả' && word.section !== selectedLesson) return false;
+      if (!query) return true;
+      return [word.kanji, word.word, word.reading, word.hanviet, word.meaning].some((value) => String(value || '').toLowerCase().includes(query));
+    });
+  }, [words, selectedUnit, selectedLesson, search]);
+
+  const currentWord = filteredWords[Math.min(cardIndex, Math.max(filteredWords.length - 1, 0))];
+
+  const startQuiz = () => {
+    const pool = [...filteredWords].sort(() => Math.random() - 0.5).slice(0, 10);
+    const generated = pool.map((word) => {
+      const type: 'reading' | 'meaning' = Math.random() > 0.5 ? 'reading' : 'meaning';
+      const correctAnswer = String(type === 'reading' ? word.reading || '' : word.meaning || '');
+      const distractors = words
+        .map((item) => String(type === 'reading' ? item.reading || '' : item.meaning || ''))
+        .filter((value) => value && value !== correctAnswer)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+      return {
+        word,
+        type,
+        prompt: type === 'reading' ? `Cách đọc của "${word.kanji || word.word}" là gì?` : `"${word.kanji || word.word}" nghĩa là gì?`,
+        correctAnswer,
+        options: [correctAnswer, ...distractors].sort(() => Math.random() - 0.5),
+      };
+    }).filter((item) => item.correctAnswer && item.options.length >= 2);
+    setQuizQuestions(generated);
+    setQuizIndex(0);
+    setQuizScore(0);
+    setSelectedAnswer(null);
+    setMode('quiz');
+  };
+
+  const answerQuiz = (answer: string) => {
+    if (selectedAnswer) return;
+    setSelectedAnswer(answer);
+    if (answer === quizQuestions[quizIndex]?.correctAnswer) setQuizScore((score) => score + 1);
+  };
+
+  const nextQuiz = () => {
+    setSelectedAnswer(null);
+    setQuizIndex((index) => Math.min(index + 1, quizQuestions.length));
+  };
+
+  useEffect(() => {
+    setCardIndex(0);
+    setFlipped(false);
+  }, [selectedUnit, selectedLesson, search]);
+
+  useEffect(() => {
+    if (selectedUnit !== 'Tất cả') setSelectedLesson('Tất cả');
+  }, [selectedUnit]);
+
+  if (loading) return <><>{back}</><Loading palette={palette} /></>;
+
+  return (
+    <View>
+      {back}
+      <SectionTitle title="Từ vựng Mimikara N3" subtitle={`Học và ôn tập ${words.length} từ vựng chia theo Unit và bài học.`} palette={palette} />
+      <ChipRow palette={palette} items={units} active={selectedUnit} onSelect={setSelectedUnit} />
+      <ChipRow palette={palette} items={lessons} active={selectedLesson} onSelect={setSelectedLesson} />
+      <View style={{ height: 8 }} />
+      <ChipRow
+        palette={palette}
+        items={['list', 'flashcard', 'quiz']}
+        labels={{ list: 'Danh sách', flashcard: 'Thẻ lật', quiz: 'Trắc nghiệm' }}
+        active={mode}
+        onSelect={(value) => value === 'quiz' ? startQuiz() : setMode(value as 'list' | 'flashcard')}
+      />
+      <Input palette={palette} placeholder="Tìm Kanji, Hiragana, Hán Việt hoặc nghĩa..." value={search} onChangeText={setSearch} />
+
+      {mode === 'list' ? (
+        <View>
+          <Text style={{ color: palette.sub, marginBottom: 10 }}>{filteredWords.length} từ phù hợp</Text>
+          {filteredWords.slice(0, 160).map((word) => {
+            const mastered = progress.vocabMastered.includes(word.globalId);
+            return (
+              <Card key={word.globalId} palette={palette}>
+                <View style={{ flexDirection: 'row', gap: 12 }}>
+                  <Pressable onPress={() => toggleProgress('vocab', word.globalId)}>
+                    <View style={[styles.checkBox, { borderColor: mastered ? palette.success : palette.border, backgroundColor: mastered ? palette.success : 'transparent' }]}>
+                      <Text style={{ color: '#fff', fontWeight: '900' }}>{mastered ? '✓' : ''}</Text>
+                    </View>
+                  </Pressable>
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ color: palette.text, fontSize: 24, fontWeight: '900' }}>{word.kanji || word.word}</Text>
+                    <Text style={{ color: palette.text, marginTop: 6 }}>{word.reading}</Text>
+                    {word.hanviet ? <Text style={{ color: palette.primary, fontWeight: '900', marginTop: 4 }}>{word.hanviet}</Text> : null}
+                    <Text style={{ color: palette.sub, marginTop: 4 }}>{word.meaning}</Text>
+                  </View>
+                </View>
+              </Card>
+            );
+          })}
+        </View>
+      ) : null}
+
+      {mode === 'flashcard' ? (
+        currentWord ? (
+          <View>
+            <Pressable onPress={() => setFlipped(!flipped)}>
+              <Card palette={palette} style={{ minHeight: 250, alignItems: 'center', justifyContent: 'center' }}>
+                {!flipped ? (
+                  <>
+                    <Text style={{ color: palette.text, fontSize: 44, fontWeight: '900', textAlign: 'center' }}>{currentWord.kanji || currentWord.word}</Text>
+                    <Text style={{ color: palette.muted, marginTop: 12 }}>Chạm để xem đáp án</Text>
+                  </>
+                ) : (
+                  <>
+                    <Text style={{ color: palette.text, fontSize: 28, fontWeight: '900', textAlign: 'center' }}>{currentWord.reading}</Text>
+                    {currentWord.hanviet ? <Text style={{ color: palette.primary, fontWeight: '900', marginTop: 8 }}>{currentWord.hanviet}</Text> : null}
+                    <Text style={{ color: palette.sub, fontSize: 18, marginTop: 8, textAlign: 'center' }}>{currentWord.meaning}</Text>
+                    {(currentWord.examples || []).slice(0, 2).map((example, index) => (
+                      <Text key={index} style={{ color: palette.muted, marginTop: 10, textAlign: 'center' }}>
+                        {stripHtml(example?.jp || example?.sentence || example?.vi || JSON.stringify(example))}
+                      </Text>
+                    ))}
+                  </>
+                )}
+              </Card>
+            </Pressable>
+            <View style={{ flexDirection: 'row', gap: 10 }}>
+              <View style={{ flex: 1 }}><Button title="Trước" onPress={() => { setFlipped(false); setCardIndex((index) => Math.max(0, index - 1)); }} palette={palette} variant="ghost" /></View>
+              <View style={{ flex: 1 }}><Button title={`${cardIndex + 1}/${filteredWords.length}`} onPress={() => toggleProgress('vocab', currentWord.globalId)} palette={palette} variant={progress.vocabMastered.includes(currentWord.globalId) ? 'success' : 'primary'} /></View>
+              <View style={{ flex: 1 }}><Button title="Tiếp" onPress={() => { setFlipped(false); setCardIndex((index) => Math.min(filteredWords.length - 1, index + 1)); }} palette={palette} variant="ghost" /></View>
+            </View>
+          </View>
+        ) : <EmptyState text="Không có từ nào trong bộ lọc hiện tại." palette={palette} />
+      ) : null}
+
+      {mode === 'quiz' ? (
+        quizQuestions.length === 0 ? (
+          <EmptyState text="Cần ít nhất vài từ trong bộ lọc để tạo quiz." palette={palette} />
+        ) : quizIndex >= quizQuestions.length ? (
+          <Card palette={palette}>
+            <Text style={{ color: palette.text, fontSize: 24, fontWeight: '900', textAlign: 'center' }}>Kết quả: {quizScore}/{quizQuestions.length}</Text>
+            <View style={{ height: 14 }} />
+            <Button title="Làm lại" onPress={startQuiz} palette={palette} />
+          </Card>
+        ) : (
+          <Card palette={palette}>
+            <Text style={{ color: palette.primary, fontWeight: '900' }}>Câu {quizIndex + 1}/{quizQuestions.length}</Text>
+            <Text style={{ color: palette.text, fontSize: 20, fontWeight: '900', marginVertical: 14 }}>{quizQuestions[quizIndex].prompt}</Text>
+            {quizQuestions[quizIndex].options.map((option) => {
+              const correct = selectedAnswer && option === quizQuestions[quizIndex].correctAnswer;
+              const wrong = selectedAnswer === option && !correct;
+              return (
+                <Pressable key={option} onPress={() => answerQuiz(option)}>
+                  <View style={[styles.choice, { borderColor: correct ? palette.success : wrong ? palette.danger : palette.border, backgroundColor: selectedAnswer === option ? palette.card2 : 'transparent' }]}>
+                    <Text style={{ color: palette.text, fontWeight: '800' }}>{option}</Text>
+                  </View>
+                </Pressable>
+              );
+            })}
+            {selectedAnswer ? <Button title={quizIndex + 1 === quizQuestions.length ? 'Xem kết quả' : 'Câu tiếp'} onPress={nextQuiz} palette={palette} /> : null}
+          </Card>
+        )
+      ) : null}
+    </View>
+  );
+}
+
+type ReadingSummary = {
+  id: string;
+  title: string;
+  part: string;
+  level?: string;
+  isFree?: boolean;
+  isLocked?: boolean;
+  isCompleted?: boolean;
+  score?: number | null;
+};
+
+type ReadingQuestion = {
+  _id?: string;
+  id?: string | number;
+  questionJp: string;
+  choices: string[];
+  correctAnswerIdx: number;
+};
+
+type ReadingLesson = ReadingSummary & {
+  passage?: string;
+  questions?: ReadingQuestion[];
+  explanation?: string;
+};
+
+function ReadingStudyScreen({
+  palette,
+  back,
+  progress,
+  isVip,
+  setTab,
+  toggleProgress,
+}: {
+  palette: Palette;
+  back: ReactNode;
+  progress: ProgressState;
+  isVip: boolean;
+  setTab: (tab: MainTab) => void;
+  toggleProgress: (type: string, lessonId: string | number) => Promise<void>;
+}) {
+  const [lessons, setLessons] = useState<ReadingSummary[]>([]);
+  const [selectedLesson, setSelectedLesson] = useState<ReadingLesson | null>(null);
+  const [mode, setMode] = useState<'list' | 'guide' | 'lesson'>('list');
+  const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [detailLoading, setDetailLoading] = useState(false);
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const loadLessons = async () => {
+    setLoading(true);
+    try {
+      setLessons(await apiFetch<ReadingSummary[]>('/reading'));
+    } catch (error: any) {
+      Alert.alert('Không tải được đọc hiểu', error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadLessons();
+  }, []);
+
+  const filteredLessons = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    return lessons.filter((lesson) => !query || [lesson.title, lesson.part, lesson.id].some((value) => String(value || '').toLowerCase().includes(query)));
+  }, [lessons, search]);
+
+  const groupedLessons = useMemo(() => {
+    return filteredLessons.reduce<Record<string, ReadingSummary[]>>((acc, lesson) => {
+      const part = lesson.part || 'Bài đọc';
+      if (!acc[part]) acc[part] = [];
+      acc[part].push(lesson);
+      return acc;
+    }, {});
+  }, [filteredLessons]);
+
+  const openLesson = async (lesson: ReadingSummary) => {
+    if (lesson.isLocked && !isVip) {
+      Alert.alert('Nội dung VIP', 'Bài đọc này cần VIP để mở khóa toàn bộ nội dung.', [
+        { text: 'Để sau', style: 'cancel' },
+        { text: 'Xem VIP', onPress: () => setTab('pricing') },
+      ]);
+      return;
+    }
+    setDetailLoading(true);
+    try {
+      const data = await apiFetch<ReadingLesson>(`/reading/${lesson.id}`);
+      setSelectedLesson(data);
+      setAnswers({});
+      setSubmitted(false);
+      setMode('lesson');
+    } catch (error: any) {
+      Alert.alert('Không mở được bài đọc', error.message);
+    } finally {
+      setDetailLoading(false);
+    }
+  };
+
+  const score = selectedLesson?.questions?.filter((question, index) => answers[String(question.id || index)] === question.correctAnswerIdx).length || 0;
+
+  if (loading) return <><>{back}</><Loading palette={palette} /></>;
+
+  return (
+    <View>
+      {back}
+      <SectionTitle title="Đọc hiểu Shinkanzen N3" subtitle="Danh sách bài học, smart guide, bài đọc và câu hỏi lấy trực tiếp từ backend." palette={palette} />
+      <ChipRow palette={palette} items={['list', 'guide']} labels={{ list: 'Danh sách bài học', guide: 'Bí kíp đọc hiểu' }} active={mode === 'lesson' ? 'list' : mode} onSelect={(value) => setMode(value as 'list' | 'guide')} />
+
+      {mode === 'guide' ? (
+        <View>
+          {[
+            ['Tách vế câu dài', 'Tìm chủ ngữ chính, ngắt ở liên từ/trợ từ, đọc vị ngữ cuối câu trước rồi ráp nghĩa.'],
+            ['Nhận diện liên từ chuyển ý', 'しかし, だが, つまり, なぜなら thường báo hiệu ý chính, giải thích hoặc kết luận.'],
+            ['Định vị ý tác giả', 'Chú ý と考えている, べきだ, 必要だ và đoạn kết để bắt quan điểm chính.'],
+            ['Tìm thông tin nhanh', 'Đọc câu hỏi trước, dò từ khóa trong bảng/thông báo, loại đáp án sai điều kiện.'],
+          ].map(([title, body], index) => (
+            <Card key={title} palette={palette}>
+              <Text style={{ color: palette.primary, fontWeight: '900', marginBottom: 6 }}>{index + 1}</Text>
+              <Text style={{ color: palette.text, fontSize: 18, fontWeight: '900' }}>{title}</Text>
+              <Text style={{ color: palette.sub, marginTop: 8, lineHeight: 22 }}>{body}</Text>
+            </Card>
+          ))}
+        </View>
+      ) : null}
+
+      {mode === 'list' ? (
+        <View>
+          <Input palette={palette} placeholder="Tìm tiêu đề bài học, chủ đề..." value={search} onChangeText={setSearch} />
+          <Text style={{ color: palette.sub, marginBottom: 10 }}>
+            Đã thuộc {progress.readingMastered.length}/72 bài đọc ({Math.round((progress.readingMastered.length / 72) * 100)}%)
+          </Text>
+          {detailLoading ? <Loading palette={palette} text="Đang mở bài đọc..." /> : null}
+          {Object.entries(groupedLessons).map(([part, group]) => (
+            <View key={part}>
+              <Text style={[styles.sectionHeading, { color: palette.primary }]}>{part} · {group.length} bài</Text>
+              {group.map((lesson) => {
+                const mastered = progress.readingMastered.includes(lesson.id) || lesson.isCompleted;
+                return (
+                  <Pressable key={lesson.id} onPress={() => openLesson(lesson)}>
+                    <Card palette={palette} style={{ opacity: lesson.isLocked && !isVip ? 0.75 : 1 }}>
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 10 }}>
+                        <Text style={{ color: palette.text, fontSize: 17, fontWeight: '900', flex: 1 }}>Bài {lesson.id} · {lesson.title}</Text>
+                        {lesson.isLocked && !isVip ? <Text style={{ color: palette.warning, fontWeight: '900' }}>VIP</Text> : mastered ? <Text style={{ color: palette.success, fontWeight: '900' }}>✓</Text> : null}
+                      </View>
+                      <Text style={{ color: palette.sub, marginTop: 8 }}>{lesson.isLocked && !isVip ? 'Nội dung VIP' : 'Học ngay · Có passage và câu hỏi chi tiết'}</Text>
+                    </Card>
+                  </Pressable>
+                );
+              })}
+            </View>
+          ))}
+        </View>
+      ) : null}
+
+      {mode === 'lesson' && selectedLesson ? (
+        <View>
+          <Button title="← Quay lại danh sách" onPress={() => setMode('list')} palette={palette} variant="ghost" />
+          <Card palette={palette}>
+            <Text style={{ color: palette.primary, fontWeight: '900' }}>{selectedLesson.part}</Text>
+            <Text style={{ color: palette.text, fontSize: 22, fontWeight: '900', marginTop: 6 }}>{selectedLesson.title}</Text>
+            <View style={{ height: 10 }} />
+            <Button
+              title={progress.readingMastered.includes(selectedLesson.id) ? 'Đã thuộc bài này' : 'Đánh dấu đã học'}
+              onPress={() => toggleProgress('reading', selectedLesson.id)}
+              palette={palette}
+              variant={progress.readingMastered.includes(selectedLesson.id) ? 'success' : 'ghost'}
+            />
+          </Card>
+          <Card palette={palette}>
+            <Text style={{ color: palette.text, fontSize: 18, fontWeight: '900', marginBottom: 12 }}>Văn bản bài đọc</Text>
+            {selectedLesson.passage ? <HtmlBlock html={selectedLesson.passage} palette={palette} /> : <Text style={{ color: palette.sub }}>Bài này không có passage dạng text.</Text>}
+          </Card>
+          {(selectedLesson.questions || []).map((question, index) => {
+            const key = String(question.id || index);
+            return (
+              <Card key={key} palette={palette}>
+                <Text style={{ color: palette.primary, fontWeight: '900', marginBottom: 10 }}>Câu {index + 1}</Text>
+                <HtmlBlock html={question.questionJp} palette={palette} />
+                {question.choices.map((choice, choiceIndex) => {
+                  const selected = answers[key] === choiceIndex;
+                  const correct = submitted && choiceIndex === question.correctAnswerIdx;
+                  const wrong = submitted && selected && !correct;
+                  return (
+                    <Pressable key={choiceIndex} disabled={submitted} onPress={() => setAnswers((prev) => ({ ...prev, [key]: choiceIndex }))}>
+                      <View style={[styles.choice, { borderColor: correct ? palette.success : wrong ? palette.danger : selected ? palette.primary : palette.border, backgroundColor: selected ? palette.card2 : 'transparent' }]}>
+                        <Text style={{ color: palette.text, fontWeight: '900', marginRight: 8 }}>{choiceIndex + 1}.</Text>
+                        <View style={{ flex: 1 }}><HtmlBlock html={choice} palette={palette} /></View>
+                      </View>
+                    </Pressable>
+                  );
+                })}
+              </Card>
+            );
+          })}
+          {(selectedLesson.questions || []).length ? (
+            <Card palette={palette}>
+              <Button title={submitted ? `Kết quả ${score}/${selectedLesson.questions?.length || 0}` : 'Nộp bài & kiểm tra đáp án'} onPress={() => setSubmitted(true)} palette={palette} variant={submitted ? 'success' : 'primary'} />
+            </Card>
+          ) : null}
+          {submitted && selectedLesson.explanation ? (
+            <Card palette={palette}>
+              <Text style={{ color: palette.text, fontSize: 18, fontWeight: '900', marginBottom: 12 }}>Dịch & giải thích</Text>
+              <HtmlBlock html={selectedLesson.explanation} palette={palette} />
+            </Card>
+          ) : null}
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -638,7 +1180,7 @@ function ExamListScreen({ palette, level, setDetail, back }: { palette: Palette;
       {exams.map((exam) => (
         <Pressable key={exam.id} onPress={() => setDetail({ type: 'examDetail', level, examId: exam.id })}>
           <Card palette={palette}>
-            <Text style={{ color: palette.text, fontWeight: '900', fontSize: 18 }}>{exam.title || `JLPT ${level.toUpperCase()} ${exam.year || ''}`}</Text>
+            <Text style={{ color: palette.text, fontWeight: '900', fontSize: 18 }}>{getExamTitle(level, exam)}</Text>
             <Text style={{ color: palette.sub, marginTop: 6 }}>Tháng {exam.month || 'mock'} · Vào phòng thi</Text>
           </Card>
         </Pressable>
@@ -648,21 +1190,37 @@ function ExamListScreen({ palette, level, setDetail, back }: { palette: Palette;
 }
 
 function ExamDetailScreen({ palette, level, examId, setDetail, back }: { palette: Palette; level: string; examId: string; setDetail: (route: DetailRoute) => void; back: ReactNode }) {
-  const sections = [
-    { id: 'vocabulary', title: 'Từ vựng' },
-    { id: 'grammar_reading', title: 'Ngữ pháp & Đọc' },
-    { id: 'grammar', title: 'Ngữ pháp' },
-    { id: 'listening', title: 'Nghe hiểu' },
-  ];
+  const [exam, setExam] = useState<Exam | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const load = async () => {
+      setLoading(true);
+      try {
+        setExam(await apiFetch<Exam>(`/exams/${level}/${examId}`, { auth: false }));
+      } catch (error: any) {
+        Alert.alert('Không tải được đề thi', error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    load();
+  }, [level, examId]);
+
+  if (loading) return <><>{back}</><Loading palette={palette} /></>;
+  if (!exam) return <><>{back}</><EmptyState text="Không tìm thấy đề thi này." palette={palette} /></>;
+
+  const sections = buildExamSections(level, exam);
   return (
     <View>
       {back}
-      <SectionTitle title="Chọn phần thi" subtitle="Mobile room tối ưu cho thao tác một tay." palette={palette} />
+      <SectionTitle title={getExamTitle(level, exam)} subtitle={getExamSubtitle(level, exam)} palette={palette} />
       {sections.map((section) => (
         <Pressable key={section.id} onPress={() => setDetail({ type: 'examRoom', level, examId, section: section.id })}>
           <Card palette={palette}>
+            <Text style={{ color: palette.primary, fontSize: 22, fontWeight: '900', marginBottom: 8 }}>{section.icon}</Text>
             <Text style={{ color: palette.text, fontWeight: '900', fontSize: 18 }}>{section.title}</Text>
-            <Text style={{ color: palette.sub, marginTop: 6 }}>Timer, chọn đáp án, nộp bài và xem đáp án.</Text>
+            <Text style={{ color: palette.sub, marginTop: 6 }}>{section.minutes} · Timer, chọn đáp án, nộp bài và xem đáp án.</Text>
           </Card>
         </Pressable>
       ))}
@@ -1009,6 +1567,22 @@ const styles = StyleSheet.create({
     flex: 1,
     minHeight: 40,
     borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chip: {
+    minHeight: 42,
+    borderWidth: 1,
+    borderRadius: 999,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  checkBox: {
+    width: 28,
+    height: 28,
+    borderWidth: 2,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
