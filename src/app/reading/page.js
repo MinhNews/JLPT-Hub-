@@ -6,7 +6,7 @@ import { useProgress } from '@/context/ProgressContext';
 import Link from 'next/link';
 import { 
   Search, CheckCircle, ChevronRight, BookOpen, ArrowLeft, 
-  Eye, EyeOff, Check, X, Sparkles, AlertCircle, Info, HelpCircle, Loader2
+  Eye, EyeOff, Check, X, Sparkles, AlertCircle, Info, HelpCircle, Loader2, Save
 } from 'lucide-react';
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api');
@@ -51,6 +51,18 @@ const getTranslation = (jpText, sentenceTranslations) => {
   });
   return found ? found.vi : '';
 };
+
+const stripHtml = (value = '') => String(value)
+  .replace(/<ruby>/g, '')
+  .replace(/<\/ruby>/g, '')
+  .replace(/<rt>.*?<\/rt>/g, '')
+  .replace(/<[^>]+>/g, '')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&amp;/g, '&')
+  .replace(/&lt;/g, '<')
+  .replace(/&gt;/g, '>')
+  .replace(/\s+/g, ' ')
+  .trim();
 
 export default function ReadingPage() {
   const { readingMastered, toggleReadingMastered } = useProgress();
@@ -567,6 +579,85 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
     }
   };
 
+  const saveNotebookNote = async (payload) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/notebook`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(payload),
+      });
+
+      if (res.status === 401 || res.status === 403) {
+        alert('Vui lòng đăng nhập để lưu ghi chú vào sổ tay.');
+        return;
+      }
+      if (!res.ok) throw new Error('Không lưu được ghi chú vào sổ tay.');
+      alert('Đã lưu vào sổ tay học tập.');
+    } catch (error) {
+      alert(error.message || 'Không lưu được ghi chú vào sổ tay.');
+    }
+  };
+
+  const handleSaveActiveSentence = () => {
+    if (!activeSentence || !selectedLesson) return;
+    const japanese = stripHtml(activeSentence.jp);
+    const translation = activeSentence.vi || '';
+
+    saveNotebookNote({
+      title: `Câu đọc hiểu: ${selectedLesson.title || `Bài ${selectedLesson.id}`}`,
+      content: `Câu tiếng Nhật:\n${japanese}\n\nBản dịch:\n${translation}\n\nTừ khóa / cấu trúc cần chú ý:\n- \n\nGhi chú cá nhân:`,
+      type: 'reading',
+      level: 'N3',
+      tags: ['đọc hiểu', 'câu khó', 'cần ôn'],
+      status: 'review',
+      template: 'reading',
+      source: {
+        module: 'reading',
+        label: `Câu ${activeSentence.index + 1}`,
+        path: '/reading',
+        lessonId: selectedLesson.id,
+        lessonTitle: selectedLesson.title,
+        itemId: `sentence_${activeSentence.index + 1}`,
+        japanese,
+        translation,
+      },
+    });
+  };
+
+  const handleSaveMistake = (question) => {
+    if (!question || !selectedLesson) return;
+    const selectedIdx = userAnswers[question.id];
+    const correctIdx = question.correctAnswerIdx;
+    const selectedChoice = selectedIdx !== undefined ? question.choices?.[selectedIdx] : '';
+    const correctChoice = question.choices?.[correctIdx] || '';
+    const questionTranslation = getTranslation(question.questionJp, selectedLesson.sentenceTranslations);
+    const selectedTranslation = getTranslation(selectedChoice, selectedLesson.sentenceTranslations);
+    const correctTranslation = getTranslation(correctChoice, selectedLesson.sentenceTranslations);
+
+    saveNotebookNote({
+      title: `Lỗi sai đọc hiểu: ${selectedLesson.title || `Bài ${selectedLesson.id}`}`,
+      content: `Câu hỏi:\n${stripHtml(question.questionJp)}${questionTranslation ? `\n${questionTranslation}` : ''}\n\nĐáp án mình chọn:\n${selectedIdx !== undefined ? `${selectedIdx + 1}. ${stripHtml(selectedChoice)}${selectedTranslation ? ` - ${selectedTranslation}` : ''}` : 'Chưa chọn'}\n\nĐáp án đúng:\n${correctIdx + 1}. ${stripHtml(correctChoice)}${correctTranslation ? ` - ${correctTranslation}` : ''}\n\nVì sao mình sai:\n\nCách tránh sai lại:\n- `,
+      type: 'mistake',
+      level: 'N3',
+      tags: ['lỗi sai', 'đọc hiểu', 'cần ôn'],
+      status: 'review',
+      template: 'mistake',
+      source: {
+        module: 'reading',
+        label: 'Lỗi sai đọc hiểu',
+        path: '/reading',
+        lessonId: selectedLesson.id,
+        lessonTitle: selectedLesson.title,
+        questionId: question.id,
+        japanese: stripHtml(question.questionJp),
+        translation: questionTranslation,
+        userAnswer: selectedIdx !== undefined ? String(selectedIdx + 1) : '',
+        correctAnswer: String(correctIdx + 1),
+      },
+    });
+  };
+
   return (
     <div className="reading-page-container">
       {/* Tab Header */}
@@ -912,7 +1003,13 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
                   <div className="translation-content">
                     <div className="box-header">
                       <span className="sent-badge">Dịch nghĩa câu [{activeSentence.index + 1}]:</span>
-                      <button className="close-box-btn" onClick={() => setActiveSentence(null)}>×</button>
+                      <div className="box-actions">
+                        <button className="save-note-btn" onClick={handleSaveActiveSentence}>
+                          <Save size={14} />
+                          Lưu vào sổ tay
+                        </button>
+                        <button className="close-box-btn" onClick={() => setActiveSentence(null)}>×</button>
+                      </div>
                     </div>
                     <p className="jp-sent font-serif" dangerouslySetInnerHTML={{ __html: activeSentence.jp }} />
                     <p className="vi-sent">{activeSentence.vi}</p>
@@ -1018,6 +1115,13 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
                               </>
                             )}
                           </div>
+                        )}
+
+                        {submitted && !isCorrect && (
+                          <button className="save-mistake-btn" onClick={() => handleSaveMistake(q)}>
+                            <Save size={14} />
+                            Lưu lỗi sai vào sổ tay
+                          </button>
                         )}
 
                         </div>
@@ -1803,6 +1907,13 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
           justify-content: space-between;
           align-items: center;
           margin-bottom: 8px;
+          gap: 12px;
+        }
+
+        .box-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
         }
 
         .sent-badge {
@@ -1823,6 +1934,38 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
 
         .close-box-btn:hover {
           color: var(--text-primary);
+        }
+
+        .save-note-btn,
+        .save-mistake-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          border: 1px solid rgba(99, 102, 241, 0.25);
+          background: rgba(99, 102, 241, 0.08);
+          color: var(--primary-light);
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 800;
+          cursor: pointer;
+          transition: var(--transition);
+        }
+
+        .save-note-btn {
+          padding: 7px 11px;
+        }
+
+        .save-mistake-btn {
+          margin-top: 10px;
+          padding: 8px 12px;
+        }
+
+        .save-note-btn:hover,
+        .save-mistake-btn:hover {
+          transform: translateY(-1px);
+          background: rgba(99, 102, 241, 0.14);
+          box-shadow: 0 8px 18px rgba(99, 102, 241, 0.14);
         }
 
         .jp-sent {

@@ -7,5 +7,7 @@ const router = (0, express_1.Router)();
 router.use(auth_1.authenticateToken);
 router.get('/', notebookController_1.getNotebookEntries);
 router.post('/', notebookController_1.upsertNotebookEntry);
+router.put('/:id', notebookController_1.updateNotebookEntry);
+router.patch('/:id', notebookController_1.patchNotebookEntry);
 router.delete('/:id', notebookController_1.deleteNotebookEntry);
 exports.default = router;
