@@ -381,7 +381,7 @@ function VipGate({ lessonNumber }) {
         Bài {lessonNumber} yêu cầu VIP
       </h2>
       <p style={{ color: 'var(--text-secondary)', fontSize: '14px', maxWidth: '380px', lineHeight: 1.7 }}>
-        Các bài học từ Bài 3 trở đi trong giáo trình Minna no Nihongo yêu cầu tài khoản VIP để mở khóa toàn bộ nội dung.
+        Các bài học từ Bài 31 trở đi trong giáo trình Minna no Nihongo N4 yêu cầu tài khoản VIP để mở khóa toàn bộ nội dung.
       </p>
       <button onClick={() => router.push('/pricing')} style={{
         padding: '12px 28px', background: 'linear-gradient(135deg, #f59e0b, #d97706)',

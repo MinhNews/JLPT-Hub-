@@ -19,10 +19,10 @@ const checkIsVip = async (userId: string | null): Promise<boolean> => {
   return !!activeSub;
 };
 
-// Check if lesson is free (first 2 lessons are free)
+// Check if lesson is free: first 2 lessons of Part 1 are free.
 const isLessonFree = (lessonId: string): boolean => {
-  const idLower = lessonId.toLowerCase();
-  return idLower === 'chokai_1' || idLower === 'chokai_2';
+  const idLower = lessonId.toLowerCase().replace(/[\s_-]/g, '');
+  return ['mondai1', 'mondai2', 'chokai1', 'chokai2'].includes(idLower);
 };
 
 export const getAllListeningLessons = async (req: Request, res: Response) => {

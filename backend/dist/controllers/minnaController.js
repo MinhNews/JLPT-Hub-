@@ -38,8 +38,8 @@ const getMinnaLessonDetail = async (req, res) => {
         const lesson = await MinnaLesson_1.MinnaLesson.findOne({ lessonNumber: lessonNum });
         if (!lesson)
             return res.status(404).json({ message: 'Lesson not found' });
-        // Lessons 1-2 are free; 3+ require VIP
-        if (lessonNum > 2) {
+        // N5 lessons 1-25 and the first five N4 lessons 26-30 are free; lesson 31+ requires VIP.
+        if (lessonNum >= 31) {
             const user = (0, auth_1.getUserFromRequest)(req);
             if (!user) {
                 return res.status(403).json({ message: 'vip_required', lessonNumber: lessonNum });

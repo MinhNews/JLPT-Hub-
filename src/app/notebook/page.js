@@ -152,6 +152,7 @@ const makeLocalNote = (template = templates[0]) => ({
 export default function NotebookPage() {
   const { user } = useAuth();
   const editorRef = useRef(null);
+  const savedSelectionRef = useRef(null);
   const [notes, setNotes] = useState([]);
   const [selectedId, setSelectedId] = useState('');
   const [draft, setDraft] = useState(null);
@@ -286,12 +287,33 @@ export default function NotebookPage() {
   }, [draft?.id]);
 
   const updateEditorContent = () => {
+    saveEditorSelection();
     updateDraft({ content: editorRef.current?.innerHTML || '' });
+  };
+
+  const saveEditorSelection = () => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0 || !editorRef.current) return;
+    const range = selection.getRangeAt(0);
+    if (editorRef.current.contains(range.commonAncestorContainer)) {
+      savedSelectionRef.current = range.cloneRange();
+    }
+  };
+
+  const restoreEditorSelection = () => {
+    const range = savedSelectionRef.current;
+    if (!range) return;
+    const selection = window.getSelection();
+    if (!selection) return;
+    selection.removeAllRanges();
+    selection.addRange(range);
   };
 
   const runEditorCommand = (command, value = null) => {
     editorRef.current?.focus();
+    restoreEditorSelection();
     document.execCommand(command, false, value);
+    saveEditorSelection();
     updateEditorContent();
   };
 
@@ -557,22 +579,22 @@ export default function NotebookPage() {
               ) : null}
 
               <div className="format-toolbar">
-                <button type="button" onClick={() => setBlock('h1')}>H1</button>
-                <button type="button" onClick={() => setBlock('h2')}>H2</button>
-                <button type="button" onClick={() => setBlock('p')}>P</button>
-                <button type="button" onClick={() => runEditorCommand('bold')}><strong>B</strong></button>
-                <button type="button" onClick={() => runEditorCommand('italic')}><em>I</em></button>
-                <button type="button" onClick={() => runEditorCommand('underline')}><u>U</u></button>
-                <button type="button" onClick={() => runEditorCommand('insertUnorderedList')}>• List</button>
-                <button type="button" onClick={() => runEditorCommand('insertHTML', '<blockquote>Trích dẫn...</blockquote>')}>Quote</button>
-                <select defaultValue="" onChange={(e) => { if (e.target.value) runEditorCommand('fontName', e.target.value); e.target.value = ''; }}>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => setBlock('h1')}>H1</button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => setBlock('h2')}>H2</button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => setBlock('p')}>P</button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runEditorCommand('bold')}><strong>B</strong></button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runEditorCommand('italic')}><em>I</em></button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runEditorCommand('underline')}><u>U</u></button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runEditorCommand('insertUnorderedList')}>• List</button>
+                <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runEditorCommand('insertHTML', '<blockquote>Trích dẫn...</blockquote>')}>Quote</button>
+                <select defaultValue="" onMouseDown={saveEditorSelection} onChange={(e) => { if (e.target.value) runEditorCommand('fontName', e.target.value); e.target.value = ''; }}>
                   <option value="">Font</option>
                   <option value="Arial">Arial</option>
                   <option value="Georgia">Georgia</option>
                   <option value="'Times New Roman'">Times</option>
                   <option value="'Courier New'">Mono</option>
                 </select>
-                <select defaultValue="" onChange={(e) => { if (e.target.value) runEditorCommand('fontSize', e.target.value); e.target.value = ''; }}>
+                <select defaultValue="" onMouseDown={saveEditorSelection} onChange={(e) => { if (e.target.value) runEditorCommand('fontSize', e.target.value); e.target.value = ''; }}>
                   <option value="">Cỡ chữ</option>
                   <option value="2">Nhỏ</option>
                   <option value="3">Vừa</option>
@@ -581,7 +603,7 @@ export default function NotebookPage() {
                 </select>
                 <label className="color-tool">
                   Màu
-                  <input type="color" defaultValue="#4f46e5" onChange={(e) => runEditorCommand('foreColor', e.target.value)} />
+                  <input type="color" defaultValue="#4f46e5" onMouseDown={saveEditorSelection} onInput={(e) => runEditorCommand('foreColor', e.target.value)} onChange={(e) => runEditorCommand('foreColor', e.target.value)} />
                 </label>
               </div>
 
@@ -604,6 +626,9 @@ export default function NotebookPage() {
                 contentEditable
                 suppressContentEditableWarning
                 onInput={updateEditorContent}
+                onMouseUp={saveEditorSelection}
+                onKeyUp={saveEditorSelection}
+                onBlur={saveEditorSelection}
                 data-placeholder="Viết ghi chú học tập tại đây..."
               />
 
@@ -703,13 +728,31 @@ export default function NotebookPage() {
         .metadata-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
         .metadata-grid label { display: flex; flex-direction: column; gap: 7px; color: var(--text-secondary); font-size: 12px; font-weight: 900; text-transform: uppercase; }
         .metadata-grid input, .metadata-grid select { min-height: 42px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0 10px; text-transform: none; font-weight: 700; }
+        .metadata-grid select option, .filter-row select option, .format-toolbar select option {
+          background: #111827;
+          color: #f8fafc;
+        }
         .source-box { display: flex; gap: 10px; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--card-bg-hover); color: var(--text-secondary); margin-bottom: 14px; }
         .source-box strong { display: block; color: var(--text-primary); }
         .source-box a { color: var(--primary); font-weight: 800; font-size: 13px; }
         .template-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px; }
         .template-btn { padding: 9px 12px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; }
         .note-editor > .template-list { justify-content: flex-start; }
-        .format-toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; border: 1px solid var(--border-color); border-radius: 16px; background: var(--card-bg-hover); margin-bottom: 12px; }
+        .format-toolbar {
+          position: sticky;
+          top: 10px;
+          z-index: 20;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          padding: 10px;
+          border: 1px solid var(--border-color);
+          border-radius: 16px;
+          background: color-mix(in srgb, var(--card-bg) 88%, transparent);
+          backdrop-filter: blur(12px);
+          box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
+          margin-bottom: 12px;
+        }
         .format-toolbar button, .format-toolbar select, .color-tool { min-height: 34px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 900; }
         .format-toolbar select { outline: none; }
         .color-tool input { width: 22px; height: 22px; border: 0; padding: 0; background: transparent; cursor: pointer; }

@@ -52,9 +52,11 @@ export default function Dashboard() {
     const lessons  = Array.from({ length: 25 }, (_, i) => startNum + i);
     const mastered = minnaMastered || [];
 
+    const isLessonFree = (num) => (isN5 && num <= 25) || (!isN5 && num >= 26 && num <= 30);
+    const isLessonLocked = (num) => !isLessonFree(num) && !isVip && user?.role !== 'admin';
+
     const handleLessonClick = (num) => {
-      const isFree = num <= 2;
-      if (!isFree && !isVip && user?.role !== 'admin') {
+      if (isLessonLocked(num)) {
         router.push('/pricing');
         return;
       }
@@ -68,7 +70,7 @@ export default function Dashboard() {
             {isN5 ? '🌱 Giáo trình Minna no Nihongo N5' : '🌊 Giáo trình Minna no Nihongo N4'}
           </h1>
           <p className="page-description">
-            {isN5 ? 'Bài 1 ~ 25 · Sơ cấp I — Bài 1 & 2 miễn phí' : 'Bài 26 ~ 50 · Sơ cấp II — Yêu cầu VIP'}
+            {isN5 ? 'Bài 1 ~ 25 · Sơ cấp I — miễn phí toàn bộ N5' : 'Bài 26 ~ 50 · Sơ cấp II — Bài 26 ~ 30 miễn phí'}
           </p>
         </div>
 
@@ -77,7 +79,7 @@ export default function Dashboard() {
           {[
             { label: 'Tổng bài học', value: '25 bài', icon: '📚' },
             { label: 'Đã hoàn thành', value: `${mastered.filter(n => (isN5 ? n <= 25 : n >= 26)).length}/25`, icon: '✅' },
-            { label: 'Bài miễn phí', value: isN5 ? '2 bài' : '0 bài', icon: '🔓' },
+            { label: 'Bài miễn phí', value: isN5 ? '25 bài' : '5 bài', icon: '🔓' },
             { label: 'Giáo trình', value: 'Minna no Nihongo', icon: '🇯🇵' },
           ].map((s, i) => (
             <div key={i} style={{
@@ -100,8 +102,8 @@ export default function Dashboard() {
         }}>
           {lessons.map((num) => {
             const done   = mastered.includes(num);
-            const isFree = num <= 2;
-            const locked = !isFree && !isVip && user?.role !== 'admin';
+            const isFree = isLessonFree(num);
+            const locked = isLessonLocked(num);
             const pct    = done ? 100 : 0;
             const r      = 28;
             const circ   = 2 * Math.PI * r;

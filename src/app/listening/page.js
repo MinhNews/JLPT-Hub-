@@ -431,6 +431,20 @@ export default function ListeningPage() {
     return groups;
   }, [filteredLessons]);
 
+  const orderedPartNames = useMemo(() => {
+    const getPartOrder = (name) => {
+      const normalized = String(name || '').toLowerCase();
+      if (normalized.includes('đề thi') || normalized.includes('mock') || normalized.includes('mogi')) return 99;
+      const match = normalized.match(/phần\s*(\d+)|part\s*(\d+)/i);
+      return match ? Number(match[1] || match[2]) : 50;
+    };
+
+    return Object.keys(groupedLessons).sort((a, b) => {
+      const orderDiff = getPartOrder(a) - getPartOrder(b);
+      return orderDiff || a.localeCompare(b, 'vi', { numeric: true });
+    });
+  }, [groupedLessons]);
+
   return (
     <div className="listening-page fade-in">
       {toast && (
@@ -499,7 +513,7 @@ export default function ListeningPage() {
                   <p>Vui lòng thử từ khóa khác hoặc xóa bộ lọc tìm kiếm.</p>
                 </div>
               ) : (
-                Object.keys(groupedLessons).map((partName) => (
+                orderedPartNames.map((partName) => (
                   <div key={partName} className="part-group">
                     <h2 className="part-group-title">{partName}</h2>
                     <div className="lessons-grid">
