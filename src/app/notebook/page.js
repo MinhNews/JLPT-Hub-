@@ -159,6 +159,13 @@ export default function NotebookPage() {
   const [saving, setSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState('');
   const [error, setError] = useState('');
+  const [toast, setToast] = useState(null);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+
+  const notify = (message, type = 'success') => {
+    setToast({ message, type });
+    window.setTimeout(() => setToast(null), 2800);
+  };
 
   const loadNotes = async () => {
     setLoading(true);
@@ -303,8 +310,9 @@ export default function NotebookPage() {
       setNotes((prev) => [created, ...prev]);
       setSelectedId(created.id);
       setDraft(created);
+      notify('Đã tạo ghi chú mới.');
     } catch (err) {
-      alert(err.message || 'Không tạo được ghi chú');
+      notify(err.message || 'Không tạo được ghi chú', 'error');
     } finally {
       setSaving(false);
     }
@@ -312,7 +320,6 @@ export default function NotebookPage() {
 
   const deleteNote = async () => {
     if (!draft) return;
-    if (!confirm('Xóa ghi chú này?')) return;
 
     if (!user) {
       const next = notes.filter((note) => note.id !== draft.id);
@@ -320,18 +327,25 @@ export default function NotebookPage() {
       localStorage.setItem('jlpt_study_notebook', JSON.stringify(next));
       setDraft(next[0] || null);
       setSelectedId(next[0]?.id || '');
+      setConfirmDelete(false);
+      notify('Đã xóa ghi chú.');
       return;
     }
 
-    const res = await fetch(`${API_BASE_URL}/notebook/${draft.id}`, {
-      method: 'DELETE',
-      credentials: 'include',
-    });
-    if (res.ok) {
+    try {
+      const res = await fetch(`${API_BASE_URL}/notebook/${draft.id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      });
+      if (!res.ok) throw new Error('Không xóa được ghi chú');
       const next = notes.filter((note) => note.id !== draft.id);
       setNotes(next);
       setDraft(next[0] || null);
       setSelectedId(next[0]?.id || '');
+      setConfirmDelete(false);
+      notify('Đã xóa ghi chú.');
+    } catch (err) {
+      notify(err.message || 'Không xóa được ghi chú', 'error');
     }
   };
 
@@ -379,10 +393,13 @@ export default function NotebookPage() {
             <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Tìm ghi chú, tag, bài học..." />
           </div>
 
+          <div className="filter-label">Loại ghi chú / trạng thái</div>
           <div className="filter-row">
             <Filter size={15} />
             <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
-              {typeOptions.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
+              {typeOptions.map((item) => (
+                <option key={item.value} value={item.value}>{item.value === 'all' ? 'Mọi loại ghi chú' : item.label}</option>
+              ))}
             </select>
             <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
               <option value="all">Mọi trạng thái</option>
@@ -390,16 +407,18 @@ export default function NotebookPage() {
             </select>
           </div>
 
+          <div className="filter-label">Cấp độ JLPT</div>
           <div className="level-filter">
             {['all', ...levelOptions].map((level) => (
               <button key={level} className={levelFilter === level ? 'active' : ''} onClick={() => setLevelFilter(level)}>
-                {level === 'all' ? 'All' : level}
+                {level === 'all' ? 'Mọi cấp' : level === 'ALL' ? 'Tổng hợp' : level}
               </button>
             ))}
           </div>
 
+          <div className="filter-label">Lối tắt</div>
           <div className="quick-groups">
-            <button onClick={() => { setTypeFilter('all'); setStatusFilter('all'); }}>Tất cả</button>
+            <button onClick={() => { setTypeFilter('all'); setStatusFilter('all'); setLevelFilter('all'); }}>Reset lọc</button>
             <button onClick={() => { setTypeFilter('all'); setStatusFilter('review'); }}>Cần ôn</button>
             <button onClick={() => { setTypeFilter('mistake'); setStatusFilter('all'); }}>Lỗi sai</button>
             <button onClick={() => { setTypeFilter('vocab'); setStatusFilter('all'); }}>Từ vựng</button>
@@ -445,7 +464,7 @@ export default function NotebookPage() {
                   <button className={draft.pinned ? 'active' : ''} onClick={() => updateDraft({ pinned: !draft.pinned })}>
                     <Pin size={16} /> {draft.pinned ? 'Đã ghim' : 'Ghim'}
                   </button>
-                  <button className="danger" onClick={deleteNote}>
+                  <button className="danger" onClick={() => setConfirmDelete(true)}>
                     <Trash2 size={16} /> Xóa
                   </button>
                 </div>
@@ -527,16 +546,49 @@ export default function NotebookPage() {
         </main>
       </div>
 
-      <style jsx>{`
+      {toast && (
+        <div className={`notebook-toast ${toast.type}`}>
+          {toast.type === 'error' ? <Trash2 size={17} /> : <CheckCircle size={17} />}
+          <span>{toast.message}</span>
+        </div>
+      )}
+
+      {confirmDelete && (
+        <div className="confirm-overlay" role="dialog" aria-modal="true">
+          <div className="confirm-card">
+            <div className="confirm-icon"><Trash2 size={22} /></div>
+            <h3>Xóa ghi chú này?</h3>
+            <p>Ghi chú sẽ bị xóa khỏi sổ tay của bạn. Thao tác này không thể hoàn tác.</p>
+            <div className="confirm-actions">
+              <button className="ghost-confirm-btn" onClick={() => setConfirmDelete(false)}>Hủy</button>
+              <button className="danger-confirm-btn" onClick={deleteNote}>Xóa ghi chú</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx global>{`
         .study-notebook-page { padding-bottom: 32px; }
         .notebook-loading { min-height: 50vh; display: grid; place-items: center; color: var(--text-secondary); gap: 10px; }
         .notebook-hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 18px; }
         .notebook-hero h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 8px; color: var(--text-primary); letter-spacing: 0; }
         .notebook-hero p { color: var(--text-secondary); margin: 0; max-width: 820px; line-height: 1.6; }
         .primary-note-btn, .toolbar-actions button, .quick-groups button, .template-btn, .level-filter button {
-          border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-primary); border-radius: var(--radius-md); cursor: pointer; font-weight: 800; transition: var(--transition);
+          border: 1px solid var(--border-color);
+          background: linear-gradient(180deg, var(--card-bg), var(--card-bg-hover));
+          color: var(--text-primary);
+          border-radius: 12px;
+          cursor: pointer;
+          font-weight: 800;
+          transition: var(--transition);
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+        }
+        .primary-note-btn:hover, .toolbar-actions button:hover, .quick-groups button:hover, .template-btn:hover, .level-filter button:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 12px 26px rgba(99, 102, 241, 0.14);
         }
         .primary-note-btn { min-height: 46px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; background: var(--primary-gradient); color: #fff; border: none; box-shadow: var(--shadow-md); }
+        .primary-note-btn:hover { filter: brightness(1.04); }
         .notebook-error { padding: 12px 14px; border: 1px solid var(--danger); color: var(--danger); background: rgba(239,68,68,.08); border-radius: var(--radius-md); margin-bottom: 14px; }
         .notebook-stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
         .stat-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 14px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow-sm); }
@@ -550,8 +602,9 @@ export default function NotebookPage() {
         .search-box input, .metadata-grid input, .metadata-grid select { border: none; background: transparent; color: var(--text-primary); outline: none; width: 100%; font: inherit; }
         .filter-row { display: grid; grid-template-columns: auto 1fr 1fr; gap: 8px; align-items: center; margin-bottom: 10px; }
         .filter-row select { min-width: 0; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-primary); border-radius: var(--radius-sm); padding: 9px; font-weight: 700; }
-        .level-filter { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 12px; }
-        .level-filter button { height: 34px; font-size: 12px; }
+        .filter-label { margin: 10px 0 7px; color: var(--text-muted); font-size: 11px; font-weight: 900; letter-spacing: .02em; text-transform: uppercase; }
+        .level-filter { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+        .level-filter button { min-height: 34px; padding: 0 12px; font-size: 12px; }
         .level-filter button.active, .quick-groups button:hover, .template-btn:hover, .toolbar-actions button.active { border-color: var(--primary); background: var(--primary-glow); color: var(--primary); }
         .quick-groups { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
         .quick-groups button { padding: 8px 10px; font-size: 12px; }
@@ -569,7 +622,7 @@ export default function NotebookPage() {
         .save-state { color: var(--text-secondary); display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
         .toolbar-actions { display: flex; gap: 8px; }
         .toolbar-actions button { padding: 9px 12px; display: inline-flex; align-items: center; gap: 7px; }
-        .toolbar-actions .danger { color: var(--danger); }
+        .toolbar-actions .danger { color: var(--danger); border-color: rgba(239, 68, 68, 0.22); background: rgba(239, 68, 68, 0.06); }
         .note-title-input { width: 100%; border: none; outline: none; background: transparent; color: var(--text-primary); font-size: clamp(30px, 4vw, 48px); font-weight: 900; letter-spacing: 0; margin-bottom: 14px; }
         .metadata-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
         .metadata-grid label { display: flex; flex-direction: column; gap: 7px; color: var(--text-secondary); font-size: 12px; font-weight: 900; text-transform: uppercase; }
@@ -577,12 +630,27 @@ export default function NotebookPage() {
         .source-box { display: flex; gap: 10px; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--card-bg-hover); color: var(--text-secondary); margin-bottom: 14px; }
         .source-box strong { display: block; color: var(--text-primary); }
         .source-box a { color: var(--primary); font-weight: 800; font-size: 13px; }
-        .template-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-        .template-btn { padding: 9px 11px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; }
+        .template-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px; }
+        .template-btn { padding: 9px 12px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; }
+        .note-editor > .template-list { justify-content: flex-start; }
         .note-content-input { width: 100%; min-height: 430px; resize: vertical; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--input-bg); color: var(--text-primary); padding: 18px; line-height: 1.8; font-size: 16px; outline: none; }
         .note-content-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-glow); }
         .tag-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; color: var(--text-secondary); }
         .tag-strip span { display: inline-flex; align-items: center; gap: 5px; padding: 6px 9px; border-radius: 999px; background: var(--card-bg-hover); font-size: 12px; font-weight: 800; }
+        .notebook-toast { position: fixed; right: 22px; bottom: 22px; z-index: 80; min-height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; border-radius: 14px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18); font-weight: 800; }
+        .notebook-toast.success { border-color: rgba(16, 185, 129, 0.28); }
+        .notebook-toast.success svg { color: var(--success); }
+        .notebook-toast.error { border-color: rgba(239, 68, 68, 0.32); }
+        .notebook-toast.error svg { color: var(--danger); }
+        .confirm-overlay { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 24px; background: rgba(15, 23, 42, 0.42); backdrop-filter: blur(5px); }
+        .confirm-card { width: min(420px, 100%); background: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 18px; padding: 22px; box-shadow: 0 24px 70px rgba(15, 23, 42, 0.26); }
+        .confirm-icon { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; color: var(--danger); background: rgba(239, 68, 68, 0.1); margin-bottom: 12px; }
+        .confirm-card h3 { margin: 0 0 8px; font-size: 22px; color: var(--text-primary); }
+        .confirm-card p { margin: 0; color: var(--text-secondary); line-height: 1.6; }
+        .confirm-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .ghost-confirm-btn, .danger-confirm-btn { min-height: 42px; padding: 0 15px; border-radius: 12px; border: 1px solid var(--border-color); cursor: pointer; font-weight: 900; }
+        .ghost-confirm-btn { background: var(--card-bg-hover); color: var(--text-primary); }
+        .danger-confirm-btn { background: var(--danger); color: #fff; border-color: var(--danger); box-shadow: 0 12px 24px rgba(239, 68, 68, 0.22); }
         @media (max-width: 1100px) { .notebook-shell { grid-template-columns: 1fr; } .note-sidebar { position: static; max-height: none; } .metadata-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 760px) { .notebook-hero { flex-direction: column; align-items: stretch; } .notebook-stats { grid-template-columns: repeat(2, 1fr); } .metadata-grid { grid-template-columns: 1fr; } }
       `}</style>
