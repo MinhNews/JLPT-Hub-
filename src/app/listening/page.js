@@ -180,6 +180,7 @@ export default function ListeningPage() {
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
   const [volume, setVolume] = useState(1.0);
   const [isMuted, setIsMuted] = useState(false);
+  const [toast, setToast] = useState(null);
 
   // Quiz state
   const [userAnswers, setUserAnswers] = useState({}); // { qId: optionIdx }
@@ -187,6 +188,11 @@ export default function ListeningPage() {
   const [showFurigana, setShowFurigana] = useState(true);
   const [activeSentence, setActiveSentence] = useState(null); // { jp, vi, index, blockId }
   const [expandedTranscripts, setExpandedTranscripts] = useState({}); // { [blockId]: boolean }
+
+  const notify = (message, type = 'error') => {
+    setToast({ message, type });
+    window.setTimeout(() => setToast(null), 2800);
+  };
 
   // Fetch lesson summaries
   const fetchLessons = async () => {
@@ -238,11 +244,11 @@ export default function ListeningPage() {
         setExpandedTranscripts({});
         setPlaybackSpeed(1.0);
       } else {
-        alert('Không thể tải chi tiết bài nghe.');
+        notify('Không thể tải chi tiết bài nghe.', 'error');
       }
     } catch (err) {
       console.error(err);
-      alert('Lỗi kết nối máy chủ.');
+      notify('Lỗi kết nối máy chủ.', 'error');
     } finally {
       setLessonDetailLoading(false);
     }
@@ -427,6 +433,12 @@ export default function ListeningPage() {
 
   return (
     <div className="listening-page fade-in">
+      {toast && (
+        <div className={`listening-toast ${toast.type}`}>
+          <AlertCircle size={17} />
+          <span>{toast.message}</span>
+        </div>
+      )}
       {/* Top Navbar */}
       <div className="listening-navbar">
         <div className="nav-brand">
@@ -864,6 +876,28 @@ export default function ListeningPage() {
           background: var(--bg-color);
           color: var(--text-primary);
           font-family: var(--font-sans, system-ui, sans-serif);
+        }
+
+        .listening-toast {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 100;
+          min-height: 46px;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 15px;
+          border-radius: 14px;
+          background: var(--card-bg);
+          border: 1px solid rgba(239, 68, 68, 0.32);
+          color: var(--text-primary);
+          box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+          font-weight: 800;
+        }
+
+        .listening-toast svg {
+          color: var(--danger);
         }
 
         .listening-navbar {

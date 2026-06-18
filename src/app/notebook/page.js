@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   BookOpen,
   CheckCircle,
@@ -132,6 +132,9 @@ Ghi chú:`,
 const typeLabel = (value) => typeOptions.find((item) => item.value === value)?.label || 'Ghi chú';
 const statusLabel = (value) => statusOptions.find((item) => item.value === value)?.label || 'Mới ghi';
 const formatTime = (value) => value ? new Date(value).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }) : '';
+const escapeHtml = (value = '') => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const toEditorHtml = (value = '') => /<\/?[a-z][\s\S]*>/i.test(value) ? value : escapeHtml(value).replace(/\n/g, '<br>');
+const stripHtml = (value = '') => String(value).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
 const makeLocalNote = (template = templates[0]) => ({
   id: `local_${Date.now()}`,
@@ -148,6 +151,7 @@ const makeLocalNote = (template = templates[0]) => ({
 
 export default function NotebookPage() {
   const { user } = useAuth();
+  const editorRef = useRef(null);
   const [notes, setNotes] = useState([]);
   const [selectedId, setSelectedId] = useState('');
   const [draft, setDraft] = useState(null);
@@ -161,6 +165,7 @@ export default function NotebookPage() {
   const [error, setError] = useState('');
   const [toast, setToast] = useState(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(true);
 
   const notify = (message, type = 'success') => {
     setToast({ message, type });
@@ -272,6 +277,38 @@ export default function NotebookPage() {
     setDraft(note);
   };
 
+  useEffect(() => {
+    if (!editorRef.current || !draft) return;
+    const nextHtml = toEditorHtml(draft.content || '');
+    if (editorRef.current.innerHTML !== nextHtml) {
+      editorRef.current.innerHTML = nextHtml;
+    }
+  }, [draft?.id]);
+
+  const updateEditorContent = () => {
+    updateDraft({ content: editorRef.current?.innerHTML || '' });
+  };
+
+  const runEditorCommand = (command, value = null) => {
+    editorRef.current?.focus();
+    document.execCommand(command, false, value);
+    updateEditorContent();
+  };
+
+  const setBlock = (tag) => runEditorCommand('formatBlock', tag);
+
+  const getSourceHref = (source = {}) => {
+    if (!source.path) return '';
+    if (String(source.path).includes('?')) return source.path;
+    if (source.module === 'reading' && source.lessonId) {
+      const params = new URLSearchParams({ lesson: source.lessonId });
+      if (source.itemId) params.set('sentence', String(source.itemId).replace('sentence_', ''));
+      if (source.questionId) params.set('question', source.questionId);
+      return `${source.path}?${params.toString()}`;
+    }
+    return source.path;
+  };
+
   const createNote = async (templateId = 'blank') => {
     const template = templates.find((item) => item.id === templateId) || templates[0];
     const payload = {
@@ -371,6 +408,9 @@ export default function NotebookPage() {
           <p>Ghi chú học tập, lỗi sai, câu khó và kế hoạch ôn thi được đồng bộ theo tài khoản JLPT Hub.</p>
         </div>
         <div className="notebook-actions">
+          <button className="secondary-note-btn" onClick={() => setFiltersOpen((open) => !open)}>
+            <Filter size={17} /> {filtersOpen ? 'Ẩn bộ lọc' : 'Hiện bộ lọc'}
+          </button>
           <button className="primary-note-btn" onClick={() => createNote('blank')}>
             <FilePlus2 size={18} /> Ghi chú mới
           </button>
@@ -386,8 +426,8 @@ export default function NotebookPage() {
         <Stat icon={<Pin size={18} />} label="Đã ghim" value={stats.pinned} />
       </div>
 
-      <div className="notebook-shell">
-        <aside className="note-sidebar">
+      <div className={`notebook-shell ${filtersOpen ? '' : 'filters-collapsed'}`}>
+        {filtersOpen && <aside className="note-sidebar">
           <div className="search-box">
             <Search size={17} />
             <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Tìm ghi chú, tag, bài học..." />
@@ -434,7 +474,7 @@ export default function NotebookPage() {
                   <strong>{note.title || 'Ghi chú mới'}</strong>
                   {note.pinned && <Pin size={14} />}
                 </span>
-                <span className="note-preview">{(note.content || note.note || 'Chưa có nội dung').slice(0, 110)}</span>
+                <span className="note-preview">{(stripHtml(note.content || note.note) || 'Chưa có nội dung').slice(0, 110)}</span>
                 <span className="note-meta">
                   <em>{typeLabel(note.type)}</em>
                   <em>{note.level}</em>
@@ -443,7 +483,7 @@ export default function NotebookPage() {
               </button>
             ))}
           </div>
-        </aside>
+        </aside>}
 
         <main className="note-editor">
           {!draft ? (
@@ -511,27 +551,60 @@ export default function NotebookPage() {
                   <LinkIcon size={16} />
                   <div>
                     <strong>{draft.source.label || draft.source.lessonTitle}</strong>
-                    {draft.source.path ? <a href={draft.source.path}>Mở nội dung gốc</a> : null}
+                    {getSourceHref(draft.source) ? <a href={getSourceHref(draft.source)}>Mở đúng bài học gốc</a> : null}
                   </div>
                 </div>
               ) : null}
 
+              <div className="format-toolbar">
+                <button type="button" onClick={() => setBlock('h1')}>H1</button>
+                <button type="button" onClick={() => setBlock('h2')}>H2</button>
+                <button type="button" onClick={() => setBlock('p')}>P</button>
+                <button type="button" onClick={() => runEditorCommand('bold')}><strong>B</strong></button>
+                <button type="button" onClick={() => runEditorCommand('italic')}><em>I</em></button>
+                <button type="button" onClick={() => runEditorCommand('underline')}><u>U</u></button>
+                <button type="button" onClick={() => runEditorCommand('insertUnorderedList')}>• List</button>
+                <button type="button" onClick={() => runEditorCommand('insertHTML', '<blockquote>Trích dẫn...</blockquote>')}>Quote</button>
+                <select defaultValue="" onChange={(e) => { if (e.target.value) runEditorCommand('fontName', e.target.value); e.target.value = ''; }}>
+                  <option value="">Font</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="'Times New Roman'">Times</option>
+                  <option value="'Courier New'">Mono</option>
+                </select>
+                <select defaultValue="" onChange={(e) => { if (e.target.value) runEditorCommand('fontSize', e.target.value); e.target.value = ''; }}>
+                  <option value="">Cỡ chữ</option>
+                  <option value="2">Nhỏ</option>
+                  <option value="3">Vừa</option>
+                  <option value="5">Lớn</option>
+                  <option value="7">Rất lớn</option>
+                </select>
+                <label className="color-tool">
+                  Màu
+                  <input type="color" defaultValue="#4f46e5" onChange={(e) => runEditorCommand('foreColor', e.target.value)} />
+                </label>
+              </div>
+
               <TemplatePicker onPick={(templateId) => {
                 const template = templates.find((item) => item.id === templateId);
                 if (!template) return;
+                const nextContent = draft.content ? `${draft.content}<br><br>${toEditorHtml(template.content)}` : toEditorHtml(template.content);
                 updateDraft({
                   type: template.type,
                   template: template.id,
                   tags: [...new Set([...(draft.tags || []), ...template.tags])],
-                  content: draft.content ? `${draft.content}\n\n${template.content}` : template.content,
+                  content: nextContent,
                 });
+                if (editorRef.current) editorRef.current.innerHTML = nextContent;
               }} compact />
 
-              <textarea
+              <div
+                ref={editorRef}
                 className="note-content-input"
-                value={draft.content || ''}
-                onChange={(e) => updateDraft({ content: e.target.value })}
-                placeholder="Viết ghi chú học tập tại đây..."
+                contentEditable
+                suppressContentEditableWarning
+                onInput={updateEditorContent}
+                data-placeholder="Viết ghi chú học tập tại đây..."
               />
 
               <div className="tag-strip">
@@ -573,7 +646,8 @@ export default function NotebookPage() {
         .notebook-hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 18px; }
         .notebook-hero h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 8px; color: var(--text-primary); letter-spacing: 0; }
         .notebook-hero p { color: var(--text-secondary); margin: 0; max-width: 820px; line-height: 1.6; }
-        .primary-note-btn, .toolbar-actions button, .quick-groups button, .template-btn, .level-filter button {
+        .notebook-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+        .primary-note-btn, .secondary-note-btn, .toolbar-actions button, .quick-groups button, .template-btn, .level-filter button, .format-toolbar button, .format-toolbar select, .color-tool {
           border: 1px solid var(--border-color);
           background: linear-gradient(180deg, var(--card-bg), var(--card-bg-hover));
           color: var(--text-primary);
@@ -583,11 +657,12 @@ export default function NotebookPage() {
           transition: var(--transition);
           box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
         }
-        .primary-note-btn:hover, .toolbar-actions button:hover, .quick-groups button:hover, .template-btn:hover, .level-filter button:hover {
+        .primary-note-btn:hover, .secondary-note-btn:hover, .toolbar-actions button:hover, .quick-groups button:hover, .template-btn:hover, .level-filter button:hover, .format-toolbar button:hover, .format-toolbar select:hover, .color-tool:hover {
           transform: translateY(-1px);
           box-shadow: 0 12px 26px rgba(99, 102, 241, 0.14);
         }
         .primary-note-btn { min-height: 46px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; background: var(--primary-gradient); color: #fff; border: none; box-shadow: var(--shadow-md); }
+        .secondary-note-btn { min-height: 46px; padding: 0 15px; display: inline-flex; align-items: center; gap: 8px; }
         .primary-note-btn:hover { filter: brightness(1.04); }
         .notebook-error { padding: 12px 14px; border: 1px solid var(--danger); color: var(--danger); background: rgba(239,68,68,.08); border-radius: var(--radius-md); margin-bottom: 14px; }
         .notebook-stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
@@ -596,6 +671,7 @@ export default function NotebookPage() {
         .stat-card strong { display: block; color: var(--text-primary); font-size: 20px; }
         .stat-card span { color: var(--text-secondary); font-size: 12px; font-weight: 700; }
         .notebook-shell { display: grid; grid-template-columns: 360px minmax(0,1fr); gap: 18px; align-items: start; }
+        .notebook-shell.filters-collapsed { grid-template-columns: minmax(0, 1fr); }
         .note-sidebar, .note-editor { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
         .note-sidebar { padding: 14px; position: sticky; top: 16px; max-height: calc(100vh - 40px); overflow: auto; }
         .search-box { height: 46px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0 12px; background: var(--input-bg); margin-bottom: 10px; }
@@ -633,8 +709,17 @@ export default function NotebookPage() {
         .template-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px; }
         .template-btn { padding: 9px 12px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; }
         .note-editor > .template-list { justify-content: flex-start; }
-        .note-content-input { width: 100%; min-height: 430px; resize: vertical; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--input-bg); color: var(--text-primary); padding: 18px; line-height: 1.8; font-size: 16px; outline: none; }
+        .format-toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; border: 1px solid var(--border-color); border-radius: 16px; background: var(--card-bg-hover); margin-bottom: 12px; }
+        .format-toolbar button, .format-toolbar select, .color-tool { min-height: 34px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 900; }
+        .format-toolbar select { outline: none; }
+        .color-tool input { width: 22px; height: 22px; border: 0; padding: 0; background: transparent; cursor: pointer; }
+        .note-content-input { width: 100%; min-height: 430px; resize: vertical; overflow: auto; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--input-bg); color: var(--text-primary); padding: 18px; line-height: 1.8; font-size: 16px; outline: none; }
         .note-content-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-glow); }
+        .note-content-input:empty:before { content: attr(data-placeholder); color: var(--text-muted); }
+        .note-content-input h1 { font-size: 32px; line-height: 1.25; margin: 10px 0; }
+        .note-content-input h2 { font-size: 24px; line-height: 1.35; margin: 10px 0; }
+        .note-content-input blockquote { margin: 12px 0; padding: 10px 14px; border-left: 4px solid var(--primary); background: var(--primary-glow); border-radius: 10px; }
+        .note-content-input ul { padding-left: 24px; }
         .tag-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; color: var(--text-secondary); }
         .tag-strip span { display: inline-flex; align-items: center; gap: 5px; padding: 6px 9px; border-radius: 999px; background: var(--card-bg-hover); font-size: 12px; font-weight: 800; }
         .notebook-toast { position: fixed; right: 22px; bottom: 22px; z-index: 80; min-height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; border-radius: 14px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18); font-weight: 800; }

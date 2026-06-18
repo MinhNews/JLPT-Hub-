@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useProgress } from '@/context/ProgressContext';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { 
   Search, CheckCircle, ChevronRight, BookOpen, ArrowLeft, 
   Eye, EyeOff, Check, X, Sparkles, AlertCircle, Info, HelpCircle, Loader2, Save
@@ -65,6 +66,7 @@ const stripHtml = (value = '') => String(value)
   .trim();
 
 export default function ReadingPage() {
+  const searchParams = useSearchParams();
   const { readingMastered, toggleReadingMastered } = useProgress();
   const [activeTab, setActiveTab] = useState('list'); // 'list' | 'guide' | 'lesson' | 'locked'
   const [lessons, setLessons] = useState([]);
@@ -79,6 +81,7 @@ export default function ReadingPage() {
   const [submitted, setSubmitted] = useState(false);
   const [showFurigana, setShowFurigana] = useState(true);
   const [activeSentence, setActiveSentence] = useState(null); // { jp, vi, index }
+  const [toast, setToast] = useState(null);
 
   // AI Chatbot state
   const [apiKey, setApiKey] = useState('');
@@ -90,6 +93,11 @@ export default function ReadingPage() {
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState('');
   const [lessonImagesBase64, setLessonImagesBase64] = useState([]);
+
+  const notify = (message, type = 'success') => {
+    setToast({ message, type });
+    window.setTimeout(() => setToast(null), 2800);
+  };
 
   // Fetch lesson summaries
   const fetchLessons = async () => {
@@ -484,15 +492,37 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
         setLessonImagesBase64([]);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        alert('Không thể tải chi tiết bài đọc.');
+        notify('Không thể tải chi tiết bài đọc.', 'error');
       }
     } catch (err) {
       console.error(err);
-      alert('Lỗi kết nối máy chủ.');
+      notify('Lỗi kết nối máy chủ.', 'error');
     } finally {
       setLessonDetailLoading(false);
     }
   };
+
+  useEffect(() => {
+    const lessonId = searchParams.get('lesson');
+    if (!lessonId || lessonsLoading || !lessons.length) return;
+    if (selectedLesson?.id === lessonId) return;
+    const lessonSummary = lessons.find((lesson) => String(lesson.id) === String(lessonId));
+    if (lessonSummary) handleSelectLesson(lessonSummary);
+  }, [searchParams, lessonsLoading, lessons, selectedLesson?.id]);
+
+  useEffect(() => {
+    const sentenceNumber = Number(searchParams.get('sentence'));
+    if (!selectedLesson || !sentenceNumber) return;
+    const translations = normalizeSentenceTranslations(selectedLesson.sentenceTranslations || []);
+    const sent = translations[sentenceNumber - 1];
+    if (sent) {
+      setActiveSentence({
+        jp: sent.jp,
+        vi: sent.vi || 'Chưa có bản dịch tiếng Việt cho câu này trong dữ liệu.',
+        index: sentenceNumber - 1
+      });
+    }
+  }, [searchParams, selectedLesson?.id]);
 
   // Handle quiz radio choice
   const handleSelectAnswer = (qId, optionIdx) => {
@@ -511,7 +541,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
     const questionsCount = selectedLesson?.questions?.length || 0;
     const answeredCount = Object.keys(userAnswers).length;
     if (answeredCount < questionsCount) {
-      alert('Vui lòng trả lời đầy đủ các câu hỏi trước khi nộp bài!');
+      notify('Vui lòng trả lời đầy đủ các câu hỏi trước khi nộp bài.', 'error');
       return;
     }
     setSubmitted(true);
@@ -589,13 +619,13 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
       });
 
       if (res.status === 401 || res.status === 403) {
-        alert('Vui lòng đăng nhập để lưu ghi chú vào sổ tay.');
+        notify('Vui lòng đăng nhập để lưu ghi chú vào sổ tay.', 'error');
         return;
       }
       if (!res.ok) throw new Error('Không lưu được ghi chú vào sổ tay.');
-      alert('Đã lưu vào sổ tay học tập.');
+      notify('Đã lưu vào sổ tay học tập.');
     } catch (error) {
-      alert(error.message || 'Không lưu được ghi chú vào sổ tay.');
+      notify(error.message || 'Không lưu được ghi chú vào sổ tay.', 'error');
     }
   };
 
@@ -615,7 +645,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
       source: {
         module: 'reading',
         label: `Câu ${activeSentence.index + 1}`,
-        path: '/reading',
+        path: `/reading?lesson=${selectedLesson.id}&sentence=${activeSentence.index + 1}`,
         lessonId: selectedLesson.id,
         lessonTitle: selectedLesson.title,
         itemId: `sentence_${activeSentence.index + 1}`,
@@ -646,7 +676,7 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
       source: {
         module: 'reading',
         label: 'Lỗi sai đọc hiểu',
-        path: '/reading',
+        path: `/reading?lesson=${selectedLesson.id}&question=${question.id}`,
         lessonId: selectedLesson.id,
         lessonTitle: selectedLesson.title,
         questionId: question.id,
@@ -1401,6 +1431,13 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
         </div>
       )}
 
+      {toast && (
+        <div className={`reading-toast ${toast.type}`}>
+          {toast.type === 'error' ? <AlertCircle size={17} /> : <CheckCircle size={17} />}
+          <span>{toast.message}</span>
+        </div>
+      )}
+
       {/* Embedded CSS for Interactive Reader & Styles */}
       <style jsx global>{`
         /* Page layout */
@@ -1410,6 +1447,29 @@ Phản hồi hoàn toàn bằng Tiếng Việt, sử dụng định dạng Markd
           margin: 0 auto;
           min-height: 100vh;
         }
+
+        .reading-toast {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 100;
+          min-height: 46px;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 15px;
+          border-radius: 14px;
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
+          color: var(--text-primary);
+          box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+          font-weight: 800;
+        }
+
+        .reading-toast.success { border-color: rgba(16, 185, 129, 0.28); }
+        .reading-toast.success svg { color: var(--success); }
+        .reading-toast.error { border-color: rgba(239, 68, 68, 0.32); }
+        .reading-toast.error svg { color: var(--danger); }
 
         /* Header styling */
         .reading-header {

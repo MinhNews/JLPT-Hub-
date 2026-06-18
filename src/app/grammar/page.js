@@ -26,6 +26,12 @@ export default function GrammarPage() {
   const [grammarData, setGrammarData] = useState([]);
   const [questionData, setQuestionData] = useState({ fillInBlanks: [], starArrangements: [] });
   const [isLoading, setIsLoading] = useState(true);
+  const [toast, setToast] = useState(null);
+
+  const notify = (message, type = 'error') => {
+    setToast({ message, type });
+    window.setTimeout(() => setToast(null), 2800);
+  };
 
   useEffect(() => {
     Promise.all([
@@ -204,7 +210,7 @@ export default function GrammarPage() {
     }
 
     if (filteredQuestions.length === 0) {
-      alert('Không có câu hỏi nào trong phạm vi đã chọn!');
+      notify('Không có câu hỏi nào trong phạm vi đã chọn.');
       return;
     }
 
@@ -342,6 +348,26 @@ export default function GrammarPage() {
 
   return (
     <div className={`grammar-page-container ${hideFurigana ? 'hide-furigana' : ''} ${hideTranslation ? 'hide-translation' : ''}`}>
+      {toast && (
+        <div className={`app-toast ${toast.type}`}>
+          <span>{toast.message}</span>
+        </div>
+      )}
+      <style jsx global>{`
+        .app-toast {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 100;
+          padding: 12px 15px;
+          border-radius: 14px;
+          background: var(--card-bg);
+          border: 1px solid rgba(239, 68, 68, 0.32);
+          color: var(--text-primary);
+          box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+          font-weight: 800;
+        }
+      `}</style>
       <div className="page-header">
         <h1 className="page-title">Ngữ pháp N3</h1>
         <p className="page-description">Chinh phục 110 mẫu ngữ pháp Mimi Kara Oboeru N3 với Flashcards và bài tập trắc nghiệm dấu sao.</p>

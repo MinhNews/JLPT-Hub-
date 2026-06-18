@@ -31,6 +31,7 @@ export default function AdminDashboard() {
   const [loadingStats, setLoadingStats] = useState(true);
   const [loadingUsers, setLoadingUsers] = useState(true);
   const [actionLoading, setActionLoading] = useState(null); // stores user ID currently being modified
+  const [confirmAction, setConfirmAction] = useState(null);
 
   const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api') + '/admin';
 
@@ -81,8 +82,16 @@ export default function AdminDashboard() {
   }, [page, search]);
 
   // Handle VIP Toggle
-  const handleToggleVip = async (userId) => {
-    if (!window.confirm("Bạn có chắc chắn muốn cấp / hủy VIP cho người dùng này không?")) return;
+  const handleToggleVip = async (userId, confirmed = false) => {
+    if (!confirmed) {
+      setConfirmAction({
+        title: 'Xác nhận thay đổi VIP',
+        message: 'Bạn có chắc chắn muốn cấp hoặc hủy VIP cho người dùng này không?',
+        onConfirm: () => handleToggleVip(userId, true),
+      });
+      return;
+    }
+    setConfirmAction(null);
     setActionLoading(userId);
     try {
       const res = await fetch(`${API_BASE_URL}/users/${userId}/vip`, {
@@ -101,8 +110,16 @@ export default function AdminDashboard() {
   };
 
   // Handle Ban / Unban
-  const handleToggleStatus = async (userId) => {
-    if (!window.confirm("Bạn có chắc chắn muốn thay đổi trạng thái Khóa / Mở Khóa tài khoản này không?")) return;
+  const handleToggleStatus = async (userId, confirmed = false) => {
+    if (!confirmed) {
+      setConfirmAction({
+        title: 'Xác nhận trạng thái tài khoản',
+        message: 'Bạn có chắc chắn muốn khóa hoặc mở khóa tài khoản này không?',
+        onConfirm: () => handleToggleStatus(userId, true),
+      });
+      return;
+    }
+    setConfirmAction(null);
     setActionLoading(userId);
     try {
       const res = await fetch(`${API_BASE_URL}/users/${userId}/status`, {
@@ -121,9 +138,17 @@ export default function AdminDashboard() {
   };
 
   // Handle Role Toggle (Student <=> Admin)
-  const handleToggleRole = async (userId, currentRole) => {
+  const handleToggleRole = async (userId, currentRole, confirmed = false) => {
     const actionName = currentRole === 'admin' ? 'hạ cấp xuống Học viên' : 'nâng cấp lên Admin';
-    if (!window.confirm(`CẢNH BÁO: Bạn có chắc chắn muốn ${actionName} cho người dùng này không?`)) return;
+    if (!confirmed) {
+      setConfirmAction({
+        title: 'Cảnh báo đổi quyền',
+        message: `Bạn có chắc chắn muốn ${actionName} cho người dùng này không?`,
+        onConfirm: () => handleToggleRole(userId, currentRole, true),
+      });
+      return;
+    }
+    setConfirmAction(null);
     
     setActionLoading(userId);
     const newRole = currentRole === 'admin' ? 'student' : 'admin';
@@ -370,12 +395,68 @@ export default function AdminDashboard() {
         )}
       </div>
 
+      {confirmAction && (
+        <div className="admin-confirm-overlay" role="dialog" aria-modal="true">
+          <div className="admin-confirm-card">
+            <div className="admin-confirm-icon"><ShieldAlert size={22} /></div>
+            <h3>{confirmAction.title}</h3>
+            <p>{confirmAction.message}</p>
+            <div className="admin-confirm-actions">
+              <button className="admin-confirm-cancel" onClick={() => setConfirmAction(null)}>Hủy</button>
+              <button className="admin-confirm-ok" onClick={confirmAction.onConfirm}>Xác nhận</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
         .admin-container {
           display: flex;
           flex-direction: column;
           gap: 28px;
         }
+        .admin-confirm-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 100;
+          display: grid;
+          place-items: center;
+          padding: 24px;
+          background: rgba(15, 23, 42, 0.42);
+          backdrop-filter: blur(5px);
+        }
+        .admin-confirm-card {
+          width: min(430px, 100%);
+          background: var(--card-bg);
+          color: var(--text-primary);
+          border: 1px solid var(--border-color);
+          border-radius: 18px;
+          padding: 22px;
+          box-shadow: 0 24px 70px rgba(15, 23, 42, 0.26);
+        }
+        .admin-confirm-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 14px;
+          display: grid;
+          place-items: center;
+          color: #f59e0b;
+          background: rgba(245, 158, 11, 0.1);
+          margin-bottom: 12px;
+        }
+        .admin-confirm-card h3 { margin: 0 0 8px; font-size: 22px; color: var(--text-primary); }
+        .admin-confirm-card p { margin: 0; color: var(--text-secondary); line-height: 1.6; }
+        .admin-confirm-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .admin-confirm-cancel, .admin-confirm-ok {
+          min-height: 42px;
+          padding: 0 15px;
+          border-radius: 12px;
+          border: 1px solid var(--border-color);
+          cursor: pointer;
+          font-weight: 900;
+        }
+        .admin-confirm-cancel { background: var(--card-bg-hover); color: var(--text-primary); }
+        .admin-confirm-ok { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 12px 24px rgba(99, 102, 241, 0.22); }
         .admin-badge-top {
           display: flex;
           align-items: center;
