@@ -184,7 +184,7 @@ export default function Dashboard() {
 
   // Default: N3 Map
   const n3Cards = [
-    { title: 'Từ vựng Mimikara', path: '/vocab', icon: '📖', desc: '880 từ vựng cốt lõi', stat: `${vocabMastered?.length || 0}/${totalVocab}` },
+    { title: 'Từ vựng N3', path: '/vocab', icon: '📖', desc: '880 từ vựng cốt lõi', stat: `${vocabMastered?.length || 0}/${totalVocab}` },
     { title: 'Ngữ pháp N3', path: '/grammar', icon: '✏️', desc: '110 cấu trúc trọng điểm', stat: `${grammarMastered?.length || 0}/${totalGrammar}` },
     { title: 'Đọc hiểu N3', path: '/reading', icon: '📝', desc: '72 bài tập đọc hiểu', stat: `${readingMastered?.length || 0}/${totalReading}` },
     { title: 'Nghe hiểu N3', path: '/listening', icon: '🎧', desc: '28 bài tập nghe hiểu', stat: `${listeningMastered?.length || 0}/${totalListening}` },

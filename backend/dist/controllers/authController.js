@@ -12,16 +12,19 @@ const auth_1 = require("../utils/auth");
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '1061656991815-05nll45ijshstr1l3t4nj1phm6o04vih.apps.googleusercontent.com';
 const client = new google_auth_library_1.OAuth2Client(GOOGLE_CLIENT_ID);
 const IS_PROD = process.env.NODE_ENV === 'production';
-const COOKIE_OPTIONS = {
+const DEFAULT_SESSION_DAYS = 7;
+const REMEMBER_SESSION_DAYS = 30;
+const getSessionDays = (rememberMe) => rememberMe ? REMEMBER_SESSION_DAYS : DEFAULT_SESSION_DAYS;
+const getCookieOptions = (rememberMe) => ({
     httpOnly: true,
     secure: IS_PROD,
     sameSite: IS_PROD ? 'none' : 'lax',
-    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+    maxAge: getSessionDays(rememberMe) * 24 * 60 * 60 * 1000,
     path: '/',
-};
-const signToken = (userId, role) => {
+});
+const signToken = (userId, role, rememberMe) => {
     const secret = (0, auth_1.getJwtSecret)();
-    return jsonwebtoken_1.default.sign({ id: userId, role }, secret, { expiresIn: '30d' });
+    return jsonwebtoken_1.default.sign({ id: userId, role }, secret, { expiresIn: `${getSessionDays(rememberMe)}d` });
 };
 const registerUser = async (req, res) => {
     try {
@@ -46,7 +49,7 @@ const registerUser = async (req, res) => {
 exports.registerUser = registerUser;
 const loginUser = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password, rememberMe } = req.body;
         if (!email || !password) {
             return res.status(400).json({ message: 'Please provide email and password' });
         }
@@ -60,8 +63,8 @@ const loginUser = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
-        const accessToken = signToken(user._id, user.role);
-        res.cookie('token', accessToken, COOKIE_OPTIONS);
+        const accessToken = signToken(user._id, user.role, Boolean(rememberMe));
+        res.cookie('token', accessToken, getCookieOptions(Boolean(rememberMe)));
         res.status(200).json({
             accessToken,
             user: {
@@ -80,7 +83,7 @@ const loginUser = async (req, res) => {
 exports.loginUser = loginUser;
 const googleLogin = async (req, res) => {
     try {
-        const { credential } = req.body;
+        const { credential, rememberMe } = req.body;
         if (!credential) {
             return res.status(400).json({ message: 'Missing Google credential' });
         }
@@ -110,8 +113,8 @@ const googleLogin = async (req, res) => {
         else if (user.status === 'banned') {
             return res.status(403).json({ message: 'Tài khoản của bạn đã bị khóa.' });
         }
-        const accessToken = signToken(user._id, user.role);
-        res.cookie('token', accessToken, COOKIE_OPTIONS);
+        const accessToken = signToken(user._id, user.role, Boolean(rememberMe));
+        res.cookie('token', accessToken, getCookieOptions(Boolean(rememberMe)));
         res.status(200).json({
             accessToken,
             user: {
@@ -130,7 +133,7 @@ const googleLogin = async (req, res) => {
 };
 exports.googleLogin = googleLogin;
 const logoutUser = (_req, res) => {
-    res.clearCookie('token', { ...COOKIE_OPTIONS, maxAge: 0 });
+    res.clearCookie('token', { ...getCookieOptions(false), maxAge: 0 });
     res.status(200).json({ message: 'Logged out successfully' });
 };
 exports.logoutUser = logoutUser;

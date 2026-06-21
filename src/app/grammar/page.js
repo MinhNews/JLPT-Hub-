@@ -369,7 +369,7 @@ export default function GrammarPage() {
         }
       `}</style>
       <div className="page-header">
-        <h1 className="page-title">Ngữ pháp N3</h1>
+        <h1 className="page-title">Ngữ pháp Mimikara N3</h1>
         <p className="page-description">Chinh phục 110 mẫu ngữ pháp Mimi Kara Oboeru N3 với Flashcards và bài tập trắc nghiệm dấu sao.</p>
       </div>
 

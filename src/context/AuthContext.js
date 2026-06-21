@@ -66,10 +66,10 @@ export function AuthProvider({ children }) {
   };
 
   // Login — server sets HttpOnly cookie, we only store non-sensitive user info
-  const login = async (email, password) => {
+  const login = async (email, password, rememberMe = false) => {
     const res = await apiFetch('/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password, rememberMe }),
     });
 
     const data = await res.json();
@@ -82,7 +82,7 @@ export function AuthProvider({ children }) {
   };
 
   // Register then auto-login
-  const register = async (name, email, password) => {
+  const register = async (name, email, password, rememberMe = false) => {
     const res = await apiFetch('/auth/register', {
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
@@ -91,14 +91,14 @@ export function AuthProvider({ children }) {
     const data = await res.json();
     if (!res.ok) throw new Error(data.message || 'Registration failed');
 
-    return await login(email, password);
+    return await login(email, password, rememberMe);
   };
 
   // Google Login — server sets HttpOnly cookie
-  const googleLoginAuth = async (credential) => {
+  const googleLoginAuth = async (credential, rememberMe = false) => {
     const res = await apiFetch('/auth/google', {
       method: 'POST',
-      body: JSON.stringify({ credential }),
+      body: JSON.stringify({ credential, rememberMe }),
     });
 
     const data = await res.json();

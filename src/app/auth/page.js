@@ -16,6 +16,7 @@ export default function AuthPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -63,9 +64,9 @@ export default function AuthPage() {
     setIsSubmitting(true);
     try {
       if (isLogin) {
-        await login(email, password);
+        await login(email, password, rememberMe);
       } else {
-        await register(name, email, password);
+        await register(name, email, password, rememberMe);
       }
       router.push('/');
     } catch (err) {
@@ -171,6 +172,16 @@ export default function AuthPage() {
             </div>
           )}
 
+          <label className="remember-login-row">
+            <input
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+              disabled={isSubmitting}
+            />
+            <span>Ghi nhớ đăng nhập trong 30 ngày</span>
+          </label>
+
           <button type="submit" className="submit-auth-btn" disabled={isSubmitting}>
             {isSubmitting ? (
               <>
@@ -196,7 +207,7 @@ export default function AuthPage() {
               try {
                 setIsSubmitting(true);
                 setErrorMsg('');
-                await googleLoginAuth(credentialResponse.credential);
+                await googleLoginAuth(credentialResponse.credential, rememberMe);
                 router.push('/');
               } catch (err) {
                 setErrorMsg(err.message || 'Đăng nhập Google thất bại');
@@ -379,6 +390,25 @@ export default function AuthPage() {
           opacity: 0.6;
           cursor: not-allowed;
           transform: none;
+        }
+        .remember-login-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--text-secondary);
+          font-size: 13px;
+          font-weight: 600;
+          cursor: pointer;
+          user-select: none;
+        }
+        .remember-login-row input {
+          width: 16px;
+          height: 16px;
+          accent-color: var(--primary);
+          cursor: pointer;
+        }
+        .remember-login-row input:disabled {
+          cursor: not-allowed;
         }
         .auth-footer {
           margin-top: 24px;
